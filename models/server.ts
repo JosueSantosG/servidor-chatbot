@@ -55,7 +55,8 @@ class Server{
     listen(){
         this.app.listen(this.port, ()=>{
             console.log('Servidor en puerto: '+ this.port);
-            
+            console.log('Servidor heroku en puerto: '+ process.env.PORT);
+       
         });
     }
 }
