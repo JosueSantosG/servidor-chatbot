@@ -1,4 +1,9 @@
 # compiled output
-/dist
+#/dist
 
 /node_modules
+
+#"start": "nodemon dist/app.js",
+#"ts": "tsc --watch",
+#"dev": "concurrently --kill-others \"npm run start\" \"npm run ts\""
+  
