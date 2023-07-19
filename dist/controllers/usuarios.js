@@ -33,20 +33,6 @@ export const getUsuario = async (req: Request, res: Response) => {
     });
   }
 };
- export const postRegistro = async (req: Request, res: Response) => {
-  const { body } = req;
-  try {
-    const persona = Persona.build(body);
-    
-    await persona.save();
-    res.json(persona);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({
-      msg: "Error al registrarse",
-    });
-  }
-};
  */
 let registrationInProgress = false;
 let currentStep = 0;
@@ -71,7 +57,8 @@ function postConsulta(req, res) {
                 currentStep = 1;
             }
             else if (registrationInProgress) {
-                if (message.toLowerCase() === "cancelar") {
+                if (message.toLowerCase() === "no" ||
+                    message.toLowerCase() === "cancelar") {
                     registrationInProgress = false;
                     currentStep = 0;
                     userData = {};
@@ -113,7 +100,6 @@ function postConsulta(req, res) {
                         case 7:
                             userData.email_personal = message;
                             const maestrias = yield (0, exports.getMaestrias)(); // Obtener la lista de maestrías
-                            console.log(maestrias);
                             if (Array.isArray(maestrias)) {
                                 userData.maestrias = maestrias;
                                 answer =
@@ -143,28 +129,6 @@ function postConsulta(req, res) {
                                     "La maestría seleccionada no es válida. Por favor, elige una maestría de la lista.";
                             }
                             break;
-                        /*
-                                  case 8:
-                                    const selectedMaestria = message.toLowerCase(); // Obtener la maestría seleccionada por el usuario en minúsculas
-                                    const lowerCaseMaestrias = userData.maestrias.map(
-                                      (maestria: string) => maestria.toLowerCase()
-                                    ); // Convertir todas las maestrías a minúsculas
-                                    if (lowerCaseMaestrias.includes(selectedMaestria)) {
-                                      userData.selectedMaestria = selectedMaestria; // Guardar la maestría seleccionada en los datos del usuario
-                                      answer =
-                                        "¡Registro completado! Revise su correo para continuar el proceso.";
-                                      currentStep++;
-                                    } else {
-                                      answer =
-                                        "La maestría seleccionada no es válida. Por favor, elige una maestría de la lista.";
-                                    }
-                        
-                                    const personaData = { ...body, ...userData };
-                                    const persona = Persona.build(personaData);
-                                    await persona.save();
-                                    console.log(persona);
-                                    registrationInProgress = false;
-                                    break; */
                     }
                 }
             }

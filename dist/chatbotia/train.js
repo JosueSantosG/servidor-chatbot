@@ -189,57 +189,58 @@ const readline = require('readline');
     // Entrena el chatbot y guarda el modelo
     yield exports.nlp.train();
     exports.nlp.save();
-    let registrationInProgress = false;
+    /* let registrationInProgress = false;
     let currentStep = 0;
-    let userData = {};
+    let userData: any = {};
+    
     const rl = readline.createInterface({
-        input: process.stdin,
-        output: process.stdout
+      input: process.stdin,
+      output: process.stdout
     });
     const askQuestion = () => {
-        rl.question('Ingrese un mensaje (escriba "quit" para salir): ', (message) => __awaiter(void 0, void 0, void 0, function* () {
-            if (message.toLowerCase() === 'quit') {
-                rl.close();
-                return;
-            }
-            const response = yield exports.nlp.process('es', message);
-            if (response.intent === 'registro.registro') {
-                console.log(response.answer);
-                registrationInProgress = true;
-                currentStep = 1;
-            }
-            else if (registrationInProgress) {
-                switch (currentStep) {
-                    case 1:
-                        userData.cedula = message;
-                        console.log('Dame tu nombre:');
-                        currentStep++;
-                        break;
-                    case 2:
-                        userData.nombre = message;
-                        console.log('Dame tu apellido:');
-                        currentStep++;
-                        break;
-                    // Agrega más casos según las preguntas que desees hacer
-                    default:
-                        userData.apellido = message;
-                        console.log('Registro completado:');
-                        console.log(userData);
-                        registrationInProgress = false;
-                        break;
-                }
-            }
-            else {
-                if (response.intent === 'None') {
-                    console.log('No entiendo lo que quieres decir en traints.');
-                }
-                else {
-                    console.log('Respuesta:', response.answer);
-                }
-            }
-            askQuestion();
-        }));
+      rl.question('Ingrese un mensaje (escriba "quit" para salir): ', async (message: string) => {
+        if (message.toLowerCase() === 'quit') {
+          rl.close();
+          return;
+        }
+    
+        const response = await nlp.process('es', message);
+        if (response.intent === 'registro.registro') {
+          console.log(response.answer);
+          registrationInProgress = true;
+          currentStep = 1;
+        } else if (registrationInProgress) {
+          switch (currentStep) {
+            case 1:
+              userData.cedula = message;
+              console.log('Dame tu nombre:');
+              currentStep++;
+              break;
+            case 2:
+              userData.nombre = message;
+              console.log('Dame tu apellido:');
+              currentStep++;
+              break;
+            // Agrega más casos según las preguntas que desees hacer
+            default:
+              userData.apellido = message;
+              console.log('Registro completado:');
+              console.log(userData);
+              registrationInProgress = false;
+              break;
+          }
+        } else {
+          if (response.intent === 'None') {
+            console.log('No entiendo lo que quieres decir en traints.');
+          } else {
+            console.log('Respuesta:', response.answer);
+          }
+        }
+    
+        askQuestion();
+      });
     };
-    askQuestion();
+    
+    askQuestion(); */
 }))();
 //# sourceMappingURL=train.js.map

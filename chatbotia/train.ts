@@ -272,7 +272,7 @@ nlp.addAnswer('es', 'soporte.soporte', 'Si presentas algún inconveniente, puede
   await nlp.train();
   nlp.save();
 
-let registrationInProgress = false;
+/* let registrationInProgress = false;
 let currentStep = 0;
 let userData: any = {};
 
@@ -324,7 +324,7 @@ const askQuestion = () => {
   });
 };
 
-askQuestion();
+askQuestion(); */
 
 })();
 
