@@ -57,7 +57,7 @@ export async function postConsulta(req: Request, res: Response) {
       registrationInProgress = true;
       currentStep = 1;
     } else if (registrationInProgress) {
-      if (message.toLowerCase() === "cancelar") {
+      if (message.toLowerCase() === "cancelar"||message.toLowerCase() === "no") {
         registrationInProgress = false;
         currentStep = 0;
         userData = {};
