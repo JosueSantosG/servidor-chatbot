@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import {getUsuario, getUsuarios, postUsuario,postConsulta} from '../controllers/usuarios'
+import {getMaestrias,postConsulta} from '../controllers/usuarios'
 const router = Router();
 //end-points
-router.get('/', getUsuarios);
-router.get('/:id_persona', getUsuario);
-router.post('/', postUsuario);
+router.get('/maestrias', getMaestrias);
+/* router.get('/:id_persona', getUsuario); */
+/* router.post('/registro', postRegistro); */
 router.post('/consulta', postConsulta);
 
 

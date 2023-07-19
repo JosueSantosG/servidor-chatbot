@@ -2,14 +2,14 @@ import express, {Application} from 'express'
 import userRoutes from '../routes/usuario';
 import cors from 'cors';
 import database from '../database/connection';
-import { nlp } from "../chatbotia/train";
+import session from 'express-session';
 
 class Server{
     private app: Application;
     private port : string;
     private apiPaths = {
-        usuarios: '/api/usuarios',
-        chatbot:'/api/chatbot'
+        chatbot:'/api/chatbot',
+        oferta:'/api/oferta'
     }
     constructor(){
         this.app=express();
@@ -36,21 +36,28 @@ class Server{
 
 
     middlewares(){
-        //configurar cors
+        // Configurar cors
         this.app.use(cors());
-
-        //lectura del body
+      
+        // Lectura del body
         this.app.use(express.json());
-        //carpeta publica
+      
+        // Carpeta pública
         this.app.use(express.static('public'));
-
-
-    }
+      
+        // Middleware de sesión
+        this.app.use(session({
+          secret: 'my-secret-key',
+          resave: false,
+          saveUninitialized: true
+        }));
+      }
+      
 
 
     routes(){
-        this.app.use(this.apiPaths.usuarios,userRoutes)
         this.app.use(this.apiPaths.chatbot,userRoutes)
+        this.app.use(this.apiPaths.oferta,userRoutes)
     }
     listen(){
         this.app.listen(this.port, ()=>{

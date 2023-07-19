@@ -16,11 +16,12 @@ const express_1 = __importDefault(require("express"));
 const usuario_1 = __importDefault(require("../routes/usuario"));
 const cors_1 = __importDefault(require("cors"));
 const connection_1 = __importDefault(require("../database/connection"));
+const express_session_1 = __importDefault(require("express-session"));
 class Server {
     constructor() {
         this.apiPaths = {
-            usuarios: '/api/usuarios',
-            chatbot: '/api/chatbot'
+            chatbot: '/api/chatbot',
+            oferta: '/api/oferta'
         };
         this.app = (0, express_1.default)();
         this.port = process.env.PORT || '3000';
@@ -42,16 +43,22 @@ class Server {
         });
     }
     middlewares() {
-        //configurar cors
+        // Configurar cors
         this.app.use((0, cors_1.default)());
-        //lectura del body
+        // Lectura del body
         this.app.use(express_1.default.json());
-        //carpeta publica
+        // Carpeta pública
         this.app.use(express_1.default.static('public'));
+        // Middleware de sesión
+        this.app.use((0, express_session_1.default)({
+            secret: 'my-secret-key',
+            resave: false,
+            saveUninitialized: true
+        }));
     }
     routes() {
-        this.app.use(this.apiPaths.usuarios, usuario_1.default);
         this.app.use(this.apiPaths.chatbot, usuario_1.default);
+        this.app.use(this.apiPaths.oferta, usuario_1.default);
     }
     listen() {
         this.app.listen(this.port, () => {

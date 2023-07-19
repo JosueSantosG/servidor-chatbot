@@ -7,6 +7,7 @@ import { Request, Response } from 'express';
 const { NlpManager } = require('node-nlp');
 export const nlp = new NlpManager({ languages: ['es'], forceNER: true });
 const readline = require('readline');
+
 // Agrega los documentos y respuestas al chatbot
 (async () => {
 nlp.addLanguage('es');
@@ -49,12 +50,12 @@ nlp.addAnswer('es', 'gracias.gracias', 'Es un placer ayudarte. ¡No olvides preg
 
 //TAG: FACULTADES
 nlp.addDocument('es', 'facultades', 'facultades.facultades');
-nlp.addAnswer('es', 'facultades.facultades', 'En total son siete facultades que son: \nCiencia del Mar\nSistemas y Telecomunicaciones\nCiencias de la Educación e Idiomas\nCiencias de la Ingeniería\nCiencias sociales y de la Salud \nCiencias administrativas\nCiencias Agrarias\n \nRecuerda que puedes consultarme más información sobre cada una de ellas.');
-nlp.addAnswer('es', 'facultades.facultades', 'Hay siete facultades disponibles: \nCiencia del Mar\nSistemas y Telecomunicaciones\nCiencias de la Educación e Idiomas\nCiencias de la Ingeniería\nCiencias sociales y de la Salud \nCiencias administrativas\nCiencias Agrarias\n \nRecuerda que puedes consultarme más información sobre cada una de ellas.');
+nlp.addAnswer('es', 'facultades.facultades', 'En total son siete facultades que son: <br>- Ciencia del Mar<br>- Sistemas y Telecomunicaciones<br>- Ciencias de la Educación e Idiomas<br>- Ciencias de la Ingeniería<br>- Ciencias sociales y de la Salud<br>- Ciencias administrativas<br>- Ciencias Agrarias<br><br>Recuerda que puedes consultarme más información sobre cada una de ellas.');
+nlp.addAnswer('es', 'facultades.facultades', 'Hay siete facultades disponibles: <br>- Ciencia del Mar<br>- Sistemas y Telecomunicaciones<br>- Ciencias de la Educación e Idiomas<br>- Ciencias de la Ingeniería<br>- Ciencias sociales y de la Salud<br>- Ciencias administrativas<br>- Ciencias Agrarias<br><br>Recuerda que puedes consultarme más información sobre cada una de ellas.');
 
 //TAG: INFO_FAC_CIENCIAS_DEL_MAR
 nlp.addDocument('es', 'ciencias del mar', 'facultades.fac_cmar');
-nlp.addAnswer('es', 'facultades.fac_cmar', 'La facultad de Ciencias del Mar tiene las siguientes maestrías disponibles: \nMaestría en Acuicultura. \nMaestría en Biodiversidad y Cambio Climático.\n\nRecuerda que puedes solicitar más información sobre estas maestrías.');
+nlp.addAnswer('es', 'facultades.fac_cmar', 'La facultad de Ciencias del Mar tiene las siguientes maestrías disponibles: <br>- Maestría en Acuicultura. <br>- Maestría en Biodiversidad y Cambio Climático.<br><br>Recuerda que puedes solicitar más información sobre estas maestrías.');
 
 //TAG: INFO_MAESTRIA_ACUICULTURA
 nlp.addDocument('es', 'dame más información sobre la maestria en Acuicultura', 'maestria.acuicultura');
@@ -67,12 +68,12 @@ nlp.addDocument('es', 'la maestria de acui tiene modalidad virtual', 'maestria.a
 nlp.addDocument('es', 'que modalidad tiene Acuicultura', 'maestria.acuicultura');
 nlp.addDocument('es', 'cual es la resolucion de Acuicultura', 'maestria.acuicultura');
 
-nlp.addAnswer('es', 'maestria.acuicultura', 'La Maestría en Acuicultura contiene lo siguiente: \nTítulo a obtener: Magíster en Acuicultura\nDuración: 2 Semestres Académicos\nResolución CES: RPC-SO-18-No.293-2023\nModalidad: Híbrida\n\nSi quieres más información visita este link: https://www.upse.edu.ec/postgrado/index.php/acuicultura o comuníquese al correo: maestria.acuicultura@upse.edu.ec');
+nlp.addAnswer('es', 'maestria.acuicultura', 'La Maestría en Acuicultura contiene lo siguiente: <br><strong>Título a obtener:</strong> Magíster en Acuicultura<br><strong>Duración:</strong> 2 Semestres Académicos<br><strong>Resolución CES:</strong> RPC-SO-18-No.293-2023<br><strong>Modalidad:</strong> Híbrida<br><br>Si quieres más información visita este <a href="https://www.upse.edu.ec/postgrado/index.php/acuicultura" target="_blank">enlace</a> o comunícate al correo: <a href="mailto:maestria.acuicultura@upse.edu.ec">maestria.acuicultura@upse.edu.ec</a>');
     //descargar_doc_acuicultura
     nlp.addDocument('es', 'que documentos necesito para acuicultura', 'maestria.docs');
     nlp.addDocument('es', 'como hago para descargar la plantilla de acuicultura', 'maestria.docs');
     nlp.addDocument('es', 'hoja de vida acuicultura', 'maestria.docs');
-    nlp.addAnswer('es','maestria.docs', 'Para el registro en línea necesitarás: hoja de vida, solicitud de admisión, senescyt*, cedula/votación y pago de inscripción. Puedes descargar las platillas aquí -> https://www.upse.edu.ec/postgrado/index.php/acuicultura');
+    nlp.addAnswer('es', 'maestria.docs', 'Para el registro en línea necesitarás: hoja de vida, solicitud de admisión, senescyt*, cedula/votación y pago de inscripción. Puedes descargar las plantillas <a href="https://www.upse.edu.ec/postgrado/index.php/acuicultura" target="_blank">aquí</a>.');
 
     //costo_maestria_acuicultura
     nlp.addDocument('es', 'valor o costo de acuicultura', 'maestria.costo');
@@ -80,7 +81,7 @@ nlp.addAnswer('es', 'maestria.acuicultura', 'La Maestría en Acuicultura contien
     nlp.addDocument('es', 'precio acuicultura', 'maestria.costo');
     nlp.addDocument('es', 'que vale la maestria de acuicultura', 'maestria.costo');
 
-    nlp.addAnswer('es','maestria.costo', 'La maestría de Acuicultura tiene un arancel de $3700 dólares y matrícula de $300 dólares que dan un total de $4000 dólares. \n\nRecuerda que hay diferentes descuentos a la que puedes aplicar');
+    nlp.addAnswer('es','maestria.costo', 'La maestría de Acuicultura tiene un arancel de $3700 dólares y matrícula de $300 dólares que dan un total de $4000 dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar');
 
 
 //TAG: INFO_MAESTRIA_BIODIVERSIDAD
@@ -94,12 +95,12 @@ nlp.addDocument('es', 'la maestria de biodiversidad y cambio climatico tiene mod
 nlp.addDocument('es', 'que modalidad tiene biodiversidad y cambio climatico', 'maestria.biodiv');
 nlp.addDocument('es', 'cual es la resolucion de biodiversidad y cambio climatico', 'maestria.biodiv');
 
-nlp.addAnswer('es', 'maestria.biodiv', 'La Maestría en Biodiversidad y Cambio Climático contiene lo siguiente: \nTítulo a obtener: Magíster en Biodiversidad y Cambio Climático\nDuración: 2 Semestres Académicos\nResolución CES: RPC-SO-51-NO.834-2022\nModalidad: Presencial (En tiempo real)\n\nSi quieres más información visita este link: https://www.upse.edu.ec/postgrado/index.php/biodiversidad-y-cambio-climatico o comuníquese al correo: maestria.biodiversidadcambioclimatico@upse.edu.ec');
+nlp.addAnswer('es', 'maestria.biodiv', 'La Maestría en Biodiversidad y Cambio Climático contiene lo siguiente: <br><b>Título a obtener:</b> Magíster en Biodiversidad y Cambio Climático<br><b>Duración:</b> 2 Semestres Académicos<br><b>Resolución CES:</b> RPC-SO-51-NO.834-2022<br><b>Modalidad:</b> Presencial (En tiempo real)<br><br>Si quieres más información visita este <a href="https://www.upse.edu.ec/postgrado/index.php/biodiversidad-y-cambio-climatico" target="_blank">link </a> o comuníquese al <a href="mailto:maestria.biodiversidadcambioclimatico@upse.edu.ec">correo</a>.');
     //descargar_doc_biodiv
     nlp.addDocument('es', 'que documentos necesito para biodiversidad y cambio climatico', 'maestria.docsbio');
     nlp.addDocument('es', 'como hago para descargar la plantilla de biodiversidad y cambio climatico', 'maestria.docsbio');
     nlp.addDocument('es', 'hoja de vida biodiversidad y cambio climatico', 'maestria.docsbio');
-    nlp.addAnswer('es','maestria.docsbio', 'Para el registro en línea necesitarás: hoja de vida, solicitud de admisión, senescyt*, cedula/votación y pago de inscripción. Puedes descargar las platillas aquí -> https://www.upse.edu.ec/postgrado/index.php/acuicultura');
+    nlp.addAnswer('es', 'maestria.docsbio', 'Para el registro en línea necesitarás: hoja de vida, solicitud de admisión, senescyt*, cédula/votación y pago de inscripción. Puedes descargar las plantillas <a href="https://www.upse.edu.ec/postgrado/index.php/acuicultura">aquí</a>.');
 
     //costo_maestria_biodiv
     nlp.addDocument('es', 'valor o costo de biodiversidad y cambio climatico', 'maestria.costobio');
@@ -107,7 +108,7 @@ nlp.addAnswer('es', 'maestria.biodiv', 'La Maestría en Biodiversidad y Cambio C
     nlp.addDocument('es', 'precio biodiversidad y cambio climatico', 'maestria.costobio');
     nlp.addDocument('es', 'que vale la maestria de biodiversidad y cambio climatico', 'maestria.costobio');
 
-    nlp.addAnswer('es','maestria.costobio', 'La maestría de Biodiversidad y Cambio Climático tiene un arancel de $4000 dólares y matrícula de $0 dólares que dan un total de $4000 dólares. \n\nRecuerda que hay diferentes descuentos a la que puedes aplicar');
+    nlp.addAnswer('es','maestria.costobio', 'La maestría de Biodiversidad y Cambio Climático tiene un arancel de $4000 dólares y matrícula de $0 dólares que dan un total de $4000 dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar');
 
 
 //TAG: INFO_FAC_SISTEMAS_Y_TELECOMUNICACIONES
@@ -156,7 +157,7 @@ nlp.addDocument('es', 'que vale una maestria', 'costo_maestria.costo_maestria');
 nlp.addDocument('es', 'que precio tiene una maestria', 'costo_maestria.costo_maestria');
 nlp.addDocument('es', 'cual es el costo de una maestria', 'costo_maestria.costo_maestria');
 
-nlp.addAnswer('es', 'costo_maestria.costo_maestria', 'Varía dependiendo de la maestría que elijas. Por ejemplo, en la maestría de Tecnologías de la Información tiene un arancel de $5500 dólares y una matrícula de $300 dólares, lo que da un total de $5800 dólares. \n\nRecuerda que también hay diferentes descuentos a los que puedes aplicar.');
+nlp.addAnswer('es', 'costo_maestria.costo_maestria', 'Varía dependiendo de la maestría que elijas. Por ejemplo, en la maestría de Tecnologías de la Información tiene un arancel de $5500 dólares y una matrícula de $300 dólares, lo que da un total de $5800 dólares. <br><br>Recuerda que también hay diferentes descuentos a los que puedes aplicar.');
 
 
 
@@ -176,7 +177,7 @@ nlp.addDocument('es', 'puedo pagar con tarjeta de credito', 'forma_pago.forma_pa
 nlp.addDocument('es', 'es permitido cancelar con financiamiento directo', 'forma_pago.forma_pago');
 nlp.addDocument('es', 'cual es el numero de pagos', 'forma_pago.forma_pago');
 
-nlp.addAnswer('es', 'forma_pago.forma_pago', 'La Empresa Pública (EP) y el Instituto de Postgrado (IPG) de UPSE brindan descuentos diferenciados para que evoluciones a otro nivel, por eso te otorgamos descuentos especiales por tu forma de pago: \nPronto pago efectivo\nPronto pago tarjeta de crédito\nConvenio de financiamiento directo\n\nPara mayor información comuníquese al: 0939937721');
+nlp.addAnswer('es', 'forma_pago.forma_pago', 'La Empresa Pública (EP) y el Instituto de Postgrado (IPG) de UPSE brindan descuentos diferenciados para que evoluciones a otro nivel, por eso te otorgamos descuentos especiales por tu forma de pago: <br>Pronto pago efectivo<br>Pronto pago tarjeta de crédito<br>Convenio de financiamiento directo<br><br>Para mayor información comuníquese al: <b>0939937721');
 
 
 
@@ -184,19 +185,20 @@ nlp.addAnswer('es', 'forma_pago.forma_pago', 'La Empresa Pública (EP) y el Inst
 nlp.addDocument('es', 'descuentos de maestrias', 'descuentos.descuentos');
 
 
-nlp.addAnswer('es', 'descuentos.descuentos', 'Hay diferentes descuentos que puedes aplicar como:\nDescuentos por Convenios Institucionales\nDescuento Institucional\nDescuentos Grupales\nPronto Pago\nDescuentos para: Graduados, Personal Académico, Personal Administrativo');
-nlp.addAnswer('es', 'descuentos.descuentos', 'Estos son los descuentos que puedes aplicar: \nDescuentos por Convenios Institucionales\nDescuento Institucional\nDescuentos Grupales\nPronto Pago\nDescuentos para: Graduados, Personal Académico, Personal Administrativo');
+nlp.addAnswer('es', 'descuentos.descuentos', 'Hay diferentes descuentos que puedes aplicar como:<br>Descuentos por Convenios Institucionales<br>Descuento Institucional<br>Descuentos Grupales<br>Pronto Pago<br>Descuentos para: Graduados, Personal Académico, Personal Administrativo');
+nlp.addAnswer('es', 'descuentos.descuentos', 'Estos son los descuentos que puedes aplicar: <br>Descuentos por Convenios Institucionales<br>Descuento Institucional<br>Descuentos Grupales<br>Pronto Pago<br>Descuentos para: Graduados, Personal Académico, Personal Administrativo');
 
 
 
 //TAG: INSCRIPCION
 nlp.addDocument('es', 'quiero inscribirme', 'inscripcion.inscripcion');
 nlp.addDocument('es', 'como hago para la inscripcion', 'inscripcion.inscripcion');
-nlp.addDocument('es', 'link de inscripcion', 'inscripcion.inscripcion');
 nlp.addDocument('es', 'que necesito para inscribirme', 'inscripcion.inscripcion');
+nlp.addDocument('es', 'donde me inscribo', 'inscripcion.inscripcion');
+nlp.addDocument('es', 'quiero registrarme', 'inscripcion.inscripcion');
+nlp.addDocument("es", "donde me registro", "inscripcion.inscripcion");
 
-nlp.addAnswer('es', 'inscripcion.inscripcion', 'Para inscribirte en una maestría puedes ir a este link y proporcionar tus datos: https://sga.upse.edu.ec/aplicacion/#/register-postgrados.');
-
+nlp.addAnswer("es","inscripcion.inscripcion","Para comenzar el registro, necesitaré que propociones tus datos para poder contactarte. ¿Deseas inscribirte?");
 
 
 //TAG: DOCUMENTACION_ADMISION
@@ -213,7 +215,7 @@ nlp.addDocument('es', 'que debo cumplir para mi admision', 'admision.admision');
 nlp.addDocument('es', 'admision', 'admision.admision');
 nlp.addDocument('es', 'requisitos para la admision', 'admision.admision');
 
-nlp.addAnswer('es', 'admision.admision', 'El aspirante deberá cumplir con los siguientes requisitos:\na. Solicitud de admisión dirigida al Director del IPG.\nb. Aprobar el examen de admisión y test de aptitud.\nc. Asistir a la entrevista personal con el Coordinador del programa.');
+nlp.addAnswer('es', 'admision.admision', 'El aspirante deberá cumplir con los siguientes requisitos:<br>a. Solicitud de admisión dirigida al Director del IPG.<br>b. Aprobar el examen de admisión y test de aptitud.<br>c. Asistir a la entrevista personal con el Coordinador del programa.');
 
 
 //TAG: INFO_BECA_DISCAPACIDAD
@@ -226,7 +228,7 @@ nlp.addDocument('es', 'que documentos debo entregar', 'docum.docum');
 nlp.addDocument('es', 'que necesito para la matriculacion', 'docum.docum');
 nlp.addDocument('es', 'que datos debo subir para matricularme', 'docum.docum');
 
-nlp.addAnswer('es', 'docum.docum', 'Para la matriculación necesitas:\nDos fotos tamaño carnet actualizadas\nComprobante de depósito original del pago de la inscripción.');
+nlp.addAnswer('es', 'docum.docum', 'Para la matriculación necesitas:<br>Dos fotos tamaño carnet actualizadas<br>Comprobante de depósito original del pago de la inscripción.');
 
 
 
@@ -238,14 +240,14 @@ nlp.addDocument('es', 'quiero subir mis documentos', 'subir_docs.subir_docs');
 nlp.addDocument('es', 'donde veo mis calificaciones', 'subir_docs.subir_docs');
 nlp.addDocument('es', 'como hago para subir los requisitos', 'subir_docs.subir_docs');
 
-nlp.addAnswer('es', 'subir_docs.subir_docs', 'Para subir tus documentos, comprobantes de pago o ver tus calificaciones, puedes hacerlo a través de la plataforma SGA -> https://sga.upse.edu.ec/aplicacion/');
+nlp.addAnswer('es', 'subir_docs.subir_docs', 'Para subir tus documentos, comprobantes de pago o ver tus calificaciones, puedes hacerlo a través de la plataforma <a href="https://sga.upse.edu.ec/aplicacion/" target="_blank">SGA</a>.');
 
 
 
 //TAG: PLATAFORMA_MOODLE
 nlp.addDocument('es', 'plataforma de moodle', 'moodle.moodle');
 
-nlp.addAnswer('es', 'moodle.moodle', 'Para ingresar a la plataforma Moodle puedes hacerlo aquí -> https://ava.upse.edu.ec/');
+nlp.addAnswer('es', 'moodle.moodle', 'Para ingresar a la plataforma Moodle puedes hacerlo <a href="https://ava.upse.edu.ec/" target="_blank">aquí</a>.');
 
 
 
@@ -257,7 +259,7 @@ nlp.addDocument('es', 'con quien me comunico para que me resuelvan mi inconvenie
 nlp.addDocument('es', 'como resuelvo mi conflicto', 'soporte.soporte');
 nlp.addDocument('es', 'no puedo entrar a la plataforma moodle', 'soporte.soporte');
 
-nlp.addAnswer('es', 'soporte.soporte', 'Si presentas algún inconveniente, puedes comunicarte con el soporte de TICS en este enlace: http://www.upse.edu.ec/soporte/ o al correo: soporte@upse.edu.ec');
+nlp.addAnswer('es', 'soporte.soporte', 'Si presentas algún inconveniente, puedes comunicarte con el <a href="http://www.upse.edu.ec/soporte/" target="_blank">soporte de TICS</a> o al correo: <a href="mailto:soporte@upse.edu.ec">soporte@upse.edu.ec</a>');
 
 
 
@@ -270,6 +272,10 @@ nlp.addAnswer('es', 'soporte.soporte', 'Si presentas algún inconveniente, puede
   await nlp.train();
   nlp.save();
 
+let registrationInProgress = false;
+let currentStep = 0;
+let userData: any = {};
+
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
@@ -278,21 +284,48 @@ const askQuestion = () => {
   rl.question('Ingrese un mensaje (escriba "quit" para salir): ', async (message: string) => {
     if (message.toLowerCase() === 'quit') {
       rl.close();
-      
       return;
     }
 
     const response = await nlp.process('es', message);
-    if (response.intent === 'None') {
-      console.log('No entiendo lo que quieres decir.');
+    if (response.intent === 'registro.registro') {
+      console.log(response.answer);
+      registrationInProgress = true;
+      currentStep = 1;
+    } else if (registrationInProgress) {
+      switch (currentStep) {
+        case 1:
+          userData.cedula = message;
+          console.log('Dame tu nombre:');
+          currentStep++;
+          break;
+        case 2:
+          userData.nombre = message;
+          console.log('Dame tu apellido:');
+          currentStep++;
+          break;
+        // Agrega más casos según las preguntas que desees hacer
+        default:
+          userData.apellido = message;
+          console.log('Registro completado:');
+          console.log(userData);
+          registrationInProgress = false;
+          break;
+      }
     } else {
-      console.log('Respuesta:', response.answer);
+      if (response.intent === 'None') {
+        console.log('No entiendo lo que quieres decir en traints.');
+      } else {
+        console.log('Respuesta:', response.answer);
+      }
     }
+
     askQuestion();
   });
 };
 
 askQuestion();
+
 })();
 
 
