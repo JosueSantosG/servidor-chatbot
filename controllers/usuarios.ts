@@ -14,6 +14,7 @@ interface UserData {
   maestrias?: any;
   confirm?: string;
 }
+
 /* export const getMaestrias = async (req: Request, res: Response) => {
   const oferta = await Oferta.findAll();
 
@@ -38,16 +39,30 @@ let currentStep = 0;
 let userData: UserData = {};
 
 export const getMaestrias = async () => {
-  const oferta = await Oferta.findAll({ attributes: ["descripcion"],
-  order: [["descripcion", "ASC"]], });
+  const oferta = await Oferta.findAll({
+    attributes: ["descripcion"],
+    order: [["descripcion", "ASC"]],
+  });
   const maestrias = oferta.map((oferta: any) => oferta.descripcion);
   return maestrias;
 };
 
+declare module "express-session" {
+  interface Session {
+    userData?: any;
+    registrationInProgress?: boolean;
+    currentStep?: number;
+  }
+}
 export async function postConsulta(req: Request, res: Response) {
   const message = req.body.message;
   const { body } = req;
   let answer = "";
+  if (!req.session.userData) {
+    req.session.userData = {};
+    req.session.registrationInProgress = false;
+    req.session.currentStep = 0;
+  }
 
   try {
     const response = await nlp.process("es", message);
@@ -57,8 +72,10 @@ export async function postConsulta(req: Request, res: Response) {
       registrationInProgress = true;
       currentStep = 1;
     } else if (registrationInProgress) {
-      if (message.toLowerCase() === "no" ||
-          message.toLowerCase() === "cancelar") {
+      if (
+        message.toLowerCase() === "no" ||
+        message.toLowerCase() === "cancelar"
+      ) {
         registrationInProgress = false;
         currentStep = 0;
         userData = {};
@@ -112,13 +129,14 @@ export async function postConsulta(req: Request, res: Response) {
 
           case 8:
             const selectedMaestria = message.toLowerCase();
-            const lowerCaseMaestrias = userData.maestrias.map((maestria: string) =>
-              maestria.toLowerCase()
+            const lowerCaseMaestrias = userData.maestrias.map(
+              (maestria: string) => maestria.toLowerCase()
             );
 
             if (lowerCaseMaestrias.includes(selectedMaestria)) {
               userData.selectedMaestria = selectedMaestria; // Guardar la maestría seleccionada en los datos del usuario
-              answer ="¡Registro completado! Revise su correo para continuar el proceso.";
+              answer =
+                "¡Registro completado! Revise su correo para continuar el proceso.";
 
               const personaData = { ...body, ...userData };
               const persona = Persona.build(personaData);
@@ -131,7 +149,6 @@ export async function postConsulta(req: Request, res: Response) {
                 "La maestría seleccionada no es válida. Por favor, elige una maestría de la lista.";
             }
             break;
-
         }
       }
     } else {

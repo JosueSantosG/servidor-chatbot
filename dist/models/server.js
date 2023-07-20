@@ -51,9 +51,14 @@ class Server {
         this.app.use(express_1.default.static('public'));
         // Middleware de sesión
         this.app.use((0, express_session_1.default)({
-            secret: 'my-secret-key',
+            secret: 'S3cr3tK3y',
             resave: false,
-            saveUninitialized: true
+            saveUninitialized: false,
+            cookie: {
+                secure: process.env.NODE_ENV === 'production',
+                httpOnly: true,
+                sameSite: 'lax' // Prevenir ataques CSRF
+            }
         }));
     }
     routes() {

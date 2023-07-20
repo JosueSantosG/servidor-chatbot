@@ -38,8 +38,10 @@ let registrationInProgress = false;
 let currentStep = 0;
 let userData = {};
 const getMaestrias = () => __awaiter(void 0, void 0, void 0, function* () {
-    const oferta = yield oferta_1.default.findAll({ attributes: ["descripcion"],
-        order: [["descripcion", "ASC"]], });
+    const oferta = yield oferta_1.default.findAll({
+        attributes: ["descripcion"],
+        order: [["descripcion", "ASC"]],
+    });
     const maestrias = oferta.map((oferta) => oferta.descripcion);
     return maestrias;
 });
@@ -49,6 +51,11 @@ function postConsulta(req, res) {
         const message = req.body.message;
         const { body } = req;
         let answer = "";
+        if (!req.session.userData) {
+            req.session.userData = {};
+            req.session.registrationInProgress = false;
+            req.session.currentStep = 0;
+        }
         try {
             const response = yield train_1.nlp.process("es", message);
             if (response.intent === "inscripcion.inscripcion") {
@@ -116,7 +123,8 @@ function postConsulta(req, res) {
                             const lowerCaseMaestrias = userData.maestrias.map((maestria) => maestria.toLowerCase());
                             if (lowerCaseMaestrias.includes(selectedMaestria)) {
                                 userData.selectedMaestria = selectedMaestria; // Guardar la maestría seleccionada en los datos del usuario
-                                answer = "¡Registro completado! Revise su correo para continuar el proceso.";
+                                answer =
+                                    "¡Registro completado! Revise su correo para continuar el proceso.";
                                 const personaData = Object.assign(Object.assign({}, body), userData);
                                 const persona = usuario_1.default.build(personaData);
                                 yield persona.save();

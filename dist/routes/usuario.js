@@ -4,6 +4,10 @@ const express_1 = require("express");
 const usuarios_1 = require("../controllers/usuarios");
 const router = (0, express_1.Router)();
 //end-points
+/* router.get('/',(req,res)=>{
+    req.session.prueba=req.session.prueba
+    res.send('hola');
+}); */
 router.get('/maestrias', usuarios_1.getMaestrias);
 /* router.get('/:id_persona', getUsuario); */
 /* router.post('/registro', postRegistro); */

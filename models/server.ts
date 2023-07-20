@@ -1,4 +1,4 @@
-import express, {Application} from 'express'
+import express, {Application,Request } from 'express'
 import userRoutes from '../routes/usuario';
 import cors from 'cors';
 import database from '../database/connection';
@@ -47,10 +47,17 @@ class Server{
       
         // Middleware de sesión
         this.app.use(session({
-          secret: 'my-secret-key',
-          resave: false,
-          saveUninitialized: true
-        }));
+            secret: 'S3cr3tK3y',
+            resave: false,
+            saveUninitialized: false,
+            
+            cookie: {
+              secure: process.env.NODE_ENV === 'production', // Usar cookies seguras en producción
+              httpOnly: true, // Prevenir el acceso a las cookies desde JavaScript en el cliente
+              sameSite: 'lax' // Prevenir ataques CSRF
+            }
+          }));
+          
       }
       
 
