@@ -30,11 +30,19 @@ const Persona = connection_1.default.define('persona', {
     email_personal: {
         type: sequelize_1.DataTypes.STRING
     },
+    codigo_vendedor: {
+        type: sequelize_1.DataTypes.STRING
+    },
+    maestria: {
+        type: sequelize_1.DataTypes.STRING
+    },
     estado: {
-        type: sequelize_1.DataTypes.CHAR
+        type: sequelize_1.DataTypes.CHAR,
+        defaultValue: 'A',
     },
     fecha_ing: {
-        type: sequelize_1.DataTypes.TIME
+        type: sequelize_1.DataTypes.TIME,
+        defaultValue: (0, sequelize_1.literal)('CURRENT_TIME'),
     }
 });
 exports.default = Persona;

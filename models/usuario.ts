@@ -1,4 +1,4 @@
-import { DataTypes } from "sequelize";
+import { DataTypes,literal  } from "sequelize";
 import database from "../database/connection";
 
 const Persona = database.define('persona', {
@@ -26,11 +26,19 @@ const Persona = database.define('persona', {
   email_personal: {
     type: DataTypes.STRING
   },
+  codigo_vendedor: {
+    type: DataTypes.STRING
+  },
+  maestria: {
+    type: DataTypes.STRING
+  },
   estado: {
-    type: DataTypes.CHAR
+    type: DataTypes.CHAR,
+    defaultValue: 'A',
   },
   fecha_ing: {
-    type: DataTypes.TIME
+    type: DataTypes.TIME,
+    defaultValue: literal('CURRENT_TIME'),
   }
 });
 

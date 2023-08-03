@@ -9,7 +9,8 @@ class Server{
     private port : string;
     private apiPaths = {
         chatbot:'/api/chatbot',
-        oferta:'/api/oferta'
+        oferta:'/api/oferta',
+        comentario:'/api/chatbot',
     }
     constructor(){
         this.app=express();
@@ -49,7 +50,7 @@ class Server{
         this.app.use(session({
             secret: 'S3cr3tK3y',
             resave: false,
-            saveUninitialized: false,
+            saveUninitialized: true,
             
             cookie: {
               secure: process.env.NODE_ENV === 'production', // Usar cookies seguras en producción
@@ -65,11 +66,11 @@ class Server{
     routes(){
         this.app.use(this.apiPaths.chatbot,userRoutes)
         this.app.use(this.apiPaths.oferta,userRoutes)
+        this.app.use(this.apiPaths.comentario,userRoutes)
     }
     listen(){
         this.app.listen(this.port, ()=>{
             console.log('Servidor en puerto: '+ this.port);
-            console.log('Servidor heroku en puerto: '+ process.env.PORT);
        
         });
     }
