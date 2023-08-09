@@ -51,12 +51,12 @@ class Server{
             secret: 'S3cr3tK3y',
             resave: false,
             saveUninitialized: true,
-            
+            /* 
             cookie: {
               secure: process.env.NODE_ENV === 'production', // Usar cookies seguras en producción
               httpOnly: true, // Prevenir el acceso a las cookies desde JavaScript en el cliente
               sameSite: 'lax' // Prevenir ataques CSRF
-            }
+            } */
           }));
           
       }

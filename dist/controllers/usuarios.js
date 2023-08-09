@@ -36,25 +36,31 @@ function postComentario(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const { comentario } = req.body;
-            const result = yield sentiment.process('es', comentario);
+            const result = yield sentiment.process("es", comentario);
             const sentimentResult = result.vote;
-            if (sentimentResult === 'positive') {
-                const comentario_pos = comentario_pos_1.default.build({ comentario_pos: comentario }); // Asegúrate de que 'build' esté construyendo el objeto correctamente
+            if (sentimentResult === "positive") {
+                const comentario_pos = comentario_pos_1.default.build({
+                    comentario_pos: comentario,
+                }); // Asegúrate de que 'build' esté construyendo el objeto correctamente
                 yield comentario_pos.save();
                 console.log("El mensaje es positivo.");
             }
-            else if (sentimentResult === 'negative') {
-                const comentario_neg = comentario_neg_1.default.build({ comentario_neg: comentario }); // Asegúrate de que 'build' esté construyendo el objeto correctamente
+            else if (sentimentResult === "negative") {
+                const comentario_neg = comentario_neg_1.default.build({
+                    comentario_neg: comentario,
+                }); // Asegúrate de que 'build' esté construyendo el objeto correctamente
                 yield comentario_neg.save();
                 console.log("El mensaje es negativo.");
             }
             else {
-                const comentario_pos = comentario_pos_1.default.build({ comentario_pos: comentario }); // Asegúrate de que 'build' esté construyendo el objeto correctamente
+                const comentario_pos = comentario_pos_1.default.build({
+                    comentario_pos: comentario,
+                }); // Asegúrate de que 'build' esté construyendo el objeto correctamente
                 yield comentario_pos.save();
                 console.log("El mensaje es neutral o no se pudo determinar el sentimiento.");
             }
             console.log({ comentario });
-            res.json({ msg: 'Comentario enviado correctamente.' }); // Respuesta general para ambos casos (positivo o negativo)
+            res.json({ msg: "Comentario enviado correctamente." }); // Respuesta general para ambos casos (positivo o negativo)
         }
         catch (error) {
             console.error("Error al procesar el sentimiento:", error);
@@ -85,21 +91,21 @@ function postConsulta(req, res) {
                     registrationInProgress = false;
                     currentStep = 0;
                     userData = {};
-                    answer = "Entiendo, si cambias de opinión, estaré aquí para ayudarte.";
+                    answer = "Entiendo...🥺 <br>Si cambias de opinión, estaré aquí para ayudarte.😄";
                 }
                 else {
                     switch (currentStep) {
                         case 1:
                             userData.confirm = "temp";
                             answer =
-                                "¡Perfecto! (Puedes cancelar el registro si escribes: <b>cancelar</b>) <br><br> Por favor, proporciona tu número de cédula:";
+                                "¡Perfecto! 🥳 (Puedes cancelar el registro si escribes: <b>cancelar</b>) <br><br> Por favor, proporciona tu número de cédula:";
                             currentStep++;
                             break;
                         case 2:
                             if (!validarNum) {
                                 if (!message.match(validarDig)) {
                                     answer =
-                                        "El número de cédula debe tener 10 dígitos numéricos. Por favor, intenta nuevamente:";
+                                        "El número de cédula debe tener 10 dígitos numéricos 🙂. Por favor, intenta nuevamente:";
                                 }
                                 else {
                                     userData.identificacion = message;
@@ -114,11 +120,11 @@ function postConsulta(req, res) {
                         case 3:
                             if (!message.match(validarLetras)) {
                                 answer =
-                                    "El nombre debe contener solo letras. Por favor, intenta nuevamente:";
+                                    "El nombre debe contener solo letras 🙂. Por favor, intenta nuevamente:";
                             }
                             else if (message.trim().length < 3) {
                                 answer =
-                                    "El nombre debe tener al menos 3 carácteres. Por favor, intenta nuevamente:";
+                                    "El nombre debe tener al menos 3 carácteres 🙂. Por favor, intenta nuevamente:";
                             }
                             else {
                                 userData.nombres = message;
@@ -129,11 +135,11 @@ function postConsulta(req, res) {
                         case 4:
                             if (!message.match(validarLetras)) {
                                 answer =
-                                    "El apellido debe contener solo letras. Por favor, intenta nuevamente:";
+                                    "El apellido debe contener solo letras 🙂. Por favor, intenta nuevamente:";
                             }
                             else if (message.trim().length < 3) {
                                 answer =
-                                    "El apellido debe tener al menos 3 carácteres. Por favor, intenta nuevamente:";
+                                    "El apellido debe tener al menos 3 carácteres 🙂. Por favor, intenta nuevamente:";
                             }
                             else {
                                 userData.apellidos = message;
@@ -159,7 +165,7 @@ function postConsulta(req, res) {
                             if (!validarNum) {
                                 if (!message.match(validarDig)) {
                                     answer =
-                                        "El número de teléfono debe tener 10 dígitos numéricos. Por favor, intenta nuevamente:";
+                                        "El número de teléfono debe tener 10 dígitos numéricos 🙂. Por favor, intenta nuevamente:";
                                 }
                                 else {
                                     userData.celular = message;
@@ -174,7 +180,7 @@ function postConsulta(req, res) {
                         case 7:
                             if (!message.match(validarEmail)) {
                                 answer =
-                                    "La dirección de correo electrónico no es válida. Por favor, intenta nuevamente:";
+                                    "La dirección de correo electrónico no es válida 🙂. Por favor, intenta nuevamente:";
                             }
                             else {
                                 userData.email_personal = message;
@@ -206,7 +212,7 @@ function postConsulta(req, res) {
                                 if (lowerCaseMaestrias.includes(selectedMaestria)) {
                                     userData.selectedMaestria = selectedMaestria;
                                     answer =
-                                        "¡Registro completado! Revise su correo para continuar el proceso.";
+                                        "¡Registro completado! 🤗 <br>Revise su correo para continuar el proceso 📧. <br> Pronto un asesor se contactará contigo 📱👨‍💼.";
                                     const personaData = Object.assign(Object.assign({}, body), userData);
                                     const persona = usuario_1.default.build(personaData);
                                     yield persona.save();
@@ -216,7 +222,7 @@ function postConsulta(req, res) {
                                 }
                                 else {
                                     answer =
-                                        "La maestría seleccionada no es válida. Por favor, elige una maestría de la lista.";
+                                        "La maestría seleccionada no es válida 🙂. Por favor, elige una maestría de la lista.";
                                 }
                             }
                             else {
@@ -228,7 +234,7 @@ function postConsulta(req, res) {
             }
             else {
                 if (response.intent === "None") {
-                    answer = "No entiendo lo que quieres decir.";
+                    answer = "No entiendo lo que quieres decir. 😟";
                 }
                 else {
                     answer = response.answer;
