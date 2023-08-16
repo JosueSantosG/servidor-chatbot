@@ -22,10 +22,10 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
 /* const readline = require('readline'); */
 // Agrega los documentos y respuestas al chatbot
 (() => __awaiter(void 0, void 0, void 0, function* () {
-    /* if (fs.existsSync('./model.nlp')) {
-      nlp.load('./model.nlp');
-      console.info('Modelo cargado correctamente!')
-    }else{ */
+    /*if (fs.existsSync('./model.nlp')) {
+     nlp.load('./model.nlp');
+     console.info('Modelo cargado correctamente!')
+   }else{ */
     exports.nlp.addLanguage('es');
     //TAG: NOMBRE BOT
     exports.nlp.addDocument('es', 'Como te llamas', 'nombot.nombot');
@@ -37,11 +37,11 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'Como estas', 'saludo.saludo');
     exports.nlp.addDocument('es', 'Buenos dias', 'saludo.saludo');
     exports.nlp.addAnswer('es', 'saludo.saludo', `Hola, ¿cómo te puedo ayudar? 😄<br>
-Puedes hacer click en una opción 👇
-<a class="option-link" (click)="selectOption($event)">Información sobre las Facultades 🎓</a>
-<a class="option-link" (click)="selectOption($event)">Quiero inscribirme 📝</a><br>
-O escribe tu pregunta en la caja de texto.
-`);
+  Puedes hacer click en una opción 👇
+  <a class="option-link" (click)="selectOption($event)">Información sobre las Facultades 🎓</a>
+  <a class="option-link" (click)="selectOption($event)">Quiero inscribirme 📝</a><br>
+  O escribe tu pregunta en la caja de texto.
+  `);
     /* nlp.addAnswer('es', 'saludo.saludo', 'Hola, ¿cómo te puedo ayudar?');
     nlp.addAnswer('es', 'saludo.saludo', 'Hola, ¿qué información necesitas?'); */
     //TAG: DESPEDIDA
@@ -65,48 +65,57 @@ O escribe tu pregunta en la caja de texto.
     //TAG: FACULTADES
     exports.nlp.addDocument('es', 'facultades', 'facultades.facultades');
     exports.nlp.addAnswer('es', 'facultades.facultades', `Hay siete facultades disponibles 🎓: <br>
-<a class="option-link" (click)="selectOption($event)">Ciencias del Mar 🌊🔬</a>
-<a class="option-link" (click)="selectOption($event)">Sistemas y Telecomunicaciones 📡💻</a>
-<a class="option-link" (click)="selectOption($event)">Ciencias de la Educación e Idiomas 📚🗣️</a>
-<a class="option-link" (click)="selectOption($event)">Ciencias de la Ingeniería 🛠️🔌</a>
-<a class="option-link" (click)="selectOption($event)">Ciencias Sociales y de la Salud 👥🏥</a>
-<a class="option-link" (click)="selectOption($event)">Ciencias Administrativas 📊💼</a>
-<a class="option-link" (click)="selectOption($event)">Ciencias Agrarias 🌱🚜</a><br>
-
-
-Puedes consultar mas información haciendo click en una facultad, y luego en enviar.`);
+  <a class="option-link" (click)="selectOption($event)">Ciencias del Mar 🌊🔬</a>
+  <a class="option-link" (click)="selectOption($event)">Sistemas y Telecomunicaciones 📡💻</a>
+  <a class="option-link" (click)="selectOption($event)">Ciencias de la Educación e Idiomas 📚🗣️</a>
+  <a class="option-link" (click)="selectOption($event)">Ciencias de la Ingeniería 🛠️🔌</a>
+  <a class="option-link" (click)="selectOption($event)">Ciencias Sociales y de la Salud 👥🏥</a>
+  <a class="option-link" (click)="selectOption($event)">Ciencias Administrativas 📊💼</a>
+  <a class="option-link" (click)="selectOption($event)">Ciencias Agrarias 🌱🚜</a><br>
+  Puedes consultar mas información haciendo click en una facultad, y luego en enviar.`);
     //coso ``
     //TAG: INFO_FAC_CIENCIAS_DEL_MAR
     exports.nlp.addDocument('es', 'ciencias del mar', 'facultades.fac_cmar');
     exports.nlp.addAnswer('es', 'facultades.fac_cmar', `La facultad de <b>Ciencias del Mar</b> tiene las siguientes maestrías disponibles: <br>
-<a class="option-link" (click)="selectOption($event)">Maestría en Acuicultura</a>
-<a class="option-link" (click)="selectOption($event)">Maestría en Biodiversidad y Cambio Climático</a><br>
-Puedes consultar mas información haciendo click en una maestría, y luego en enviar.`);
+  <a class="option-link" (click)="selectOption($event)">Maestría en Acuicultura</a>
+  <a class="option-link" (click)="selectOption($event)">Maestría en Biodiversidad y Cambio Climático</a><br>
+  Puedes consultar mas información haciendo click en una maestría, y luego en enviar.`);
     //TAG: INFO_MAESTRIA_ACUICULTURA
-    exports.nlp.addDocument('es', 'dame más información sobre la maestria en Acuicultura', 'maestria.acuicultura');
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Acuicultura', 'maestria.acuicultura');
     exports.nlp.addDocument('es', 'maestria en Acuicultura', 'maestria.acuicultura');
     exports.nlp.addDocument('es', 'acuicultura', 'maestria.acuicultura');
-    exports.nlp.addDocument('es', 'quiero información de la Maestria en Acuicultura', 'maestria.acuicultura');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en Acuicultura', 'maestria.acuicultura');
     exports.nlp.addDocument('es', 'cuanto dura la maestria de acuicultura', 'maestria.acuicultura');
     exports.nlp.addDocument('es', 'que titulo obtendre en acuicultura', 'maestria.acuicultura');
     exports.nlp.addDocument('es', 'la maestria de acui tiene modalidad virtual', 'maestria.acuicultura');
     exports.nlp.addDocument('es', 'que modalidad tiene Acuicultura', 'maestria.acuicultura');
     exports.nlp.addDocument('es', 'cual es la resolucion de Acuicultura', 'maestria.acuicultura');
     exports.nlp.addDocument('es', 'cual es correo de Acuicultura', 'maestria.acuicultura');
-    exports.nlp.addAnswer('es', 'maestria.acuicultura', 'La Maestría en Acuicultura contiene lo siguiente: <br><strong>Título a obtener:</strong> Magíster en Acuicultura<br><strong>Duración:</strong> 2 Semestres Académicos<br><strong>Resolución CES:</strong> RPC-SO-18-No.293-2023<br><strong>Modalidad:</strong> Híbrida<br><br>Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/acuicultura" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.acuicultura@upse.edu.ec">correo</a>.');
-    //costo_maestria_acuicultura
-    exports.nlp.addDocument('es', 'valor o costo de acuicultura', 'maestria.costo_acui');
-    exports.nlp.addDocument('es', 'pagar en la maestria acuicultura', 'maestria.costo_acui');
-    exports.nlp.addDocument('es', 'precio acuicultura', 'maestria.costo_acui');
+    exports.nlp.addAnswer('es', 'maestria.acuicultura', `La Maestría en <b>Acuicultura</b> contiene lo siguiente: 
+    <br><strong>Título a obtener:</strong> 
+    Magíster en Acuicultura<br><strong>
+    Duración:</strong> 2 Semestres Académicos<br><strong>
+    Resolución CES:</strong> RPC-SO-18-No.293-2023<br><strong>
+    Modalidad:</strong> Híbrida<br><br>Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/acuicultura" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.acuicultura@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Acuicultura?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Acuicultura?</a>
+    `);
+    //costo de acuicultura
+    exports.nlp.addDocument('es', 'Cual es el costo de Acuicultura', 'maestria.costo_acui');
+    exports.nlp.addDocument('es', 'cual es el valor de acuicultura', 'maestria.costo_acui');
+    exports.nlp.addDocument('es', 'cuanto se paga por la maestria de acuicultura', 'maestria.costo_acui');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria acuicultura', 'maestria.costo_acui');
+    exports.nlp.addDocument('es', 'que precio tiene acuicultura', 'maestria.costo_acui');
     exports.nlp.addDocument('es', 'que vale la maestria de acuicultura', 'maestria.costo_acui');
-    exports.nlp.addAnswer('es', 'maestria.costo_acui', `La maestría de Acuicultura tiene un arancel de <b>$3700</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar.
+    exports.nlp.addAnswer('es', 'maestria.costo_acui', `La maestría de <b>Acuicultura</b> tiene un arancel de <b>$3700</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar.
       <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
       `);
     //modulos de acuicultura
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de acuicultura', 'modulos.mod_acui');
     exports.nlp.addDocument('es', 'modulos de la maestria de acuicultura', 'modulos.mod_acui');
     exports.nlp.addDocument('es', 'que modulos tiene acuicultura', 'modulos.mod_acui');
-    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de acuicultura', 'modulos.mod_ti');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de acuicultura', 'modulos.mod_acui');
     exports.nlp.addAnswer('es', 'modulos.mod_acui', `La maestría de <b>Acuicultura</b> tiene: 
       <div>
       <ul>
@@ -116,7 +125,7 @@ Puedes consultar mas información haciendo click en una maestría, y luego en en
       </div>
       <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de acuicultura</a>
       `);
-    //nombre asignaturas acui
+    //nombre asignaturas acuicultura
     exports.nlp.addDocument('es', 'dime las asignaturas de acuicultura', 'modulos.asig_acui');
     exports.nlp.addDocument('es', 'cual es la malla de acuicultura', 'modulos.asig_acui');
     exports.nlp.addDocument('es', 'cuales son las materias de acuicultura', 'modulos.asig_acui');
@@ -135,26 +144,31 @@ Puedes consultar mas información haciendo click en una maestría, y luego en en
     exports.nlp.addDocument('es', 'que modalidad tiene biodiversidad y cambio climatico', 'maestria.biodiv');
     exports.nlp.addDocument('es', 'cual es la resolucion de biodiversidad y cambio climatico', 'maestria.biodiv');
     exports.nlp.addDocument('es', 'cual es correo de biodiversidad', 'maestria.biodiv');
-    exports.nlp.addAnswer('es', 'maestria.biodiv', 'La Maestría en Biodiversidad y Cambio Climático contiene lo siguiente: <br><b>Título a obtener:</b> Magíster en Biodiversidad y Cambio Climático<br><b>Duración:</b> 2 Semestres Académicos<br><b>Resolución CES:</b> RPC-SO-51-NO.834-2022<br><b>Modalidad:</b> Presencial (En tiempo real)<br><br>Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/biodiversidad-y-cambio-climatico" target="_blank">link </a> o comuníquese al 📧 <a href="mailto:maestria.biodiversidadcambioclimatico@upse.edu.ec">correo</a>.');
-    /* //descargar_doc_biodiv
-    nlp.addDocument('es', 'que documentos necesito para biodiversidad y cambio climatico', 'maestria.docsbio');
-    nlp.addDocument('es', 'como hago para descargar la plantilla de biodiversidad y cambio climatico', 'maestria.docsbio');
-    nlp.addDocument('es', 'hoja de vida biodiversidad y cambio climatico', 'maestria.docsbio');
-    nlp.addAnswer('es', 'maestria.docsbio', 'Para el registro en línea necesitarás: hoja de vida, solicitud de admisión senescyt*, cédula/votación y pago de inscripción. Puedes descargar las plantillas <a href="https://www.upse.edu.ec/postgrado/index.php/acuicultura">aquí</a>.');
- */
+    exports.nlp.addAnswer('es', 'maestria.biodiv', `La Maestría en <b>Biodiversidad y Cambio Climático</b> contiene lo siguiente: <br>
+    <b>Título a obtener:</b> Magíster en Biodiversidad y Cambio Climático<br><b>
+    Duración:</b> 2 Semestres Académicos<br><b>
+    Resolución CES:</b> RPC-SO-51-NO.834-2022<br><b>
+    Modalidad:</b> Presencial (En tiempo real)<br><br>
+    Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/biodiversidad-y-cambio-climatico" target="_blank">link </a> o comuníquese al 📧 <a href="mailto:maestria.biodiversidadcambioclimatico@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Biodiversidad?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Biodiversidad?</a>
+    `);
     //costo_maestria_biodiv
-    exports.nlp.addDocument('es', 'valor o costo de biodiversidad y cambio climatico', 'maestria.costobio');
+    exports.nlp.addDocument('es', 'Cual es el costo de biodiversidad', 'maestria.costobio');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria biodiversidad y cambio climatico', 'maestria.costobio');
+    exports.nlp.addDocument('es', 'cual es el valor de biodiversidad y cambio climatico', 'maestria.costobio');
     exports.nlp.addDocument('es', 'pagar en la maestria biodiversidad y cambio climatico', 'maestria.costobio');
     exports.nlp.addDocument('es', 'precio biodiversidad y cambio climatico', 'maestria.costobio');
     exports.nlp.addDocument('es', 'que vale la maestria de biodiversidad y cambio climatico', 'maestria.costobio');
-    exports.nlp.addAnswer('es', 'maestria.costobio', `La maestría de Biodiversidad y Cambio Climático tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar'
+    exports.nlp.addAnswer('es', 'maestria.costobio', `La maestría de <b>Biodiversidad y Cambio Climático</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar'
     <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
       `);
     //modulos de biodiv
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de biodiversidad', 'modulos.mod_biodiv');
     exports.nlp.addDocument('es', 'modulos de la maestria de biodiversidad', 'modulos.mod_biodiv');
     exports.nlp.addDocument('es', 'que modulos tiene biodiversidad', 'modulos.mod_biodiv');
-    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de biodiversidad', 'modulos.mod_ti');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de biodiversidad', 'modulos.mod_biodiv');
     exports.nlp.addAnswer('es', 'modulos.mod_biodiv', `La maestría de <b>Biodiversidad y Cambio Climático</b> tiene: 
       <div>
       <ul>
@@ -191,9 +205,19 @@ Puedes consultar mas información haciendo click en una maestría, y luego en en
     exports.nlp.addDocument('es', 'que modalidad tiene Electronica y Automatizacion', 'maestria.electronica');
     exports.nlp.addDocument('es', 'cual es la resolucion de Electronica y Automatizacion', 'maestria.electronica');
     exports.nlp.addDocument('es', 'cual es correo de Electronica y Automatizacion', 'maestria.electronica');
-    exports.nlp.addAnswer('es', 'maestria.electronica', 'La Maestría en Electrónica y Automatización contiene lo siguiente: <br><strong>Título a obtener:</strong> Magíster en Electrónica y Automatización<br><strong>Duración:</strong> 2 Semestres Académicos<br><strong>Resolución CES:</strong> RPC-SO-03-No.049-2023<br><strong>Modalidad:</strong> En línea<br><br>Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/electronica-y-automatizacion" target="_blank">enlace</a> o comunícate al 📧<a href="mailto:maestria.electronica.automatizaion@upse.edu.ec">correo</a>.');
+    exports.nlp.addAnswer('es', 'maestria.electronica', `La Maestría en <b>Electrónica y Automatización</b> contiene lo siguiente: 
+    <br><strong>Título a obtener:</strong> Magíster en Electrónica y Automatización<br><strong>
+    Duración:</strong> 2 Semestres Académicos<br><strong>
+    Resolución CES:</strong> RPC-SO-03-No.049-2023<br><strong>
+    Modalidad:</strong> En línea<br><br>Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/electronica-y-automatizacion" target="_blank">enlace</a> o comunícate al 📧<a href="mailto:maestria.electronica.automatizaion@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Electrónica y Automatización?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Electrónica y Automatización?</a>
+    `);
     //costo_maestria_electronica
-    exports.nlp.addDocument('es', 'valor o costo de electronica y automatizacion', 'maestria.costoelect');
+    exports.nlp.addDocument('es', 'Cual es el costo de electronica y automatizacion', 'maestria.costoelect');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria electronica y automatizacion', 'maestria.costoelect');
+    exports.nlp.addDocument('es', 'cual es el valor de electronica y automatizacion', 'maestria.costoelect');
     exports.nlp.addDocument('es', 'pagar en la maestria electronica y automatizacion', 'maestria.costoelect');
     exports.nlp.addDocument('es', 'precio electronica y automatizacion', 'maestria.costoelect');
     exports.nlp.addDocument('es', 'que vale la maestria de electronica y automatizacion', 'maestria.costoelect');
@@ -204,7 +228,7 @@ Puedes consultar mas información haciendo click en una maestría, y luego en en
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de electronica', 'modulos.mod_elect');
     exports.nlp.addDocument('es', 'modulos de la maestria de electronica', 'modulos.mod_elect');
     exports.nlp.addDocument('es', 'que modulos tiene electronica', 'modulos.mod_elect');
-    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de electronica', 'modulos.mod_ti');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de electronica', 'modulos.mod_elect');
     exports.nlp.addAnswer('es', 'modulos.mod_elect', `La maestría de <b>Electrónica y Automatización</b> tiene: 
       <div>
       <ul>
@@ -216,7 +240,7 @@ Puedes consultar mas información haciendo click en una maestría, y luego en en
       `);
     //nombre asignaturas electronica
     exports.nlp.addDocument('es', 'dime las asignaturas de electronica', 'modulos.asig_elect');
-    exports.nlp.addDocument('es', 'cual es la malla de electronica', 'modulos.asig_elect');
+    exports.nlp.addDocument('es', 'cual es la malla de Electronica y Automatizacion', 'modulos.asig_elect');
     exports.nlp.addDocument('es', 'cuales son las materias de electronica', 'modulos.asig_elect');
     exports.nlp.addAnswer('es', 'modulos.asig_elect', `Puedes revisar la malla de la maestría de <b>Electrónica y Automatización</b> con sus módulos (asignaturas) con más detalles
       ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/images/2022/maestrias/electronica/malla-electronica.pdf" target="_blank">link</a>.
@@ -233,9 +257,19 @@ Puedes consultar mas información haciendo click en una maestría, y luego en en
     exports.nlp.addDocument('es', 'que modalidad tiene Ciberseguridad', 'maestria.ciberseg');
     exports.nlp.addDocument('es', 'cual es la resolucion de Ciberseguridad', 'maestria.ciberseg');
     exports.nlp.addDocument('es', 'cual es correo de Ciberseguridad', 'maestria.ciberseg');
-    exports.nlp.addAnswer('es', 'maestria.ciberseg', 'La Maestría en Ciberseguridad contiene lo siguiente: <br><strong>Título a obtener:</strong> Magíster en Ciberseguridad<br><strong>Duración:</strong> 2 Semestres Académicos<br><strong>Resolución CES:</strong> RPC-SO-39-NO.627-2022<br><strong>Modalidad:</strong> Online<br><br>Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/ciberseguridad" target="_blank">enlace</a> o comunícate al 📧<a href="mailto:maestria.ciberseguridad@upse.edu.ec">correo</a>.');
+    exports.nlp.addAnswer('es', 'maestria.ciberseg', `La Maestría en <b>Ciberseguridad</b> contiene lo siguiente: 
+    <br><strong>Título a obtener:</strong> Magíster en Ciberseguridad<br><strong>
+    Duración:</strong> 2 Semestres Académicos<br><strong>
+    Resolución CES:</strong> RPC-SO-39-NO.627-2022<br><strong>
+    Modalidad:</strong> Online<br><br>Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/ciberseguridad" target="_blank">enlace</a> o comunícate al 📧<a href="mailto:maestria.ciberseguridad@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Ciberseguridad?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Ciberseguridad?</a>
+    `);
     //costo_maestria_ciberseguridad
-    exports.nlp.addDocument('es', 'valor o costo de ciberseguridad', 'maestria.costociber');
+    exports.nlp.addDocument('es', 'Cual es el costo ciberseguridad', 'maestria.costociber');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria ciberseguridad', 'maestria.costociber');
+    exports.nlp.addDocument('es', 'cual es el valor de ciberseguridad', 'maestria.costociber');
     exports.nlp.addDocument('es', 'pagar en la maestria de ciberseguridad', 'maestria.costociber');
     exports.nlp.addDocument('es', 'precio ciberseguridad', 'maestria.costociber');
     exports.nlp.addDocument('es', 'que vale la maestria de ciberseguridad', 'maestria.costociber');
@@ -246,7 +280,7 @@ Puedes consultar mas información haciendo click en una maestría, y luego en en
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de ciberseguridad', 'modulos.mod_ciber');
     exports.nlp.addDocument('es', 'modulos de la maestria de ciberseguridad', 'modulos.mod_ciber');
     exports.nlp.addDocument('es', 'que modulos tiene ciberseguridad', 'modulos.mod_ciber');
-    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de Ciberseguridad', 'modulos.mod_ti');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de Ciberseguridad', 'modulos.mod_ciber');
     exports.nlp.addAnswer('es', 'modulos.mod_ciber', `La maestría de <b>Ciberseguridad</b> tiene: 
       <div>
       <ul>
@@ -273,20 +307,30 @@ Puedes consultar mas información haciendo click en una maestría, y luego en en
     exports.nlp.addDocument('es', 'que modalidad tiene Telecomunicaciones', 'maestria.telecom');
     exports.nlp.addDocument('es', 'cual es la resolucion de Telecomunicaciones', 'maestria.telecom');
     exports.nlp.addDocument('es', 'cual es el correo de Telecomunicaciones', 'maestria.telecom');
-    exports.nlp.addAnswer('es', 'maestria.telecom', 'La Maestría en Telecomunicaciones contiene lo siguiente: <br><strong>Título a obtener:</strong> Magíster en Telecomunicaciones<br><strong>Duración:</strong> 2 Semestres Académicos<br><strong>Resolución CES:</strong> RPC-SO-51-NO.834-2022<br><strong>Modalidad:</strong> Online<br><br>Si quieres más información visita este 👉<a href="https://www.upse.edu.ec/postgrado/index.php/telecomunicaciones" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.telecomunicaciones@upse.edu.ec">correo</a>.');
+    exports.nlp.addAnswer('es', 'maestria.telecom', `La Maestría en <b>Telecomunicaciones</b> contiene lo siguiente: 
+    <br><strong>Título a obtener:</strong> Magíster en Telecomunicaciones<br><strong>
+    Duración:</strong> 2 Semestres Académicos<br><strong>
+    Resolución CES:</strong> RPC-SO-51-NO.834-2022<br><strong>
+    Modalidad:</strong> Online<br><br>Si quieres más información visita este 👉<a href="https://www.upse.edu.ec/postgrado/index.php/telecomunicaciones" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.telecomunicaciones@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Telecomunicaciones?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Telecomunicaciones?</a>
+    `);
     //costo_maestria_telecomunicaciones
-    exports.nlp.addDocument('es', 'valor o costo de telecomunicaciones', 'maestria.costo_telecom');
+    exports.nlp.addDocument('es', 'Cual es el costo de telecomunicaciones', 'maestria.costo_telecom');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria telecomunicaciones', 'maestria.costo_telecom');
+    exports.nlp.addDocument('es', 'cual es el valor de telecomunicaciones', 'maestria.costo_telecom');
     exports.nlp.addDocument('es', 'pagar en la maestria telecomunicaciones', 'maestria.costo_telecom');
     exports.nlp.addDocument('es', 'precio telecomunicaciones', 'maestria.costo_telecom');
     exports.nlp.addDocument('es', 'que vale la maestria de telecomunicaciones', 'maestria.costo_telecom');
-    exports.nlp.addAnswer('es', 'maestria.costo_telecom', `La maestría de Telecomunicaciones tiene un arancel de <b>$3800</b> dólares y matrícula de <b>$200</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+    exports.nlp.addAnswer('es', 'maestria.costo_telecom', `La maestría de <b>Telecomunicaciones</b> tiene un arancel de <b>$3800</b> dólares y matrícula de <b>$200</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
       <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
       `);
     //modulos de telecomunicaciones
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de telecomunicaciones', 'modulos.mod_telecom');
     exports.nlp.addDocument('es', 'modulos de la maestria de telecomunicaciones', 'modulos.mod_telecom');
     exports.nlp.addDocument('es', 'que modulos tiene telecomunicaciones', 'modulos.mod_telecom');
-    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de Telecomunicaciones', 'modulos.mod_ti');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de Telecomunicaciones', 'modulos.mod_telecom');
     exports.nlp.addAnswer('es', 'modulos.mod_telecom', `La maestría de <b>Telecomunicaciones</b> tiene: 
       <div>
       <ul>
@@ -313,13 +357,23 @@ Puedes consultar mas información haciendo click en una maestría, y luego en en
     exports.nlp.addDocument('es', 'que modalidad tiene Tecnologias de la Informacion', 'maestria.ti');
     exports.nlp.addDocument('es', 'cual es la resolucion de Tecnologias de la Informacion', 'maestria.ti');
     exports.nlp.addDocument('es', 'cual es correo de Tecnologias de la Informacion', 'maestria.ti');
-    exports.nlp.addAnswer('es', 'maestria.ti', 'La Maestría en Tecnologías de la Información contiene lo siguiente: <br><strong>Título a obtener:</strong> Magíster en Tecnologías de la Información<br><strong>Duración:</strong> 2 Semestres Académicos<br><strong>Resolución CES:</strong> RPC-SO-14-NO.287-2020<br><strong>Modalidad:</strong> Presencial<br><br>Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/tecnologias-informacion" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.tic@upse.edu.ec">correo</a>.');
+    exports.nlp.addAnswer('es', 'maestria.ti', `La Maestría en <b>Tecnologías de la Información</b> contiene lo siguiente: 
+    <br><strong>Título a obtener:</strong> Magíster en Tecnologías de la Información<br><strong>
+    Duración:</strong> 2 Semestres Académicos<br><strong>
+    Resolución CES:</strong> RPC-SO-14-NO.287-2020<br><strong>
+    Modalidad:</strong> Presencial<br><br>Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/tecnologias-informacion" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.tic@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Tecnologías de la Información?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Tecnologías de la Información?</a>
+    `);
     //costo_maestria_ti
-    exports.nlp.addDocument('es', 'valor o costo de tecnologias de la informacion', 'maestria.costo_ti');
+    exports.nlp.addDocument('es', 'Cual es el costo de tecnologias de la informacion', 'maestria.costo_ti');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria tecnologias de la informacion', 'maestria.costo_ti');
+    exports.nlp.addDocument('es', 'cual es el valor de tecnologias de la informacion', 'maestria.costo_ti');
     exports.nlp.addDocument('es', 'pagar en la maestria tecnologias de la informacion', 'maestria.costo_ti');
     exports.nlp.addDocument('es', 'precio tecnologias de la informacion', 'maestria.costo_ti');
     exports.nlp.addDocument('es', 'que vale la maestria de tecnologias de la informacion', 'maestria.costo_ti');
-    exports.nlp.addAnswer('es', 'maestria.costo_ti', `La maestría de Tecnologías de la Información tiene un arancel de <b>$5500</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$5800</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+    exports.nlp.addAnswer('es', 'maestria.costo_ti', `La maestría de <b>Tecnologías de la Información</b> tiene un arancel de <b>$5500</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$5800</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
       <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
       `);
     //modulos de tecnologias de la informacion
@@ -352,16 +406,542 @@ Puedes consultar mas información haciendo click en una maestría, y luego en en
   <a class="option-link" (click)="selectOption($event)">Maestría en Psicopedagogía</a>
   <a class="option-link" (click)="selectOption($event)">Maestría en Pedagogía de los Idiomas Nacionales y Extranjeros mención Enseñanza de Inglés</a><br>
   Puedes consultar mas información haciendo click en una maestría, y luego en enviar.`);
+    //TAG: INFO_MAESTRIA_EDUCACION_INICIAL
+    exports.nlp.addDocument('es', 'dame más información sobre la maestria en Educacion Inicial', 'maestria.educacion_inicial');
+    exports.nlp.addDocument('es', 'maestria en Educacion Inicial', 'maestria.educacion_inicial');
+    exports.nlp.addDocument('es', 'Educacion Inicial', 'maestria.educacion_inicial');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en Educacion Inicial', 'maestria.educacion_inicial');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de Educacion Inicial', 'maestria.educacion_inicial');
+    exports.nlp.addDocument('es', 'que título obtendre en Educacion Inicial', 'maestria.educacion_inicial');
+    exports.nlp.addDocument('es', 'la maestria de Educacion Inicial tiene modalidad virtual', 'maestria.educacion_inicial');
+    exports.nlp.addDocument('es', 'que modalidad tiene Educacion Inicial', 'maestria.educacion_inicial');
+    exports.nlp.addDocument('es', 'cual es la resolucion de Educacion Inicial', 'maestria.educacion_inicial');
+    exports.nlp.addDocument('es', 'cual es correo de Educacion Inicial', 'maestria.educacion_inicial');
+    exports.nlp.addAnswer('es', 'maestria.educacion_inicial', `La Maestría en <b>Educación Inicial</b> contiene lo siguiente: <br>
+    <b>Título a obtener:</b> Magíster en Educación Inicial<br>
+    <b>Duración:</b> 2 Semestres Académicos<br>
+    <b>Resolución CES:</b> RPC-SO-04-No.077-2023<br>
+    <b>Modalidad:</b> En línea<br>
+    <br>
+    Si quieres más información visita este 👉<a href="https://www.upse.edu.ec/postgrado/index.php/educacion-inicial" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.educacion.inicial@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Educación Inicial?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Educación Inicial?</a>
+
+    `);
+    //costo maestria Educacion inicial
+    exports.nlp.addDocument('es', 'Cual es el costo de educacion inicial', 'maestria.costo_edu_ini');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria educacion inicial', 'maestria.costo_edu_ini');
+    exports.nlp.addDocument('es', 'cual es el valor de educacion inicial', 'maestria.costo_edu_ini');
+    exports.nlp.addDocument('es', 'pagar en la maestria de educacion inicial', 'maestria.costo_edu_ini');
+    exports.nlp.addDocument('es', 'precio de educacion inicial', 'maestria.costo_edu_ini');
+    exports.nlp.addDocument('es', 'que vale la maestria de educacion inicial', 'maestria.costo_edu_ini');
+    exports.nlp.addAnswer('es', 'maestria.costo_edu_ini', `La maestría de <b>Educacion Inicial</b> tiene un arancel de <b>$2000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$2000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar.
+      <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+      `);
+    //modulos de Educacion Inicial
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de Educacion Inicial', 'modulos.mod_edu_ini');
+    exports.nlp.addDocument('es', 'modulos de la maestria de Educacion Inicial', 'modulos.mod_edu_ini');
+    exports.nlp.addDocument('es', 'que modulos tiene Educacion Inicial', 'modulos.mod_edu_ini');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de Educacion Inicial', 'modulos.mod_edu_ini');
+    exports.nlp.addAnswer('es', 'modulos.mod_edu_ini', `La maestría de <b>Educación Inicial</b> tiene: 
+      <div>
+      <ul>
+      <li>2 periodos académicos</li>
+      <li>10 módulos (asignaturas)</li>
+      </ul> 
+      </div>
+      <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de Educacion Inicial</a>
+      `);
+    //nombre asignaturas Educacion Inicial
+    exports.nlp.addDocument('es', 'dime las asignaturas de Educacion Inicial', 'modulos.asig_edu_ini');
+    exports.nlp.addDocument('es', 'cual es la malla de Educacion Inicial', 'modulos.asig_edu_ini');
+    exports.nlp.addDocument('es', 'cuales son las materias de Educacion Inicial', 'modulos.asig_edu_ini');
+    exports.nlp.addAnswer('es', 'modulos.asig_edu_ini', `Puedes revisar la malla de la maestría de <b>Educacion Inicial</b> con sus módulos (asignaturas) con más detalles
+        ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/images/2022/maestrias/educacion-inicial/malla-educacion-inicial.pdf" target="_blank">link</a>.
+
+      `);
+    //TAG: INFO_MAESTRIA_EDUCACION_BASICA
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Educacion Basica', 'maestria.educacion_basica');
+    exports.nlp.addDocument('es', 'maestria en Educacion Basica', 'maestria.educacion_basica');
+    exports.nlp.addDocument('es', 'Educacion Basica', 'maestria.educacion_basica');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en Educacion Basica', 'maestria.educacion_basica');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de Educacion Basica', 'maestria.educacion_basica');
+    exports.nlp.addDocument('es', 'que titulo obtendre en Educacion Basica', 'maestria.educacion_basica');
+    exports.nlp.addDocument('es', 'la maestria de Educacion Basica tiene modalidad en linea', 'maestria.educacion_basica');
+    exports.nlp.addDocument('es', 'que modalidad tiene Educacion Basica', 'maestria.educacion_basica');
+    exports.nlp.addDocument('es', 'cual es la resolucion de Educacion Basica', 'maestria.educacion_basica');
+    exports.nlp.addDocument('es', 'cual es el correo de Educacion Basica', 'maestria.educacion_basica');
+    exports.nlp.addAnswer('es', 'maestria.educacion_basica', `La Maestría en <b>Educación Básica</b> contiene lo siguiente: 
+    <br><b>Título a obtener:</b> Magíster en Educación Básica<br>
+    <b>Duración:</b> 2 años académicos<br>
+    <b>Resolución CES:</b> RPC-SO-04-No.077-2023<br>
+    <b>Modalidad:</b> En línea<br>
+    <br>
+    Si quieres más información visita este 👉<a href="https://www.upse.edu.ec/postgrado/index.php/educacion-basica" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.educacionbasica@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Educación Básica?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Educación Básica?</a>
+    `);
+    //costo de educación básica
+    exports.nlp.addDocument('es', 'Cual es el costo de Educacion basica', 'maestria.costo_edubasica');
+    exports.nlp.addDocument('es', 'cual es el valor de educacion basica', 'maestria.costo_edubasica');
+    exports.nlp.addDocument('es', 'cuanto se paga por la maestria de educacion basica', 'maestria.costo_edubasica');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria educacion basica', 'maestria.costo_edubasica');
+    exports.nlp.addDocument('es', 'que precio tiene educacion basica', 'maestria.costo_edubasica');
+    exports.nlp.addDocument('es', 'que vale la maestria de educacion basica', 'maestria.costo_edubasica');
+    exports.nlp.addAnswer('es', 'maestria.costo_edubasica', `La maestría de <b>Educacion basica</b> tiene un arancel de <b>$2000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$2000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+      <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+      `);
+    //modulos de educación básica
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de educacion basica', 'modulos.mod_edubasica');
+    exports.nlp.addDocument('es', 'modulos de la maestria de educacion basica', 'modulos.mod_edubasica');
+    exports.nlp.addDocument('es', 'que modulos tiene educacion basica', 'modulos.mod_edubasica');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de educacion basica', 'modulos.mod_edubasica');
+    exports.nlp.addAnswer('es', 'modulos.mod_edubasica', `La maestría de <b>Educación básica</b> tiene: 
+      <div>
+      <ul>
+      <li>2 periodos académicos</li>
+      <li>10 módulos (asignaturas)</li>
+      </ul> 
+      </div>
+      <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de Educacion basica</a>
+      `);
+    //nombre asignaturas educación básica
+    exports.nlp.addDocument('es', 'dime las asignaturas de educacion basica', 'modulos.asig_edubasica');
+    exports.nlp.addDocument('es', 'cual es la malla de educacion basica', 'modulos.asig_edubasica');
+    exports.nlp.addDocument('es', 'cuales son las materias de educacion basica', 'modulos.asig_edubasica');
+    exports.nlp.addAnswer('es', 'modulos.asig_edubasica', `Puedes revisar la malla de la maestría de <b>Educación Básica</b> con sus módulos (asignaturas) con más detalles ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/images/2022/maestrias/educacion-basica/malla-educacion-basica.pdf" target="_blank">link</a>.
+      `);
+    //TAG: INFO_MAESTRIA_EDUCACION_TECNOLOGIA
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Educacion con Mencion en Tecnologia', 'maestria.edutecnol');
+    exports.nlp.addDocument('es', 'maestria en Educacion con Mencion en Tecnologia', 'maestria.edutecnol');
+    exports.nlp.addDocument('es', 'Educacion con Mencion en Tecnologia e Innovacion Educativa', 'maestria.edutecnol');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en Educacion con Mencion', 'maestria.edutecnol');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de Educacion con Mencion en Tecnologia', 'maestria.edutecnol');
+    exports.nlp.addDocument('es', 'que titulo obtendre en Educacion con Mencion en Tecnologia e Innovacion Educativa', 'maestria.edutecnol');
+    exports.nlp.addDocument('es', 'la maestria de Educacion con Mencion en Tecnologia tiene modalidad virtual', 'maestria.edutecnol');
+    exports.nlp.addDocument('es', 'que modalidad tiene Educacion con Mencion en Tecnologia ', 'maestria.edutecnol');
+    exports.nlp.addDocument('es', 'cual es la resolucion de Educacion con Mencion en Tecnologia', 'maestria.edutecnol');
+    exports.nlp.addDocument('es', 'cual es correo de Educacion con Mencion en Tecnologia', 'maestria.edutecnol');
+    exports.nlp.addAnswer('es', 'maestria.edutecnol', `La Maestría en <b>Educación</b> contiene lo siguiente: 
+    <br><b>Título a obtener:</b> Magíster en Educación Básica mención Tecnología E Innovación Educativa<br>
+    <b>Duración:</b> 2 años académicos<br>
+    <b>Resolución CES:</b> RPC-SO-25-NO.393-2022<br>
+    <b>Modalidad:</b> Presencial<br>
+    <br>
+    Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/educacion" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.educacion@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Educación con Mención en Tecnología?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Educación con Mención en Tecnología?</a>
+    `);
+    //costo de educación con mención en tecnología e innovación educativa
+    exports.nlp.addDocument('es', 'Cual es el costo de Educacion con mencion en Tecnologia', 'maestria.costo_eduinnov');
+    exports.nlp.addDocument('es', 'cual es el valor de educacion con mencion en Tecnologia', 'maestria.costo_eduinnov');
+    exports.nlp.addDocument('es', 'cuanto se paga por la maestria de educacion con mencion en Tecnologia', 'maestria.costo_eduinnov');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria educacion con mencion en Tecnologia', 'maestria.costo_eduinnov');
+    exports.nlp.addDocument('es', 'que precio tiene educacion con mencion en Tecnologia', 'maestria.costo_eduinnov');
+    exports.nlp.addDocument('es', 'que vale la maestria de educacion con mencion en Tecnologia', 'maestria.costo_eduinnov');
+    exports.nlp.addAnswer('es', 'maestria.costo_eduinnov', `La maestría de <b>Educación con mención en Tecnología e Innovación Educativa</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+      <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+      `);
+    //modulos de educación con mención en tecnología e innovación educativa
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de educacion con mencion en Tecnologia', 'modulos.mod_eduinnov');
+    exports.nlp.addDocument('es', 'modulos de la maestria de educacion con mencion en Tecnologia', 'modulos.mod_eduinnov');
+    exports.nlp.addDocument('es', 'que modulos tiene educacion con mencion en Tecnologia', 'modulos.mod_eduinnov');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de educacion con mencion en Tecnologia', 'modulos.mod_eduinnov');
+    exports.nlp.addDocument('es', 'cuantos modulos tiene la maestria de educacion con mencion', 'modulos.mod_eduinnov');
+    exports.nlp.addAnswer('es', 'modulos.mod_eduinnov', `La maestría de <b>Educación con mención en Tecnología e Innovación Educativa</b> tiene: 
+      <div>
+      <ul>
+      <li>2 periodos académicos</li>
+      <li>12 módulos (asignaturas)</li>
+      </ul> 
+      </div>
+      <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de Educación con mención en Tecnología</a>
+      `);
+    //nombre asignaturas educación con mención en tecnología e innovación educativa
+    exports.nlp.addDocument('es', 'dime las asignaturas de educacion con mencion en Tecnologia', 'modulos.asig_eduinnov');
+    exports.nlp.addDocument('es', 'cual es la malla de educacion con mencion en Tecnologia', 'modulos.asig_eduinnov');
+    exports.nlp.addDocument('es', 'cuales son las materias de educacion con mencion en Tecnologia', 'modulos.asig_eduinnov');
+    exports.nlp.addAnswer('es', 'modulos.asig_eduinnov', `Puedes revisar la malla de la maestría de <b>Educación con mención en Tecnología e Innovación Educativa</b> con sus módulos (asignaturas) con más detalles ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/images/2022/marzo/mallascurriculares/educacion.pdf" target="_blank">link</a>.
+      `);
+    //TAG: INFO_MAESTRIA_ENTRENAMIENTO_DEPORTIVO
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Entrenamiento Deportivo', 'maestria.entrenamiento');
+    exports.nlp.addDocument('es', 'maestria en Entrenamiento Deportivo', 'maestria.entrenamiento');
+    exports.nlp.addDocument('es', 'Entrenamiento Deportivo', 'maestria.entrenamiento');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en Entrenamiento Deportivo', 'maestria.entrenamiento');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de Entrenamiento Deportivo', 'maestria.entrenamiento');
+    exports.nlp.addDocument('es', 'que titulo obtendre en Entrenamiento Deportivo', 'maestria.entrenamiento');
+    exports.nlp.addDocument('es', 'la maestria de Entrenamiento Deportivo tiene modalidad presencial', 'maestria.entrenamiento');
+    exports.nlp.addDocument('es', 'que modalidad tiene Entrenamiento Deportivo', 'maestria.entrenamiento');
+    exports.nlp.addDocument('es', 'cual es la resolucion de Entrenamiento Deportivo', 'maestria.entrenamiento');
+    exports.nlp.addDocument('es', 'cual es correo de Entrenamiento Deportivo', 'maestria.entrenamiento');
+    exports.nlp.addAnswer('es', 'maestria.entrenamiento', `La Maestría en <b>Entrenamiento Deportivo</b> contiene lo siguiente: 
+    <br><b>Título a obtener:</b> Magíster en Entrenamiento Deportivo<br>
+    <b>Duración:</b> 2 Semestres Académicos<br>
+    <b>Resolución CES:</b> RPC-SO-21-NO.449-2020<br>
+    <b>Modalidad:</b> Presencial<br>
+    <br>
+    Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/entrenamiento-deportivo" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.entrenamiento@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Entrenamiento Deportivo?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Entrenamiento Deportivo?</a>
+    `);
+    //costo de entrenamiento deportivo
+    exports.nlp.addDocument('es', 'Cual es el costo de Entrenamiento Deportivo', 'maestria.costo_entdep');
+    exports.nlp.addDocument('es', 'cual es el valor de entrenamiento deportivo', 'maestria.costo_entdep');
+    exports.nlp.addDocument('es', 'cuanto se paga por la maestria de entrenamiento deportivo', 'maestria.costo_entdep');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria entrenamiento deportivo', 'maestria.costo_entdep');
+    exports.nlp.addDocument('es', 'que precio tiene entrenamiento deportivo', 'maestria.costo_entdep');
+    exports.nlp.addDocument('es', 'que vale la maestria de entrenamiento deportivo', 'maestria.costo_entdep');
+    exports.nlp.addAnswer('es', 'maestria.costo_entdep', `La maestría de <b>Entrenamiento Deportivo</b> tiene un arancel de <b>$3200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$3500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+      <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+      `);
+    //modulos de entrenamiento deportivo
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de entrenamiento deportivo', 'modulos.mod_entdep');
+    exports.nlp.addDocument('es', 'modulos de la maestria de entrenamiento deportivo', 'modulos.mod_entdep');
+    exports.nlp.addDocument('es', 'que modulos tiene entrenamiento deportivo', 'modulos.mod_entdep');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de entrenamiento deportivo', 'modulos.mod_entdep');
+    exports.nlp.addAnswer('es', 'modulos.mod_entdep', `La maestría de <b>Entrenamiento Deportivo</b> tiene: 
+      <div>
+      <ul>
+      <li>2 periodos académicos</li>
+      <li>10 módulos (asignaturas)</li>
+      </ul> 
+      </div>
+      <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de Entrenamiento Deportivo</a>
+      `);
+    //nombre asignaturas entrenamiento deportivo
+    exports.nlp.addDocument('es', 'dime las asignaturas de entrenamiento deportivo', 'modulos.asig_entdep');
+    exports.nlp.addDocument('es', 'cual es la malla de entrenamiento deportivo', 'modulos.asig_entdep');
+    exports.nlp.addDocument('es', 'cuales son las materias de entrenamiento deportivo', 'modulos.asig_entdep');
+    exports.nlp.addAnswer('es', 'modulos.asig_entdep', `Puedes revisar la malla de la maestría de <b>Entrenamiento Deportivo</b> con sus módulos (asignaturas) con más detalles ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/images/2022/marzo/mallascurriculares/entrenamientodeportivo.pdf" target="_blank">link</a>.
+      `);
+    //TAG: INFO_MAESTRIA_PSICOPEDAGOGIA
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Psicopedagogia', 'maestria.psicopedagogia');
+    exports.nlp.addDocument('es', 'maestria en Psicopedagogia', 'maestria.psicopedagogia');
+    exports.nlp.addDocument('es', 'Psicopedagogia', 'maestria.psicopedagogia');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en Psicopedagogia', 'maestria.psicopedagogia');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de Psicopedagogia', 'maestria.psicopedagogia');
+    exports.nlp.addDocument('es', 'que titulo obtendre en Psicopedagogia', 'maestria.psicopedagogia');
+    exports.nlp.addDocument('es', 'la maestria de Psicopedagogia tiene modalidad presencial', 'maestria.psicopedagogia');
+    exports.nlp.addDocument('es', 'que modalidad tiene Psicopedagogia', 'maestria.psicopedagogia');
+    exports.nlp.addDocument('es', 'cual es la resolucion de Psicopedagogia', 'maestria.psicopedagogia');
+    exports.nlp.addDocument('es', 'cual es correo de Psicopedagogia', 'maestria.psicopedagogia');
+    exports.nlp.addAnswer('es', 'maestria.psicopedagogia', `La Maestría en <b>Psicopedagogía</b> contiene lo siguiente: 
+    <br><b>Título a obtener:</b> Magíster en Psicopedagogía<br>
+    <b>Duración:</b> 3 Semestres Académicos<br>
+    <b>Resolución CES:</b> RPC-SO-21-NO.445-2020<br>
+    <b>Modalidad:</b> Presencial<br>
+    <br>
+    Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/psicopedagogia" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.psicopedagogia@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Psicopedagogia?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Psicopedagogia?</a>
+    `);
+    //costo de psicopedagogía
+    exports.nlp.addDocument('es', 'Cual es el costo de Psicopedagogia', 'maestria.costo_psicoped');
+    exports.nlp.addDocument('es', 'cual es el valor de psicopedagogia', 'maestria.costo_psicoped');
+    exports.nlp.addDocument('es', 'cuanto se paga por la maestria de psicopedagogia', 'maestria.costo_psicoped');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria psicopedagogia', 'maestria.costo_psicoped');
+    exports.nlp.addDocument('es', 'que precio tiene psicopedagogia', 'maestria.costo_psicoped');
+    exports.nlp.addDocument('es', 'que vale la maestria de psicopedagogia', 'maestria.costo_psicoped');
+    exports.nlp.addAnswer('es', 'maestria.costo_psicoped', `La maestría de <b>Psicopedagogía</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+      <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+      `);
+    //modulos de psicopedagogía
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de psicopedagogia', 'modulos.mod_psicoped');
+    exports.nlp.addDocument('es', 'modulos de la maestria de psicopedagogia', 'modulos.mod_psicoped');
+    exports.nlp.addDocument('es', 'que modulos tiene psicopedagogia', 'modulos.mod_psicoped');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de psicopedagogia', 'modulos.mod_psicoped');
+    exports.nlp.addAnswer('es', 'modulos.mod_psicoped', `La maestría de <b>Psicopedagogía</b> tiene: 
+      <div>
+      <ul>
+      <li>3 periodos académicos</li>
+      <li>13 módulos (asignaturas)</li>
+      </ul> 
+      </div>
+      <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de Psicopedagogía</a>
+      `);
+    //nombre asignaturas psicopedagogía
+    exports.nlp.addDocument('es', 'dime las asignaturas de psicopedagogia', 'modulos.asig_psicoped');
+    exports.nlp.addDocument('es', 'cual es la malla de psicopedagogia', 'modulos.asig_psicoped');
+    exports.nlp.addDocument('es', 'cuales son las materias de psicopedagogia', 'modulos.asig_psicoped');
+    exports.nlp.addAnswer('es', 'modulos.asig_psicoped', `Puedes revisar la malla de la maestría de <b>Psicopedagogía</b> con sus módulos (asignaturas) con más detalles ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/images/2022/marzo/mallascurriculares/psicopedagogia.pdf" target="_blank">link</a>.
+      `);
+    //TAG: INFO_MAESTRIA_PEDAGOGIA_IDIOMAS
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Pedagogia de los Idiomas Nacionales y Extranjeros mencion Enseñanza de Ingles', 'maestria.pedagogiaidiomas');
+    exports.nlp.addDocument('es', 'maestria en Pedagogia de los Idiomas Nacionales y Extranjeros mencion Enseñanza de Ingles', 'maestria.pedagogiaidiomas');
+    exports.nlp.addDocument('es', 'Pedagogia de los Idiomas Nacionales y Extranjeros mencion Enseñanza de Ingles', 'maestria.pedagogiaidiomas');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en Pedagogia de los Idiomas Nacionales y Extranjeros mencion Enseñanza de Ingles', 'maestria.pedagogiaidiomas');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de Pedagogia de los Idiomas Nacionales y Extranjeros mencion Enseñanza de Ingles', 'maestria.pedagogiaidiomas');
+    exports.nlp.addDocument('es', 'que titulo obtendre en Pedagogia de los Idiomas Nacionales y Extranjeros mencion Enseñanza de Ingles', 'maestria.pedagogiaidiomas');
+    exports.nlp.addDocument('es', 'la maestria de Pedagogia de los Idiomas Nacionales y Extranjeros mencion Enseñanza de Ingles tiene modalidad presencial', 'maestria.pedagogiaidiomas');
+    exports.nlp.addDocument('es', 'que modalidad tiene Pedagogia de los Idiomas Nacionales y Extranjeros mencion Enseñanza de Ingles', 'maestria.pedagogiaidiomas');
+    exports.nlp.addDocument('es', 'cual es la resolucion de Pedagogia de los Idiomas Nacionales y Extranjeros mencion Enseñanza de Ingles', 'maestria.pedagogiaidiomas');
+    exports.nlp.addDocument('es', 'cual es correo de Pedagogia de los Idiomas Nacionales y Extranjeros mencion Enseñanza de Ingles', 'maestria.pedagogiaidiomas');
+    exports.nlp.addAnswer('es', 'maestria.pedagogiaidiomas', `La Maestría en <b>Pedagogía de los Idiomas Nacionales y Extranjeros</b> contiene lo siguiente: 
+    <br><b>Título a obtener:</b> Magíster en Pedagogía de los Idiomas Nacionales y Extranjeros mención Enseñanza de Inglés<br>
+    <b>Duración:</b> 2 Semestres Académicos<br>
+    <b>Resolución CES:</b> RPC-SO-21-NO.440-2020<br>
+    <b>Modalidad:</b> Presencial<br>
+    <br>
+    Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/idiomas-nacionales-extranjeros" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.idiomas@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Pedagogía de los Idiomas?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Pedagogía de los Idiomas?</a>
+    `);
+    //costo de pedagogía de los idiomas nacionales y extranjeros con mención en enseñanza de inglés
+    exports.nlp.addDocument('es', 'Cual es el costo de Pedagogia de los Idiomas', 'maestria.costo_pedidiomas');
+    exports.nlp.addDocument('es', 'cual es el valor de pedagogia de los idiomas nacionales y extranjeros con mencion en enseñanza de ingles', 'maestria.costo_pedidiomas');
+    exports.nlp.addDocument('es', 'cuanto se paga por la maestria de pedagogia de los idiomas nacionales y extranjeros con mencion en enseñanza de ingles', 'maestria.costo_pedidiomas');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria pedagogia de los idiomas nacionales y extranjeros con mencion en enseñanza de ingles', 'maestria.costo_pedidiomas');
+    exports.nlp.addDocument('es', 'que precio tiene pedagogia de los idiomas nacionales y extranjeros con mencion en enseñanza de ingles', 'maestria.costo_pedidiomas');
+    exports.nlp.addDocument('es', 'que vale la maestria de pedagogia de los idiomas nacionales y extranjeros con mencion en enseñanza de ingles', 'maestria.costo_pedidiomas');
+    exports.nlp.addAnswer('es', 'maestria.costo_pedidiomas', `La maestría de <b>Pedagogía de los Idiomas Nacionales y Extranjeros</b> con mencion en <b>Enseñanza de ingles</b> tiene un arancel de <b>$3700</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+      <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+      `);
+    //modulos de pedagogía de los idiomas nacionales y extranjeros con mencion en enseñanza de ingles
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de pedagogia de los idiomas nacionales y extranjeros con mencion en enseñanza de ingles', 'modulos.mod_pedidiomas');
+    exports.nlp.addDocument('es', 'modulos de la maestria de pedagogia de los idiomas nacionales y extranjeros con mencion en enseñanza de ingles', 'modulos.mod_pedidiomas');
+    exports.nlp.addDocument('es', 'que modulos tiene pedagogia de los idiomas nacionales y extranjeros con mencion en enseñanza de ingles', 'modulos.mod_pedidiomas');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de pedagogia de los idiomas nacionales y extranjeros con mencion en enseñanza de ingles', 'modulos.mod_pedidiomas');
+    exports.nlp.addAnswer('es', 'modulos.mod_pedidiomas', `La maestría de <b>Pedagogía de los Idiomas Nacionales y Extranjeros</b> con mencion en <b>Enseñanza de ingles</b> tiene: 
+      <div>
+      <ul>
+      <li>2 periodos académicos</li>
+      <li>10 módulos (asignaturas)</li>
+      </ul> 
+      </div>
+      <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de Pedagogía de los Idiomas</a>
+      `);
+    //nombre asignaturas pedagogía de los idiomas nacionales y extranjeros con mencion en enseñanza de ingles
+    exports.nlp.addDocument('es', 'dime las asignaturas de pedagogia de los idiomas nacionales', 'modulos.asig_pedidiomas');
+    exports.nlp.addDocument('es', 'cual es la malla de pedagogia de los idiomas nacionales', 'modulos.asig_pedidiomas');
+    exports.nlp.addDocument('es', 'cuales son las materias de pedagogia de los idiomas nacionales y extranjeros con mencion en enseñanza de ingles', 'modulos.asig_pedidiomas');
+    exports.nlp.addAnswer('es', 'modulos.asig_pedidiomas', `Puedes revisar la malla de la maestría de <b>Pedagogía de los Idiomas Nacionales y Extranjeros</b> con mencion en <b>Enseñanza de ingles</b> con sus módulos (asignaturas) con más detalles ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/images/2022/maestrias/pine/malla-pine-corr.pdf" target="_blank">link</a>.
+      `);
     //TAG: INFO_FAC_CIENCIAS_INGENIERIA
     exports.nlp.addDocument('es', 'ciencias de la ingenieria', 'facultades.fac_cing');
     exports.nlp.addAnswer('es', 'facultades.fac_cing', `La facultad de <b>Ciencias de la Ingeniería</b> tiene las siguientes maestrías disponibles: <br>
   <a class="option-link" (click)="selectOption($event)">Maestría en Gestión Ambiental</a>
-  <a class="option-link" (click)="selectOption($event)">Maestría en Gestión de Riesgos</a>
-  <a class="option-link" (click)="selectOption($event)">Maestría en Ingeniería Civil</a>
+  <a class="option-link" (click)="selectOption($event)">Maestría en Gestión de Riesgos mención Prevención de Riesgos Laborales</a>
+  <a class="option-link" (click)="selectOption($event)">Maestría en Ingeniería Civil mención Gestión de la Construcción</a>
   <a class="option-link" (click)="selectOption($event)">Maestría en Petróleos</a><br>
   Puedes consultar mas información haciendo click en una maestría, y luego en enviar.`);
+    //TAG: INFO_MAESTRIA_GESTION_AMBIENTAL
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en gestion Ambiental', 'maestria.gestionambiental');
+    exports.nlp.addDocument('es', 'maestria en gestion Ambiental', 'maestria.gestionambiental');
+    exports.nlp.addDocument('es', 'gestion Ambiental', 'maestria.gestionambiental');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en gestion Ambiental', 'maestria.gestionambiental');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de gestion Ambiental', 'maestria.gestionambiental');
+    exports.nlp.addDocument('es', 'que titulo obtendre en gestion Ambiental', 'maestria.gestionambiental');
+    exports.nlp.addDocument('es', 'la maestria de gestion Ambiental tiene modalidad presencial', 'maestria.gestionambiental');
+    exports.nlp.addDocument('es', 'que modalidad tiene gestion Ambiental', 'maestria.gestionambiental');
+    exports.nlp.addDocument('es', 'cual es la resolucion de gestion Ambiental', 'maestria.gestionambiental');
+    exports.nlp.addDocument('es', 'cual es correo de gestion Ambiental', 'maestria.gestionambiental');
+    exports.nlp.addAnswer('es', 'maestria.gestionambiental', `La Maestría en <b>Gestión Ambiental</b> contiene lo siguiente: 
+    <br><b>Título a obtener:</b> Magíster en Gestión Ambiental<br>
+    <b>Duración:</b> 2 Semestres Académicos<br>
+    <b>Resolución CES:</b> RPC-SO-51-NO.834-2022<br>
+    <b>Modalidad:</b> Presencial<br>
+    <br>
+    Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/gestion-ambiental" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.gestionambiental@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Gestión Ambiental?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Gestión Ambiental?</a>
+    `);
+    //costo de gestión ambiental
+    exports.nlp.addDocument('es', 'Cual es el costo de gestion Ambiental', 'maestria.costo_ambiental');
+    exports.nlp.addDocument('es', 'cual es el valor de gestion ambiental', 'maestria.costo_ambiental');
+    exports.nlp.addDocument('es', 'cuanto se paga por la maestria de gestion ambiental', 'maestria.costo_ambiental');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria gestion ambiental', 'maestria.costo_ambiental');
+    exports.nlp.addDocument('es', 'que precio tiene gestion ambiental', 'maestria.costo_ambiental');
+    exports.nlp.addDocument('es', 'que vale la maestria de gestion ambiental', 'maestria.costo_ambiental');
+    exports.nlp.addAnswer('es', 'maestria.costo_ambiental', `La maestría de <b>Gestión Ambiental</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+      <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+      `);
+    //modulos de gestión ambiental
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de gestion ambiental', 'modulos.mod_ambiental');
+    exports.nlp.addDocument('es', 'modulos de la maestria de gestion ambiental', 'modulos.mod_ambiental');
+    exports.nlp.addDocument('es', 'que modulos tiene gestion ambiental', 'modulos.mod_ambiental');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de gestion ambiental', 'modulos.mod_ambiental');
+    exports.nlp.addAnswer('es', 'modulos.mod_ambiental', `La maestría de <b>Gestión Ambiental</b> tiene: 
+      <div>
+      <ul>
+      <li>2 periodos académicos</li>
+      <li>10 módulos (asignaturas)</li>
+      </ul> 
+      </div>
+      <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de Gestión Ambiental</a>
+      `);
+    //nombre asignaturas gestión ambiental
+    exports.nlp.addDocument('es', 'dime las asignaturas de gestion ambiental', 'modulos.asig_ambiental');
+    exports.nlp.addDocument('es', 'cual es la malla de gestion ambiental', 'modulos.asig_ambiental');
+    exports.nlp.addDocument('es', 'cuales son las materias de gestion ambiental', 'modulos.asig_ambiental');
+    exports.nlp.addAnswer('es', 'modulos.asig_ambiental', `Puedes revisar la malla de la maestría de <b>Gestión Ambiental</b> con sus módulos (asignaturas) con más detalles ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/images/2022/marzo/mallascurriculares/gestion-ambiental.pdf" target="_blank">link</a>.
+      `);
+    //TAG: INFO_MAESTRIA_RIESGOS
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Gestion de Riesgos mencion Prevencion de Riesgos Laborales', 'maestria.riesgos');
+    exports.nlp.addDocument('es', 'maestria en Gestion de Riesgos', 'maestria.riesgos');
+    exports.nlp.addDocument('es', 'Gestion de Riesgos mencion Prevencion de Riesgos Laborales', 'maestria.riesgos');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en Gestion de Riesgos mencion Prevencion de Riesgos Laborales', 'maestria.riesgos');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de Gestion de Riesgos mencion Prevencion de Riesgos Laborales', 'maestria.riesgos');
+    exports.nlp.addDocument('es', 'que titulo obtendre en Gestion de Riesgos mencion Prevencion de Riesgos Laborales', 'maestria.riesgos');
+    exports.nlp.addDocument('es', 'la maestria de Gestion de Riesgos mencion Prevencion de Riesgos Laborales tiene modalidad presencial', 'maestria.riesgos');
+    exports.nlp.addDocument('es', 'que modalidad tiene Gestion de Riesgos mencion Prevencion de Riesgos Laborales', 'maestria.riesgos');
+    exports.nlp.addDocument('es', 'cual es la resolucion de Gestion de Riesgos mencion Prevencion de Riesgos Laborales', 'maestria.riesgos');
+    exports.nlp.addDocument('es', 'cual es correo de Gestion de Riesgos mencion Prevencion de Riesgos Laborales', 'maestria.riesgos');
+    exports.nlp.addAnswer('es', 'maestria.riesgos', `La Maestría en <b>Gestión de Riesgos</b> contiene lo siguiente: 
+    <br><b>Título a obtener:</b> Magíster en Gestión de Riesgos mención Prevención de Riesgos Laborales<br>
+    <b>Duración:</b> 2 Semestres Académicos<br>
+    <b>Resolución CES:</b> RPC-SO-01-N.016-2023<br>
+    <b>Modalidad:</b> Presencial<br>
+    <br>
+    Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/gestion-de-riesgos" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.gestionriesgos@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Gestion de Riesgos?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Gestion de Riesgos?</a>
+    `);
+    //costo de gestión de riesgos
+    exports.nlp.addDocument('es', 'Cual es el costo de gestion de Riesgos', 'maestria.costo_riesgos');
+    exports.nlp.addDocument('es', 'cual es el valor de gestion de riesgos', 'maestria.costo_riesgos');
+    exports.nlp.addDocument('es', 'cuanto se paga por la maestria de gestion de riesgos', 'maestria.costo_riesgos');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria gestion de riesgos', 'maestria.costo_riesgos');
+    exports.nlp.addDocument('es', 'que precio tiene gestion de riesgos', 'maestria.costo_riesgos');
+    exports.nlp.addDocument('es', 'que vale la maestria de gestion de riesgos', 'maestria.costo_riesgos');
+    exports.nlp.addAnswer('es', 'maestria.costo_riesgos', `La maestría de <b>Gestión de Riesgos mención Prevención de Riesgos Laborales</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+      <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+      `);
+    //modulos de gestión de riesgos
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de gestion de riesgos', 'modulos.mod_riesgos');
+    exports.nlp.addDocument('es', 'modulos de la maestria de gestion de riesgos', 'modulos.mod_riesgos');
+    exports.nlp.addDocument('es', 'que modulos tiene gestion de riesgos', 'modulos.mod_riesgos');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de gestion de riesgos', 'modulos.mod_riesgos');
+    exports.nlp.addAnswer('es', 'modulos.mod_riesgos', `La maestría de <b>Gestión de Riesgos mención Prevención de Riesgos Laborales</b> tiene: 
+      <div>
+      <ul>
+      <li>2 periodos académicos</li>
+      <li>10 módulos (asignaturas)</li>
+      </ul> 
+      </div>
+      <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de Gestión de Riesgos</a>
+      `);
+    //nombre asignaturas gestión de riesgos
+    exports.nlp.addDocument('es', 'dime las asignaturas de gestion de riesgos', 'modulos.asig_riesgos');
+    exports.nlp.addDocument('es', 'cual es la malla de gestion de riesgos', 'modulos.asig_riesgos');
+    exports.nlp.addDocument('es', 'cuales son las materias de gestion de riesgos', 'modulos.asig_riesgos');
+    exports.nlp.addAnswer('es', 'modulos.asig_riesgos', `Puedes revisar la malla de la maestría de <b>Gestión de Riesgos mención Prevención de Riesgos Laborales</b> con sus módulos (asignaturas) con más detalles ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/images/2022/marzo/mallascurriculares/malla_griesgos.pdf" target="_blank">link</a>.
+      `);
+    //TAG: INFO_MAESTRIA_CIVIL
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Ingenieria Civil', 'maestria.civil');
+    exports.nlp.addDocument('es', 'maestria en Ingenieria Civil', 'maestria.civil');
+    exports.nlp.addDocument('es', 'Ingenieria Civil', 'maestria.civil');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en Ingenieria Civil', 'maestria.civil');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de Ingenieria Civil', 'maestria.civil');
+    exports.nlp.addDocument('es', 'que titulo obtendre en Ingenieria Civil', 'maestria.civil');
+    exports.nlp.addDocument('es', 'la maestria de Ingenieria Civil tiene modalidad presencial', 'maestria.civil');
+    exports.nlp.addDocument('es', 'que modalidad tiene Ingenieria Civil', 'maestria.civil');
+    exports.nlp.addDocument('es', 'cual es la resolucion de Ingenieria Civil', 'maestria.civil');
+    exports.nlp.addDocument('es', 'cual es correo de Ingenieria Civil', 'maestria.civil');
+    exports.nlp.addAnswer('es', 'maestria.civil', `La Maestría en <b>Ingeniería Civil</b> contiene lo siguiente: 
+    <br><b>Título a obtener:</b> Magíster en Ingeniería Civil mención Gestión de la Construcción<br>
+    <b>Duración:</b> 3 Semestres Académicos<br>
+    <b>Resolución CES:</b> RPC-SO-25-NO.571-2020<br>
+    <b>Modalidad:</b> Presencial<br>
+    <br>
+    Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/ingenieria-civil" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.civil@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Ingenieria Civil?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Ingenieria Civil?</a>
+    `);
+    //costo de ingeniería civil
+    exports.nlp.addDocument('es', 'Cual es el costo de Ingenieria Civil', 'maestria.costo_ingenieria');
+    exports.nlp.addDocument('es', 'cual es el valor de ingenieria civil', 'maestria.costo_ingenieria');
+    exports.nlp.addDocument('es', 'cuanto se paga por la maestria de ingenieria civil', 'maestria.costo_ingenieria');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria ingenieria civil', 'maestria.costo_ingenieria');
+    exports.nlp.addDocument('es', 'que precio tiene ingenieria civil', 'maestria.costo_ingenieria');
+    exports.nlp.addDocument('es', 'que vale la maestria de ingenieria civil', 'maestria.costo_ingenieria');
+    exports.nlp.addAnswer('es', 'maestria.costo_ingenieria', `La maestría de <b>Ingeniería Civil mención Gestión de la Construcción</b> tiene un arancel de <b>$5500</b> dólares y matrícula de <b>$350</b> dólares que dan un total de <b>$5850</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+      <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+      `);
+    //modulos de ingeniería civil
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de ingenieria civil', 'modulos.mod_ingenieria');
+    exports.nlp.addDocument('es', 'modulos de la maestria de ingenieria civil', 'modulos.mod_ingenieria');
+    exports.nlp.addDocument('es', 'que modulos tiene ingenieria civil', 'modulos.mod_ingenieria');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de ingenieria civil', 'modulos.mod_ingenieria');
+    exports.nlp.addAnswer('es', 'modulos.mod_ingenieria', `La maestría de <b>Ingeniería Civil mención Gestión de la Construcción</b> tiene: 
+      <div>
+      <ul>
+      <li>3 periodos académicos</li>
+      <li>14 módulos (asignaturas)</li>
+      </ul> 
+      </div>
+      <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de Ingeniería Civil</a>
+      `);
+    //nombre asignaturas ingeniería civil
+    exports.nlp.addDocument('es', 'dime las asignaturas de ingenieria civil', 'modulos.asig_ingenieria');
+    exports.nlp.addDocument('es', 'cual es la malla de ingenieria civil', 'modulos.asig_ingenieria');
+    exports.nlp.addDocument('es', 'cuales son las materias de ingenieria civil', 'modulos.asig_ingenieria');
+    exports.nlp.addAnswer('es', 'modulos.asig_ingenieria', `Puedes revisar la malla de la maestría de <b>Ingeniería Civil mención Gestión de la Construcción</b> con sus módulos (asignaturas) con más detalles ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/images/2022/marzo/mallascurriculares/malla%20maestria%20civil.pdf" target="_blank">link</a>.
+      `);
+    //TAG: INFO_MAESTRIA_PETROLEOS
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Petroleos', 'maestria.petroleos');
+    exports.nlp.addDocument('es', 'maestria en Petroleos', 'maestria.petroleos');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en Petroleos', 'maestria.petroleos');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de Petroleos', 'maestria.petroleos');
+    exports.nlp.addDocument('es', 'que titulo obtendre en Petroleos', 'maestria.petroleos');
+    exports.nlp.addDocument('es', 'la maestria de Petroleos tiene modalidad presencial', 'maestria.petroleos');
+    exports.nlp.addDocument('es', 'que modalidad tiene Petroleos', 'maestria.petroleos');
+    exports.nlp.addDocument('es', 'cual es la resolucion de Petroleos', 'maestria.petroleos');
+    exports.nlp.addDocument('es', 'cual es correo de Petroleos', 'maestria.petroleos');
+    exports.nlp.addAnswer('es', 'maestria.petroleos', `La Maestría en <b>Petróleos</b> contiene lo siguiente: 
+    <br><b>Título a obtener:</b> Magíster en Petróleos<br>
+    <b>Duración:</b> 2 Semestres Académicos<br>
+    <b>Resolución CES:</b> RPC-SO-22-NO.479-2020<br>
+    <b>Modalidad:</b> Presencial<br>
+    <br>
+    Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/petroleos" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.petroleos@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Petroleos?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Petroleos?</a>
+    `);
+    //costo de petróleos
+    exports.nlp.addDocument('es', 'Cual es el costo de Petroleos', 'maestria.costo_petroleos');
+    exports.nlp.addDocument('es', 'cual es el valor de petroleos', 'maestria.costo_petroleos');
+    exports.nlp.addDocument('es', 'cuanto se paga por la maestria de petroleos', 'maestria.costo_petroleos');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria petroleos', 'maestria.costo_petroleos');
+    exports.nlp.addDocument('es', 'que precio tiene petroleos', 'maestria.costo_petroleos');
+    exports.nlp.addDocument('es', 'que vale la maestria de petroleos', 'maestria.costo_petroleos');
+    exports.nlp.addAnswer('es', 'maestria.costo_petroleos', `La maestría de <b>Petróleos</b> tiene un arancel de <b>$6000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$6400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+      <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+      `);
+    //modulos de petróleos
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de petroleos', 'modulos.mod_petroleos');
+    exports.nlp.addDocument('es', 'modulos de la maestria de petroleos', 'modulos.mod_petroleos');
+    exports.nlp.addDocument('es', 'que modulos tiene petroleos', 'modulos.mod_petroleos');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de petroleos', 'modulos.mod_petroleos');
+    exports.nlp.addAnswer('es', 'modulos.mod_petroleos', `La maestría de <b>Petróleos</b> tiene: 
+      <div>
+      <ul>
+      <li>2 periodos académicos</li>
+      <li>12 módulos (asignaturas)</li>
+      </ul> 
+      </div>
+      <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de Petróleos</a>
+      `);
+    //nombre asignaturas petróleos
+    exports.nlp.addDocument('es', 'dime las asignaturas de petroleos', 'modulos.asig_petroleos');
+    exports.nlp.addDocument('es', 'cual es la malla de petroleos', 'modulos.asig_petroleos');
+    exports.nlp.addDocument('es', 'cuales son las materias de petroleos', 'modulos.asig_petroleos');
+    exports.nlp.addAnswer('es', 'modulos.asig_petroleos', `Puedes revisar la malla de la maestría de <b>Petróleos</b> con sus módulos (asignaturas) con más detalles ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/images/2022/marzo/mallascurriculares/petroleos.pdf" target="_blank">link</a>.
+      `);
     //TAG: INFO_FAC_CIENCIAS_SOCIALES_SALUD
     exports.nlp.addDocument('es', 'ciencias sociales y de la salud', 'facultades.fac_salud');
+    exports.nlp.addDocument('es', 'cuales son las maestrias de derecho', 'facultades.fac_salud');
+    exports.nlp.addDocument('es', 'cuantas maestrias de derecho hay', 'facultades.fac_salud');
+    exports.nlp.addDocument('es', 'dime las maestrias de derecho', 'facultades.fac_salud');
     exports.nlp.addAnswer('es', 'facultades.fac_salud', `La facultad de <b>Ciencias Sociales y de la Salud</b> tiene las siguientes maestrías disponibles: <br>
   <a class="option-link" (click)="selectOption($event)">Maestría en Derecho Procesal</a>
   <a class="option-link" (click)="selectOption($event)">Maestría en Derecho</a>
@@ -369,6 +949,262 @@ Puedes consultar mas información haciendo click en una maestría, y luego en en
   <a class="option-link" (click)="selectOption($event)">Maestría en Gestión Social y Desarrollo mención Desarrollo Local</a>
   <a class="option-link" (click)="selectOption($event)">Maestría en Comunicación</a><br>
   Puedes consultar mas información haciendo click en una maestría, y luego en enviar.`);
+    //TAG: INFO_MAESTRIA_DERECHO_PROCESAL
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Derecho Procesal', 'maestria.derecho_procesal');
+    exports.nlp.addDocument('es', 'maestria en Derecho Procesal', 'maestria.derecho_procesal');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en Derecho Procesal', 'maestria.derecho_procesal');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de Derecho Procesal', 'maestria.derecho_procesal');
+    exports.nlp.addDocument('es', 'que titulo obtendre en Derecho Procesal', 'maestria.derecho_procesal');
+    exports.nlp.addDocument('es', 'la maestria de Derecho Procesal tiene modalidad presencial', 'maestria.derecho_procesal');
+    exports.nlp.addDocument('es', 'que modalidad tiene Derecho Procesal', 'maestria.derecho_procesal');
+    exports.nlp.addDocument('es', 'cual es la resolucion de Derecho Procesal', 'maestria.derecho_procesal');
+    exports.nlp.addDocument('es', 'cual es correo de Derecho Procesal', 'maestria.derecho_procesal');
+    exports.nlp.addAnswer('es', 'maestria.derecho_procesal', `La Maestría en <b>Derecho Procesal</b> contiene lo siguiente: 
+    <br><b>Título a obtener:</b> Magíster en Derecho Procesal<br>
+    <b>Duración:</b> 2 Semestres Académicos<br>
+    <b>Resolución CES:</b> RPC-SO-50-No.805-2022<br>
+    <b>Modalidad:</b> En línea<br>
+    <br>
+    Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/derecho-procesal" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.derechoprocesal@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Derecho Procesal?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Derecho Procesal?</a>
+    `);
+    //costo de derecho procesal
+    exports.nlp.addDocument('es', 'Cual es el costo de Derecho Procesal', 'maestria.costo_derechoprocesal');
+    exports.nlp.addDocument('es', 'cual es el valor de derecho procesal', 'maestria.costo_derechoprocesal');
+    exports.nlp.addDocument('es', 'cuanto se paga por la maestria de derecho procesal', 'maestria.costo_derechoprocesal');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria derecho procesal', 'maestria.costo_derechoprocesal');
+    exports.nlp.addDocument('es', 'que precio tiene derecho procesal', 'maestria.costo_derechoprocesal');
+    exports.nlp.addDocument('es', 'que vale la maestria de derecho procesal', 'maestria.costo_derechoprocesal');
+    exports.nlp.addAnswer('es', 'maestria.costo_derechoprocesal', `La maestría de <b>Derecho Procesal</b> tiene un arancel de <b>$2500</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$2500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+      <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+      `);
+    //modulos de derecho procesal
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de derecho procesal', 'modulos.mod_derechoprocesal');
+    exports.nlp.addDocument('es', 'modulos de la maestria de derecho procesal', 'modulos.mod_derechoprocesal');
+    exports.nlp.addDocument('es', 'que modulos tiene derecho procesal', 'modulos.mod_derechoprocesal');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de derecho procesal', 'modulos.mod_derechoprocesal');
+    exports.nlp.addAnswer('es', 'modulos.mod_derechoprocesal', `La maestría de <b>Derecho Procesal</b> tiene: 
+      <div>
+      <ul>
+      <li>2 periodos académicos</li>
+      <li>10 módulos (asignaturas)</li>
+      </ul> 
+      </div>
+      <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de Derecho Procesal</a>
+      `);
+    //nombre asignaturas derecho procesal
+    exports.nlp.addDocument('es', 'dime las asignaturas de derecho procesal', 'modulos.asig_derechoprocesal');
+    exports.nlp.addDocument('es', 'cual es la malla de derecho procesal', 'modulos.asig_derechoprocesal');
+    exports.nlp.addDocument('es', 'cuales son las materias de derecho procesal', 'modulos.asig_derechoprocesal');
+    exports.nlp.addAnswer('es', 'modulos.asig_derechoprocesal', `Puedes revisar la malla de la maestría de <b>Derecho Procesal</b> con sus módulos (asignaturas) con más detalles ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/derecho-procesal" target="_blank">link</a>.
+      `);
+    //TAG: INFO_MAESTRIA_DERECHO
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Derecho', 'maestria.derecho');
+    exports.nlp.addDocument('es', 'maestria en Derecho', 'maestria.derecho');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en Derecho', 'maestria.derecho');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de Derecho', 'maestria.derecho');
+    exports.nlp.addDocument('es', 'que titulo obtendre en Derecho', 'maestria.derecho');
+    exports.nlp.addDocument('es', 'la maestria de Derecho tiene modalidad presencial', 'maestria.derecho');
+    exports.nlp.addDocument('es', 'que modalidad tiene Derecho', 'maestria.derecho');
+    exports.nlp.addDocument('es', 'cual es la resolucion de Derecho', 'maestria.derecho');
+    exports.nlp.addDocument('es', 'cual es correo de Derecho', 'maestria.derecho');
+    exports.nlp.addAnswer('es', 'maestria.derecho', `La Maestría en <b>Derecho</b> contiene lo siguiente: 
+    <br><b>Título a obtener:</b> Magíster en Derecho<br>
+    <b>Duración:</b> 3 Semestres Académicos<br>
+    <b>Resolución CES:</b> RPC-SO-25-NO.570-2020<br>
+    <b>Modalidad:</b> Presencial<br>
+    <br>
+    Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/derecho" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.derecho@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Derecho?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Derecho?</a>
+    `);
+    //costo de derecho
+    exports.nlp.addDocument('es', 'Cual es el costo de Derecho', 'maestria.costo_derecho');
+    exports.nlp.addDocument('es', 'cual es el valor de derecho', 'maestria.costo_derecho');
+    exports.nlp.addDocument('es', 'cuanto se paga por la maestria de derecho', 'maestria.costo_derecho');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria derecho', 'maestria.costo_derecho');
+    exports.nlp.addDocument('es', 'que precio tiene derecho', 'maestria.costo_derecho');
+    exports.nlp.addDocument('es', 'que vale la maestria de derecho', 'maestria.costo_derecho');
+    exports.nlp.addAnswer('es', 'maestria.costo_derecho', `La maestría de <b>Derecho</b> tiene un arancel de <b>$4600</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$5000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+      <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+      `);
+    //modulos de derecho
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de derecho', 'modulos.mod_derecho');
+    exports.nlp.addDocument('es', 'modulos de la maestria de derecho', 'modulos.mod_derecho');
+    exports.nlp.addDocument('es', 'que modulos tiene derecho', 'modulos.mod_derecho');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de derecho', 'modulos.mod_derecho');
+    exports.nlp.addAnswer('es', 'modulos.mod_derecho', `La maestría de <b>Derecho</b> tiene: 
+      <div>
+      <ul>
+      <li>3 periodos académicos</li>
+      <li>14 módulos (asignaturas)</li>
+      </ul> 
+      </div>
+      <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de Derecho</a>
+      `);
+    //nombre asignaturas derecho
+    exports.nlp.addDocument('es', 'dime las asignaturas de derecho', 'modulos.asig_derecho');
+    exports.nlp.addDocument('es', 'cual es la malla de derecho', 'modulos.asig_derecho');
+    exports.nlp.addDocument('es', 'cuales son las materias de derecho', 'modulos.asig_derecho');
+    exports.nlp.addAnswer('es', 'modulos.asig_derecho', `Puedes revisar la malla de la maestría de <b>Derecho</b> con sus módulos (asignaturas) con más detalles ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/images/2022/marzo/mallascurriculares/Derecho.pdf" target="_blank">link</a>.
+      `);
+    //TAG: INFO_MAESTRIA_DERECHO_CONSTITUCIONAL
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Derecho mencion Derecho Constitucional', 'maestria.derecho_const');
+    exports.nlp.addDocument('es', 'maestria en Derecho mencion Derecho Constitucional', 'maestria.derecho_const');
+    exports.nlp.addDocument('es', 'Derecho mencion Derecho Constitucional', 'maestria.derecho_const');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en Derecho mencion Derecho Constitucional', 'maestria.derecho_const');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de Derecho mencion Derecho Constitucional', 'maestria.derecho_const');
+    exports.nlp.addDocument('es', 'que titulo obtendre en Derecho mencion Derecho Constitucional', 'maestria.derecho_const');
+    exports.nlp.addDocument('es', 'la maestria de Derecho mencion Derecho Constitucional tiene modalidad presencial', 'maestria.derecho_const');
+    exports.nlp.addDocument('es', 'que modalidad tiene Derecho mencion Derecho Constitucional', 'maestria.derecho_const');
+    exports.nlp.addDocument('es', 'cual es la resolucion de Derecho mencion Derecho Constitucional', 'maestria.derecho_const');
+    exports.nlp.addDocument('es', 'cual es correo de Derecho mencion Derecho Constitucional', 'maestria.derecho_const');
+    exports.nlp.addAnswer('es', 'maestria.derecho_const', `La Maestría en <b>Derecho</b> con mención en <b>Derecho Constitucional</b> contiene lo siguiente: 
+    <br><b>Título a obtener:</b> Magíster en Derecho mención Derecho Constitucional<br>
+    <b>Duración:</b> 2 Semestres Académicos<br>
+    <b>Resolución CES:</b> RPC-SO-21-NO.449-2020<br>
+    <b>Modalidad:</b> Presencial<br>
+    <br>
+    Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/derecho-constitucional" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.derechoconstitucional@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Derecho mención Derecho Constitucional?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Derecho mención Derecho Constitucional?</a>
+    `);
+    //costo de Derecho mención Derecho Constitucional
+    exports.nlp.addDocument('es', 'Cual es el costo de Derecho mencion Derecho Constitucional', 'maestria.costo_derechoconstitucional');
+    exports.nlp.addDocument('es', 'cual es el valor de Derecho mencion Derecho Constitucional', 'maestria.costo_derechoconstitucional');
+    exports.nlp.addDocument('es', 'cuanto se paga por la maestria de Derecho mencion Derecho Constitucional', 'maestria.costo_derechoconstitucional');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria Derecho mencion Derecho Constitucional', 'maestria.costo_derechoconstitucional');
+    exports.nlp.addDocument('es', 'que precio tiene Derecho mencion Derecho Constitucional', 'maestria.costo_derechoconstitucional');
+    exports.nlp.addDocument('es', 'que vale la maestria de Derecho mencion Derecho Constitucional', 'maestria.costo_derechoconstitucional');
+    exports.nlp.addAnswer('es', 'maestria.costo_derechoconstitucional', `La maestría en <b>Derecho mención Derecho Constitucional</b> tiene un arancel de <b>$4600</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$5000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+      <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+      `);
+    //modulos de Derecho mención Derecho Constitucional
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de Derecho mencion Derecho Constitucional', 'modulos.mod_derechoconstitucional');
+    exports.nlp.addDocument('es', 'modulos de la maestria de Derecho mencion Derecho Constitucional', 'modulos.mod_derechoconstitucional');
+    exports.nlp.addDocument('es', 'que modulos tiene Derecho mencion Derecho Constitucional', 'modulos.mod_derechoconstitucional');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de Derecho mencion Derecho Constitucional', 'modulos.mod_derechoconstitucional');
+    exports.nlp.addAnswer('es', 'modulos.mod_derechoconstitucional', `La maestría en <b>Derecho mención Derecho Constitucional</b> tiene: 
+      <div>
+      <ul>
+      <li>2 periodos académicos</li>
+      <li>10 módulos (asignaturas)</li>
+      </ul> 
+      </div>
+      <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de Derecho mención Derecho Constitucional</a>
+      `);
+    //nombre asignaturas Derecho mención Derecho Constitucional
+    exports.nlp.addDocument('es', 'dime las asignaturas de Derecho mencion Derecho Constitucional', 'modulos.asig_derechoconstitucional');
+    exports.nlp.addDocument('es', 'cual es la malla de Derecho mencion Derecho Constitucional', 'modulos.asig_derechoconstitucional');
+    exports.nlp.addDocument('es', 'cuales son las materias de Derecho mencion Derecho Constitucional', 'modulos.asig_derechoconstitucional');
+    exports.nlp.addAnswer('es', 'modulos.asig_derechoconstitucional', `Puedes revisar la malla de la maestría en <b>Derecho mención Derecho Constitucional</b> con sus módulos (asignaturas) con más detalles ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/images/programas/derecho_constitucional/MALLA%20DE%20DERECHO%20CONSTITUCIONAL.pdf" target="_blank">link</a>.
+      `);
+    //TAG: INFO_MAESTRIA_GESTION_SOCIAL
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en gestion Social y Desarrollo mencion Desarrollo Local', 'maestria.gestion_social');
+    exports.nlp.addDocument('es', 'maestria en gestion Social y Desarrollo mencion Desarrollo Local', 'maestria.gestion_social');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en gestion Social y Desarrollo mencion Desarrollo Local', 'maestria.gestion_social');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de gestion Social y Desarrollo mencion Desarrollo Local', 'maestria.gestion_social');
+    exports.nlp.addDocument('es', 'que titulo obtendre en gestion Social y Desarrollo mencion Desarrollo Local', 'maestria.gestion_social');
+    exports.nlp.addDocument('es', 'la maestria de gestion Social y Desarrollo mencion Desarrollo Local tiene modalidad presencial', 'maestria.gestion_social');
+    exports.nlp.addDocument('es', 'que modalidad tiene gestion Social y Desarrollo mencion Desarrollo Local', 'maestria.gestion_social');
+    exports.nlp.addDocument('es', 'cual es la resolucion de gestion Social y Desarrollo mencion Desarrollo Local', 'maestria.gestion_social');
+    exports.nlp.addDocument('es', 'cual es correo de gestion Social y Desarrollo mencion Desarrollo Local', 'maestria.gestion_social');
+    exports.nlp.addAnswer('es', 'maestria.gestion_social', `La Maestría en <b>Gestión Social y Desarrollo</b> contiene lo siguiente: 
+    <br><b>Título a obtener:</b> Magíster en Gestión Social y Desarrollo mención Desarrollo Local<br>
+    <b>Duración:</b> 2 Semestres Académicos<br>
+    <b>Resolución CES:</b> RPC-SO-19-NO.404-2020<br>
+    <b>Modalidad:</b> Presencial<br>
+    <br>
+    Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/gestion-social-y-desarrollo" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.desarrollolocal@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Gestión Social y Desarrollo?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Gestión Social y Desarrollo?</a>
+    `);
+    //costo de Maestría en Gestión Social y Desarrollo mención Desarrollo Local
+    exports.nlp.addDocument('es', 'Cual es el costo de la maestria en gestion Social y Desarrollo', 'maestria.costo_gestiondesarrollo');
+    exports.nlp.addDocument('es', 'cual es el valor de la maestria en gestion Social y Desarrollo mencion Desarrollo Local', 'maestria.costo_gestiondesarrollo');
+    exports.nlp.addDocument('es', 'cuanto se paga por la maestria en gestion Social y Desarrollo mencion Desarrollo Local', 'maestria.costo_gestiondesarrollo');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria en gestion Social y Desarrollo mencion Desarrollo Local', 'maestria.costo_gestiondesarrollo');
+    exports.nlp.addDocument('es', 'que precio tiene maestria en gestion Social y Desarrollo mencion Desarrollo Local', 'maestria.costo_gestiondesarrollo');
+    exports.nlp.addDocument('es', 'que vale la maestria en gestion Social y Desarrollo mencion Desarrollo Local', 'maestria.costo_gestiondesarrollo');
+    exports.nlp.addAnswer('es', 'maestria.costo_gestiondesarrollo', `La maestría en <b>Gestión Social y Desarrollo</b> con mención en <b>Desarrollo Local</b> tiene un arancel de <b>$3600</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$3900</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+      <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+      `);
+    //modulos de Maestría en Gestión Social y Desarrollo mención Desarrollo Local
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de gestion Social y Desarrollo mencion Desarrollo Local', 'modulos.mod_gestiondesarrollo');
+    exports.nlp.addDocument('es', 'modulos de la maestria en gestion Social y Desarrollo mencion Desarrollo Local', 'modulos.mod_gestiondesarrollo');
+    exports.nlp.addDocument('es', 'que modulos tiene la maestria en gestion Social y Desarrollo mencion Desarrollo Local', 'modulos.mod_gestiondesarrollo');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria en gestion Social y Desarrollo mencion Desarrollo Local', 'modulos.mod_gestiondesarrollo');
+    exports.nlp.addAnswer('es', 'modulos.mod_gestiondesarrollo', `La maestría en <b>Gestión Social y Desarrollo</b> con mención en <b>Desarrollo Local</b> tiene: 
+      <div>
+      <ul>
+      <li>2 periodos académicos</li>
+      <li>10 módulos (asignaturas)</li>
+      </ul> 
+      </div>
+      <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de la Maestría en Gestión Social y Desarrollo</a>
+      `);
+    //nombre asignaturas Maestría en Gestión Social y Desarrollo mención Desarrollo Local
+    exports.nlp.addDocument('es', 'dime las asignaturas de la maestria en gestion Social y Desarrollo', 'modulos.asig_gestiondesarrollo');
+    exports.nlp.addDocument('es', 'cual es la malla de maestria en gestion Social y Desarrollo', 'modulos.asig_gestiondesarrollo');
+    exports.nlp.addDocument('es', 'cuales son las materias de maestria en gestion Social y Desarrollo mencion Desarrollo Local', 'modulos.asig_gestiondesarrollo');
+    exports.nlp.addAnswer('es', 'modulos.asig_gestiondesarrollo', `Puedes revisar la malla de la maestría en <b>Gestión Social y Desarrollo</b> con mención en <b>Desarrollo Local</b> y sus módulos (asignaturas) con más detalles ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/gestion-social-y-desarrollo" target="_blank">link</a>.
+      `);
+    //TAG: INFO_MAESTRIA_COMUNICACION
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Comunicacion', 'maestria.comunicacion');
+    exports.nlp.addDocument('es', 'maestria en Comunicacion', 'maestria.comunicacion');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en Comunicacion', 'maestria.comunicacion');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de Comunicacion', 'maestria.comunicacion');
+    exports.nlp.addDocument('es', 'que titulo obtendre en Comunicacion', 'maestria.comunicacion');
+    exports.nlp.addDocument('es', 'la maestria de Comunicacion tiene modalidad presencial', 'maestria.comunicacion');
+    exports.nlp.addDocument('es', 'que modalidad tiene Comunicacion', 'maestria.comunicacion');
+    exports.nlp.addDocument('es', 'cual es la resolucion de Comunicacion', 'maestria.comunicacion');
+    exports.nlp.addDocument('es', 'cual es correo de Comunicacion', 'maestria.comunicacion');
+    exports.nlp.addAnswer('es', 'maestria.comunicacion', `La Maestría en <b>Comunicación</b> contiene lo siguiente: 
+    <br><b>Título a obtener:</b> Magíster en Comunicación<br>
+    <b>Duración:</b> 2 Semestres Académicos<br>
+    <b>Resolución CES:</b> RPC-SO-24-NO.543-2020<br>
+    <b>Modalidad:</b> Presencial<br>
+    <br>
+    Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/comunicacion" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.comunicacion@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Comunicación?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Comunicación?</a>
+    `);
+    //costo maestria Comunicación
+    exports.nlp.addDocument('es', 'Cual es el costo de comunicacion', 'maestria.costo_comunicacion');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria comunicacion', 'maestria.costo_comunicacion');
+    exports.nlp.addDocument('es', 'cual es el valor de comunicacion', 'maestria.costo_comunicacion');
+    exports.nlp.addDocument('es', 'pagar en la maestria de comunicacion', 'maestria.costo_comunicacion');
+    exports.nlp.addDocument('es', 'precio de comunicacion', 'maestria.costo_comunicacion');
+    exports.nlp.addDocument('es', 'que vale la maestria de comunicacion', 'maestria.costo_comunicacion');
+    exports.nlp.addAnswer('es', 'maestria.costo_comunicacion', `La maestría de <b>Comunicación</b> tiene un arancel de <b>$3500</b> dólares y matrícula de <b>$350</b> dólares que dan un total de <b>$3850</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+      <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+      `);
+    //modulos de Comunicación
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de Comunicacion', 'modulos.mod_comunicacion');
+    exports.nlp.addDocument('es', 'modulos de la maestria de Comunicacion', 'modulos.mod_comunicacion');
+    exports.nlp.addDocument('es', 'que modulos tiene Comunicacion', 'modulos.mod_comunicacion');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de Comunicacion', 'modulos.mod_comunicacion');
+    exports.nlp.addAnswer('es', 'modulos.mod_comunicacion', `La maestría de <b>Comunicación</b> tiene: 
+      <div>
+      <ul>
+      <li>2 periodos académicos</li>
+      <li>12 módulos (asignaturas)</li>
+      </ul> 
+      </div>
+      <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de Comunicación</a>
+      `);
+    //nombre asignaturas Comunicación
+    exports.nlp.addDocument('es', 'dime las asignaturas de Comunicacion', 'modulos.asig_comunicacion');
+    exports.nlp.addDocument('es', 'cual es la malla de Comunicacion', 'modulos.asig_comunicacion');
+    exports.nlp.addDocument('es', 'cuales son las materias de Comunicacion', 'modulos.asig_comunicacion');
+    exports.nlp.addAnswer('es', 'modulos.asig_comunicacion', `Puedes revisar la malla de la maestría de <b>Comunicación</b> con sus módulos (asignaturas) con más detalles ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/images/2022/marzo/mallascurriculares/comunicacion.pdf" target="_blank">link</a>.
+      `);
     //TAG: INFO_FAC_CIENCIAS_ADMINISTRATIVAS
     exports.nlp.addDocument('es', 'ciencias administrativas', 'facultades.fac_adminis');
     exports.nlp.addAnswer('es', 'facultades.fac_adminis', `La facultad de <b>Ciencias Administrativas</b> tiene las siguientes maestrías disponibles: <br>
@@ -378,18 +1214,333 @@ Puedes consultar mas información haciendo click en una maestría, y luego en en
   <a class="option-link" (click)="selectOption($event)">Maestría en Turismo mención Gestión Sostenible en Destinos Turísticos</a>
   <a class="option-link" (click)="selectOption($event)">Maestría en Administración de Empresas mención Gestión de las Pymes</a><br>
   Puedes consultar mas información haciendo click en una maestría, y luego en enviar.`);
+    //TAG: INFO_MAESTRIA_TALENTO_HUMANO
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en gestion del Talento Humano', 'maestria.talento_humano');
+    exports.nlp.addDocument('es', 'maestria en gestion del Talento Humano', 'maestria.talento_humano');
+    exports.nlp.addDocument('es', 'gestion del Talento Humano', 'maestria.talento_humano');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en gestion del Talento Humano', 'maestria.talento_humano');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de gestion del Talento Humano', 'maestria.talento_humano');
+    exports.nlp.addDocument('es', 'que titulo obtendre en gestion del Talento Humano', 'maestria.talento_humano');
+    exports.nlp.addDocument('es', 'la maestria de gestion del Talento Humano tiene modalidad presencial', 'maestria.talento_humano');
+    exports.nlp.addDocument('es', 'que modalidad tiene gestion del Talento Humano', 'maestria.talento_humano');
+    exports.nlp.addDocument('es', 'cual es la resolucion de gestion del Talento Humano', 'maestria.talento_humano');
+    exports.nlp.addDocument('es', 'cual es correo de gestion del Talento Humano', 'maestria.talento_humano');
+    exports.nlp.addAnswer('es', 'maestria.talento_humano', `La Maestría en <b>Gestión del Talento Humano</b> contiene lo siguiente: 
+    <br><b>Título a obtener:</b> Magíster en Gestión del Talento Humano<br>
+    <b>Duración:</b> 2 Semestres Académicos<br>
+    <b>Resolución CES:</b> RPC-SO-25-NO.571-2020<br>
+    <b>Modalidad:</b> Presencial<br>
+    <br>
+    Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/talento-humano" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.talentohumano@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Gestión del Talento Humano?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Gestión del Talento Humano?</a>
+    `);
+    //costo maestria Gestión del Talento Humano
+    exports.nlp.addDocument('es', 'Cual es el costo de gestion del Talento Humano', 'maestria.costo_talento_humano');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria gestion del Talento Humano', 'maestria.costo_talento_humano');
+    exports.nlp.addDocument('es', 'cual es el valor de gestion del Talento Humano', 'maestria.costo_talento_humano');
+    exports.nlp.addDocument('es', 'pagar en la maestria de gestion del Talento Humano', 'maestria.costo_talento_humano');
+    exports.nlp.addDocument('es', 'precio de gestion del Talento Humano', 'maestria.costo_talento_humano');
+    exports.nlp.addDocument('es', 'que vale la maestria de gestion del Talento Humano', 'maestria.costo_talento_humano');
+    exports.nlp.addAnswer('es', 'maestria.costo_talento_humano', `La maestría de <b>Gestión del Talento Humano</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+      <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+      `);
+    //modulos de Gestión del Talento Humano
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de gestion del Talento Humano', 'modulos.mod_talento_humano');
+    exports.nlp.addDocument('es', 'modulos de la maestria de gestion del Talento Humano', 'modulos.mod_talento_humano');
+    exports.nlp.addDocument('es', 'que modulos tiene gestion del Talento Humano', 'modulos.mod_talento_humano');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de gestion del Talento Humano', 'modulos.mod_talento_humano');
+    exports.nlp.addAnswer('es', 'modulos.mod_talento_humano', `La maestría de <b>Gestión del Talento Humano</b> tiene: 
+      <div>
+      <ul>
+      <li>2 periodos académicos</li>
+      <li>12 módulos (asignaturas)</li>
+      </ul> 
+      </div>
+      <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de Gestión del Talento Humano</a>
+      `);
+    //nombre asignaturas Gestión del Talento Humano
+    exports.nlp.addDocument('es', 'dime las asignaturas de gestion del Talento Humano', 'modulos.asig_talento_humano');
+    exports.nlp.addDocument('es', 'cual es la malla de gestion del Talento Humano', 'modulos.asig_talento_humano');
+    exports.nlp.addDocument('es', 'cuales son las materias de gestion del Talento Humano', 'modulos.asig_talento_humano');
+    exports.nlp.addAnswer('es', 'modulos.asig_talento_humano', `Puedes revisar la malla de la maestría de <b>Gestión del Talento Humano</b> con sus módulos (asignaturas) con más detalles ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/images/2022/marzo/mallascurriculares/talentohumano.pdf" target="_blank">link</a>.
+      `);
+    //TAG: INFO_MAESTRIA_ADMINISTRACION_PUBLICA
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Administracion Publica', 'maestria.admin_publica');
+    exports.nlp.addDocument('es', 'Administracion Publica', 'maestria.admin_publica');
+    exports.nlp.addDocument('es', 'maestria en Administracion Publica', 'maestria.admin_publica');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en Administracion Publica', 'maestria.admin_publica');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de Administracion Publica', 'maestria.admin_publica');
+    exports.nlp.addDocument('es', 'que titulo obtendre en Administracion Publica', 'maestria.admin_publica');
+    exports.nlp.addDocument('es', 'la maestria de Administracion Publica tiene modalidad presencial', 'maestria.admin_publica');
+    exports.nlp.addDocument('es', 'que modalidad tiene Administracion Publica', 'maestria.admin_publica');
+    exports.nlp.addDocument('es', 'cual es la resolucion de Administracion Publica', 'maestria.admin_publica');
+    exports.nlp.addDocument('es', 'cual es correo de Administracion Publica', 'maestria.admin_publica');
+    exports.nlp.addAnswer('es', 'maestria.admin_publica', `La Maestría en <b>Administración Pública</b> contiene lo siguiente: 
+    <br><b>Título a obtener:</b> Magíster en Administración Pública<br>
+    <b>Duración:</b> 2 Semestres Académicos<br>
+    <b>Resolución CES:</b> RPC-SO-25-NO.571-2020<br>
+    <b>Modalidad:</b> Presencial<br>
+    <br>
+    Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/administracion-publica" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.admpublica@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Administración Pública?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Administración Pública?</a>
+    `);
+    //costo maestria Administracion Publica
+    exports.nlp.addDocument('es', 'Cual es el costo de Administracion Publica', 'maestria.costo_admin_publica');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria Administracion Publica', 'maestria.costo_admin_publica');
+    exports.nlp.addDocument('es', 'cual es el valor de Administracion Publica', 'maestria.costo_admin_publica');
+    exports.nlp.addDocument('es', 'pagar en la maestria de Administracion Publica', 'maestria.costo_admin_publica');
+    exports.nlp.addDocument('es', 'precio de Administracion Publica', 'maestria.costo_admin_publica');
+    exports.nlp.addDocument('es', 'que vale la maestria de Administracion Publica', 'maestria.costo_admin_publica');
+    exports.nlp.addAnswer('es', 'maestria.costo_admin_publica', `La maestría de <b>Administración Pública</b> tiene un arancel de <b>$4500</b> dólares y matrícula de <b>$450</b> dólares que dan un total de <b>$4950</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+      <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+      `);
+    //modulos de Administración Pública
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de Administración Pública', 'modulos.mod_admin_publica');
+    exports.nlp.addDocument('es', 'modulos de la maestria de Administración Pública', 'modulos.mod_admin_publica');
+    exports.nlp.addDocument('es', 'que modulos tiene Administración Pública', 'modulos.mod_admin_publica');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de Administración Pública', 'modulos.mod_admin_publica');
+    exports.nlp.addAnswer('es', 'modulos.mod_admin_publica', `La maestría de <b>Administración Pública</b> tiene: 
+      <div>
+      <ul>
+      <li>2 periodos académicos</li>
+      <li>12 módulos (asignaturas)</li>
+      </ul> 
+      </div>
+      <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de Administración Pública</a>
+      `);
+    //nombre asignaturas Administración Pública
+    exports.nlp.addDocument('es', 'dime las asignaturas de Administración Pública', 'modulos.asig_admin_publica');
+    exports.nlp.addDocument('es', 'cual es la malla de Administración Pública', 'modulos.asig_admin_publica');
+    exports.nlp.addDocument('es', 'cuales son las materias de Administración Pública', 'modulos.asig_admin_publica');
+    exports.nlp.addAnswer('es', 'modulos.asig_admin_publica', `Puedes revisar la malla de la maestría de <b>Administración Pública</b> con sus módulos (asignaturas) con más detalles ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/images/2022/marzo/mallascurriculares/administracionpublica.pdf" target="_blank">link</a>.
+      `);
+    //TAG: INFO_MAESTRIA_CONTABILIDAD_AUDITORIA
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Contabilidad y Auditoria', 'maestria.contabilidad');
+    exports.nlp.addDocument('es', 'maestria en Contabilidad y Auditoria', 'maestria.contabilidad');
+    exports.nlp.addDocument('es', 'Contabilidad y Auditoria', 'maestria.contabilidad');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en Contabilidad y Auditoria', 'maestria.contabilidad');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de Contabilidad y Auditoria', 'maestria.contabilidad');
+    exports.nlp.addDocument('es', 'que titulo obtendre en Contabilidad y Auditoria', 'maestria.contabilidad');
+    exports.nlp.addDocument('es', 'la maestria de Contabilidad y Auditoria tiene modalidad presencial', 'maestria.contabilidad');
+    exports.nlp.addDocument('es', 'que modalidad tiene Contabilidad y Auditoria', 'maestria.contabilidad');
+    exports.nlp.addDocument('es', 'cual es la resolucion de Contabilidad y Auditoria', 'maestria.contabilidad');
+    exports.nlp.addDocument('es', 'cual es correo de Contabilidad y Auditoria', 'maestria.contabilidad');
+    exports.nlp.addAnswer('es', 'maestria.contabilidad', `La Maestría en <b>Contabilidad y Auditoría</b> contiene lo siguiente: 
+    <br><b>Título a obtener:</b> Magíster en Contabilidad y Auditoría<br>
+    <b>Duración:</b> 2 Semestres Académicos<br>
+    <b>Resolución CES:</b> RPC-SO-24-NO.543-2020<br>
+    <b>Modalidad:</b> Presencial<br>
+    <br>
+    Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/contabilidad" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.contabilidad@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Contabilidad y Auditoría?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Contabilidad y Auditoría?</a>
+    `);
+    //costo maestria Contabilidad y Auditoria
+    exports.nlp.addDocument('es', 'Cual es el costo de Contabilidad y Auditoria', 'maestria.costo_contabilidad');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria Contabilidad y Auditoria', 'maestria.costo_contabilidad');
+    exports.nlp.addDocument('es', 'cual es el valor de Contabilidad y Auditoria', 'maestria.costo_contabilidad');
+    exports.nlp.addDocument('es', 'pagar en la maestria de Contabilidad y Auditoria', 'maestria.costo_contabilidad');
+    exports.nlp.addDocument('es', 'precio de Contabilidad y Auditoria', 'maestria.costo_contabilidad');
+    exports.nlp.addDocument('es', 'que vale la maestria de Contabilidad y Auditoria', 'maestria.costo_contabilidad');
+    exports.nlp.addAnswer('es', 'maestria.costo_contabilidad', `La maestría de <b>Contabilidad y Auditoría</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+      <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+      `);
+    //modulos de Contabilidad y Auditoría
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de Contabilidad y Auditoría', 'modulos.mod_contabilidad');
+    exports.nlp.addDocument('es', 'modulos de la maestria de Contabilidad y Auditoría', 'modulos.mod_contabilidad');
+    exports.nlp.addDocument('es', 'que modulos tiene Contabilidad y Auditoría', 'modulos.mod_contabilidad');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de Contabilidad y Auditoría', 'modulos.mod_contabilidad');
+    exports.nlp.addAnswer('es', 'modulos.mod_contabilidad', `La maestría de <b>Contabilidad y Auditoría</b> tiene: 
+      <div>
+      <ul>
+      <li>2 periodos académicos</li>
+      <li>12 módulos (asignaturas)</li>
+      </ul> 
+      </div>
+      <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de Contabilidad y Auditoría</a>
+      `);
+    //nombre asignaturas Contabilidad y Auditoría
+    exports.nlp.addDocument('es', 'dime las asignaturas de Contabilidad y Auditoría', 'modulos.asig_contabilidad');
+    exports.nlp.addDocument('es', 'cual es la malla de Contabilidad y Auditoría', 'modulos.asig_contabilidad');
+    exports.nlp.addDocument('es', 'cuales son las materias de Contabilidad y Auditoría', 'modulos.asig_contabilidad');
+    exports.nlp.addAnswer('es', 'modulos.asig_contabilidad', `Puedes revisar la malla de la maestría de <b>Contabilidad y Auditoría</b> con sus módulos (asignaturas) con más detalles ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/images/2022/marzo/mallascurriculares/contabilidadyauditoria.pdf" target="_blank">link</a>.
+      `);
+    //TAG: INFO_MAESTRIA_TURISMO
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Turismo', 'maestria.turismo');
+    exports.nlp.addDocument('es', 'maestria en Turismo', 'maestria.turismo');
+    exports.nlp.addDocument('es', 'Turismo mencion Gestion Sostenible en Destinos Turisticos', 'maestria.turismo');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en Turismo', 'maestria.turismo');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de Turismo', 'maestria.turismo');
+    exports.nlp.addDocument('es', 'que titulo obtendre en Turismo', 'maestria.turismo');
+    exports.nlp.addDocument('es', 'la maestria de Turismo tiene modalidad presencial', 'maestria.turismo');
+    exports.nlp.addDocument('es', 'que modalidad tiene Turismo', 'maestria.turismo');
+    exports.nlp.addDocument('es', 'cual es la resolucion de Turismo', 'maestria.turismo');
+    exports.nlp.addDocument('es', 'cual es correo de Turismo', 'maestria.turismo');
+    exports.nlp.addAnswer('es', 'maestria.turismo', `La Maestría en <b>Turismo</b> contiene lo siguiente: 
+    <br><b>Título a obtener:</b> Magíster en Turismo mención Gestión Sostenible en Destinos Turísticos<br>
+    <b>Duración:</b> 2 Semestres Académicos<br>
+    <b>Resolución CES:</b> RPC-SO-01-NO.026-2021<br>
+    <b>Modalidad:</b> Presencial<br>
+    <br>
+    Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/turismo" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.turismo@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Turismo?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Turismo?</a>
+    `);
+    //costo maestria Turismo
+    exports.nlp.addDocument('es', 'Cual es el costo de Turismo', 'maestria.costo_turismo');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria Turismo', 'maestria.costo_turismo');
+    exports.nlp.addDocument('es', 'cual es el valor de Turismo', 'maestria.costo_turismo');
+    exports.nlp.addDocument('es', 'pagar en la maestria de Turismo', 'maestria.costo_turismo');
+    exports.nlp.addDocument('es', 'precio de Turismo', 'maestria.costo_turismo');
+    exports.nlp.addDocument('es', 'que vale la maestria de Turismo', 'maestria.costo_turismo');
+    exports.nlp.addAnswer('es', 'maestria.costo_turismo', `La maestría de <b>Turismo</b> con mención <b>Gestión Sostenible en Destinos Turísticos</b> tiene un arancel de <b>$5000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$5000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+      <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+      `);
+    //modulos de Turismo
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de Turismo', 'modulos.mod_turismo');
+    exports.nlp.addDocument('es', 'modulos de la maestria de Turismo', 'modulos.mod_turismo');
+    exports.nlp.addDocument('es', 'que modulos tiene Turismo', 'modulos.mod_turismo');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de Turismo', 'modulos.mod_turismo');
+    exports.nlp.addAnswer('es', 'modulos.mod_turismo', `La maestría de <b>Turismo mención Gestión Sostenible en Destinos Turísticos</b> tiene: 
+      <div>
+      <ul>
+      <li>2 periodos académicos</li>
+      <li>12 módulos (asignaturas)</li>
+      </ul> 
+      </div>
+      <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de Turismo</a>
+      `);
+    //nombre asignaturas Turismo
+    exports.nlp.addDocument('es', 'dime las asignaturas de Turismo', 'modulos.asig_turismo');
+    exports.nlp.addDocument('es', 'cual es la malla de Turismo', 'modulos.asig_turismo');
+    exports.nlp.addDocument('es', 'cuales son las materias de Turismo', 'modulos.asig_turismo');
+    exports.nlp.addAnswer('es', 'modulos.asig_turismo', `Puedes revisar la malla de la maestría de <b>Turismo</b> con sus módulos (asignaturas) con más detalles ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/images/2022/marzo/mallascurriculares/turismo.pdf" target="_blank">link</a>.
+      `);
+    //TAG: INFO_MAESTRIA_ADMINISTRACION_EMPRESAS
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Administracion de Empresas', 'maestria.admin_empresas');
+    exports.nlp.addDocument('es', 'maestria en Administracion de Empresas', 'maestria.admin_empresas');
+    exports.nlp.addDocument('es', 'Administracion de Empresas mención Gestión de las Pymes', 'maestria.admin_empresas');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en Administracion de Empresas', 'maestria.admin_empresas');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de Administracion de Empresas', 'maestria.admin_empresas');
+    exports.nlp.addDocument('es', 'que titulo obtendre en Administracion de Empresas', 'maestria.admin_empresas');
+    exports.nlp.addDocument('es', 'la maestria de Administracion de Empresas tiene modalidad presencial', 'maestria.admin_empresas');
+    exports.nlp.addDocument('es', 'que modalidad tiene Administracion de Empresas', 'maestria.admin_empresas');
+    exports.nlp.addDocument('es', 'cual es la resolucion de Administracion de Empresas', 'maestria.admin_empresas');
+    exports.nlp.addDocument('es', 'cual es correo de Administracion de Empresas', 'maestria.admin_empresas');
+    exports.nlp.addAnswer('es', 'maestria.admin_empresas', `La Maestría en <b>Administración de Empresas</b> contiene lo siguiente: 
+    <br><b>Título a obtener:</b> Magíster en Administración de Empresas mención Gestión de las Pymes<br>
+    <b>Duración:</b> 2 Semestres Académicos<br>
+    <b>Resolución CES:</b> RPC-SO-25-NO.571-2020<br>
+    <b>Modalidad:</b> Presencial<br>
+    <br>
+    Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/administracion-empresas" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.pymes@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Administración de Empresas?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Administración de Empresas?</a>
+    `);
+    //costo maestria Administración de Empresas
+    exports.nlp.addDocument('es', 'Cual es el costo de Administracion de Empresas', 'maestria.costo_admin_empresas');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria Administracion de Empresas', 'maestria.costo_admin_empresas');
+    exports.nlp.addDocument('es', 'cual es el valor de Administracion de Empresas', 'maestria.costo_admin_empresas');
+    exports.nlp.addDocument('es', 'pagar en la maestria de Administracion de Empresas', 'maestria.costo_admin_empresas');
+    exports.nlp.addDocument('es', 'precio de Administracion de Empresas', 'maestria.costo_admin_empresas');
+    exports.nlp.addDocument('es', 'que vale la maestria de Administracion de Empresas', 'maestria.costo_admin_empresas');
+    exports.nlp.addAnswer('es', 'maestria.costo_admin_empresas', `La maestría de <b>Administración de Empresas</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+    <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+    `);
+    //modulos de Administración de Empresas
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de Administración de Empresas', 'modulos.mod_admin_empresas');
+    exports.nlp.addDocument('es', 'modulos de la maestria de Administración de Empresas', 'modulos.mod_admin_empresas');
+    exports.nlp.addDocument('es', 'que modulos tiene Administración de Empresas', 'modulos.mod_admin_empresas');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de Administración de Empresas', 'modulos.mod_admin_empresas');
+    exports.nlp.addAnswer('es', 'modulos.mod_admin_empresas', `La maestría de <b>Administración de Empresas mención Gestión de las Pymes</b> tiene: 
+    <div>
+    <ul>
+    <li>2 periodos académicos</li>
+    <li>12 módulos (asignaturas)</li>
+    </ul> 
+    </div>
+    <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de Administración de Empresas</a>
+    `);
+    //nombre asignaturas Administración de Empresas
+    exports.nlp.addDocument('es', 'dime las asignaturas de Administración de Empresas', 'modulos.asig_admin_empresas');
+    exports.nlp.addDocument('es', 'cual es la malla de Administración de Empresas', 'modulos.asig_admin_empresas');
+    exports.nlp.addDocument('es', 'cuales son las materias de Administración de Empresas', 'modulos.asig_admin_empresas');
+    exports.nlp.addAnswer('es', 'modulos.asig_admin_empresas', `Puedes revisar la malla de la maestría de <b>Administración de Empresas mención Gestión de las Pymes</b> con sus módulos (asignaturas) con más detalles ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/images/2022/marzo/mallascurriculares/administraciondeempresas.pdf" target="_blank">link</a>.
+    `);
     //TAG: INFO_FAC_CIENCIAS_AGRARIAS
     exports.nlp.addDocument('es', 'ciencias agrarias', 'facultades.fac_cagraria');
     exports.nlp.addAnswer('es', 'facultades.fac_cagraria', `La facultad de <b>Ciencias Agrarias</b> tiene la siguiente maestría disponible: <br>
 
   <a class="option-link" (click)="selectOption($event)">Maestría en Agropecuaria mención Gestión del Desarrollo Rural Sostenible</a><br>
   Puedes consultar mas información haciendo click en una maestría, y luego en enviar.`);
-    //TAG: MAESTRIAS
+    //TAG: INFO_MAESTRIA_AGROPECUARIA
+    exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Agropecuaria mencion gestion del Desarrollo Rural Sostenible', 'maestria.agropecuaria');
+    exports.nlp.addDocument('es', 'maestria en Agropecuaria mencion gestion del Desarrollo Rural Sostenible', 'maestria.agropecuaria');
+    exports.nlp.addDocument('es', 'Agropecuaria mencion gestion del Desarrollo Rural Sostenible', 'maestria.agropecuaria');
+    exports.nlp.addDocument('es', 'quiero informacion de la Maestria en Agropecuaria mencion gestion del Desarrollo Rural Sostenible', 'maestria.agropecuaria');
+    exports.nlp.addDocument('es', 'cuanto dura la maestria de Agropecuaria mencion gestion del Desarrollo Rural Sostenible', 'maestria.agropecuaria');
+    exports.nlp.addDocument('es', 'que titulo obtendre en Agropecuaria mencion gestion del Desarrollo Rural Sostenible', 'maestria.agropecuaria');
+    exports.nlp.addDocument('es', 'la maestria de Agropecuaria mencion gestion del Desarrollo Rural Sostenible tiene modalidad presencial', 'maestria.agropecuaria');
+    exports.nlp.addDocument('es', 'que modalidad tiene Agropecuaria mencion gestion del Desarrollo Rural Sostenible', 'maestria.agropecuaria');
+    exports.nlp.addDocument('es', 'cual es la resolucion de Agropecuaria mencion gestion del Desarrollo Rural Sostenible', 'maestria.agropecuaria');
+    exports.nlp.addDocument('es', 'cual es correo de Agropecuaria mencion gestion del Desarrollo Rural Sostenible', 'maestria.agropecuaria');
+    exports.nlp.addAnswer('es', 'maestria.agropecuaria', `La Maestría en <b>Agropecuaria</b> contiene lo siguiente: 
+    <br><b>Título a obtener:</b> Magíster en Agropecuaria mención Gestión del Desarrollo Rural Sostenible<br>
+    <b>Duración:</b> 3 Semestres Académicos<br>
+    <b>Resolución CES:</b> RPC-SO-25-NO.571-2020<br>
+    <b>Modalidad:</b> Presencial / Virtualidad<br>
+    <br>
+    Si quieres más información visita este 👉 <a href="https://www.upse.edu.ec/postgrado/index.php/agropecuaria" target="_blank">enlace</a> o comunícate al 📧 <a href="mailto:maestria.agropecuaria@upse.edu.ec">correo</a>.
+    <br>O intenta una de estas opciones 👇
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es el costo de Agropecuaria?</a>
+    <a class="option-link" (click)="selectOption($event)">¿Cuál es la malla de Agropecuaria?</a>
+    `);
+    //costo de agropecuaria con mención en gestión del desarrollo rural sostenible
+    exports.nlp.addDocument('es', 'Cual es el costo de Agropecuaria', 'maestria.costo_agropecuaria');
+    exports.nlp.addDocument('es', 'cual es el valor de agropecuaria', 'maestria.costo_agropecuaria');
+    exports.nlp.addDocument('es', 'cuanto se paga por la maestria de agropecuaria con mencion en gestion del desarrollo rural sostenible', 'maestria.costo_agropecuaria');
+    exports.nlp.addDocument('es', 'cuanto debo pagar en la maestria agropecuaria con mencion en gestion del desarrollo rural sostenible', 'maestria.costo_agropecuaria');
+    exports.nlp.addDocument('es', 'que precio tiene agropecuaria con mencion en gestion del desarrollo rural sostenible', 'maestria.costo_agropecuaria');
+    exports.nlp.addDocument('es', 'que vale la maestria de agropecuaria con mencion en gestion del desarrollo rural sostenible', 'maestria.costo_agropecuaria');
+    exports.nlp.addAnswer('es', 'maestria.costo_agropecuaria', `La maestría de <b>Agropecuaria</b> con mencion en <b>Gestión del Desarrollo Rural Sostenible</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$250</b> dólares que dan un total de <b>$4450</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
+      <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
+      `);
+    //modulos de agropecuaria con mencion en gestión del desarrollo rural sostenible
+    exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de agropecuaria con mencion en gestion del desarrollo rural sostenible', 'modulos.mod_agropecuaria');
+    exports.nlp.addDocument('es', 'modulos de la maestria de agropecuaria con mencion en gestion del desarrollo rural sostenible', 'modulos.mod_agropecuaria');
+    exports.nlp.addDocument('es', 'que modulos tiene agropecuaria con mencion en gestion del desarrollo rural sostenible', 'modulos.mod_agropecuaria');
+    exports.nlp.addDocument('es', 'cuantos periodos academicos tiene la maestria de agropecuaria con mencion en gestion del desarrollo rural sostenible', 'modulos.mod_agropecuaria');
+    exports.nlp.addAnswer('es', 'modulos.mod_agropecuaria', `La maestría de <b>Agropecuaria</b> con mencion en <b>Gestión del Desarrollo Rural Sostenible</b> tiene: 
+      <div>
+      <ul>
+      <li>2 periodos académicos</li>
+      <li>12 módulos (asignaturas)</li>
+      </ul> 
+      </div>
+      <a class="option-link" (click)="selectOption($event)">Dime las asignaturas de Agropecuaria</a>
+      `);
+    //nombre asignaturas agropecuaria con mencion en gestión del desarrollo rural sostenible
+    exports.nlp.addDocument('es', 'dime las asignaturas de agropecuaria', 'modulos.asig_agropecuaria');
+    exports.nlp.addDocument('es', 'cual es la malla de agropecuaria', 'modulos.asig_agropecuaria');
+    exports.nlp.addDocument('es', 'cuales son las materias de agropecuaria con mencion en gestion del desarrollo rural sostenible', 'modulos.asig_agropecuaria');
+    exports.nlp.addAnswer('es', 'modulos.asig_agropecuaria', `Puedes revisar la malla de la maestría de <b>Agropecuaria</b> con mención en <b>Gestión del Desarrollo Rural Sostenible</b> con sus módulos (asignaturas) con más detalles ingresando a este 👉 <a href="https://www.upse.edu.ec/postgrado/images/2022/marzo/mallascurriculares/agropecuaria.pdf" target="_blank">link</a>.
+      `);
+    //TAG: MAESTRIAS GENERAL
     exports.nlp.addDocument('es', 'Puedes decirme algunas maestrias', 'maestrias.gen');
     exports.nlp.addDocument('es', 'Que maestrias hay', 'maestrias.gen');
     exports.nlp.addDocument('es', 'Que maestrias ofrecen', 'maestrias.gen');
+    exports.nlp.addDocument('es', 'Cuales son las maestrias actuales', 'maestrias.gen');
+    exports.nlp.addDocument('es', 'dime las maestrias disponibles', 'maestrias.gen');
+    exports.nlp.addDocument('es', 'Cuantas maestrias son', 'maestrias.gen');
     exports.nlp.addAnswer('es', 'maestrias.gen', `Ofrecemos una amplia gama de programas de 
-  maestrías en diferentes areas, como: 
+  maestrías (26 en total) en diferentes áreas, como por ejemplo: 
   <a class="option-link" (click)="selectOption($event)">Maestría en Acuicultura</a>
   <a class="option-link" (click)="selectOption($event)">Maestría en Tecnología de Información</a>
   <a class="option-link" (click)="selectOption($event)">Maestría en Gestión Ambiental</a>
@@ -419,10 +1570,10 @@ Puedes consultar mas información haciendo click en una maestría, y luego en en
     exports.nlp.addDocument('es', 'que vale una maestria', 'costo_maestria.costo_maestria');
     exports.nlp.addDocument('es', 'que precio tiene una maestria', 'costo_maestria.costo_maestria');
     exports.nlp.addDocument('es', 'cual es el costo de una maestria', 'costo_maestria.costo_maestria');
-    exports.nlp.addAnswer('es', 'costo_maestria.costo_maestria', `Varía dependiendo de la maestría que elijas. Por ejemplo, en la maestría de Tecnologías de la Información tiene un arancel de <b>$5500</b> dólares y una matrícula de <b>$300</b> dólares, lo que da un total de <b>$5800</b> dólares. 
+    exports.nlp.addAnswer('es', 'costo_maestria.costo_maestria', `Varía dependiendo de la maestría que elijas. Por ejemplo, en la maestría de <b>Tecnologías de la Información</b> tiene un arancel de <b>$5500</b> dólares y una matrícula de <b>$300</b> dólares, lo que da un total de <b>$5800</b> dólares. 
   <br><br>Recuerda que también hay diferentes descuentos a los que puedes aplicar. 
   <a class="option-link" (click)="selectOption($event)">¿Cuáles son esos descuentos?</a>
-  <a class="option-link" (click)="selectOption($event)">¿Cuáles son las Facultades</a>
+  <a class="option-link" (click)="selectOption($event)">¿Cuáles son las Facultades?</a>
   <a class="option-link" (click)="selectOption($event)">Quiero inscribirme</a>`);
     //GESTIÓN DEL APRENDIZAJE Y EVALUACIÓN
     //TAG: FALTA ASISTENCIA
@@ -917,58 +2068,5 @@ Puedes consultar mas información haciendo click en una maestría, y luego en en
     exports.nlp.save('./model.nlp');
     const hrend = process.hrtime(hrstart);
     console.info('Se entrenó correctamente! (hr): %ds %dms', hrend[0], hrend[1] / 1000000);
-    /* let registrationInProgress = false;
-    let currentStep = 0;
-    let userData: any = {};
-    
-    const rl = readline.createInterface({
-      input: process.stdin,
-      output: process.stdout
-    });
-    const askQuestion = () => {
-      rl.question('Ingrese un mensaje (escriba "quit" para salir): ', async (message: string) => {
-        if (message.toLowerCase() === 'quit') {
-          rl.close();
-          return;
-        }
-    
-        const response = await nlp.process('es', message);
-        if (response.intent === 'registro.registro') {
-          console.log(response.answer);
-          registrationInProgress = true;
-          currentStep = 1;
-        } else if (registrationInProgress) {
-          switch (currentStep) {
-            case 1:
-              userData.cedula = message;
-              console.log('Dame tu nombre:');
-              currentStep++;
-              break;
-            case 2:
-              userData.nombre = message;
-              console.log('Dame tu apellido:');
-              currentStep++;
-              break;
-            // Agrega más casos según las preguntas que desees hacer
-            default:
-              userData.apellido = message;
-              console.log('Registro completado:');
-              console.log(userData);
-              registrationInProgress = false;
-              break;
-          }
-        } else {
-          if (response.intent === 'None') {
-            console.log('No entiendo lo que quieres decir en traints.');
-          } else {
-            console.log('Respuesta:', response.answer);
-          }
-        }
-    
-        askQuestion();
-      });
-    };
-    
-    askQuestion(); */
 }))();
 //# sourceMappingURL=train.js.map
