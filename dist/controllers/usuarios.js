@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.postConsulta = exports.postComentario = exports.getMaestrias = void 0;
+exports.postComentario = exports.postConsulta = exports.getMaestrias = void 0;
 const usuario_1 = __importDefault(require("../models/usuario"));
 const oferta_1 = __importDefault(require("../models/oferta"));
 const train_1 = require("../chatbotia/train");
@@ -20,9 +20,11 @@ const comentario_neg_1 = __importDefault(require("../models/comentario_neg"));
 const comentario_pos_1 = __importDefault(require("../models/comentario_pos"));
 const { SentimentManager } = require("node-nlp");
 const sentiment = new SentimentManager();
+const userStates = {};
+/*
 let registrationInProgress = false;
 let currentStep = 0;
-let userData = {};
+let userData: UserData = {}; */
 const getMaestrias = () => __awaiter(void 0, void 0, void 0, function* () {
     const oferta = yield oferta_1.default.findAll({
         attributes: ["descripcion"],
@@ -32,6 +34,187 @@ const getMaestrias = () => __awaiter(void 0, void 0, void 0, function* () {
     return maestrias;
 });
 exports.getMaestrias = getMaestrias;
+function postConsulta(req, res) {
+    var _a;
+    return __awaiter(this, void 0, void 0, function* () {
+        const message = req.body.message;
+        const uniqueUserId = req.body.uniqueUserId;
+        const { body } = req;
+        let answer = "";
+        let validarNum = false;
+        const validarDig = /^\d{10}$/;
+        const validarEmail = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+        const validarLetras = /^(?=.*[a-zA-ZáéíóúÁÉÍÓÚñÑ])[-a-zA-ZáéíóúÁÉÍÓÚñÑ]+(?:\s[-a-zA-ZáéíóúÁÉÍÓÚñÑ]+)*$/;
+        try {
+            const response = yield train_1.nlp.process("es", message);
+            if (response.intent === "inscripcion.inscripcion") {
+                answer = response.answer;
+                /* registrationInProgress = true;
+                currentStep = 1; */
+                userStates[uniqueUserId] = {}; // Inicializar el estado de usuario
+                userStates[uniqueUserId].currentStep = 1; // Establecer el primer paso del flujo
+            }
+            else if (userStates[uniqueUserId] && userStates[uniqueUserId].currentStep) {
+                if (message.toLowerCase() === "no" ||
+                    message.toLowerCase() === "cancelar") {
+                    delete userStates[uniqueUserId];
+                    answer = "Entiendo...🥺 <br>Si cambias de opinión, estaré aquí para ayudarte.😄";
+                }
+                else {
+                    switch (userStates[uniqueUserId].currentStep) {
+                        case 1:
+                            userStates[uniqueUserId].confirm = "temp";
+                            answer =
+                                "¡Perfecto! 🥳 (Puedes cancelar el registro si escribes: <b>cancelar</b>) <br><br> Por favor, proporciona tu número de cédula:";
+                            userStates[uniqueUserId].currentStep = 2;
+                            break;
+                        case 2:
+                            if (!validarNum) {
+                                if (!message.match(validarDig)) {
+                                    answer =
+                                        "El número de cédula debe tener 10 dígitos numéricos 🙂. Por favor, intenta nuevamente:";
+                                }
+                                else {
+                                    userStates[uniqueUserId].identificacion = message;
+                                    validarNum = true; // Marcar la cédula como válida
+                                    if (validarNum) {
+                                        answer = "Ingresa tus nombres:";
+                                        userStates[uniqueUserId].currentStep = 3;
+                                    }
+                                }
+                            }
+                            break;
+                        case 3:
+                            if (!message.match(validarLetras)) {
+                                answer =
+                                    "El nombre debe contener solo letras 🙂. Por favor, intenta nuevamente:";
+                            }
+                            else if (message.trim().length < 3) {
+                                answer =
+                                    "El nombre debe tener al menos 3 carácteres 🙂. Por favor, intenta nuevamente:";
+                            }
+                            else {
+                                userStates[uniqueUserId].nombres = message;
+                                answer = "Ingresa tus apellidos:";
+                                userStates[uniqueUserId].currentStep = 4;
+                            }
+                            break;
+                        case 4:
+                            if (!message.match(validarLetras)) {
+                                answer =
+                                    "El apellido debe contener solo letras 🙂. Por favor, intenta nuevamente:";
+                            }
+                            else if (message.trim().length < 3) {
+                                answer =
+                                    "El apellido debe tener al menos 3 carácteres 🙂. Por favor, intenta nuevamente:";
+                            }
+                            else {
+                                userStates[uniqueUserId].apellidos = message;
+                                answer = `Sexo: F=Femenino, M=Masculino <br>
+            <a class="option-link" (click)="selectOption($event)">F</a>
+            <a class="option-link" (click)="selectOption($event)">M</a>`;
+                                userStates[uniqueUserId].currentStep = 5;
+                            }
+                            break;
+                        case 5:
+                            if (message.toUpperCase() === "F" ||
+                                message.toUpperCase() === "M") {
+                                userStates[uniqueUserId].sexo = message.toUpperCase();
+                                answer = "Ingrese su número de teléfono:";
+                                userStates[uniqueUserId].currentStep = 6;
+                            }
+                            else {
+                                answer =
+                                    "Por favor, ingresa 'F' para Femenino o 'M' para Masculino:";
+                            }
+                            break;
+                        case 6:
+                            if (!validarNum) {
+                                if (!message.match(validarDig)) {
+                                    answer =
+                                        "El número de teléfono debe tener 10 dígitos numéricos 🙂. Por favor, intenta nuevamente:";
+                                }
+                                else {
+                                    userStates[uniqueUserId].celular = message;
+                                    validarNum = true; // Marcar la telefono como válido
+                                    if (validarNum) {
+                                        answer = "Ingrese su correo personal:";
+                                        userStates[uniqueUserId].currentStep = 7;
+                                    }
+                                }
+                            }
+                            break;
+                        case 7:
+                            if (!message.match(validarEmail)) {
+                                answer =
+                                    "La dirección de correo electrónico no es válida 🙂. Por favor, intenta nuevamente:";
+                            }
+                            else {
+                                userStates[uniqueUserId].email_personal = message;
+                                answer = `Ingrese código: (Si no tiene, haga click en el botón)<br>
+                <a class="option-link" (click)="selectOption($event)">No tengo código</a>`;
+                                userStates[uniqueUserId].currentStep = 8;
+                            }
+                            break;
+                        case 8:
+                            userStates[uniqueUserId].codigo_vendedor = message;
+                            const maestrias = yield (0, exports.getMaestrias)(); // Obtener la lista de maestrías
+                            if (Array.isArray(maestrias)) {
+                                userStates[uniqueUserId].maestriasDisponibles = maestrias;
+                                answer =
+                                    'Por favor, elige una maestría de la lista:<br><a class="option-link" (click)="selectOption($event)">' +
+                                        maestrias.join('<a class="option-link" (click)="selectOption($event)">') +
+                                        "</a>";
+                                userStates[uniqueUserId].currentStep = 9;
+                            }
+                            else {
+                                answer = "Ha ocurrido un error al obtener la lista de maestrías.";
+                            }
+                            break;
+                        case 9:
+                            userStates[uniqueUserId].maestria = message;
+                            const selectedMaestria = message.toLowerCase();
+                            if (userStates[uniqueUserId].maestriasDisponibles) {
+                                const lowerCaseMaestrias = (_a = userStates[uniqueUserId].maestriasDisponibles) === null || _a === void 0 ? void 0 : _a.map((maestria) => maestria.toLowerCase());
+                                if (lowerCaseMaestrias === null || lowerCaseMaestrias === void 0 ? void 0 : lowerCaseMaestrias.includes(selectedMaestria)) {
+                                    userStates[uniqueUserId].selectedMaestria = selectedMaestria;
+                                    answer =
+                                        "¡Registro completado! 🤗 <br>Revise su correo para continuar el proceso 📧. <br> Pronto un asesor se contactará contigo 📱👨‍💼.";
+                                    const personaData = Object.assign(Object.assign({}, body), userStates[uniqueUserId]);
+                                    const persona = usuario_1.default.build(personaData);
+                                    yield persona.save();
+                                    console.log(persona);
+                                    delete userStates[uniqueUserId];
+                                }
+                                else {
+                                    answer =
+                                        "La maestría seleccionada no es válida 🙂. Por favor, elige una maestría de la lista.";
+                                }
+                            }
+                            else {
+                                answer = "No hay maestrías disponibles para seleccionar.";
+                            }
+                            break;
+                    }
+                }
+            }
+            else {
+                if (response.intent === "None") {
+                    answer = "No entiendo lo que quieres decir. 😟";
+                }
+                else {
+                    answer = response.answer;
+                }
+            }
+        }
+        catch (error) {
+            console.error("Error en el procesamiento del mensaje:", error);
+            answer = "Error en el procesamiento del mensaje";
+        }
+        res.json({ response: answer, uniqueUserId: uniqueUserId });
+    });
+}
+exports.postConsulta = postConsulta;
 function postComentario(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
@@ -69,184 +252,4 @@ function postComentario(req, res) {
     });
 }
 exports.postComentario = postComentario;
-function postConsulta(req, res) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const message = req.body.message;
-        const { body } = req;
-        let answer = "";
-        let validarNum = false;
-        const validarDig = /^\d{10}$/;
-        const validarEmail = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
-        const validarLetras = /^(?=.*[a-zA-ZáéíóúÁÉÍÓÚñÑ])[-a-zA-ZáéíóúÁÉÍÓÚñÑ]+(?:\s[-a-zA-ZáéíóúÁÉÍÓÚñÑ]+)*$/;
-        try {
-            const response = yield train_1.nlp.process("es", message);
-            if (response.intent === "inscripcion.inscripcion") {
-                answer = response.answer;
-                registrationInProgress = true;
-                currentStep = 1;
-            }
-            else if (registrationInProgress) {
-                if (message.toLowerCase() === "no" ||
-                    message.toLowerCase() === "cancelar") {
-                    registrationInProgress = false;
-                    currentStep = 0;
-                    userData = {};
-                    answer = "Entiendo...🥺 <br>Si cambias de opinión, estaré aquí para ayudarte.😄";
-                }
-                else {
-                    switch (currentStep) {
-                        case 1:
-                            userData.confirm = "temp";
-                            answer =
-                                "¡Perfecto! 🥳 (Puedes cancelar el registro si escribes: <b>cancelar</b>) <br><br> Por favor, proporciona tu número de cédula:";
-                            currentStep++;
-                            break;
-                        case 2:
-                            if (!validarNum) {
-                                if (!message.match(validarDig)) {
-                                    answer =
-                                        "El número de cédula debe tener 10 dígitos numéricos 🙂. Por favor, intenta nuevamente:";
-                                }
-                                else {
-                                    userData.identificacion = message;
-                                    validarNum = true; // Marcar la cédula como válida
-                                    if (validarNum) {
-                                        answer = "Ingresa tus nombres:";
-                                        currentStep++;
-                                    }
-                                }
-                            }
-                            break;
-                        case 3:
-                            if (!message.match(validarLetras)) {
-                                answer =
-                                    "El nombre debe contener solo letras 🙂. Por favor, intenta nuevamente:";
-                            }
-                            else if (message.trim().length < 3) {
-                                answer =
-                                    "El nombre debe tener al menos 3 carácteres 🙂. Por favor, intenta nuevamente:";
-                            }
-                            else {
-                                userData.nombres = message;
-                                answer = "Ingresa tus apellidos:";
-                                currentStep++;
-                            }
-                            break;
-                        case 4:
-                            if (!message.match(validarLetras)) {
-                                answer =
-                                    "El apellido debe contener solo letras 🙂. Por favor, intenta nuevamente:";
-                            }
-                            else if (message.trim().length < 3) {
-                                answer =
-                                    "El apellido debe tener al menos 3 carácteres 🙂. Por favor, intenta nuevamente:";
-                            }
-                            else {
-                                userData.apellidos = message;
-                                answer = `Sexo: F=Femenino, M=Masculino <br>
-            <a class="option-link" (click)="selectOption($event)">F</a>
-            <a class="option-link" (click)="selectOption($event)">M</a>`;
-                                currentStep++;
-                            }
-                            break;
-                        case 5:
-                            if (message.toUpperCase() === "F" ||
-                                message.toUpperCase() === "M") {
-                                userData.sexo = message.toUpperCase();
-                                answer = "Ingrese su número de teléfono:";
-                                currentStep++;
-                            }
-                            else {
-                                answer =
-                                    "Por favor, ingresa 'F' para Femenino o 'M' para Masculino:";
-                            }
-                            break;
-                        case 6:
-                            if (!validarNum) {
-                                if (!message.match(validarDig)) {
-                                    answer =
-                                        "El número de teléfono debe tener 10 dígitos numéricos 🙂. Por favor, intenta nuevamente:";
-                                }
-                                else {
-                                    userData.celular = message;
-                                    validarNum = true; // Marcar la telefono como válido
-                                    if (validarNum) {
-                                        answer = "Ingrese su correo personal:";
-                                        currentStep++;
-                                    }
-                                }
-                            }
-                            break;
-                        case 7:
-                            if (!message.match(validarEmail)) {
-                                answer =
-                                    "La dirección de correo electrónico no es válida 🙂. Por favor, intenta nuevamente:";
-                            }
-                            else {
-                                userData.email_personal = message;
-                                answer = `Ingrese código: (Si no tiene, haga click en el botón)<br>
-                <a class="option-link" (click)="selectOption($event)">No tengo código</a>`;
-                                currentStep++;
-                            }
-                            break;
-                        case 8:
-                            userData.codigo_vendedor = message;
-                            const maestrias = yield (0, exports.getMaestrias)(); // Obtener la lista de maestrías
-                            if (Array.isArray(maestrias)) {
-                                userData.maestriasDisponibles = maestrias;
-                                answer =
-                                    'Por favor, elige una maestría de la lista:<br><a class="option-link" (click)="selectOption($event)">' +
-                                        maestrias.join('<a class="option-link" (click)="selectOption($event)">') +
-                                        "</a>";
-                                currentStep++;
-                            }
-                            else {
-                                answer = "Ha ocurrido un error al obtener la lista de maestrías.";
-                            }
-                            break;
-                        case 9:
-                            userData.maestria = message;
-                            const selectedMaestria = message.toLowerCase();
-                            if (userData.maestriasDisponibles) {
-                                const lowerCaseMaestrias = userData.maestriasDisponibles.map((maestria) => maestria.toLowerCase());
-                                if (lowerCaseMaestrias.includes(selectedMaestria)) {
-                                    userData.selectedMaestria = selectedMaestria;
-                                    answer =
-                                        "¡Registro completado! 🤗 <br>Revise su correo para continuar el proceso 📧. <br> Pronto un asesor se contactará contigo 📱👨‍💼.";
-                                    const personaData = Object.assign(Object.assign({}, body), userData);
-                                    const persona = usuario_1.default.build(personaData);
-                                    yield persona.save();
-                                    console.log(persona);
-                                    registrationInProgress = false;
-                                    currentStep = 0;
-                                }
-                                else {
-                                    answer =
-                                        "La maestría seleccionada no es válida 🙂. Por favor, elige una maestría de la lista.";
-                                }
-                            }
-                            else {
-                                answer = "No hay maestrías disponibles para seleccionar.";
-                            }
-                            break;
-                    }
-                }
-            }
-            else {
-                if (response.intent === "None") {
-                    answer = "No entiendo lo que quieres decir. 😟";
-                }
-                else {
-                    answer = response.answer;
-                }
-            }
-        }
-        catch (error) {
-            console.error("Error en el procesamiento del mensaje:", error);
-            answer = "Error en el procesamiento del mensaje";
-        }
-        res.json({ response: answer });
-    });
-}
-exports.postConsulta = postConsulta;
 //# sourceMappingURL=usuarios.js.map

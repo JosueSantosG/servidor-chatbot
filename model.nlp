@@ -53593,7 +53593,7 @@
         ],
         "inscripcion.inscripcion": [
           {
-            "answer": "Para comenzar el registro, necesitaré que propociones tus datos para poder contactarte. ¿Deseas inscribirte? 🤗<br>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Si</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">No</a>"
+            "answer": "Para comenzar el registro, necesitaré \n  que propociones tus datos para poder contactarte."
           }
         ],
         "doc_admision.doc_admision": [
