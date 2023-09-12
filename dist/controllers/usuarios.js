@@ -111,8 +111,8 @@ function postConsulta(req, res) {
                             else {
                                 userStates[uniqueUserId].apellidos = message;
                                 answer = `Sexo: F=Femenino, M=Masculino <br>
-            <a class="option-link" (click)="selectOption($event)">F</a>
-            <a class="option-link" (click)="selectOption($event)">M</a>`;
+            <a class="option-link">F</a>
+            <a class="option-link">M</a>`;
                                 userStates[uniqueUserId].currentStep = 5;
                             }
                             break;
@@ -152,7 +152,7 @@ function postConsulta(req, res) {
                             else {
                                 userStates[uniqueUserId].email_personal = message;
                                 answer = `Ingrese código: (Si no tiene, haga click en el botón)<br>
-                <a class="option-link" (click)="selectOption($event)">No tengo código</a>`;
+                <a class="option-link">No tengo código</a>`;
                                 userStates[uniqueUserId].currentStep = 8;
                             }
                             break;
@@ -162,8 +162,8 @@ function postConsulta(req, res) {
                             if (Array.isArray(maestrias)) {
                                 userStates[uniqueUserId].maestriasDisponibles = maestrias;
                                 answer =
-                                    'Por favor, elige una maestría de la lista:<br><a class="option-link" (click)="selectOption($event)">' +
-                                        maestrias.join('<a class="option-link" (click)="selectOption($event)">') +
+                                    'Por favor, elige una maestría de la lista:<br><a class="option-link">' +
+                                        maestrias.join('<a class="option-link">') +
                                         "</a>";
                                 userStates[uniqueUserId].currentStep = 9;
                             }
