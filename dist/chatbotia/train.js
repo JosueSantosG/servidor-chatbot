@@ -1556,7 +1556,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'modalidades que tiene una maestria', 'preg_frec.preg_frec');
     exports.nlp.addDocument('es', 'cuanto dura una maestria', 'preg_frec.preg_frec');
     exports.nlp.addDocument('es', 'cual es la duracion de una maestria', 'preg_frec.preg_frec');
-    exports.nlp.addAnswer('es', 'preg_frec.preg_frec', 'Puede variar según la maestría que elijas. Por ejemplo, en la facultad de Ciencias del Mar, sus maestrías tienen una duración de 2 semestres académicos y pueden ser de modalidad híbrida, presencial o virtual. Pero puedes consultar más información específica sobre la maestría que estás buscando. <a class="option-link" (click)="selectOption($event)">Información sobre la maestría ...</a>');
+    exports.nlp.addAnswer('es', 'preg_frec.preg_frec', 'Puede variar según la maestría que elijas. Por ejemplo, en la facultad de Ciencias del Mar, sus maestrías tienen una duración de 2 semestres académicos y pueden ser de modalidad híbrida, presencial o virtual. Pero puedes consultar más información específica sobre la maestría que estás buscando. <a class="option-link" (click)="selectOptionW($event)">Información sobre la maestría ...</a>');
     //TAG: PREGUNTA DOCENTES
     exports.nlp.addDocument('es', 'quienes son los profesores las maestrias', 'preg_frec.preg_doc');
     exports.nlp.addDocument('es', 'cuales son los maestros de las maestrias', 'preg_frec.preg_doc');
@@ -1769,7 +1769,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
   También puedes consultar el correo de la maestría que buscas en 👇
   <a class="option-link" (click)="selectOption($event)">Información sobre las Facultades 🎓</a>
   y elige la maestría respectiva. O puedes intentar escribiendo 📝
-  <a class="option-link" (click)="selectOption($event)">Cual el correo de la maestría de ...</a>
+  <a class="option-link" (click)="selectOptionW($event)">Cual el correo de la maestría de ...</a>
   y especifíca el nombre de la maestría.
 
   `);
@@ -1791,7 +1791,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'que modulos tiene una maestria', 'mod_gen.mod_gen');
     exports.nlp.addAnswer('es', 'mod_gen.mod_gen', `Si deseas conocer los módulos de una maestría en particular debes 
   mencionar el nombre, puedes intentar escribiendo 📝👇
-  <a class="option-link" (click)="selectOption($event)">Cuantos modulos hay en la maestría de ...</a>
+  <a class="option-link" (click)="selectOptionW($event)">Cuantos modulos hay en la maestría de ...</a>
   y especifíca el nombre de la maestría.
   `);
     //TAG: PERFIL ASPIRANTE
