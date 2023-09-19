@@ -1,0 +1,723 @@
+{
+  "settings": {
+    "languages": [
+      "es"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "es"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "es": {
+        "settings": {
+          "locale": "es",
+          "trainByDomain": false,
+          "tag": "domain-manager-es",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "como,llam,te": {
+            "intent": "nombot.nombot",
+            "domain": "default"
+          },
+          "cual,nombr,ser,tu": {
+            "intent": "nombot.nombot",
+            "domain": "default"
+          },
+          "hol": {
+            "intent": "saludo.saludo",
+            "domain": "default"
+          },
+          "ey,que,tal": {
+            "intent": "saludo.saludo",
+            "domain": "default"
+          },
+          "como,esta": {
+            "intent": "saludo.saludo",
+            "domain": "default"
+          },
+          "buen,dia": {
+            "intent": "saludo.saludo",
+            "domain": "default"
+          },
+          "adi,ahor,por": {
+            "intent": "despedida.despedida",
+            "domain": "default"
+          },
+          "nos,ver": {
+            "intent": "despedida.despedida",
+            "domain": "default"
+          },
+          "deb,ir": {
+            "intent": "despedida.despedida",
+            "domain": "default"
+          },
+          "hast,lueg": {
+            "intent": "despedida.despedida",
+            "domain": "default"
+          },
+          "bye": {
+            "intent": "despedida.despedida",
+            "domain": "default"
+          },
+          "cha": {
+            "intent": "despedida.despedida",
+            "domain": "default"
+          },
+          "grac": {
+            "intent": "gracias.gracias",
+            "domain": "default"
+          },
+          "eso,ser,util": {
+            "intent": "gracias.gracias",
+            "domain": "default"
+          },
+          "agradec,el,te": {
+            "intent": "gracias.gracias",
+            "domain": "default"
+          },
+          "me,much,serv": {
+            "intent": "gracias.gracias",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "nombot.nombot": "default",
+          "saludo.saludo": "default",
+          "despedida.despedida": "default",
+          "gracias.gracias": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Como te llamas",
+            "intent": "nombot.nombot"
+          },
+          {
+            "domain": "default",
+            "utterance": "cual es tu nombre",
+            "intent": "nombot.nombot"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hola",
+            "intent": "saludo.saludo"
+          },
+          {
+            "domain": "default",
+            "utterance": "Ey, que tal",
+            "intent": "saludo.saludo"
+          },
+          {
+            "domain": "default",
+            "utterance": "Como estas",
+            "intent": "saludo.saludo"
+          },
+          {
+            "domain": "default",
+            "utterance": "Buenos dias",
+            "intent": "saludo.saludo"
+          },
+          {
+            "domain": "default",
+            "utterance": "adios por ahora",
+            "intent": "despedida.despedida"
+          },
+          {
+            "domain": "default",
+            "utterance": "Nos vemos",
+            "intent": "despedida.despedida"
+          },
+          {
+            "domain": "default",
+            "utterance": "debo irme",
+            "intent": "despedida.despedida"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hasta luego",
+            "intent": "despedida.despedida"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye",
+            "intent": "despedida.despedida"
+          },
+          {
+            "domain": "default",
+            "utterance": "Chao",
+            "intent": "despedida.despedida"
+          },
+          {
+            "domain": "default",
+            "utterance": "Gracias",
+            "intent": "gracias.gracias"
+          },
+          {
+            "domain": "default",
+            "utterance": "Eso es util",
+            "intent": "gracias.gracias"
+          },
+          {
+            "domain": "default",
+            "utterance": "Te lo agradezco",
+            "intent": "gracias.gracias"
+          },
+          {
+            "domain": "default",
+            "utterance": "Me sirvio mucho",
+            "intent": "gracias.gracias"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "es",
+              "tag": "nlu-es",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "como": 1,
+              "te": 1,
+              "llam": 1,
+              "cual": 1,
+              "ser": 1,
+              "tu": 1,
+              "nombr": 1,
+              "hol": 1,
+              "ey": 1,
+              "que": 1,
+              "tal": 1,
+              "esta": 1,
+              "buen": 1,
+              "dia": 1,
+              "adi": 1,
+              "por": 1,
+              "ahor": 1,
+              "nos": 1,
+              "ver": 1,
+              "deb": 1,
+              "ir": 1,
+              "hast": 1,
+              "lueg": 1,
+              "bye": 1,
+              "cha": 1,
+              "grac": 1,
+              "eso": 1,
+              "util": 1,
+              "el": 1,
+              "agradec": 1,
+              "me": 1,
+              "serv": 1,
+              "much": 1
+            },
+            "intents": {
+              "nombot.nombot": 1,
+              "saludo.saludo": 1,
+              "despedida.despedida": 1,
+              "gracias.gracias": 1
+            },
+            "intentFeatures": {
+              "nombot.nombot": {
+                "como": 1,
+                "te": 1,
+                "llam": 1,
+                "cual": 1,
+                "ser": 1,
+                "tu": 1,
+                "nombr": 1
+              },
+              "saludo.saludo": {
+                "hol": 1,
+                "ey": 1,
+                "que": 1,
+                "tal": 1,
+                "como": 1,
+                "esta": 1,
+                "buen": 1,
+                "dia": 1
+              },
+              "despedida.despedida": {
+                "adi": 1,
+                "por": 1,
+                "ahor": 1,
+                "nos": 1,
+                "ver": 1,
+                "deb": 1,
+                "ir": 1,
+                "hast": 1,
+                "lueg": 1,
+                "bye": 1,
+                "cha": 1
+              },
+              "gracias.gracias": {
+                "grac": 1,
+                "eso": 1,
+                "ser": 1,
+                "util": 1,
+                "te": 1,
+                "el": 1,
+                "agradec": 1,
+                "me": 1,
+                "serv": 1,
+                "much": 1
+              }
+            },
+            "featuresToIntent": {
+              "como": [
+                "nombot.nombot",
+                "saludo.saludo"
+              ],
+              "te": [
+                "nombot.nombot",
+                "gracias.gracias"
+              ],
+              "llam": [
+                "nombot.nombot"
+              ],
+              "cual": [
+                "nombot.nombot"
+              ],
+              "ser": [
+                "nombot.nombot",
+                "gracias.gracias"
+              ],
+              "tu": [
+                "nombot.nombot"
+              ],
+              "nombr": [
+                "nombot.nombot"
+              ],
+              "hol": [
+                "saludo.saludo"
+              ],
+              "ey": [
+                "saludo.saludo"
+              ],
+              "que": [
+                "saludo.saludo"
+              ],
+              "tal": [
+                "saludo.saludo"
+              ],
+              "esta": [
+                "saludo.saludo"
+              ],
+              "buen": [
+                "saludo.saludo"
+              ],
+              "dia": [
+                "saludo.saludo"
+              ],
+              "adi": [
+                "despedida.despedida"
+              ],
+              "por": [
+                "despedida.despedida"
+              ],
+              "ahor": [
+                "despedida.despedida"
+              ],
+              "nos": [
+                "despedida.despedida"
+              ],
+              "ver": [
+                "despedida.despedida"
+              ],
+              "deb": [
+                "despedida.despedida"
+              ],
+              "ir": [
+                "despedida.despedida"
+              ],
+              "hast": [
+                "despedida.despedida"
+              ],
+              "lueg": [
+                "despedida.despedida"
+              ],
+              "bye": [
+                "despedida.despedida"
+              ],
+              "cha": [
+                "despedida.despedida"
+              ],
+              "grac": [
+                "gracias.gracias"
+              ],
+              "eso": [
+                "gracias.gracias"
+              ],
+              "util": [
+                "gracias.gracias"
+              ],
+              "el": [
+                "gracias.gracias"
+              ],
+              "agradec": [
+                "gracias.gracias"
+              ],
+              "me": [
+                "gracias.gracias"
+              ],
+              "serv": [
+                "gracias.gracias"
+              ],
+              "much": [
+                "gracias.gracias"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "es",
+                "tag": "nlu-es",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "como",
+                "te",
+                "llam",
+                "cual",
+                "ser",
+                "tu",
+                "nombr",
+                "hol",
+                "ey",
+                "que",
+                "tal",
+                "esta",
+                "buen",
+                "dia",
+                "adi",
+                "por",
+                "ahor",
+                "nos",
+                "ver",
+                "deb",
+                "ir",
+                "hast",
+                "lueg",
+                "bye",
+                "cha",
+                "grac",
+                "eso",
+                "util",
+                "el",
+                "agradec",
+                "me",
+                "serv",
+                "much"
+              ],
+              "intents": [
+                "nombot.nombot",
+                "saludo.saludo",
+                "despedida.despedida",
+                "gracias.gracias"
+              ],
+              "perceptrons": [
+                [
+                  3.3034398555755615,
+                  4.376018047332764,
+                  6.5496368408203125,
+                  3.9083757400512695,
+                  2.554713249206543,
+                  3.9083757400512695,
+                  3.9083757400512695,
+                  -0.4787410497665405,
+                  -0.2857363820075989,
+                  -0.2857363820075989,
+                  -0.2857363820075989,
+                  -3.24800968170166,
+                  -0.3091171979904175,
+                  -0.3091171979904175,
+                  -0.24462835490703583,
+                  -0.24462835490703583,
+                  -0.24462835490703583,
+                  -0.29167118668556213,
+                  -0.29167118668556213,
+                  -0.2826465964317322,
+                  -0.2826465964317322,
+                  -0.28982725739479065,
+                  -0.28982725739479065,
+                  -0.3670375645160675,
+                  -0.3558368682861328,
+                  -0.34495165944099426,
+                  -1.3415517807006836,
+                  -1.3415517807006836,
+                  -2.176907777786255,
+                  -2.176907777786255,
+                  -0.14850465953350067,
+                  -0.14850465953350067,
+                  -0.14850465953350067,
+                  -0.0008411643906724698
+                ],
+                [
+                  3.9449784755706787,
+                  -3.79974102973938,
+                  -3.214590549468994,
+                  -0.5641798377037048,
+                  -1.4121097326278687,
+                  -0.5641798377037048,
+                  -0.5641798377037048,
+                  10.84799575805664,
+                  3.721013307571411,
+                  3.721013307571411,
+                  3.721013307571411,
+                  7.159947872161865,
+                  5.577401638031006,
+                  5.577401638031006,
+                  -1.0867247581481934,
+                  -1.0867247581481934,
+                  -1.0867247581481934,
+                  -1.5745196342468262,
+                  -1.5745196342468262,
+                  -1.5726618766784668,
+                  -1.5726618766784668,
+                  -1.5709083080291748,
+                  -1.5709083080291748,
+                  -3.0240707397460938,
+                  -3.0061912536621094,
+                  -2.9877376556396484,
+                  -0.8476690649986267,
+                  -0.8476690649986267,
+                  -0.5329856276512146,
+                  -0.5329856276512146,
+                  -1.035480260848999,
+                  -1.035480260848999,
+                  -1.035480260848999,
+                  3.1087663245862838
+                ],
+                [
+                  -3.1124253273010254,
+                  -2.3996071815490723,
+                  -0.8997329473495483,
+                  -0.9581287503242493,
+                  -2.434725522994995,
+                  -0.9581287503242493,
+                  -0.9581287503242493,
+                  -5.075964450836182,
+                  -1.7627061605453491,
+                  -1.7627061605453491,
+                  -1.7627061605453491,
+                  -2.1683857440948486,
+                  -2.639511823654175,
+                  -2.639511823654175,
+                  2.999915361404419,
+                  2.999915361404419,
+                  2.999915361404419,
+                  4.503993511199951,
+                  4.503993511199951,
+                  4.504513740539551,
+                  4.504513740539551,
+                  4.504988670349121,
+                  4.504988670349121,
+                  8.772322654724121,
+                  8.727797508239746,
+                  -5.141054630279541,
+                  -1.437470555305481,
+                  -1.437470555305481,
+                  -1.4550105333328247,
+                  -1.4550105333328247,
+                  -1.7724891901016235,
+                  -1.7724891901016235,
+                  -1.7724891901016235,
+                  5.302846437352688
+                ],
+                [
+                  -2.79504656791687,
+                  2.4005331993103027,
+                  -2.2297613620758057,
+                  -1.7772690057754517,
+                  2.7004411220550537,
+                  -1.7772690057754517,
+                  -1.7772690057754517,
+                  -2.532705545425415,
+                  -0.873466968536377,
+                  -0.873466968536377,
+                  -0.873466968536377,
+                  -0.5179716944694519,
+                  -1.308632731437683,
+                  -1.308632731437683,
+                  -0.8729645609855652,
+                  -0.8729645609855652,
+                  -0.8729645609855652,
+                  -1.3082865476608276,
+                  -1.3082865476608276,
+                  -1.3079618215560913,
+                  -1.3079618215560913,
+                  -1.3075916767120361,
+                  -1.3075916767120361,
+                  -2.4935660362243652,
+                  -2.4761343002319336,
+                  11.319887161254883,
+                  4.480467319488525,
+                  4.480467319488525,
+                  4.630377769470215,
+                  4.630377769470215,
+                  3.8870933055877686,
+                  3.8870933055877686,
+                  3.8870933055877686,
+                  2.6234670974981182
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "es",
+        "Como te llamas"
+      ],
+      [
+        "es",
+        "cual es tu nombre"
+      ],
+      [
+        "es",
+        "Hola"
+      ],
+      [
+        "es",
+        "Ey, que tal"
+      ],
+      [
+        "es",
+        "Como estas"
+      ],
+      [
+        "es",
+        "Buenos dias"
+      ],
+      [
+        "es",
+        "adios por ahora"
+      ],
+      [
+        "es",
+        "Nos vemos"
+      ],
+      [
+        "es",
+        "debo irme"
+      ],
+      [
+        "es",
+        "Hasta luego"
+      ],
+      [
+        "es",
+        "bye"
+      ],
+      [
+        "es",
+        "Chao"
+      ],
+      [
+        "es",
+        "Gracias"
+      ],
+      [
+        "es",
+        "Eso es util"
+      ],
+      [
+        "es",
+        "Te lo agradezco"
+      ],
+      [
+        "es",
+        "Me sirvio mucho"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "es": {
+        "nombot.nombot": [
+          {
+            "answer": "Mi nombre es PostgradIA 🤖"
+          }
+        ],
+        "saludo.saludo": [
+          {
+            "answer": "Hola, ¿cómo te puedo ayudar? 😄"
+          }
+        ],
+        "despedida.despedida": [
+          {
+            "answer": "¡Adios! 👋 Espero haberte ayudado."
+          },
+          {
+            "answer": "Hasta luego, que tengas un buen dia. 👋"
+          },
+          {
+            "answer": "Nos vemos pronto. 👋 ¡Vuelve cuando quieras!"
+          },
+          {
+            "answer": "Bye cuidate, 👋 si tienes otra consulta no olvides preguntarme!"
+          }
+        ],
+        "gracias.gracias": [
+          {
+            "answer": "¡Feliz de ayudar! 😄 Si tienes otra consulta no olvides preguntarme!"
+          },
+          {
+            "answer": "Es un placer ayudarte. 😄 ¡No olvides preguntarme si tienes otra duda!"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

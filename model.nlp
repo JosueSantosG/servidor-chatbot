@@ -52841,7 +52841,7 @@
         ],
         "saludo.saludo": [
           {
-            "answer": "Hola, ¿cómo te puedo ayudar? 😄<br>\n  Puedes hacer click en una opción 👇\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Información sobre las Facultades 🎓</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Quiero inscribirme 📝</a><br>\n  O escribe tu pregunta en la caja de texto.\n  "
+            "answer": "Hola, ¿cómo te puedo ayudar? 😄<br>\n  Puedes hacer click en una opción 👇\n  <a class=\"option-link\">Información sobre las Facultades 🎓</a>\n  <a class=\"option-link\">Quiero inscribirme 📝</a><br>\n  O escribe tu pregunta en la caja de texto.\n  "
           }
         ],
         "despedida.despedida": [
@@ -52868,27 +52868,27 @@
         ],
         "facultades.facultades": [
           {
-            "answer": "Hay siete facultades disponibles 🎓: <br>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Ciencias del Mar 🌊🔬</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Sistemas y Telecomunicaciones 📡💻</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Ciencias de la Educación e Idiomas 📚🗣️</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Ciencias de la Ingeniería 🛠️🔌</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Ciencias Sociales y de la Salud 👥🏥</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Ciencias Administrativas 📊💼</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Ciencias Agrarias 🌱🚜</a><br>\n  Puedes consultar mas información haciendo click en una facultad, y luego en enviar."
+            "answer": "Hay siete facultades disponibles 🎓: <br>\n  <a class=\"option-link\">Ciencias del Mar 🌊🔬</a>\n  <a class=\"option-link\">Sistemas y Telecomunicaciones 📡💻</a>\n  <a class=\"option-link\">Ciencias de la Educación e Idiomas 📚🗣️</a>\n  <a class=\"option-link\">Ciencias de la Ingeniería 🛠️🔌</a>\n  <a class=\"option-link\">Ciencias Sociales y de la Salud 👥🏥</a>\n  <a class=\"option-link\">Ciencias Administrativas 📊💼</a>\n  <a class=\"option-link\">Ciencias Agrarias 🌱🚜</a><br>\n  Puedes consultar mas información haciendo click en una facultad, y luego en enviar."
           }
         ],
         "facultades.fac_cmar": [
           {
-            "answer": "La facultad de <b>Ciencias del Mar</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Acuicultura</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Biodiversidad y Cambio Climático</a><br>\n  Puedes consultar mas información haciendo click en una maestría, y luego en enviar."
+            "answer": "La facultad de <b>Ciencias del Mar</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\">Maestría en Acuicultura</a>\n  <a class=\"option-link\">Maestría en Biodiversidad y Cambio Climático</a><br>\n  Puedes consultar mas información haciendo click en una maestría, y luego en enviar."
           }
         ],
         "maestria.acuicultura": [
           {
-            "answer": "La Maestría en <b>Acuicultura</b> contiene lo siguiente: \n    <br><strong>Título a obtener:</strong> \n    Magíster en Acuicultura<br><strong>\n    Duración:</strong> 2 Semestres Académicos<br><strong>\n    Resolución CES:</strong> RPC-SO-18-No.293-2023<br><strong>\n    Modalidad:</strong> Híbrida<br><br>Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/acuicultura\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.acuicultura@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Acuicultura?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Acuicultura?</a>\n    "
+            "answer": "La Maestría en <b>Acuicultura</b> contiene lo siguiente: \n    <br><strong>Título a obtener:</strong> \n    Magíster en Acuicultura<br><strong>\n    Duración:</strong> 2 Semestres Académicos<br><strong>\n    Resolución CES:</strong> RPC-SO-18-No.293-2023<br><strong>\n    Modalidad:</strong> Híbrida<br><br>Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/acuicultura\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.acuicultura@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Acuicultura?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Acuicultura?</a>\n    "
           }
         ],
         "maestria.costo_acui": [
           {
-            "answer": "La maestría de <b>Acuicultura</b> tiene un arancel de <b>$3700</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Acuicultura</b> tiene un arancel de <b>$3700</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_acui": [
           {
-            "answer": "La maestría de <b>Acuicultura</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>12 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de acuicultura</a>\n      "
+            "answer": "La maestría de <b>Acuicultura</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>12 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de acuicultura</a>\n      "
           }
         ],
         "modulos.asig_acui": [
@@ -52898,17 +52898,17 @@
         ],
         "maestria.biodiv": [
           {
-            "answer": "La Maestría en <b>Biodiversidad y Cambio Climático</b> contiene lo siguiente: <br>\n    <b>Título a obtener:</b> Magíster en Biodiversidad y Cambio Climático<br><b>\n    Duración:</b> 2 Semestres Académicos<br><b>\n    Resolución CES:</b> RPC-SO-51-NO.834-2022<br><b>\n    Modalidad:</b> Presencial (En tiempo real)<br><br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/biodiversidad-y-cambio-climatico\" target=\"_blank\">link </a> o comuníquese al 📧 <a href=\"mailto:maestria.biodiversidadcambioclimatico@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Biodiversidad?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Biodiversidad?</a>\n    "
+            "answer": "La Maestría en <b>Biodiversidad y Cambio Climático</b> contiene lo siguiente: <br>\n    <b>Título a obtener:</b> Magíster en Biodiversidad y Cambio Climático<br><b>\n    Duración:</b> 2 Semestres Académicos<br><b>\n    Resolución CES:</b> RPC-SO-51-NO.834-2022<br><b>\n    Modalidad:</b> Presencial (En tiempo real)<br><br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/biodiversidad-y-cambio-climatico\" target=\"_blank\">link </a> o comuníquese al 📧 <a href=\"mailto:maestria.biodiversidadcambioclimatico@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Biodiversidad?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Biodiversidad?</a>\n    "
           }
         ],
         "maestria.costobio": [
           {
-            "answer": "La maestría de <b>Biodiversidad y Cambio Climático</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar'\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Biodiversidad y Cambio Climático</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar'\n    <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_biodiv": [
           {
-            "answer": "La maestría de <b>Biodiversidad y Cambio Climático</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Biodiversidad</a>\n      "
+            "answer": "La maestría de <b>Biodiversidad y Cambio Climático</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Biodiversidad</a>\n      "
           }
         ],
         "modulos.asig_biodiv": [
@@ -52918,22 +52918,22 @@
         ],
         "facultades.fac_sistel": [
           {
-            "answer": "La facultad de <b>Sistemas y Telecomunicaciones</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Electrónica y Automatización</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Ciberseguridad</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Tecnologías de la Información</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Telecomunicaciones</a><br>\n  Puedes consultar más información haciendo click en una maestría, y luego en enviar."
+            "answer": "La facultad de <b>Sistemas y Telecomunicaciones</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\">Maestría en Electrónica y Automatización</a>\n  <a class=\"option-link\">Maestría en Ciberseguridad</a>\n  <a class=\"option-link\">Maestría en Tecnologías de la Información</a>\n  <a class=\"option-link\">Maestría en Telecomunicaciones</a><br>\n  Puedes consultar más información haciendo click en una maestría, y luego en enviar."
           }
         ],
         "maestria.electronica": [
           {
-            "answer": "La Maestría en <b>Electrónica y Automatización</b> contiene lo siguiente: \n    <br><strong>Título a obtener:</strong> Magíster en Electrónica y Automatización<br><strong>\n    Duración:</strong> 2 Semestres Académicos<br><strong>\n    Resolución CES:</strong> RPC-SO-03-No.049-2023<br><strong>\n    Modalidad:</strong> En línea<br><br>Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/electronica-y-automatizacion\" target=\"_blank\">enlace</a> o comunícate al 📧<a href=\"mailto:maestria.electronica.automatizaion@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Electrónica y Automatización?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Electrónica y Automatización?</a>\n    "
+            "answer": "La Maestría en <b>Electrónica y Automatización</b> contiene lo siguiente: \n    <br><strong>Título a obtener:</strong> Magíster en Electrónica y Automatización<br><strong>\n    Duración:</strong> 2 Semestres Académicos<br><strong>\n    Resolución CES:</strong> RPC-SO-03-No.049-2023<br><strong>\n    Modalidad:</strong> En línea<br><br>Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/electronica-y-automatizacion\" target=\"_blank\">enlace</a> o comunícate al 📧<a href=\"mailto:maestria.electronica.automatizaion@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Electrónica y Automatización?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Electrónica y Automatización?</a>\n    "
           }
         ],
         "maestria.costoelect": [
           {
-            "answer": "La maestría de <br> Electrónica y Automatización</br> tiene un arancel de <b>$3800</b> dólares y matrícula de <b>$230</b> dólares que dan un total de <b>$4030</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <br> Electrónica y Automatización</br> tiene un arancel de <b>$3800</b> dólares y matrícula de <b>$230</b> dólares que dan un total de <b>$4030</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_elect": [
           {
-            "answer": "La maestría de <b>Electrónica y Automatización</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Electrónica</a>\n      "
+            "answer": "La maestría de <b>Electrónica y Automatización</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Electrónica</a>\n      "
           }
         ],
         "modulos.asig_elect": [
@@ -52943,17 +52943,17 @@
         ],
         "maestria.ciberseg": [
           {
-            "answer": "La Maestría en <b>Ciberseguridad</b> contiene lo siguiente: \n    <br><strong>Título a obtener:</strong> Magíster en Ciberseguridad<br><strong>\n    Duración:</strong> 2 Semestres Académicos<br><strong>\n    Resolución CES:</strong> RPC-SO-39-NO.627-2022<br><strong>\n    Modalidad:</strong> Online<br><br>Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/ciberseguridad\" target=\"_blank\">enlace</a> o comunícate al 📧<a href=\"mailto:maestria.ciberseguridad@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Ciberseguridad?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Ciberseguridad?</a>\n    "
+            "answer": "La Maestría en <b>Ciberseguridad</b> contiene lo siguiente: \n    <br><strong>Título a obtener:</strong> Magíster en Ciberseguridad<br><strong>\n    Duración:</strong> 2 Semestres Académicos<br><strong>\n    Resolución CES:</strong> RPC-SO-39-NO.627-2022<br><strong>\n    Modalidad:</strong> Online<br><br>Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/ciberseguridad\" target=\"_blank\">enlace</a> o comunícate al 📧<a href=\"mailto:maestria.ciberseguridad@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Ciberseguridad?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Ciberseguridad?</a>\n    "
           }
         ],
         "maestria.costociber": [
           {
-            "answer": "La maestría de <br> Ciberseguridad</br> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <br> Ciberseguridad</br> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_ciber": [
           {
-            "answer": "La maestría de <b>Ciberseguridad</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Ciberseguridad</a>\n      "
+            "answer": "La maestría de <b>Ciberseguridad</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Ciberseguridad</a>\n      "
           }
         ],
         "modulos.asig_ciber": [
@@ -52963,17 +52963,17 @@
         ],
         "maestria.telecom": [
           {
-            "answer": "La Maestría en <b>Telecomunicaciones</b> contiene lo siguiente: \n    <br><strong>Título a obtener:</strong> Magíster en Telecomunicaciones<br><strong>\n    Duración:</strong> 2 Semestres Académicos<br><strong>\n    Resolución CES:</strong> RPC-SO-51-NO.834-2022<br><strong>\n    Modalidad:</strong> Online<br><br>Si quieres más información visita este 👉<a href=\"https://www.upse.edu.ec/postgrado/index.php/telecomunicaciones\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.telecomunicaciones@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Telecomunicaciones?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Telecomunicaciones?</a>\n    "
+            "answer": "La Maestría en <b>Telecomunicaciones</b> contiene lo siguiente: \n    <br><strong>Título a obtener:</strong> Magíster en Telecomunicaciones<br><strong>\n    Duración:</strong> 2 Semestres Académicos<br><strong>\n    Resolución CES:</strong> RPC-SO-51-NO.834-2022<br><strong>\n    Modalidad:</strong> Online<br><br>Si quieres más información visita este 👉<a href=\"https://www.upse.edu.ec/postgrado/index.php/telecomunicaciones\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.telecomunicaciones@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Telecomunicaciones?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Telecomunicaciones?</a>\n    "
           }
         ],
         "maestria.costo_telecom": [
           {
-            "answer": "La maestría de <b>Telecomunicaciones</b> tiene un arancel de <b>$3800</b> dólares y matrícula de <b>$200</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Telecomunicaciones</b> tiene un arancel de <b>$3800</b> dólares y matrícula de <b>$200</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_telecom": [
           {
-            "answer": "La maestría de <b>Telecomunicaciones</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>12 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Telecomunicaciones</a>\n      "
+            "answer": "La maestría de <b>Telecomunicaciones</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>12 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Telecomunicaciones</a>\n      "
           }
         ],
         "modulos.asig_telecom": [
@@ -52983,17 +52983,17 @@
         ],
         "maestria.ti": [
           {
-            "answer": "La Maestría en <b>Tecnologías de la Información</b> contiene lo siguiente: \n    <br><strong>Título a obtener:</strong> Magíster en Tecnologías de la Información<br><strong>\n    Duración:</strong> 2 Semestres Académicos<br><strong>\n    Resolución CES:</strong> RPC-SO-14-NO.287-2020<br><strong>\n    Modalidad:</strong> Presencial<br><br>Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/tecnologias-informacion\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.tic@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Tecnologías de la Información?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Tecnologías de la Información?</a>\n    "
+            "answer": "La Maestría en <b>Tecnologías de la Información</b> contiene lo siguiente: \n    <br><strong>Título a obtener:</strong> Magíster en Tecnologías de la Información<br><strong>\n    Duración:</strong> 2 Semestres Académicos<br><strong>\n    Resolución CES:</strong> RPC-SO-14-NO.287-2020<br><strong>\n    Modalidad:</strong> Presencial<br><br>Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/tecnologias-informacion\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.tic@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Tecnologías de la Información?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Tecnologías de la Información?</a>\n    "
           }
         ],
         "maestria.costo_ti": [
           {
-            "answer": "La maestría de <b>Tecnologías de la Información</b> tiene un arancel de <b>$5500</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$5800</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Tecnologías de la Información</b> tiene un arancel de <b>$5500</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$5800</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_ti": [
           {
-            "answer": "La maestría de <b>Tecnologías de la Información</b> tiene: \n      <div>\n      <ul>\n      <li>3 periodos académicos</li>\n      <li>14 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Tecnologías de la Información</a>\n      "
+            "answer": "La maestría de <b>Tecnologías de la Información</b> tiene: \n      <div>\n      <ul>\n      <li>3 periodos académicos</li>\n      <li>14 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Tecnologías de la Información</a>\n      "
           }
         ],
         "modulos.asig_ti": [
@@ -53003,22 +53003,22 @@
         ],
         "facultades.fac_idiomas": [
           {
-            "answer": "La facultad de <b>Ciencias de la Educacion e Idiomas</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Educación Inicial</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Educación Básica</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Educación mención Tecnología e Innovación Educativa</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Entrenamiento Deportivo</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Psicopedagogía</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Pedagogía de los Idiomas Nacionales y Extranjeros mención Enseñanza de Inglés</a><br>\n  Puedes consultar mas información haciendo click en una maestría, y luego en enviar."
+            "answer": "La facultad de <b>Ciencias de la Educacion e Idiomas</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\">Maestría en Educación Inicial</a>\n  <a class=\"option-link\">Maestría en Educación Básica</a>\n  <a class=\"option-link\">Maestría en Educación mención Tecnología e Innovación Educativa</a>\n  <a class=\"option-link\">Maestría en Entrenamiento Deportivo</a>\n  <a class=\"option-link\">Maestría en Psicopedagogía</a>\n  <a class=\"option-link\">Maestría en Pedagogía de los Idiomas Nacionales y Extranjeros mención Enseñanza de Inglés</a><br>\n  Puedes consultar mas información haciendo click en una maestría, y luego en enviar."
           }
         ],
         "maestria.educacion_inicial": [
           {
-            "answer": "La Maestría en <b>Educación Inicial</b> contiene lo siguiente: <br>\n    <b>Título a obtener:</b> Magíster en Educación Inicial<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-04-No.077-2023<br>\n    <b>Modalidad:</b> En línea<br>\n    <br>\n    Si quieres más información visita este 👉<a href=\"https://www.upse.edu.ec/postgrado/index.php/educacion-inicial\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.educacion.inicial@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Educación Inicial?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Educación Inicial?</a>\n\n    "
+            "answer": "La Maestría en <b>Educación Inicial</b> contiene lo siguiente: <br>\n    <b>Título a obtener:</b> Magíster en Educación Inicial<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-04-No.077-2023<br>\n    <b>Modalidad:</b> En línea<br>\n    <br>\n    Si quieres más información visita este 👉<a href=\"https://www.upse.edu.ec/postgrado/index.php/educacion-inicial\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.educacion.inicial@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Educación Inicial?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Educación Inicial?</a>\n\n    "
           }
         ],
         "maestria.costo_edu_ini": [
           {
-            "answer": "La maestría de <b>Educacion Inicial</b> tiene un arancel de <b>$2000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$2000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Educacion Inicial</b> tiene un arancel de <b>$2000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$2000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_edu_ini": [
           {
-            "answer": "La maestría de <b>Educación Inicial</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Educacion Inicial</a>\n      "
+            "answer": "La maestría de <b>Educación Inicial</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Educacion Inicial</a>\n      "
           }
         ],
         "modulos.asig_edu_ini": [
@@ -53028,17 +53028,17 @@
         ],
         "maestria.educacion_basica": [
           {
-            "answer": "La Maestría en <b>Educación Básica</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Educación Básica<br>\n    <b>Duración:</b> 2 años académicos<br>\n    <b>Resolución CES:</b> RPC-SO-04-No.077-2023<br>\n    <b>Modalidad:</b> En línea<br>\n    <br>\n    Si quieres más información visita este 👉<a href=\"https://www.upse.edu.ec/postgrado/index.php/educacion-basica\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.educacionbasica@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Educación Básica?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Educación Básica?</a>\n    "
+            "answer": "La Maestría en <b>Educación Básica</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Educación Básica<br>\n    <b>Duración:</b> 2 años académicos<br>\n    <b>Resolución CES:</b> RPC-SO-04-No.077-2023<br>\n    <b>Modalidad:</b> En línea<br>\n    <br>\n    Si quieres más información visita este 👉<a href=\"https://www.upse.edu.ec/postgrado/index.php/educacion-basica\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.educacionbasica@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Educación Básica?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Educación Básica?</a>\n    "
           }
         ],
         "maestria.costo_edubasica": [
           {
-            "answer": "La maestría de <b>Educacion basica</b> tiene un arancel de <b>$2000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$2000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Educacion basica</b> tiene un arancel de <b>$2000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$2000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_edubasica": [
           {
-            "answer": "La maestría de <b>Educación básica</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Educacion basica</a>\n      "
+            "answer": "La maestría de <b>Educación básica</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Educacion basica</a>\n      "
           }
         ],
         "modulos.asig_edubasica": [
@@ -53048,17 +53048,17 @@
         ],
         "maestria.edutecnol": [
           {
-            "answer": "La Maestría en <b>Educación</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Educación Básica mención Tecnología E Innovación Educativa<br>\n    <b>Duración:</b> 2 años académicos<br>\n    <b>Resolución CES:</b> RPC-SO-25-NO.393-2022<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/educacion\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.educacion@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Educación con Mención en Tecnología?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Educación con Mención en Tecnología?</a>\n    "
+            "answer": "La Maestría en <b>Educación</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Educación Básica mención Tecnología E Innovación Educativa<br>\n    <b>Duración:</b> 2 años académicos<br>\n    <b>Resolución CES:</b> RPC-SO-25-NO.393-2022<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/educacion\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.educacion@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Educación con Mención en Tecnología?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Educación con Mención en Tecnología?</a>\n    "
           }
         ],
         "maestria.costo_eduinnov": [
           {
-            "answer": "La maestría de <b>Educación con mención en Tecnología e Innovación Educativa</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Educación con mención en Tecnología e Innovación Educativa</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_eduinnov": [
           {
-            "answer": "La maestría de <b>Educación con mención en Tecnología e Innovación Educativa</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>12 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Educación con mención en Tecnología</a>\n      "
+            "answer": "La maestría de <b>Educación con mención en Tecnología e Innovación Educativa</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>12 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Educación con mención en Tecnología</a>\n      "
           }
         ],
         "modulos.asig_eduinnov": [
@@ -53068,17 +53068,17 @@
         ],
         "maestria.entrenamiento": [
           {
-            "answer": "La Maestría en <b>Entrenamiento Deportivo</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Entrenamiento Deportivo<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-21-NO.449-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/entrenamiento-deportivo\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.entrenamiento@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Entrenamiento Deportivo?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Entrenamiento Deportivo?</a>\n    "
+            "answer": "La Maestría en <b>Entrenamiento Deportivo</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Entrenamiento Deportivo<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-21-NO.449-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/entrenamiento-deportivo\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.entrenamiento@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Entrenamiento Deportivo?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Entrenamiento Deportivo?</a>\n    "
           }
         ],
         "maestria.costo_entdep": [
           {
-            "answer": "La maestría de <b>Entrenamiento Deportivo</b> tiene un arancel de <b>$3200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$3500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Entrenamiento Deportivo</b> tiene un arancel de <b>$3200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$3500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_entdep": [
           {
-            "answer": "La maestría de <b>Entrenamiento Deportivo</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Entrenamiento Deportivo</a>\n      "
+            "answer": "La maestría de <b>Entrenamiento Deportivo</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Entrenamiento Deportivo</a>\n      "
           }
         ],
         "modulos.asig_entdep": [
@@ -53088,17 +53088,17 @@
         ],
         "maestria.psicopedagogia": [
           {
-            "answer": "La Maestría en <b>Psicopedagogía</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Psicopedagogía<br>\n    <b>Duración:</b> 3 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-21-NO.445-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/psicopedagogia\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.psicopedagogia@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Psicopedagogia?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Psicopedagogia?</a>\n    "
+            "answer": "La Maestría en <b>Psicopedagogía</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Psicopedagogía<br>\n    <b>Duración:</b> 3 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-21-NO.445-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/psicopedagogia\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.psicopedagogia@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Psicopedagogia?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Psicopedagogia?</a>\n    "
           }
         ],
         "maestria.costo_psicoped": [
           {
-            "answer": "La maestría de <b>Psicopedagogía</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Psicopedagogía</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_psicoped": [
           {
-            "answer": "La maestría de <b>Psicopedagogía</b> tiene: \n      <div>\n      <ul>\n      <li>3 periodos académicos</li>\n      <li>13 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Psicopedagogía</a>\n      "
+            "answer": "La maestría de <b>Psicopedagogía</b> tiene: \n      <div>\n      <ul>\n      <li>3 periodos académicos</li>\n      <li>13 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Psicopedagogía</a>\n      "
           }
         ],
         "modulos.asig_psicoped": [
@@ -53108,17 +53108,17 @@
         ],
         "maestria.pedagogiaidiomas": [
           {
-            "answer": "La Maestría en <b>Pedagogía de los Idiomas Nacionales y Extranjeros</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Pedagogía de los Idiomas Nacionales y Extranjeros mención Enseñanza de Inglés<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-21-NO.440-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/idiomas-nacionales-extranjeros\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.idiomas@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Pedagogía de los Idiomas?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Pedagogía de los Idiomas?</a>\n    "
+            "answer": "La Maestría en <b>Pedagogía de los Idiomas Nacionales y Extranjeros</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Pedagogía de los Idiomas Nacionales y Extranjeros mención Enseñanza de Inglés<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-21-NO.440-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/idiomas-nacionales-extranjeros\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.idiomas@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Pedagogía de los Idiomas?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Pedagogía de los Idiomas?</a>\n    "
           }
         ],
         "maestria.costo_pedidiomas": [
           {
-            "answer": "La maestría de <b>Pedagogía de los Idiomas Nacionales y Extranjeros</b> con mencion en <b>Enseñanza de ingles</b> tiene un arancel de <b>$3700</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Pedagogía de los Idiomas Nacionales y Extranjeros</b> con mencion en <b>Enseñanza de ingles</b> tiene un arancel de <b>$3700</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_pedidiomas": [
           {
-            "answer": "La maestría de <b>Pedagogía de los Idiomas Nacionales y Extranjeros</b> con mencion en <b>Enseñanza de ingles</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Pedagogía de los Idiomas</a>\n      "
+            "answer": "La maestría de <b>Pedagogía de los Idiomas Nacionales y Extranjeros</b> con mencion en <b>Enseñanza de ingles</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Pedagogía de los Idiomas</a>\n      "
           }
         ],
         "modulos.asig_pedidiomas": [
@@ -53128,22 +53128,22 @@
         ],
         "facultades.fac_cing": [
           {
-            "answer": "La facultad de <b>Ciencias de la Ingeniería</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Gestión Ambiental</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Gestión de Riesgos mención Prevención de Riesgos Laborales</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Ingeniería Civil mención Gestión de la Construcción</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Petróleos</a><br>\n  Puedes consultar mas información haciendo click en una maestría, y luego en enviar."
+            "answer": "La facultad de <b>Ciencias de la Ingeniería</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\">Maestría en Gestión Ambiental</a>\n  <a class=\"option-link\">Maestría en Gestión de Riesgos mención Prevención de Riesgos Laborales</a>\n  <a class=\"option-link\">Maestría en Ingeniería Civil mención Gestión de la Construcción</a>\n  <a class=\"option-link\">Maestría en Petróleos</a><br>\n  Puedes consultar mas información haciendo click en una maestría, y luego en enviar."
           }
         ],
         "maestria.gestionambiental": [
           {
-            "answer": "La Maestría en <b>Gestión Ambiental</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Gestión Ambiental<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-51-NO.834-2022<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/gestion-ambiental\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.gestionambiental@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Gestión Ambiental?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Gestión Ambiental?</a>\n    "
+            "answer": "La Maestría en <b>Gestión Ambiental</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Gestión Ambiental<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-51-NO.834-2022<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/gestion-ambiental\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.gestionambiental@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Gestión Ambiental?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Gestión Ambiental?</a>\n    "
           }
         ],
         "maestria.costo_ambiental": [
           {
-            "answer": "La maestría de <b>Gestión Ambiental</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Gestión Ambiental</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_ambiental": [
           {
-            "answer": "La maestría de <b>Gestión Ambiental</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Gestión Ambiental</a>\n      "
+            "answer": "La maestría de <b>Gestión Ambiental</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Gestión Ambiental</a>\n      "
           }
         ],
         "modulos.asig_ambiental": [
@@ -53153,17 +53153,17 @@
         ],
         "maestria.riesgos": [
           {
-            "answer": "La Maestría en <b>Gestión de Riesgos</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Gestión de Riesgos mención Prevención de Riesgos Laborales<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-01-N.016-2023<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/gestion-de-riesgos\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.gestionriesgos@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Gestion de Riesgos?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Gestion de Riesgos?</a>\n    "
+            "answer": "La Maestría en <b>Gestión de Riesgos</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Gestión de Riesgos mención Prevención de Riesgos Laborales<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-01-N.016-2023<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/gestion-de-riesgos\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.gestionriesgos@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Gestion de Riesgos?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Gestion de Riesgos?</a>\n    "
           }
         ],
         "maestria.costo_riesgos": [
           {
-            "answer": "La maestría de <b>Gestión de Riesgos mención Prevención de Riesgos Laborales</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Gestión de Riesgos mención Prevención de Riesgos Laborales</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_riesgos": [
           {
-            "answer": "La maestría de <b>Gestión de Riesgos mención Prevención de Riesgos Laborales</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Gestión de Riesgos</a>\n      "
+            "answer": "La maestría de <b>Gestión de Riesgos mención Prevención de Riesgos Laborales</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Gestión de Riesgos</a>\n      "
           }
         ],
         "modulos.asig_riesgos": [
@@ -53173,17 +53173,17 @@
         ],
         "maestria.civil": [
           {
-            "answer": "La Maestría en <b>Ingeniería Civil</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Ingeniería Civil mención Gestión de la Construcción<br>\n    <b>Duración:</b> 3 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-25-NO.571-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/ingenieria-civil\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.civil@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Ingenieria Civil?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Ingenieria Civil?</a>\n    "
+            "answer": "La Maestría en <b>Ingeniería Civil</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Ingeniería Civil mención Gestión de la Construcción<br>\n    <b>Duración:</b> 3 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-25-NO.571-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/ingenieria-civil\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.civil@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Ingenieria Civil?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Ingenieria Civil?</a>\n    "
           }
         ],
         "maestria.costo_ingenieria": [
           {
-            "answer": "La maestría de <b>Ingeniería Civil mención Gestión de la Construcción</b> tiene un arancel de <b>$5500</b> dólares y matrícula de <b>$350</b> dólares que dan un total de <b>$5850</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Ingeniería Civil mención Gestión de la Construcción</b> tiene un arancel de <b>$5500</b> dólares y matrícula de <b>$350</b> dólares que dan un total de <b>$5850</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_ingenieria": [
           {
-            "answer": "La maestría de <b>Ingeniería Civil mención Gestión de la Construcción</b> tiene: \n      <div>\n      <ul>\n      <li>3 periodos académicos</li>\n      <li>14 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Ingeniería Civil</a>\n      "
+            "answer": "La maestría de <b>Ingeniería Civil mención Gestión de la Construcción</b> tiene: \n      <div>\n      <ul>\n      <li>3 periodos académicos</li>\n      <li>14 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Ingeniería Civil</a>\n      "
           }
         ],
         "modulos.asig_ingenieria": [
@@ -53193,17 +53193,17 @@
         ],
         "maestria.petroleos": [
           {
-            "answer": "La Maestría en <b>Petróleos</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Petróleos<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-22-NO.479-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/petroleos\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.petroleos@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Petroleos?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Petroleos?</a>\n    "
+            "answer": "La Maestría en <b>Petróleos</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Petróleos<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-22-NO.479-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/petroleos\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.petroleos@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Petroleos?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Petroleos?</a>\n    "
           }
         ],
         "maestria.costo_petroleos": [
           {
-            "answer": "La maestría de <b>Petróleos</b> tiene un arancel de <b>$6000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$6400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Petróleos</b> tiene un arancel de <b>$6000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$6400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_petroleos": [
           {
-            "answer": "La maestría de <b>Petróleos</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>12 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Petróleos</a>\n      "
+            "answer": "La maestría de <b>Petróleos</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>12 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Petróleos</a>\n      "
           }
         ],
         "modulos.asig_petroleos": [
@@ -53213,22 +53213,22 @@
         ],
         "facultades.fac_salud": [
           {
-            "answer": "La facultad de <b>Ciencias Sociales y de la Salud</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Derecho Procesal</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Derecho</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Derecho mención Derecho Constitucional</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Gestión Social y Desarrollo mención Desarrollo Local</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Comunicación</a><br>\n  Puedes consultar mas información haciendo click en una maestría, y luego en enviar."
+            "answer": "La facultad de <b>Ciencias Sociales y de la Salud</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\">Maestría en Derecho Procesal</a>\n  <a class=\"option-link\">Maestría en Derecho</a>\n  <a class=\"option-link\">Maestría en Derecho mención Derecho Constitucional</a>\n  <a class=\"option-link\">Maestría en Gestión Social y Desarrollo mención Desarrollo Local</a>\n  <a class=\"option-link\">Maestría en Comunicación</a><br>\n  Puedes consultar mas información haciendo click en una maestría, y luego en enviar."
           }
         ],
         "maestria.derecho_procesal": [
           {
-            "answer": "La Maestría en <b>Derecho Procesal</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Derecho Procesal<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-50-No.805-2022<br>\n    <b>Modalidad:</b> En línea<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/derecho-procesal\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.derechoprocesal@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Derecho Procesal?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Derecho Procesal?</a>\n    "
+            "answer": "La Maestría en <b>Derecho Procesal</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Derecho Procesal<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-50-No.805-2022<br>\n    <b>Modalidad:</b> En línea<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/derecho-procesal\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.derechoprocesal@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Derecho Procesal?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Derecho Procesal?</a>\n    "
           }
         ],
         "maestria.costo_derechoprocesal": [
           {
-            "answer": "La maestría de <b>Derecho Procesal</b> tiene un arancel de <b>$2500</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$2500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Derecho Procesal</b> tiene un arancel de <b>$2500</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$2500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_derechoprocesal": [
           {
-            "answer": "La maestría de <b>Derecho Procesal</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Derecho Procesal</a>\n      "
+            "answer": "La maestría de <b>Derecho Procesal</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Derecho Procesal</a>\n      "
           }
         ],
         "modulos.asig_derechoprocesal": [
@@ -53238,17 +53238,17 @@
         ],
         "maestria.derecho": [
           {
-            "answer": "La Maestría en <b>Derecho</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Derecho<br>\n    <b>Duración:</b> 3 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-25-NO.570-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/derecho\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.derecho@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Derecho?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Derecho?</a>\n    "
+            "answer": "La Maestría en <b>Derecho</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Derecho<br>\n    <b>Duración:</b> 3 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-25-NO.570-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/derecho\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.derecho@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Derecho?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Derecho?</a>\n    "
           }
         ],
         "maestria.costo_derecho": [
           {
-            "answer": "La maestría de <b>Derecho</b> tiene un arancel de <b>$4600</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$5000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Derecho</b> tiene un arancel de <b>$4600</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$5000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_derecho": [
           {
-            "answer": "La maestría de <b>Derecho</b> tiene: \n      <div>\n      <ul>\n      <li>3 periodos académicos</li>\n      <li>14 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Derecho</a>\n      "
+            "answer": "La maestría de <b>Derecho</b> tiene: \n      <div>\n      <ul>\n      <li>3 periodos académicos</li>\n      <li>14 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Derecho</a>\n      "
           }
         ],
         "modulos.asig_derecho": [
@@ -53258,17 +53258,17 @@
         ],
         "maestria.derecho_const": [
           {
-            "answer": "La Maestría en <b>Derecho</b> con mención en <b>Derecho Constitucional</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Derecho mención Derecho Constitucional<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-21-NO.449-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/derecho-constitucional\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.derechoconstitucional@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Derecho mención Derecho Constitucional?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Derecho mención Derecho Constitucional?</a>\n    "
+            "answer": "La Maestría en <b>Derecho</b> con mención en <b>Derecho Constitucional</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Derecho mención Derecho Constitucional<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-21-NO.449-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/derecho-constitucional\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.derechoconstitucional@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Derecho mención Derecho Constitucional?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Derecho mención Derecho Constitucional?</a>\n    "
           }
         ],
         "maestria.costo_derechoconstitucional": [
           {
-            "answer": "La maestría en <b>Derecho mención Derecho Constitucional</b> tiene un arancel de <b>$4600</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$5000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría en <b>Derecho mención Derecho Constitucional</b> tiene un arancel de <b>$4600</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$5000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_derechoconstitucional": [
           {
-            "answer": "La maestría en <b>Derecho mención Derecho Constitucional</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Derecho mención Derecho Constitucional</a>\n      "
+            "answer": "La maestría en <b>Derecho mención Derecho Constitucional</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Derecho mención Derecho Constitucional</a>\n      "
           }
         ],
         "modulos.asig_derechoconstitucional": [
@@ -53278,17 +53278,17 @@
         ],
         "maestria.gestion_social": [
           {
-            "answer": "La Maestría en <b>Gestión Social y Desarrollo</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Gestión Social y Desarrollo mención Desarrollo Local<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-19-NO.404-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/gestion-social-y-desarrollo\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.desarrollolocal@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Gestión Social y Desarrollo?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Gestión Social y Desarrollo?</a>\n    "
+            "answer": "La Maestría en <b>Gestión Social y Desarrollo</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Gestión Social y Desarrollo mención Desarrollo Local<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-19-NO.404-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/gestion-social-y-desarrollo\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.desarrollolocal@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Gestión Social y Desarrollo?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Gestión Social y Desarrollo?</a>\n    "
           }
         ],
         "maestria.costo_gestiondesarrollo": [
           {
-            "answer": "La maestría en <b>Gestión Social y Desarrollo</b> con mención en <b>Desarrollo Local</b> tiene un arancel de <b>$3600</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$3900</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría en <b>Gestión Social y Desarrollo</b> con mención en <b>Desarrollo Local</b> tiene un arancel de <b>$3600</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$3900</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_gestiondesarrollo": [
           {
-            "answer": "La maestría en <b>Gestión Social y Desarrollo</b> con mención en <b>Desarrollo Local</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de la Maestría en Gestión Social y Desarrollo</a>\n      "
+            "answer": "La maestría en <b>Gestión Social y Desarrollo</b> con mención en <b>Desarrollo Local</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>10 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de la Maestría en Gestión Social y Desarrollo</a>\n      "
           }
         ],
         "modulos.asig_gestiondesarrollo": [
@@ -53298,17 +53298,17 @@
         ],
         "maestria.comunicacion": [
           {
-            "answer": "La Maestría en <b>Comunicación</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Comunicación<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-24-NO.543-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/comunicacion\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.comunicacion@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Comunicación?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Comunicación?</a>\n    "
+            "answer": "La Maestría en <b>Comunicación</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Comunicación<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-24-NO.543-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/comunicacion\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.comunicacion@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Comunicación?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Comunicación?</a>\n    "
           }
         ],
         "maestria.costo_comunicacion": [
           {
-            "answer": "La maestría de <b>Comunicación</b> tiene un arancel de <b>$3500</b> dólares y matrícula de <b>$350</b> dólares que dan un total de <b>$3850</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Comunicación</b> tiene un arancel de <b>$3500</b> dólares y matrícula de <b>$350</b> dólares que dan un total de <b>$3850</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_comunicacion": [
           {
-            "answer": "La maestría de <b>Comunicación</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>12 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Comunicación</a>\n      "
+            "answer": "La maestría de <b>Comunicación</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>12 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Comunicación</a>\n      "
           }
         ],
         "modulos.asig_comunicacion": [
@@ -53318,22 +53318,22 @@
         ],
         "facultades.fac_adminis": [
           {
-            "answer": "La facultad de <b>Ciencias Administrativas</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Gestión del Talento Humano</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Administración Pública</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Contabilidad y Auditoría</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Turismo mención Gestión Sostenible en Destinos Turísticos</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Administración de Empresas mención Gestión de las Pymes</a><br>\n  Puedes consultar mas información haciendo click en una maestría, y luego en enviar."
+            "answer": "La facultad de <b>Ciencias Administrativas</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\">Maestría en Gestión del Talento Humano</a>\n  <a class=\"option-link\">Maestría en Administración Pública</a>\n  <a class=\"option-link\">Maestría en Contabilidad y Auditoría</a>\n  <a class=\"option-link\">Maestría en Turismo mención Gestión Sostenible en Destinos Turísticos</a>\n  <a class=\"option-link\">Maestría en Administración de Empresas mención Gestión de las Pymes</a><br>\n  Puedes consultar mas información haciendo click en una maestría, y luego en enviar."
           }
         ],
         "maestria.talento_humano": [
           {
-            "answer": "La Maestría en <b>Gestión del Talento Humano</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Gestión del Talento Humano<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-25-NO.571-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/talento-humano\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.talentohumano@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Gestión del Talento Humano?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Gestión del Talento Humano?</a>\n    "
+            "answer": "La Maestría en <b>Gestión del Talento Humano</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Gestión del Talento Humano<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-25-NO.571-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/talento-humano\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.talentohumano@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Gestión del Talento Humano?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Gestión del Talento Humano?</a>\n    "
           }
         ],
         "maestria.costo_talento_humano": [
           {
-            "answer": "La maestría de <b>Gestión del Talento Humano</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Gestión del Talento Humano</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_talento_humano": [
           {
-            "answer": "La maestría de <b>Gestión del Talento Humano</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>12 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Gestión del Talento Humano</a>\n      "
+            "answer": "La maestría de <b>Gestión del Talento Humano</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>12 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Gestión del Talento Humano</a>\n      "
           }
         ],
         "modulos.asig_talento_humano": [
@@ -53343,17 +53343,17 @@
         ],
         "maestria.admin_publica": [
           {
-            "answer": "La Maestría en <b>Administración Pública</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Administración Pública<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-25-NO.571-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/administracion-publica\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.admpublica@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Administración Pública?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Administración Pública?</a>\n    "
+            "answer": "La Maestría en <b>Administración Pública</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Administración Pública<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-25-NO.571-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/administracion-publica\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.admpublica@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Administración Pública?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Administración Pública?</a>\n    "
           }
         ],
         "maestria.costo_admin_publica": [
           {
-            "answer": "La maestría de <b>Administración Pública</b> tiene un arancel de <b>$4500</b> dólares y matrícula de <b>$450</b> dólares que dan un total de <b>$4950</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Administración Pública</b> tiene un arancel de <b>$4500</b> dólares y matrícula de <b>$450</b> dólares que dan un total de <b>$4950</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_admin_publica": [
           {
-            "answer": "La maestría de <b>Administración Pública</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>12 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Administración Pública</a>\n      "
+            "answer": "La maestría de <b>Administración Pública</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>12 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Administración Pública</a>\n      "
           }
         ],
         "modulos.asig_admin_publica": [
@@ -53363,17 +53363,17 @@
         ],
         "maestria.contabilidad": [
           {
-            "answer": "La Maestría en <b>Contabilidad y Auditoría</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Contabilidad y Auditoría<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-24-NO.543-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/contabilidad\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.contabilidad@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Contabilidad y Auditoría?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Contabilidad y Auditoría?</a>\n    "
+            "answer": "La Maestría en <b>Contabilidad y Auditoría</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Contabilidad y Auditoría<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-24-NO.543-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/contabilidad\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.contabilidad@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Contabilidad y Auditoría?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Contabilidad y Auditoría?</a>\n    "
           }
         ],
         "maestria.costo_contabilidad": [
           {
-            "answer": "La maestría de <b>Contabilidad y Auditoría</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Contabilidad y Auditoría</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_contabilidad": [
           {
-            "answer": "La maestría de <b>Contabilidad y Auditoría</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>12 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Contabilidad y Auditoría</a>\n      "
+            "answer": "La maestría de <b>Contabilidad y Auditoría</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>12 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Contabilidad y Auditoría</a>\n      "
           }
         ],
         "modulos.asig_contabilidad": [
@@ -53383,17 +53383,17 @@
         ],
         "maestria.turismo": [
           {
-            "answer": "La Maestría en <b>Turismo</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Turismo mención Gestión Sostenible en Destinos Turísticos<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-01-NO.026-2021<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/turismo\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.turismo@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Turismo?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Turismo?</a>\n    "
+            "answer": "La Maestría en <b>Turismo</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Turismo mención Gestión Sostenible en Destinos Turísticos<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-01-NO.026-2021<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/turismo\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.turismo@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Turismo?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Turismo?</a>\n    "
           }
         ],
         "maestria.costo_turismo": [
           {
-            "answer": "La maestría de <b>Turismo</b> con mención <b>Gestión Sostenible en Destinos Turísticos</b> tiene un arancel de <b>$5000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$5000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Turismo</b> con mención <b>Gestión Sostenible en Destinos Turísticos</b> tiene un arancel de <b>$5000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$5000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_turismo": [
           {
-            "answer": "La maestría de <b>Turismo mención Gestión Sostenible en Destinos Turísticos</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>12 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Turismo</a>\n      "
+            "answer": "La maestría de <b>Turismo mención Gestión Sostenible en Destinos Turísticos</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>12 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Turismo</a>\n      "
           }
         ],
         "modulos.asig_turismo": [
@@ -53403,17 +53403,17 @@
         ],
         "maestria.admin_empresas": [
           {
-            "answer": "La Maestría en <b>Administración de Empresas</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Administración de Empresas mención Gestión de las Pymes<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-25-NO.571-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/administracion-empresas\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.pymes@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Administración de Empresas?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Administración de Empresas?</a>\n    "
+            "answer": "La Maestría en <b>Administración de Empresas</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Administración de Empresas mención Gestión de las Pymes<br>\n    <b>Duración:</b> 2 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-25-NO.571-2020<br>\n    <b>Modalidad:</b> Presencial<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/administracion-empresas\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.pymes@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Administración de Empresas?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Administración de Empresas?</a>\n    "
           }
         ],
         "maestria.costo_admin_empresas": [
           {
-            "answer": "La maestría de <b>Administración de Empresas</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n    "
+            "answer": "La maestría de <b>Administración de Empresas</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n    <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n    "
           }
         ],
         "modulos.mod_admin_empresas": [
           {
-            "answer": "La maestría de <b>Administración de Empresas mención Gestión de las Pymes</b> tiene: \n    <div>\n    <ul>\n    <li>2 periodos académicos</li>\n    <li>12 módulos (asignaturas)</li>\n    </ul> \n    </div>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Administración de Empresas</a>\n    "
+            "answer": "La maestría de <b>Administración de Empresas mención Gestión de las Pymes</b> tiene: \n    <div>\n    <ul>\n    <li>2 periodos académicos</li>\n    <li>12 módulos (asignaturas)</li>\n    </ul> \n    </div>\n    <a class=\"option-link\">Dime las asignaturas de Administración de Empresas</a>\n    "
           }
         ],
         "modulos.asig_admin_empresas": [
@@ -53423,22 +53423,22 @@
         ],
         "facultades.fac_cagraria": [
           {
-            "answer": "La facultad de <b>Ciencias Agrarias</b> tiene la siguiente maestría disponible: <br>\n\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Agropecuaria mención Gestión del Desarrollo Rural Sostenible</a><br>\n  Puedes consultar mas información haciendo click en una maestría, y luego en enviar."
+            "answer": "La facultad de <b>Ciencias Agrarias</b> tiene la siguiente maestría disponible: <br>\n\n  <a class=\"option-link\">Maestría en Agropecuaria mención Gestión del Desarrollo Rural Sostenible</a><br>\n  Puedes consultar mas información haciendo click en una maestría, y luego en enviar."
           }
         ],
         "maestria.agropecuaria": [
           {
-            "answer": "La Maestría en <b>Agropecuaria</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Agropecuaria mención Gestión del Desarrollo Rural Sostenible<br>\n    <b>Duración:</b> 3 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-25-NO.571-2020<br>\n    <b>Modalidad:</b> Presencial / Virtualidad<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/agropecuaria\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.agropecuaria@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es el costo de Agropecuaria?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuál es la malla de Agropecuaria?</a>\n    "
+            "answer": "La Maestría en <b>Agropecuaria</b> contiene lo siguiente: \n    <br><b>Título a obtener:</b> Magíster en Agropecuaria mención Gestión del Desarrollo Rural Sostenible<br>\n    <b>Duración:</b> 3 Semestres Académicos<br>\n    <b>Resolución CES:</b> RPC-SO-25-NO.571-2020<br>\n    <b>Modalidad:</b> Presencial / Virtualidad<br>\n    <br>\n    Si quieres más información visita este 👉 <a href=\"https://www.upse.edu.ec/postgrado/index.php/agropecuaria\" target=\"_blank\">enlace</a> o comunícate al 📧 <a href=\"mailto:maestria.agropecuaria@upse.edu.ec\">correo</a>.\n    <br>O intenta una de estas opciones 👇\n    <a class=\"option-link\">¿Cuál es el costo de Agropecuaria?</a>\n    <a class=\"option-link\">¿Cuál es la malla de Agropecuaria?</a>\n    "
           }
         ],
         "maestria.costo_agropecuaria": [
           {
-            "answer": "La maestría de <b>Agropecuaria</b> con mencion en <b>Gestión del Desarrollo Rural Sostenible</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$250</b> dólares que dan un total de <b>$4450</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Agropecuaria</b> con mencion en <b>Gestión del Desarrollo Rural Sostenible</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$250</b> dólares que dan un total de <b>$4450</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
           }
         ],
         "modulos.mod_agropecuaria": [
           {
-            "answer": "La maestría de <b>Agropecuaria</b> con mencion en <b>Gestión del Desarrollo Rural Sostenible</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>12 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\" (click)=\"selectOption($event)\">Dime las asignaturas de Agropecuaria</a>\n      "
+            "answer": "La maestría de <b>Agropecuaria</b> con mencion en <b>Gestión del Desarrollo Rural Sostenible</b> tiene: \n      <div>\n      <ul>\n      <li>2 periodos académicos</li>\n      <li>12 módulos (asignaturas)</li>\n      </ul> \n      </div>\n      <a class=\"option-link\">Dime las asignaturas de Agropecuaria</a>\n      "
           }
         ],
         "modulos.asig_agropecuaria": [
@@ -53448,12 +53448,12 @@
         ],
         "maestrias.gen": [
           {
-            "answer": "Ofrecemos una amplia gama de programas de \n  maestrías (26 en total) en diferentes áreas, como por ejemplo: \n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Acuicultura</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Tecnología de Información</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Gestión Ambiental</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Derecho</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Entrenamiento Deportivo</a>\n  También puedes consultar más\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Información sobre las Facultades 🎓</a>\n  y sus maestrías respectivas. O inscribete a una maestría a la que quieres ofertar, y un asesor se \n  pondrá en contacto contigo para brindarte más información.\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Si, quiero inscribirme 📝</a>\n  "
+            "answer": "Ofrecemos una amplia gama de programas de \n  maestrías (26 en total) en diferentes áreas, como por ejemplo: \n  <a class=\"option-link\">Maestría en Acuicultura</a>\n  <a class=\"option-link\">Maestría en Tecnología de Información</a>\n  <a class=\"option-link\">Maestría en Gestión Ambiental</a>\n  <a class=\"option-link\">Maestría en Derecho</a>\n  <a class=\"option-link\">Maestría en Entrenamiento Deportivo</a>\n  También puedes consultar más\n  <a class=\"option-link\">Información sobre las Facultades 🎓</a>\n  y sus maestrías respectivas. O inscribete a una maestría a la que quieres ofertar, y un asesor se \n  pondrá en contacto contigo para brindarte más información.\n  <a class=\"option-link\">Si, quiero inscribirme 📝</a>\n  "
           }
         ],
         "preg_frec.preg_frec": [
           {
-            "answer": "Puede variar según la maestría que elijas. Por ejemplo, en la facultad de Ciencias del Mar, sus maestrías tienen una duración de 2 semestres académicos y pueden ser de modalidad híbrida, presencial o virtual. Pero puedes consultar más información específica sobre la maestría que estás buscando. <a class=\"option-link\" (click)=\"selectOption($event)\">Información sobre la maestría ...</a>"
+            "answer": "Puede variar según la maestría que elijas. Por ejemplo, en la facultad de Ciencias del Mar, sus maestrías tienen una duración de 2 semestres académicos y pueden ser de modalidad híbrida, presencial o virtual. Pero puedes consultar más información específica sobre la maestría que estás buscando. <p class=\"option-link\">Información sobre la maestría ...</p>"
           }
         ],
         "preg_frec.preg_doc": [
@@ -53463,22 +53463,22 @@
         ],
         "costo_maestria.costo_maestria": [
           {
-            "answer": "Varía dependiendo de la maestría que elijas. Por ejemplo, en la maestría de <b>Tecnologías de la Información</b> tiene un arancel de <b>$5500</b> dólares y una matrícula de <b>$300</b> dólares, lo que da un total de <b>$5800</b> dólares. \n  <br><br>Recuerda que también hay diferentes descuentos a los que puedes aplicar. \n  <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son esos descuentos?</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son las Facultades?</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Quiero inscribirme</a>"
+            "answer": "Varía dependiendo de la maestría que elijas. Por ejemplo, en la maestría de <b>Tecnologías de la Información</b> tiene un arancel de <b>$5500</b> dólares y una matrícula de <b>$300</b> dólares, lo que da un total de <b>$5800</b> dólares. \n  <br><br>Recuerda que también hay diferentes descuentos a los que puedes aplicar. \n  <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n  <a class=\"option-link\">¿Cuáles son las Facultades?</a>\n  <a class=\"option-link\">Quiero inscribirme</a>"
           }
         ],
         "preg_frec.asist": [
           {
-            "answer": "Según la <b>Gestión del Aprendizaje y Evaluación</b> del Reglamento Académico de Postgrado, dice que: Se necesita una asistencia mínima del 85% del total de horas de clases programadas para aprobar la asignatura, módulo o curso.<br><br> El registro de asistencia será realizado por el asistente administrativo con la colaboración del profesor correspondiente.\n  <br><br>Recuerda que esto solo aplica para las maestrías <b>Presenciales</b>.<br>\n  Para más información comunícate al celular: 📞 <b>0982495331</b> o al 📧 <a href=\"mailto:infopostgrado@upse.edu.ec\">correo</a>.\n  <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son las maestrías presenciales?</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son las maestrías virtuales?</a>\n\n  "
+            "answer": "Según la <b>Gestión del Aprendizaje y Evaluación</b> del Reglamento Académico de Postgrado, dice que: Se necesita una asistencia mínima del 85% del total de horas de clases programadas para aprobar la asignatura, módulo o curso.<br><br> El registro de asistencia será realizado por el asistente administrativo con la colaboración del profesor correspondiente.\n  <br><br>Recuerda que esto solo aplica para las maestrías <b>Presenciales</b>.<br>\n  Para más información comunícate al celular: 📞 <b>0982495331</b> o al 📧 <a href=\"mailto:infopostgrado@upse.edu.ec\">correo</a>.\n  <a class=\"option-link\">¿Cuáles son las maestrías presenciales?</a>\n  <a class=\"option-link\">¿Cuáles son las maestrías virtuales?</a>\n\n  "
           }
         ],
         "mod.modv": [
           {
-            "answer": "\n    Las maestrías <b>Virtuales</b> son:\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Educación Inicial</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Educación Básica</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Electrónica y Automatización</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Ciberseguridad</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Telecomunicaciones</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Derecho Procesal</a>\n    <br>\n    \n    Puedes consultar mas información haciendo click en una maestría, y luego en enviar.\n    Para más información comunícate al celular: 📞 <b>0982495331</b> o al 📧 <a href=\"mailto:infopostgrado@upse.edu.ec\">correo</a>.\n\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son las maestrías presenciales?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Quiero inscribirme</a>\n\n    "
+            "answer": "\n    Las maestrías <b>Virtuales</b> son:\n    <a class=\"option-link\">Maestría en Educación Inicial</a>\n    <a class=\"option-link\">Maestría en Educación Básica</a>\n    <a class=\"option-link\">Maestría en Electrónica y Automatización</a>\n    <a class=\"option-link\">Maestría en Ciberseguridad</a>\n    <a class=\"option-link\">Maestría en Telecomunicaciones</a>\n    <a class=\"option-link\">Maestría en Derecho Procesal</a>\n    <br>\n    \n    Puedes consultar mas información haciendo click en una maestría, y luego en enviar.\n    Para más información comunícate al celular: 📞 <b>0982495331</b> o al 📧 <a href=\"mailto:infopostgrado@upse.edu.ec\">correo</a>.\n\n    <a class=\"option-link\">¿Cuáles son las maestrías presenciales?</a>\n    <a class=\"option-link\">Quiero inscribirme</a>\n\n    "
           }
         ],
         "mod.modp": [
           {
-            "answer": "\n    Las maestrías <b>Presenciales</b> son:\n    \n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Acuicultura</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Administración de Empresas Mención Gestión de las PYMES</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Administración Pública</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Agropecuaria Mención en Gestión del Desarrollo Rural Sostenible</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Biodiversidad y Cambio Climático</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Comunicación</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Contabilidad y Auditoría</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Derecho</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Derecho Mención Derecho Constitucional</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Educación Mención Tecnología e Innovación Educativa</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Entrenamiento Deportivo</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Gestión Ambiental</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Gestión de Riesgos Mención Prevención de Riesgos Laborales</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Gestión de Talento Humano</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Gestión Social y Desarrollo con Mención en Desarrollo Local</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Ingeniería Civil Mención en Gestión de Construcción</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Petróleo</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Psicopedagogía</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Tecnología de Información</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Maestría en Turismo Mención Gestión Sostenible de Destinos Turísticos</a>\n    \n    <br>\n    \n    Puedes consultar mas información haciendo click en una maestría, y luego en enviar.\n    Para más información comunícate al celular: 📞 <b>0982495331</b> o al 📧 <a href=\"mailto:infopostgrado@upse.edu.ec\">correo</a>.\n\n    <a class=\"option-link\" (click)=\"selectOption($event)\">¿Cuáles son las maestrías virtuales?</a>\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Quiero inscribirme</a>\n\n    "
+            "answer": "\n    Las maestrías <b>Presenciales</b> son:\n    \n    <a class=\"option-link\">Maestría en Acuicultura</a>\n    <a class=\"option-link\">Maestría en Administración de Empresas Mención Gestión de las PYMES</a>\n    <a class=\"option-link\">Maestría en Administración Pública</a>\n    <a class=\"option-link\">Maestría en Agropecuaria Mención en Gestión del Desarrollo Rural Sostenible</a>\n    <a class=\"option-link\">Maestría en Biodiversidad y Cambio Climático</a>\n    <a class=\"option-link\">Maestría en Comunicación</a>\n    <a class=\"option-link\">Maestría en Contabilidad y Auditoría</a>\n    <a class=\"option-link\">Maestría en Derecho</a>\n    <a class=\"option-link\">Maestría en Derecho Mención Derecho Constitucional</a>\n    <a class=\"option-link\">Maestría en Educación Mención Tecnología e Innovación Educativa</a>\n    <a class=\"option-link\">Maestría en Entrenamiento Deportivo</a>\n    <a class=\"option-link\">Maestría en Gestión Ambiental</a>\n    <a class=\"option-link\">Maestría en Gestión de Riesgos Mención Prevención de Riesgos Laborales</a>\n    <a class=\"option-link\">Maestría en Gestión de Talento Humano</a>\n    <a class=\"option-link\">Maestría en Gestión Social y Desarrollo con Mención en Desarrollo Local</a>\n    <a class=\"option-link\">Maestría en Ingeniería Civil Mención en Gestión de Construcción</a>\n    <a class=\"option-link\">Maestría en Petróleo</a>\n    <a class=\"option-link\">Maestría en Psicopedagogía</a>\n    <a class=\"option-link\">Maestría en Tecnología de Información</a>\n    <a class=\"option-link\">Maestría en Turismo Mención Gestión Sostenible de Destinos Turísticos</a>\n    \n    <br>\n    \n    Puedes consultar mas información haciendo click en una maestría, y luego en enviar.\n    Para más información comunícate al celular: 📞 <b>0982495331</b> o al 📧 <a href=\"mailto:infopostgrado@upse.edu.ec\">correo</a>.\n\n    <a class=\"option-link\">¿Cuáles son las maestrías virtuales?</a>\n    <a class=\"option-link\">Quiero inscribirme</a>\n\n    "
           }
         ],
         "costo_ins.costo_ins": [
@@ -53488,7 +53488,7 @@
         ],
         "forma_pago.forma_pago": [
           {
-            "answer": "La Empresa Pública (EP) y el Instituto de Postgrado (IPG) de UPSE brindan descuentos diferenciados para que evoluciones a otro nivel, por eso te otorgamos descuentos especiales por tu forma de pago: \n  <a class=\"option-link\" (click)=\"selectOption($event)\">Pronto pago efectivo 💰</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Pronto pago tarjeta de crédito 💳</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Convenio de financiamiento directo 📄💳</a>\n  \n  <br>\n  Para mayor información comuníquese al: 📞 <b>0939937721"
+            "answer": "La Empresa Pública (EP) y el Instituto de Postgrado (IPG) de UPSE brindan descuentos diferenciados para que evoluciones a otro nivel, por eso te otorgamos descuentos especiales por tu forma de pago: \n  <a class=\"option-link\">Pronto pago efectivo 💰</a>\n  <a class=\"option-link\">Pronto pago tarjeta de crédito 💳</a>\n  <a class=\"option-link\">Convenio de financiamiento directo 📄💳</a>\n  \n  <br>\n  Para mayor información comuníquese al: 📞 <b>0939937721"
           }
         ],
         "forma_pago.info_pago_efec": [
@@ -53513,87 +53513,87 @@
         ],
         "fecha.fecha": [
           {
-            "answer": "Las fechas de inicio de las maestrías varían según la planificación académica de cada programa. \n  Para obtener más detalles puedes comunicarte al celular: 📞 <b>0982495331</b> o al 📧 <a href=\"mailto:infopostgrado@upse.edu.ec\">correo de Postgrado</a>.<br>\n  <br>\n  También puedes consultar más\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Información sobre las Facultades 🎓</a>\n  y sus maestrías respectivas. O inscribete a una maestría a la que quieres ofertar, y un asesor se \n  pondrá en contacto contigo para brindarte más información.\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Si, quiero inscribirme 📝</a>\n\n  "
+            "answer": "Las fechas de inicio de las maestrías varían según la planificación académica de cada programa. \n  Para obtener más detalles puedes comunicarte al celular: 📞 <b>0982495331</b> o al 📧 <a href=\"mailto:infopostgrado@upse.edu.ec\">correo de Postgrado</a>.<br>\n  <br>\n  También puedes consultar más\n  <a class=\"option-link\">Información sobre las Facultades 🎓</a>\n  y sus maestrías respectivas. O inscribete a una maestría a la que quieres ofertar, y un asesor se \n  pondrá en contacto contigo para brindarte más información.\n  <a class=\"option-link\">Si, quiero inscribirme 📝</a>\n\n  "
           }
         ],
         "num.maestria": [
           {
-            "answer": "\n  Para obtener más detalles puedes comunicarte al celular: 📞 <b>0982495331</b> o al 📧 <a href=\"mailto:infopostgrado@upse.edu.ec\">correo de Postgrado</a>.<br>\n  <br>\n  También puedes consultar el correo de la maestría que buscas en 👇\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Información sobre las Facultades 🎓</a>\n  y elige la maestría respectiva. O puedes intentar escribiendo 📝\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Cual el correo de la maestría de ...</a>\n  y especifíca el nombre de la maestría.\n\n  "
+            "answer": "\n  Para obtener más detalles puedes comunicarte al celular: 📞 <b>0982495331</b> o al 📧 <a href=\"mailto:infopostgrado@upse.edu.ec\">correo de Postgrado</a>.<br>\n  <br>\n  También puedes consultar el correo de la maestría que buscas en 👇\n  <a class=\"option-link\">Información sobre las Facultades 🎓</a>\n  y elige la maestría respectiva. O puedes intentar escribiendo 📝\n  <p class=\"option-link\">Cual el correo de la maestria de ...</p>\n  y especifíca el nombre de la maestría.\n\n  "
           }
         ],
         "fecha.horario": [
           {
-            "answer": "Los horarios de las maestrías varían según la planificación académica de cada programa. \n  <br>Para obtener más detalles puedes comunicarte al celular: 📞 <b>0982495331</b> o al 📧 <a href=\"mailto:infopostgrado@upse.edu.ec\">correo de Postgrado</a>, y un asesor se \n  pondrá en contacto contigo para brindarte más información.<br>\n  También puedes consultar más 👇\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Información sobre las Facultades 🎓</a>\n  y sus maestrías respectivas. \n\n  "
+            "answer": "Los horarios de las maestrías varían según la planificación académica de cada programa. \n  <br>Para obtener más detalles puedes comunicarte al celular: 📞 <b>0982495331</b> o al 📧 <a href=\"mailto:infopostgrado@upse.edu.ec\">correo de Postgrado</a>, y un asesor se \n  pondrá en contacto contigo para brindarte más información.<br>\n  También puedes consultar más 👇\n  <a class=\"option-link\">Información sobre las Facultades 🎓</a>\n  y sus maestrías respectivas. \n\n  "
           }
         ],
         "mod_gen.mod_gen": [
           {
-            "answer": "Si deseas conocer los módulos de una maestría en particular debes \n  mencionar el nombre, puedes intentar escribiendo 📝👇\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Cuantos modulos hay en la maestría de ...</a>\n  y especifíca el nombre de la maestría.\n  "
+            "answer": "Si deseas conocer los módulos de una maestría en particular debes \n  mencionar el nombre, puedes intentar escribiendo 📝👇\n  <p class=\"option-link\">Cuantos modulos hay en la maestria de ...</p>\n  y especifíca el nombre de la maestría.\n  "
           }
         ],
         "perfil.perfil": [
           {
-            "answer": "\n  Según <b>El Cuarto Nivel o Postgrado</b> del Reglamento Académico de Postgrado, dice que \n  para el ingreso a un programa de cuarto nivel o postgrado se requiere: \n  poseer <b>título de tercer nivel de grado</b>, debidamente registrado por el \n  órgano rector de la política pública de educación superior y cumplir con el \n  proceso de admisión establecido en el programa al que postula.\n\n  <br><br>Recuerda que esto no aplica para un postgrado <b>tecnológico</b>.<br>\n  Para más información comunícate al celular: 📞 <b>0982495331</b> o al 📧 <a href=\"mailto:infopostgrado@upse.edu.ec\">correo</a>.\n  También puedes consultar el 👇\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Campo amplio</a>\n  para saber a que maestrías puedes postular.\n\n    \n  "
+            "answer": "\n  Según <b>El Cuarto Nivel o Postgrado</b> del Reglamento Académico de Postgrado, dice que \n  para el ingreso a un programa de cuarto nivel o postgrado se requiere: \n  poseer <b>título de tercer nivel de grado</b>, debidamente registrado por el \n  órgano rector de la política pública de educación superior y cumplir con el \n  proceso de admisión establecido en el programa al que postula.\n\n  <br><br>Recuerda que esto no aplica para un postgrado <b>tecnológico</b>.<br>\n  Para más información comunícate al celular: 📞 <b>0982495331</b> o al 📧 <a href=\"mailto:infopostgrado@upse.edu.ec\">correo</a>.\n  También puedes consultar el 👇\n  <a class=\"option-link\">Campo amplio</a>\n  para saber a que maestrías puedes postular.\n\n    \n  "
           }
         ],
         "campo.campo": [
           {
-            "answer": "\n  Puedes consultar en que maestrías puedes aplicar según tu título de tercer nivel de grado. 🎓<br>\n  <b>Selecciona tu campo amplio:</b><br>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Ciencias Sociales, Periodismo, Información y Derecho 📚🗞️⚖️</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Artes y Humanidades 🎨📚</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Administración 💼</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Servicios 🛍️💼</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Ingeniería, Industria y Construcción 🛠️🏭🏗️</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Agricultura, Silvicultura, Pesca y Veterinaria 🌱🌳🎣🐾</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Tecnologías de la Información y la Comunicación (TIC) 💻📱</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Salud y Bienestar 🏥❤️</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Educación 📚🎓</a>\n  <a class=\"option-link\" (click)=\"selectOption($event)\">Ciencias Naturales, Matemáticas y Estadística 🔬📊</a>\n\n  "
+            "answer": "\n  Puedes consultar en que maestrías puedes aplicar según tu título de tercer nivel de grado. 🎓<br>\n  <b>Selecciona tu campo amplio:</b><br>\n  <a class=\"option-link\">Ciencias Sociales, Periodismo, Información y Derecho 📚🗞️⚖️</a>\n  <a class=\"option-link\">Artes y Humanidades 🎨📚</a>\n  <a class=\"option-link\">Administración 💼</a>\n  <a class=\"option-link\">Servicios 🛍️💼</a>\n  <a class=\"option-link\">Ingeniería, Industria y Construcción 🛠️🏭🏗️</a>\n  <a class=\"option-link\">Agricultura, Silvicultura, Pesca y Veterinaria 🌱🌳🎣🐾</a>\n  <a class=\"option-link\">Tecnologías de la Información y la Comunicación (TIC) 💻📱</a>\n  <a class=\"option-link\">Salud y Bienestar 🏥❤️</a>\n  <a class=\"option-link\">Educación 📚🎓</a>\n  <a class=\"option-link\">Ciencias Naturales, Matemáticas y Estadística 🔬📊</a>\n\n  "
           }
         ],
         "campo.ciencias_sociales": [
           {
-            "answer": "El campo amplio de <b>Ciencias Sociales, Periodismo, Información y Derecho</b>\n        otorga los siguientes títulos:\n        <div>\n          <ul>\n            <li>Magíster en Gestión Social y Desarrollo con Mención en Desarrollo Local</li>\n            <li>Magíster en Derecho Constitucional</li>\n            <li>Magíster en Comunicación</li>\n            <li>Magíster en Derecho</li>\n            <li>Magíster en Derecho Procesal</li>\n          </ul> \n        </div>\n\n        Ahora que sabes tu campo amplio puedes consultar más\n        <a class=\"option-link\" (click)=\"selectOption($event)\">Información sobre las Facultades 🎓</a>\n        y sus maestrías respectivas.\n    "
+            "answer": "El campo amplio de <b>Ciencias Sociales, Periodismo, Información y Derecho</b>\n        otorga los siguientes títulos:\n        <div>\n          <ul>\n            <li>Magíster en Gestión Social y Desarrollo con Mención en Desarrollo Local</li>\n            <li>Magíster en Derecho Constitucional</li>\n            <li>Magíster en Comunicación</li>\n            <li>Magíster en Derecho</li>\n            <li>Magíster en Derecho Procesal</li>\n          </ul> \n        </div>\n\n        Ahora que sabes tu campo amplio puedes consultar más\n        <a class=\"option-link\">Información sobre las Facultades 🎓</a>\n        y sus maestrías respectivas.\n    "
           }
         ],
         "campo.artes_humanidades": [
           {
-            "answer": "El campo amplio de <b>Artes y Humanidades</b>\n        otorga los siguientes títulos:\n        <div>\n          <ul>\n            <li>Magíster en Artes (NO HAY)</li>\n          </ul> \n        </div>\n\n        Ahora que sabes tu campo amplio puedes consultar más\n        <a class=\"option-link\" (click)=\"selectOption($event)\">Información sobre las Facultades 🎓</a>\n        y sus maestrías respectivas.\n    "
+            "answer": "El campo amplio de <b>Artes y Humanidades</b>\n        otorga los siguientes títulos:\n        <div>\n          <ul>\n            <li>Magíster en Artes (NO HAY)</li>\n          </ul> \n        </div>\n\n        Ahora que sabes tu campo amplio puedes consultar más\n        <a class=\"option-link\">Información sobre las Facultades 🎓</a>\n        y sus maestrías respectivas.\n    "
           }
         ],
         "campo.administracion": [
           {
-            "answer": "El campo amplio de <b>Administración</b>\n        otorga los siguientes títulos:\n        <div>\n          <ul>\n            <li>Magíster en Contabilidad y Auditoría</li>\n            <li>Magíster en Gestión del Talento Humano</li>\n            <li>Magíster en Administración de Empresas, Mención Gestión de las PYMES</li>\n            <li>Magíster en Administración Pública</li>\n          </ul> \n        </div>\n\n        Ahora que sabes tu campo amplio puedes consultar más\n        <a class=\"option-link\" (click)=\"selectOption($event)\">Información sobre las Facultades 🎓</a>\n        y sus maestrías respectivas.\n    "
+            "answer": "El campo amplio de <b>Administración</b>\n        otorga los siguientes títulos:\n        <div>\n          <ul>\n            <li>Magíster en Contabilidad y Auditoría</li>\n            <li>Magíster en Gestión del Talento Humano</li>\n            <li>Magíster en Administración de Empresas, Mención Gestión de las PYMES</li>\n            <li>Magíster en Administración Pública</li>\n          </ul> \n        </div>\n\n        Ahora que sabes tu campo amplio puedes consultar más\n        <a class=\"option-link\">Información sobre las Facultades 🎓</a>\n        y sus maestrías respectivas.\n    "
           }
         ],
         "campo.servicios": [
           {
-            "answer": "El campo amplio de <b>Servicios</b>\n        otorga los siguientes títulos:\n        <div>\n          <ul>\n            <li>Magíster en Entrenamiento Deportivo</li>\n            <li>Magíster en Turismo Mención Gestión Sostenible en Destinos Turísticos</li>\n            <li>Magíster en Gestión de Riesgos con Mención de Prevención de Riesgos Laborales</li>\n          </ul> \n        </div>\n\n        Ahora que sabes tu campo amplio puedes consultar más\n        <a class=\"option-link\" (click)=\"selectOption($event)\">Información sobre las Facultades 🎓</a>\n        y sus maestrías respectivas.\n    "
+            "answer": "El campo amplio de <b>Servicios</b>\n        otorga los siguientes títulos:\n        <div>\n          <ul>\n            <li>Magíster en Entrenamiento Deportivo</li>\n            <li>Magíster en Turismo Mención Gestión Sostenible en Destinos Turísticos</li>\n            <li>Magíster en Gestión de Riesgos con Mención de Prevención de Riesgos Laborales</li>\n          </ul> \n        </div>\n\n        Ahora que sabes tu campo amplio puedes consultar más\n        <a class=\"option-link\">Información sobre las Facultades 🎓</a>\n        y sus maestrías respectivas.\n    "
           }
         ],
         "campo.ing_ind": [
           {
-            "answer": "El campo amplio de <b>Ingeniería, Industria y Construcción</b>\n        otorga los siguientes títulos:\n        <div>\n          <ul>\n            <li>Magíster en Petróleos</li>\n            <li>Magíster en Ingeniería Civil con Mención en Gestión de la Construcción</li>\n            <li>Magíster en Telecomunicaciones</li>\n            <li>Magíster en Electrónica y Automatización</li>\n          </ul> \n        </div>\n\n        Ahora que sabes tu campo amplio puedes consultar más\n        <a class=\"option-link\" (click)=\"selectOption($event)\">Información sobre las Facultades 🎓</a>\n        y sus maestrías respectivas.\n    "
+            "answer": "El campo amplio de <b>Ingeniería, Industria y Construcción</b>\n        otorga los siguientes títulos:\n        <div>\n          <ul>\n            <li>Magíster en Petróleos</li>\n            <li>Magíster en Ingeniería Civil con Mención en Gestión de la Construcción</li>\n            <li>Magíster en Telecomunicaciones</li>\n            <li>Magíster en Electrónica y Automatización</li>\n          </ul> \n        </div>\n\n        Ahora que sabes tu campo amplio puedes consultar más\n        <a class=\"option-link\">Información sobre las Facultades 🎓</a>\n        y sus maestrías respectivas.\n    "
           }
         ],
         "campo.agricultura": [
           {
-            "answer": "El campo amplio de <b>Agricultura, Silvicultura, Pesca y Veterinaria</b>\n        otorga los siguientes títulos:\n        <div>\n          <ul>\n            <li>Magíster en Agropecuaria con Mención en Gestión del Desarrollo Rural Sostenible</li>\n            <li>Magíster en Acuicultura</li>\n          </ul> \n        </div>\n\n        Ahora que sabes tu campo amplio puedes consultar más\n        <a class=\"option-link\" (click)=\"selectOption($event)\">Información sobre las Facultades 🎓</a>\n        y sus maestrías respectivas.\n    "
+            "answer": "El campo amplio de <b>Agricultura, Silvicultura, Pesca y Veterinaria</b>\n        otorga los siguientes títulos:\n        <div>\n          <ul>\n            <li>Magíster en Agropecuaria con Mención en Gestión del Desarrollo Rural Sostenible</li>\n            <li>Magíster en Acuicultura</li>\n          </ul> \n        </div>\n\n        Ahora que sabes tu campo amplio puedes consultar más\n        <a class=\"option-link\">Información sobre las Facultades 🎓</a>\n        y sus maestrías respectivas.\n    "
           }
         ],
         "campo.tic": [
           {
-            "answer": "El campo amplio de <b>Tecnologías de la Información y la Comunicación (TIC)</b>\n    otorga los siguientes títulos:\n    <div>\n      <ul>\n        <li>Magíster en Tecnologías de la Información</li>\n        <li>Magíster en Ciberseguridad</li>\n      </ul> \n    </div>\n    Ahora que sabes tu campo amplio puedes consultar más\n    <a class=\"option-link\" (click)=\"selectOption($event)\">Información sobre las Facultades 🎓</a>\n    y sus maestrías respectivas.\n    "
+            "answer": "El campo amplio de <b>Tecnologías de la Información y la Comunicación (TIC)</b>\n    otorga los siguientes títulos:\n    <div>\n      <ul>\n        <li>Magíster en Tecnologías de la Información</li>\n        <li>Magíster en Ciberseguridad</li>\n      </ul> \n    </div>\n    Ahora que sabes tu campo amplio puedes consultar más\n    <a class=\"option-link\">Información sobre las Facultades 🎓</a>\n    y sus maestrías respectivas.\n    "
           }
         ],
         "campo.salud_bienestar": [
           {
-            "answer": "El campo amplio de <b>Salud y Bienestar</b>\n        otorga los siguientes títulos:\n        <div>\n          <ul>\n            <li>Magíster en Salud (NO HAY)</li>\n          </ul> \n        </div>\n\n        Ahora que sabes tu campo amplio puedes consultar más\n        <a class=\"option-link\" (click)=\"selectOption($event)\">Información sobre las Facultades 🎓</a>\n        y sus maestrías respectivas.\n    "
+            "answer": "El campo amplio de <b>Salud y Bienestar</b>\n        otorga los siguientes títulos:\n        <div>\n          <ul>\n            <li>Magíster en Salud (NO HAY)</li>\n          </ul> \n        </div>\n\n        Ahora que sabes tu campo amplio puedes consultar más\n        <a class=\"option-link\">Información sobre las Facultades 🎓</a>\n        y sus maestrías respectivas.\n    "
           }
         ],
         "campo.educacion": [
           {
-            "answer": "El campo amplio de <b>Educación</b>\n        otorga los siguientes títulos:\n        <div>\n          <ul>\n            <li>Magíster en Pedagogía de los Idiomas Nacionales y Extranjeros Mención Enseñanza de Inglés</li>\n            <li>Magíster en Psicopedagogía</li>\n            <li>Magíster en Educación</li>\n            <li>Magíster en Educación Básica</li>\n            <li>Magíster en Educación Inicial</li>\n          </ul> \n        </div>\n\n        Ahora que sabes tu campo amplio puedes consultar más\n        <a class=\"option-link\" (click)=\"selectOption($event)\">Información sobre las Facultades 🎓</a>\n        y sus maestrías respectivas.\n    "
+            "answer": "El campo amplio de <b>Educación</b>\n        otorga los siguientes títulos:\n        <div>\n          <ul>\n            <li>Magíster en Pedagogía de los Idiomas Nacionales y Extranjeros Mención Enseñanza de Inglés</li>\n            <li>Magíster en Psicopedagogía</li>\n            <li>Magíster en Educación</li>\n            <li>Magíster en Educación Básica</li>\n            <li>Magíster en Educación Inicial</li>\n          </ul> \n        </div>\n\n        Ahora que sabes tu campo amplio puedes consultar más\n        <a class=\"option-link\">Información sobre las Facultades 🎓</a>\n        y sus maestrías respectivas.\n    "
           }
         ],
         "campo.ciencias_nat": [
           {
-            "answer": "El campo amplio de <b>Ciencias Naturales, Matemáticas y Estadística</b>\n        otorga los siguientes títulos:\n        <div>\n          <ul>\n            <li>Magíster en Biodiversidad y Cambio Climático</li>\n            <li>Magíster en Gestión Ambiental</li>\n          </ul> \n        </div>\n\n        Ahora que sabes tu campo amplio puedes consultar más\n        <a class=\"option-link\" (click)=\"selectOption($event)\">Información sobre las Facultades 🎓</a>\n        y sus maestrías respectivas.\n    "
+            "answer": "El campo amplio de <b>Ciencias Naturales, Matemáticas y Estadística</b>\n        otorga los siguientes títulos:\n        <div>\n          <ul>\n            <li>Magíster en Biodiversidad y Cambio Climático</li>\n            <li>Magíster en Gestión Ambiental</li>\n          </ul> \n        </div>\n\n        Ahora que sabes tu campo amplio puedes consultar más\n        <a class=\"option-link\">Información sobre las Facultades 🎓</a>\n        y sus maestrías respectivas.\n    "
           }
         ],
         "inscripcion.inscripcion": [
           {
-            "answer": "Para comenzar el registro, necesitaré \n  que propociones tus datos para poder contactarte."
+            "answer": "Para comenzar el registro, necesitaré que propociones tus datos para poder contactarte. ¿Deseas inscribirte? 🤗<br>\n  <a class=\"option-link\">Si</a>\n  <a class=\"option-link\">No</a>"
           }
         ],
         "doc_admision.doc_admision": [

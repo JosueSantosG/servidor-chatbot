@@ -21,10 +21,6 @@ const comentario_pos_1 = __importDefault(require("../models/comentario_pos"));
 const { SentimentManager } = require("node-nlp");
 const sentiment = new SentimentManager();
 const userStates = {};
-/*
-let registrationInProgress = false;
-let currentStep = 0;
-let userData: UserData = {}; */
 const getMaestrias = () => __awaiter(void 0, void 0, void 0, function* () {
     const oferta = yield oferta_1.default.findAll({
         attributes: ["descripcion"],

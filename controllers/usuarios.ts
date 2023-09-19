@@ -4,6 +4,7 @@ import Oferta from "../models/oferta";
 import { nlp } from "../chatbotia/train";
 import ComentarioNeg from "../models/comentario_neg";
 import ComentarioPos from "../models/comentario_pos";
+
 const { SentimentManager } = require("node-nlp");
 const sentiment = new SentimentManager();
 const userStates: Record<string, UserData> = {};
@@ -22,10 +23,6 @@ interface UserData {
   maestriasDisponibles?: string[];
   currentStep?:number;
 }
-/* 
-let registrationInProgress = false;
-let currentStep = 0;
-let userData: UserData = {}; */
 
 export const getMaestrias = async () => {
   const oferta = await Oferta.findAll({
