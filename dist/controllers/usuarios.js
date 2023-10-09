@@ -52,7 +52,7 @@ function postConsulta(req, res) {
             }
             else if (userStates[uniqueUserId] && userStates[uniqueUserId].currentStep) {
                 if (message.toLowerCase() === "no" ||
-                    message.toLowerCase() === "cancelar") {
+                    message.toLowerCase() === "salir") {
                     delete userStates[uniqueUserId];
                     answer = "Entiendo...🥺 <br>Si cambias de opinión, estaré aquí para ayudarte.😄";
                 }
@@ -61,7 +61,7 @@ function postConsulta(req, res) {
                         case 1:
                             userStates[uniqueUserId].confirm = "temp";
                             answer =
-                                "¡Perfecto! 🥳 (Puedes cancelar el registro si escribes: <b>cancelar</b>) <br><br> Por favor, proporciona tu número de cédula:";
+                                "¡Perfecto! 🥳 (Puedes cancelar el registro en cualquier momento si escribes: <b>salir</b>) <br><br> Por favor, proporciona tu número de cédula:";
                             userStates[uniqueUserId].currentStep = 2;
                             break;
                         case 2:
@@ -74,7 +74,7 @@ function postConsulta(req, res) {
                                     userStates[uniqueUserId].identificacion = message;
                                     validarNum = true; // Marcar la cédula como válida
                                     if (validarNum) {
-                                        answer = "Ingresa tus nombres:";
+                                        answer = "Listo 😄, ahora ingresa tus nombres (Ej: Juan Andres):";
                                         userStates[uniqueUserId].currentStep = 3;
                                     }
                                 }
@@ -91,7 +91,7 @@ function postConsulta(req, res) {
                             }
                             else {
                                 userStates[uniqueUserId].nombres = message;
-                                answer = "Ingresa tus apellidos:";
+                                answer = "Ahora, ingresa tus apellidos (Ej: Pérez Muñoz):";
                                 userStates[uniqueUserId].currentStep = 4;
                             }
                             break;
@@ -106,7 +106,7 @@ function postConsulta(req, res) {
                             }
                             else {
                                 userStates[uniqueUserId].apellidos = message;
-                                answer = `Sexo: F=Femenino, M=Masculino <br>
+                                answer = `Por favor, elije tu sexo: <b>F</b>= Femenino, <b>M</b>= Masculino <br>
             <a class="option-link">F</a>
             <a class="option-link">M</a>`;
                                 userStates[uniqueUserId].currentStep = 5;
@@ -116,12 +116,12 @@ function postConsulta(req, res) {
                             if (message.toUpperCase() === "F" ||
                                 message.toUpperCase() === "M") {
                                 userStates[uniqueUserId].sexo = message.toUpperCase();
-                                answer = "Ingrese su número de teléfono:";
+                                answer = "Listo 😀, ahora ingrese su número de teléfono (Ej: 0912345678):";
                                 userStates[uniqueUserId].currentStep = 6;
                             }
                             else {
                                 answer =
-                                    "Por favor, ingresa 'F' para Femenino o 'M' para Masculino:";
+                                    "Por favor, ingresa '<b>F</b>' para Femenino o '<b>M</b>' para Masculino:";
                             }
                             break;
                         case 6:
@@ -134,7 +134,7 @@ function postConsulta(req, res) {
                                     userStates[uniqueUserId].celular = message;
                                     validarNum = true; // Marcar la telefono como válido
                                     if (validarNum) {
-                                        answer = "Ingrese su correo personal:";
+                                        answer = "Excelente 😊, ahora ingrese su correo personal: (Ej: Juan@gmail.com)";
                                         userStates[uniqueUserId].currentStep = 7;
                                     }
                                 }
@@ -147,7 +147,7 @@ function postConsulta(req, res) {
                             }
                             else {
                                 userStates[uniqueUserId].email_personal = message;
-                                answer = `Ingrese código: (Si no tiene, haga click en el botón)<br>
+                                answer = `Ingrese código de vendedor: (Si no tiene, haga clic en el botón)<br>
                 <a class="option-link">No tengo código</a>`;
                                 userStates[uniqueUserId].currentStep = 8;
                             }
@@ -158,13 +158,13 @@ function postConsulta(req, res) {
                             if (Array.isArray(maestrias)) {
                                 userStates[uniqueUserId].maestriasDisponibles = maestrias;
                                 answer =
-                                    'Por favor, elige una maestría de la lista:<br><a class="option-link">' +
+                                    'Por favor, elige una maestría de la lista 👇:<br><a class="option-link">' +
                                         maestrias.join('<a class="option-link">') +
                                         "</a>";
                                 userStates[uniqueUserId].currentStep = 9;
                             }
                             else {
-                                answer = "Ha ocurrido un error al obtener la lista de maestrías.";
+                                answer = "Disculpa, ha ocurrido un error al obtener la lista de maestrías 😢.";
                             }
                             break;
                         case 9:
@@ -188,7 +188,7 @@ function postConsulta(req, res) {
                                 }
                             }
                             else {
-                                answer = "No hay maestrías disponibles para seleccionar.";
+                                answer = "No hay maestrías disponibles para seleccionar 😢.";
                             }
                             break;
                     }
@@ -196,7 +196,18 @@ function postConsulta(req, res) {
             }
             else {
                 if (response.intent === "None") {
-                    answer = "No entiendo lo que quieres decir. 😟";
+                    answer = `¡Ups! Parece que no he entendido tu consulta 😟. 
+        Podrías reformular tu pregunta o proporcionar más detalles.
+        O elije una opción relacionada 👇: 
+        <a class="option-link">Información Facultades 🏫</a>
+        <a class="option-link">Información Maestrías 📚</a>
+        <a class="option-link">Inscribirse en una maestría 📝</a>
+        <a class="option-link">Formas de pago 💳</a>
+        <a class="option-link">Precio de maestrías 💰</a>
+        <a class="option-link">Descuentos 🎉</a>
+        <a class="option-link">¿Cuál es mi campo amplio? 🌐</a>
+        
+        `;
                 }
                 else {
                     answer = response.answer;

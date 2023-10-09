@@ -8,7 +8,8 @@ const router = (0, express_1.Router)();
 router.get('/maestrias', usuarios_1.getMaestrias);
 router.post('/consulta', usuarios_1.postConsulta);
 router.post('/comentario', usuarios_1.postComentario);
-router.post('/telegram', telegramchat_1.sendStartMessage);
+router.post('/consultatelegram', telegramchat_1.sendStartMessage);
+/* router.post('/maestriastlg', sendMessageRegistro); */
 exports.default = router;
 /* router.get('/',(req,res)=>{
     req.session.prueba=req.session.prueba

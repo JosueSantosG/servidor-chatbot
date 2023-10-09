@@ -11,7 +11,8 @@ router.post('/consulta', postConsulta);
 
 router.post('/comentario', postComentario);
 
-router.post('/telegram', sendStartMessage);
+router.post('/consultatelegram', sendStartMessage);
+/* router.post('/maestriastlg', sendMessageRegistro); */
 export default router;
 
 /* router.get('/',(req,res)=>{

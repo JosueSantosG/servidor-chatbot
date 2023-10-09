@@ -52841,7 +52841,7 @@
         ],
         "saludo.saludo": [
           {
-            "answer": "Hola, ¿cómo te puedo ayudar? 😄<br>\n  Puedes hacer click en una opción 👇\n  <a class=\"option-link\">Información sobre las Facultades 🎓</a>\n  <a class=\"option-link\">Quiero inscribirme 📝</a><br>\n  O escribe tu pregunta en la caja de texto.\n  "
+            "answer": "Hola, ¿cómo te puedo ayudar? 😄<br>\n  Puedes hacer clic en una opción 👇\n  <a class=\"option-link\">Información sobre las Facultades 🎓</a>\n  <a class=\"option-link\">Quiero inscribirme 📝</a>\n  <a class=\"option-link\">Información Maestrías 📚</a>\n  <a class=\"option-link\">Formas de pago 💳</a>\n  <a class=\"option-link\">Precio de maestrías 💰</a>\n  <a class=\"option-link\">Descuentos 🎉</a>\n  <a class=\"option-link\">¿Cuál es mi campo amplio? 🌐</a><br>\n  O escribe tu pregunta en la caja de texto.\n  "
           }
         ],
         "despedida.despedida": [
@@ -52868,12 +52868,12 @@
         ],
         "facultades.facultades": [
           {
-            "answer": "Hay siete facultades disponibles 🎓: <br>\n  <a class=\"option-link\">Ciencias del Mar 🌊🔬</a>\n  <a class=\"option-link\">Sistemas y Telecomunicaciones 📡💻</a>\n  <a class=\"option-link\">Ciencias de la Educación e Idiomas 📚🗣️</a>\n  <a class=\"option-link\">Ciencias de la Ingeniería 🛠️🔌</a>\n  <a class=\"option-link\">Ciencias Sociales y de la Salud 👥🏥</a>\n  <a class=\"option-link\">Ciencias Administrativas 📊💼</a>\n  <a class=\"option-link\">Ciencias Agrarias 🌱🚜</a><br>\n  Puedes consultar mas información haciendo click en una facultad, y luego en enviar."
+            "answer": "Hay siete facultades disponibles 🎓: <br>\n  <a class=\"option-link\">Ciencias del Mar 🌊🔬</a>\n  <a class=\"option-link\">Sistemas y Telecomunicaciones 📡💻</a>\n  <a class=\"option-link\">Ciencias de la Educación e Idiomas 📚🗣️</a>\n  <a class=\"option-link\">Ciencias de la Ingeniería 🛠️🔌</a>\n  <a class=\"option-link\">Ciencias Sociales y de la Salud 👥🏥</a>\n  <a class=\"option-link\">Ciencias Administrativas 📊💼</a>\n  <a class=\"option-link\">Ciencias Agrarias 🌱🚜</a><br>\n  Puedes consultar más información haciendo clic en una facultad 👆"
           }
         ],
         "facultades.fac_cmar": [
           {
-            "answer": "La facultad de <b>Ciencias del Mar</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\">Maestría en Acuicultura</a>\n  <a class=\"option-link\">Maestría en Biodiversidad y Cambio Climático</a><br>\n  Puedes consultar mas información haciendo click en una maestría, y luego en enviar."
+            "answer": "La facultad de <b>Ciencias del Mar</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\">Maestría en Acuicultura</a>\n  <a class=\"option-link\">Maestría en Biodiversidad y Cambio Climático</a><br>\n  Puedes obtener más detalles haciendo clic en una maestría 👆."
           }
         ],
         "maestria.acuicultura": [
@@ -52883,7 +52883,7 @@
         ],
         "maestria.costo_acui": [
           {
-            "answer": "La maestría de <b>Acuicultura</b> tiene un arancel de <b>$3700</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Acuicultura</b> tiene un arancel de <b>$3700</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_acui": [
@@ -52903,7 +52903,7 @@
         ],
         "maestria.costobio": [
           {
-            "answer": "La maestría de <b>Biodiversidad y Cambio Climático</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar'\n    <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Biodiversidad y Cambio Climático</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar'\n    <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_biodiv": [
@@ -52918,7 +52918,7 @@
         ],
         "facultades.fac_sistel": [
           {
-            "answer": "La facultad de <b>Sistemas y Telecomunicaciones</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\">Maestría en Electrónica y Automatización</a>\n  <a class=\"option-link\">Maestría en Ciberseguridad</a>\n  <a class=\"option-link\">Maestría en Tecnologías de la Información</a>\n  <a class=\"option-link\">Maestría en Telecomunicaciones</a><br>\n  Puedes consultar más información haciendo click en una maestría, y luego en enviar."
+            "answer": "La facultad de <b>Sistemas y Telecomunicaciones</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\">Maestría en Electrónica y Automatización</a>\n  <a class=\"option-link\">Maestría en Ciberseguridad</a>\n  <a class=\"option-link\">Maestría en Tecnologías de la Información</a>\n  <a class=\"option-link\">Maestría en Telecomunicaciones</a><br>\n  Puedes obtener más detalles haciendo clic en una maestría 👆."
           }
         ],
         "maestria.electronica": [
@@ -52928,7 +52928,7 @@
         ],
         "maestria.costoelect": [
           {
-            "answer": "La maestría de <br> Electrónica y Automatización</br> tiene un arancel de <b>$3800</b> dólares y matrícula de <b>$230</b> dólares que dan un total de <b>$4030</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <br> Electrónica y Automatización</br> tiene un arancel de <b>$3800</b> dólares y matrícula de <b>$230</b> dólares que dan un total de <b>$4030</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_elect": [
@@ -52948,7 +52948,7 @@
         ],
         "maestria.costociber": [
           {
-            "answer": "La maestría de <br> Ciberseguridad</br> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <br> Ciberseguridad</br> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_ciber": [
@@ -52968,7 +52968,7 @@
         ],
         "maestria.costo_telecom": [
           {
-            "answer": "La maestría de <b>Telecomunicaciones</b> tiene un arancel de <b>$3800</b> dólares y matrícula de <b>$200</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Telecomunicaciones</b> tiene un arancel de <b>$3800</b> dólares y matrícula de <b>$200</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_telecom": [
@@ -52988,7 +52988,7 @@
         ],
         "maestria.costo_ti": [
           {
-            "answer": "La maestría de <b>Tecnologías de la Información</b> tiene un arancel de <b>$5500</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$5800</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Tecnologías de la Información</b> tiene un arancel de <b>$5500</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$5800</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_ti": [
@@ -53003,7 +53003,7 @@
         ],
         "facultades.fac_idiomas": [
           {
-            "answer": "La facultad de <b>Ciencias de la Educacion e Idiomas</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\">Maestría en Educación Inicial</a>\n  <a class=\"option-link\">Maestría en Educación Básica</a>\n  <a class=\"option-link\">Maestría en Educación mención Tecnología e Innovación Educativa</a>\n  <a class=\"option-link\">Maestría en Entrenamiento Deportivo</a>\n  <a class=\"option-link\">Maestría en Psicopedagogía</a>\n  <a class=\"option-link\">Maestría en Pedagogía de los Idiomas Nacionales y Extranjeros mención Enseñanza de Inglés</a><br>\n  Puedes consultar mas información haciendo click en una maestría, y luego en enviar."
+            "answer": "La facultad de <b>Ciencias de la Educacion e Idiomas</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\">Maestría en Educación Inicial</a>\n  <a class=\"option-link\">Maestría en Educación Básica</a>\n  <a class=\"option-link\">Maestría en Educación mención Tecnología e Innovación Educativa</a>\n  <a class=\"option-link\">Maestría en Entrenamiento Deportivo</a>\n  <a class=\"option-link\">Maestría en Psicopedagogía</a>\n  <a class=\"option-link\">Maestría en Pedagogía de los Idiomas Nacionales y Extranjeros mención Enseñanza de Inglés</a><br>\n  Puedes obtener más detalles haciendo clic en una maestría 👆."
           }
         ],
         "maestria.educacion_inicial": [
@@ -53013,7 +53013,7 @@
         ],
         "maestria.costo_edu_ini": [
           {
-            "answer": "La maestría de <b>Educacion Inicial</b> tiene un arancel de <b>$2000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$2000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Educacion Inicial</b> tiene un arancel de <b>$2000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$2000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_edu_ini": [
@@ -53033,7 +53033,7 @@
         ],
         "maestria.costo_edubasica": [
           {
-            "answer": "La maestría de <b>Educacion basica</b> tiene un arancel de <b>$2000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$2000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Educacion basica</b> tiene un arancel de <b>$2000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$2000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_edubasica": [
@@ -53053,7 +53053,7 @@
         ],
         "maestria.costo_eduinnov": [
           {
-            "answer": "La maestría de <b>Educación con mención en Tecnología e Innovación Educativa</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Educación con mención en Tecnología e Innovación Educativa</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_eduinnov": [
@@ -53073,7 +53073,7 @@
         ],
         "maestria.costo_entdep": [
           {
-            "answer": "La maestría de <b>Entrenamiento Deportivo</b> tiene un arancel de <b>$3200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$3500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Entrenamiento Deportivo</b> tiene un arancel de <b>$3200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$3500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_entdep": [
@@ -53093,7 +53093,7 @@
         ],
         "maestria.costo_psicoped": [
           {
-            "answer": "La maestría de <b>Psicopedagogía</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Psicopedagogía</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_psicoped": [
@@ -53113,7 +53113,7 @@
         ],
         "maestria.costo_pedidiomas": [
           {
-            "answer": "La maestría de <b>Pedagogía de los Idiomas Nacionales y Extranjeros</b> con mencion en <b>Enseñanza de ingles</b> tiene un arancel de <b>$3700</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Pedagogía de los Idiomas Nacionales y Extranjeros</b> con mencion en <b>Enseñanza de ingles</b> tiene un arancel de <b>$3700</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_pedidiomas": [
@@ -53128,7 +53128,7 @@
         ],
         "facultades.fac_cing": [
           {
-            "answer": "La facultad de <b>Ciencias de la Ingeniería</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\">Maestría en Gestión Ambiental</a>\n  <a class=\"option-link\">Maestría en Gestión de Riesgos mención Prevención de Riesgos Laborales</a>\n  <a class=\"option-link\">Maestría en Ingeniería Civil mención Gestión de la Construcción</a>\n  <a class=\"option-link\">Maestría en Petróleos</a><br>\n  Puedes consultar mas información haciendo click en una maestría, y luego en enviar."
+            "answer": "La facultad de <b>Ciencias de la Ingeniería</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\">Maestría en Gestión Ambiental</a>\n  <a class=\"option-link\">Maestría en Gestión de Riesgos mención Prevención de Riesgos Laborales</a>\n  <a class=\"option-link\">Maestría en Ingeniería Civil mención Gestión de la Construcción</a>\n  <a class=\"option-link\">Maestría en Petróleos</a><br>\n  Puedes obtener más detalles haciendo clic en una maestría 👆."
           }
         ],
         "maestria.gestionambiental": [
@@ -53138,7 +53138,7 @@
         ],
         "maestria.costo_ambiental": [
           {
-            "answer": "La maestría de <b>Gestión Ambiental</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Gestión Ambiental</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_ambiental": [
@@ -53158,7 +53158,7 @@
         ],
         "maestria.costo_riesgos": [
           {
-            "answer": "La maestría de <b>Gestión de Riesgos mención Prevención de Riesgos Laborales</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Gestión de Riesgos mención Prevención de Riesgos Laborales</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_riesgos": [
@@ -53178,7 +53178,7 @@
         ],
         "maestria.costo_ingenieria": [
           {
-            "answer": "La maestría de <b>Ingeniería Civil mención Gestión de la Construcción</b> tiene un arancel de <b>$5500</b> dólares y matrícula de <b>$350</b> dólares que dan un total de <b>$5850</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Ingeniería Civil mención Gestión de la Construcción</b> tiene un arancel de <b>$5500</b> dólares y matrícula de <b>$350</b> dólares que dan un total de <b>$5850</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_ingenieria": [
@@ -53198,7 +53198,7 @@
         ],
         "maestria.costo_petroleos": [
           {
-            "answer": "La maestría de <b>Petróleos</b> tiene un arancel de <b>$6000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$6400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Petróleos</b> tiene un arancel de <b>$6000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$6400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_petroleos": [
@@ -53213,7 +53213,7 @@
         ],
         "facultades.fac_salud": [
           {
-            "answer": "La facultad de <b>Ciencias Sociales y de la Salud</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\">Maestría en Derecho Procesal</a>\n  <a class=\"option-link\">Maestría en Derecho</a>\n  <a class=\"option-link\">Maestría en Derecho mención Derecho Constitucional</a>\n  <a class=\"option-link\">Maestría en Gestión Social y Desarrollo mención Desarrollo Local</a>\n  <a class=\"option-link\">Maestría en Comunicación</a><br>\n  Puedes consultar mas información haciendo click en una maestría, y luego en enviar."
+            "answer": "La facultad de <b>Ciencias Sociales y de la Salud</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\">Maestría en Derecho Procesal</a>\n  <a class=\"option-link\">Maestría en Derecho</a>\n  <a class=\"option-link\">Maestría en Derecho mención Derecho Constitucional</a>\n  <a class=\"option-link\">Maestría en Gestión Social y Desarrollo mención Desarrollo Local</a>\n  <a class=\"option-link\">Maestría en Comunicación</a><br>\n  Puedes obtener más detalles haciendo clic en una maestría 👆."
           }
         ],
         "maestria.derecho_procesal": [
@@ -53223,7 +53223,7 @@
         ],
         "maestria.costo_derechoprocesal": [
           {
-            "answer": "La maestría de <b>Derecho Procesal</b> tiene un arancel de <b>$2500</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$2500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Derecho Procesal</b> tiene un arancel de <b>$2500</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$2500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_derechoprocesal": [
@@ -53243,7 +53243,7 @@
         ],
         "maestria.costo_derecho": [
           {
-            "answer": "La maestría de <b>Derecho</b> tiene un arancel de <b>$4600</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$5000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Derecho</b> tiene un arancel de <b>$4600</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$5000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_derecho": [
@@ -53263,7 +53263,7 @@
         ],
         "maestria.costo_derechoconstitucional": [
           {
-            "answer": "La maestría en <b>Derecho mención Derecho Constitucional</b> tiene un arancel de <b>$4600</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$5000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría en <b>Derecho mención Derecho Constitucional</b> tiene un arancel de <b>$4600</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$5000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_derechoconstitucional": [
@@ -53283,7 +53283,7 @@
         ],
         "maestria.costo_gestiondesarrollo": [
           {
-            "answer": "La maestría en <b>Gestión Social y Desarrollo</b> con mención en <b>Desarrollo Local</b> tiene un arancel de <b>$3600</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$3900</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría en <b>Gestión Social y Desarrollo</b> con mención en <b>Desarrollo Local</b> tiene un arancel de <b>$3600</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$3900</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_gestiondesarrollo": [
@@ -53303,7 +53303,7 @@
         ],
         "maestria.costo_comunicacion": [
           {
-            "answer": "La maestría de <b>Comunicación</b> tiene un arancel de <b>$3500</b> dólares y matrícula de <b>$350</b> dólares que dan un total de <b>$3850</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Comunicación</b> tiene un arancel de <b>$3500</b> dólares y matrícula de <b>$350</b> dólares que dan un total de <b>$3850</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_comunicacion": [
@@ -53318,7 +53318,7 @@
         ],
         "facultades.fac_adminis": [
           {
-            "answer": "La facultad de <b>Ciencias Administrativas</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\">Maestría en Gestión del Talento Humano</a>\n  <a class=\"option-link\">Maestría en Administración Pública</a>\n  <a class=\"option-link\">Maestría en Contabilidad y Auditoría</a>\n  <a class=\"option-link\">Maestría en Turismo mención Gestión Sostenible en Destinos Turísticos</a>\n  <a class=\"option-link\">Maestría en Administración de Empresas mención Gestión de las Pymes</a><br>\n  Puedes consultar mas información haciendo click en una maestría, y luego en enviar."
+            "answer": "La facultad de <b>Ciencias Administrativas</b> tiene las siguientes maestrías disponibles: <br>\n  <a class=\"option-link\">Maestría en Gestión del Talento Humano</a>\n  <a class=\"option-link\">Maestría en Administración Pública</a>\n  <a class=\"option-link\">Maestría en Contabilidad y Auditoría</a>\n  <a class=\"option-link\">Maestría en Turismo mención Gestión Sostenible en Destinos Turísticos</a>\n  <a class=\"option-link\">Maestría en Administración de Empresas mención Gestión de las Pymes</a><br>\n  Puedes obtener más detalles haciendo clic en una maestría 👆."
           }
         ],
         "maestria.talento_humano": [
@@ -53328,7 +53328,7 @@
         ],
         "maestria.costo_talento_humano": [
           {
-            "answer": "La maestría de <b>Gestión del Talento Humano</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Gestión del Talento Humano</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_talento_humano": [
@@ -53348,7 +53348,7 @@
         ],
         "maestria.costo_admin_publica": [
           {
-            "answer": "La maestría de <b>Administración Pública</b> tiene un arancel de <b>$4500</b> dólares y matrícula de <b>$450</b> dólares que dan un total de <b>$4950</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Administración Pública</b> tiene un arancel de <b>$4500</b> dólares y matrícula de <b>$450</b> dólares que dan un total de <b>$4950</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_admin_publica": [
@@ -53368,7 +53368,7 @@
         ],
         "maestria.costo_contabilidad": [
           {
-            "answer": "La maestría de <b>Contabilidad y Auditoría</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Contabilidad y Auditoría</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_contabilidad": [
@@ -53388,7 +53388,7 @@
         ],
         "maestria.costo_turismo": [
           {
-            "answer": "La maestría de <b>Turismo</b> con mención <b>Gestión Sostenible en Destinos Turísticos</b> tiene un arancel de <b>$5000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$5000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Turismo</b> con mención <b>Gestión Sostenible en Destinos Turísticos</b> tiene un arancel de <b>$5000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$5000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_turismo": [
@@ -53408,7 +53408,7 @@
         ],
         "maestria.costo_admin_empresas": [
           {
-            "answer": "La maestría de <b>Administración de Empresas</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n    <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n    "
+            "answer": "La maestría de <b>Administración de Empresas</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n    <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n    "
           }
         ],
         "modulos.mod_admin_empresas": [
@@ -53423,7 +53423,7 @@
         ],
         "facultades.fac_cagraria": [
           {
-            "answer": "La facultad de <b>Ciencias Agrarias</b> tiene la siguiente maestría disponible: <br>\n\n  <a class=\"option-link\">Maestría en Agropecuaria mención Gestión del Desarrollo Rural Sostenible</a><br>\n  Puedes consultar mas información haciendo click en una maestría, y luego en enviar."
+            "answer": "La facultad de <b>Ciencias Agrarias</b> tiene la siguiente maestría disponible: <br>\n\n  <a class=\"option-link\">Maestría en Agropecuaria mención Gestión del Desarrollo Rural Sostenible</a><br>\n  Puedes obtener más detalles haciendo clic en una maestría 👆."
           }
         ],
         "maestria.agropecuaria": [
@@ -53433,7 +53433,7 @@
         ],
         "maestria.costo_agropecuaria": [
           {
-            "answer": "La maestría de <b>Agropecuaria</b> con mencion en <b>Gestión del Desarrollo Rural Sostenible</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$250</b> dólares que dan un total de <b>$4450</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n      "
+            "answer": "La maestría de <b>Agropecuaria</b> con mencion en <b>Gestión del Desarrollo Rural Sostenible</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$250</b> dólares que dan un total de <b>$4450</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.\n      <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n      "
           }
         ],
         "modulos.mod_agropecuaria": [
@@ -53463,7 +53463,7 @@
         ],
         "costo_maestria.costo_maestria": [
           {
-            "answer": "Varía dependiendo de la maestría que elijas. Por ejemplo, en la maestría de <b>Tecnologías de la Información</b> tiene un arancel de <b>$5500</b> dólares y una matrícula de <b>$300</b> dólares, lo que da un total de <b>$5800</b> dólares. \n  <br><br>Recuerda que también hay diferentes descuentos a los que puedes aplicar. \n  <a class=\"option-link\">¿Cuáles son esos descuentos?</a>\n  <a class=\"option-link\">¿Cuáles son las Facultades?</a>\n  <a class=\"option-link\">Quiero inscribirme</a>"
+            "answer": "El precio varía dependiendo de la maestría que elijas. Por ejemplo, en la maestría de <b>Tecnologías de la Información</b> tiene un arancel de <b>$5500</b> dólares y una matrícula de <b>$300</b> dólares, lo que da un total de <b>$5800</b> dólares. \n  <br><br>Recuerda que también hay diferentes descuentos a los que puedes aplicar. \n  <a class=\"option-link\">¿Cuáles son esos descuentos?🤔</a>\n  <a class=\"option-link\">¿Cuáles son las Facultades?</a>\n  <a class=\"option-link\">Quiero inscribirme</a>"
           }
         ],
         "preg_frec.asist": [
@@ -53473,12 +53473,12 @@
         ],
         "mod.modv": [
           {
-            "answer": "\n    Las maestrías <b>Virtuales</b> son:\n    <a class=\"option-link\">Maestría en Educación Inicial</a>\n    <a class=\"option-link\">Maestría en Educación Básica</a>\n    <a class=\"option-link\">Maestría en Electrónica y Automatización</a>\n    <a class=\"option-link\">Maestría en Ciberseguridad</a>\n    <a class=\"option-link\">Maestría en Telecomunicaciones</a>\n    <a class=\"option-link\">Maestría en Derecho Procesal</a>\n    <br>\n    \n    Puedes consultar mas información haciendo click en una maestría, y luego en enviar.\n    Para más información comunícate al celular: 📞 <b>0982495331</b> o al 📧 <a href=\"mailto:infopostgrado@upse.edu.ec\">correo</a>.\n\n    <a class=\"option-link\">¿Cuáles son las maestrías presenciales?</a>\n    <a class=\"option-link\">Quiero inscribirme</a>\n\n    "
+            "answer": "\n    Las maestrías <b>Virtuales</b> son:\n    <a class=\"option-link\">Maestría en Educación Inicial</a>\n    <a class=\"option-link\">Maestría en Educación Básica</a>\n    <a class=\"option-link\">Maestría en Electrónica y Automatización</a>\n    <a class=\"option-link\">Maestría en Ciberseguridad</a>\n    <a class=\"option-link\">Maestría en Telecomunicaciones</a>\n    <a class=\"option-link\">Maestría en Derecho Procesal</a>\n    <br>\n    \n    Puedes obtener más detalles haciendo clic en una maestría 👆.\n    Para más información comunícate al celular: 📞 <b>0982495331</b> o al 📧 <a href=\"mailto:infopostgrado@upse.edu.ec\">correo</a>.\n\n    <a class=\"option-link\">¿Cuáles son las maestrías presenciales?</a>\n    <a class=\"option-link\">Quiero inscribirme</a>\n\n    "
           }
         ],
         "mod.modp": [
           {
-            "answer": "\n    Las maestrías <b>Presenciales</b> son:\n    \n    <a class=\"option-link\">Maestría en Acuicultura</a>\n    <a class=\"option-link\">Maestría en Administración de Empresas Mención Gestión de las PYMES</a>\n    <a class=\"option-link\">Maestría en Administración Pública</a>\n    <a class=\"option-link\">Maestría en Agropecuaria Mención en Gestión del Desarrollo Rural Sostenible</a>\n    <a class=\"option-link\">Maestría en Biodiversidad y Cambio Climático</a>\n    <a class=\"option-link\">Maestría en Comunicación</a>\n    <a class=\"option-link\">Maestría en Contabilidad y Auditoría</a>\n    <a class=\"option-link\">Maestría en Derecho</a>\n    <a class=\"option-link\">Maestría en Derecho Mención Derecho Constitucional</a>\n    <a class=\"option-link\">Maestría en Educación Mención Tecnología e Innovación Educativa</a>\n    <a class=\"option-link\">Maestría en Entrenamiento Deportivo</a>\n    <a class=\"option-link\">Maestría en Gestión Ambiental</a>\n    <a class=\"option-link\">Maestría en Gestión de Riesgos Mención Prevención de Riesgos Laborales</a>\n    <a class=\"option-link\">Maestría en Gestión de Talento Humano</a>\n    <a class=\"option-link\">Maestría en Gestión Social y Desarrollo con Mención en Desarrollo Local</a>\n    <a class=\"option-link\">Maestría en Ingeniería Civil Mención en Gestión de Construcción</a>\n    <a class=\"option-link\">Maestría en Petróleo</a>\n    <a class=\"option-link\">Maestría en Psicopedagogía</a>\n    <a class=\"option-link\">Maestría en Tecnología de Información</a>\n    <a class=\"option-link\">Maestría en Turismo Mención Gestión Sostenible de Destinos Turísticos</a>\n    \n    <br>\n    \n    Puedes consultar mas información haciendo click en una maestría, y luego en enviar.\n    Para más información comunícate al celular: 📞 <b>0982495331</b> o al 📧 <a href=\"mailto:infopostgrado@upse.edu.ec\">correo</a>.\n\n    <a class=\"option-link\">¿Cuáles son las maestrías virtuales?</a>\n    <a class=\"option-link\">Quiero inscribirme</a>\n\n    "
+            "answer": "\n    Las maestrías <b>Presenciales</b> son:\n    \n    <a class=\"option-link\">Maestría en Acuicultura</a>\n    <a class=\"option-link\">Maestría en Administración de Empresas Mención Gestión de las PYMES</a>\n    <a class=\"option-link\">Maestría en Administración Pública</a>\n    <a class=\"option-link\">Maestría en Agropecuaria Mención en Gestión del Desarrollo Rural Sostenible</a>\n    <a class=\"option-link\">Maestría en Biodiversidad y Cambio Climático</a>\n    <a class=\"option-link\">Maestría en Comunicación</a>\n    <a class=\"option-link\">Maestría en Contabilidad y Auditoría</a>\n    <a class=\"option-link\">Maestría en Derecho</a>\n    <a class=\"option-link\">Maestría en Derecho Mención Derecho Constitucional</a>\n    <a class=\"option-link\">Maestría en Educación Mención Tecnología e Innovación Educativa</a>\n    <a class=\"option-link\">Maestría en Entrenamiento Deportivo</a>\n    <a class=\"option-link\">Maestría en Gestión Ambiental</a>\n    <a class=\"option-link\">Maestría en Gestión de Riesgos Mención Prevención de Riesgos Laborales</a>\n    <a class=\"option-link\">Maestría en Gestión de Talento Humano</a>\n    <a class=\"option-link\">Maestría en Gestión Social y Desarrollo con Mención en Desarrollo Local</a>\n    <a class=\"option-link\">Maestría en Ingeniería Civil Mención en Gestión de Construcción</a>\n    <a class=\"option-link\">Maestría en Petróleo</a>\n    <a class=\"option-link\">Maestría en Psicopedagogía</a>\n    <a class=\"option-link\">Maestría en Tecnología de Información</a>\n    <a class=\"option-link\">Maestría en Turismo Mención Gestión Sostenible de Destinos Turísticos</a>\n    \n    <br>\n    \n    Puedes obtener más detalles haciendo clic en una maestría 👆.\n    Para más información comunícate al celular: 📞 <b>0982495331</b> o al 📧 <a href=\"mailto:infopostgrado@upse.edu.ec\">correo</a>.\n\n    <a class=\"option-link\">¿Cuáles son las maestrías virtuales?</a>\n    <a class=\"option-link\">Quiero inscribirme</a>\n\n    "
           }
         ],
         "costo_ins.costo_ins": [
@@ -53633,7 +53633,7 @@
         ],
         "maestria.docs_gen": [
           {
-            "answer": "Para el registro en línea necesitarás: \n  <a class=\"option-link\" href=\"https://www.upse.edu.ec/postgrado/media/attachments/2022/03/21/formato-de-hoja-de-vida-estudiantes-instituto-de-postgrado-.docx\">Hoja de vida</a>\n  <a class=\"option-link\" href=\"https://www.upse.edu.ec/postgrado/images/2022/maestrias/acuicultura/solicitud-inscripcion-acuicultura.docx\">Solicitud de al Director/a IPG</a> \n  Puedes hacer click en una opción para descargar la plantilla.<br>\n  También puedes revisar la\n  <a class=\"option-link\" href=\"https://www.upse.edu.ec/postgrado/index.php?option=com_sppagebuilder&view=page&id=34&Itemid=270\" target=\"_blank\">Guía de admisión</a> "
+            "answer": "Para el registro en línea necesitarás: \n  <a class=\"option-link\" href=\"https://www.upse.edu.ec/postgrado/media/attachments/2022/03/21/formato-de-hoja-de-vida-estudiantes-instituto-de-postgrado-.docx\">Hoja de vida</a>\n  <a class=\"option-link\" href=\"https://www.upse.edu.ec/postgrado/images/2022/maestrias/acuicultura/solicitud-inscripcion-acuicultura.docx\">Solicitud de al Director/a IPG</a> \n  Puedes descargar la plantilla haciendo clic en una opción 👆.<br>\n  También puedes revisar la 👉\n  <a class=\"option-link\" href=\"https://www.upse.edu.ec/postgrado/index.php?option=com_sppagebuilder&view=page&id=34&Itemid=270\" target=\"_blank\">Guía de admisión</a> "
           }
         ]
       }

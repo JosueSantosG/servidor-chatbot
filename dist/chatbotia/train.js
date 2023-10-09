@@ -37,9 +37,14 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'Como estas', 'saludo.saludo');
     exports.nlp.addDocument('es', 'Buenos dias', 'saludo.saludo');
     exports.nlp.addAnswer('es', 'saludo.saludo', `Hola, ¿cómo te puedo ayudar? 😄<br>
-  Puedes hacer click en una opción 👇
+  Puedes hacer clic en una opción 👇
   <a class="option-link">Información sobre las Facultades 🎓</a>
-  <a class="option-link">Quiero inscribirme 📝</a><br>
+  <a class="option-link">Quiero inscribirme 📝</a>
+  <a class="option-link">Información Maestrías 📚</a>
+  <a class="option-link">Formas de pago 💳</a>
+  <a class="option-link">Precio de maestrías 💰</a>
+  <a class="option-link">Descuentos 🎉</a>
+  <a class="option-link">¿Cuál es mi campo amplio? 🌐</a><br>
   O escribe tu pregunta en la caja de texto.
   `);
     /* nlp.addAnswer('es', 'saludo.saludo', 'Hola, ¿cómo te puedo ayudar?');
@@ -72,14 +77,14 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
   <a class="option-link">Ciencias Sociales y de la Salud 👥🏥</a>
   <a class="option-link">Ciencias Administrativas 📊💼</a>
   <a class="option-link">Ciencias Agrarias 🌱🚜</a><br>
-  Puedes consultar mas información haciendo click en una facultad, y luego en enviar.`);
+  Puedes consultar más información haciendo clic en una facultad 👆`);
     //coso ``
     //TAG: INFO_FAC_CIENCIAS_DEL_MAR
     exports.nlp.addDocument('es', 'ciencias del mar', 'facultades.fac_cmar');
     exports.nlp.addAnswer('es', 'facultades.fac_cmar', `La facultad de <b>Ciencias del Mar</b> tiene las siguientes maestrías disponibles: <br>
   <a class="option-link">Maestría en Acuicultura</a>
   <a class="option-link">Maestría en Biodiversidad y Cambio Climático</a><br>
-  Puedes consultar mas información haciendo click en una maestría, y luego en enviar.`);
+  Puedes obtener más detalles haciendo clic en una maestría 👆.`);
     //TAG: INFO_MAESTRIA_ACUICULTURA
     exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Acuicultura', 'maestria.acuicultura');
     exports.nlp.addDocument('es', 'maestria en Acuicultura', 'maestria.acuicultura');
@@ -109,7 +114,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'que precio tiene acuicultura', 'maestria.costo_acui');
     exports.nlp.addDocument('es', 'que vale la maestria de acuicultura', 'maestria.costo_acui');
     exports.nlp.addAnswer('es', 'maestria.costo_acui', `La maestría de <b>Acuicultura</b> tiene un arancel de <b>$3700</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de acuicultura
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de acuicultura', 'modulos.mod_acui');
@@ -162,7 +167,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'precio biodiversidad y cambio climatico', 'maestria.costobio');
     exports.nlp.addDocument('es', 'que vale la maestria de biodiversidad y cambio climatico', 'maestria.costobio');
     exports.nlp.addAnswer('es', 'maestria.costobio', `La maestría de <b>Biodiversidad y Cambio Climático</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar'
-    <a class="option-link">¿Cuáles son esos descuentos?</a>
+    <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de biodiv
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de biodiversidad', 'modulos.mod_biodiv');
@@ -193,7 +198,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
   <a class="option-link">Maestría en Ciberseguridad</a>
   <a class="option-link">Maestría en Tecnologías de la Información</a>
   <a class="option-link">Maestría en Telecomunicaciones</a><br>
-  Puedes consultar más información haciendo click en una maestría, y luego en enviar.`);
+  Puedes obtener más detalles haciendo clic en una maestría 👆.`);
     //TAG: INFO_MAESTRIA_ELECTRONICA
     exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria de electronica y automatizacion', 'maestria.electronica');
     exports.nlp.addDocument('es', 'maestria en Electronica y Automatizacion', 'maestria.electronica');
@@ -222,7 +227,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'precio electronica y automatizacion', 'maestria.costoelect');
     exports.nlp.addDocument('es', 'que vale la maestria de electronica y automatizacion', 'maestria.costoelect');
     exports.nlp.addAnswer('es', 'maestria.costoelect', `La maestría de <br> Electrónica y Automatización</br> tiene un arancel de <b>$3800</b> dólares y matrícula de <b>$230</b> dólares que dan un total de <b>$4030</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de electronica
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de electronica', 'modulos.mod_elect');
@@ -274,7 +279,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'precio ciberseguridad', 'maestria.costociber');
     exports.nlp.addDocument('es', 'que vale la maestria de ciberseguridad', 'maestria.costociber');
     exports.nlp.addAnswer('es', 'maestria.costociber', `La maestría de <br> Ciberseguridad</br> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos_ciberseguridad
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de ciberseguridad', 'modulos.mod_ciber');
@@ -324,7 +329,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'precio telecomunicaciones', 'maestria.costo_telecom');
     exports.nlp.addDocument('es', 'que vale la maestria de telecomunicaciones', 'maestria.costo_telecom');
     exports.nlp.addAnswer('es', 'maestria.costo_telecom', `La maestría de <b>Telecomunicaciones</b> tiene un arancel de <b>$3800</b> dólares y matrícula de <b>$200</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de telecomunicaciones
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de telecomunicaciones', 'modulos.mod_telecom');
@@ -374,7 +379,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'precio tecnologias de la informacion', 'maestria.costo_ti');
     exports.nlp.addDocument('es', 'que vale la maestria de tecnologias de la informacion', 'maestria.costo_ti');
     exports.nlp.addAnswer('es', 'maestria.costo_ti', `La maestría de <b>Tecnologías de la Información</b> tiene un arancel de <b>$5500</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$5800</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de tecnologias de la informacion
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de tecnologias de la informacion', 'modulos.mod_ti');
@@ -405,7 +410,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
   <a class="option-link">Maestría en Entrenamiento Deportivo</a>
   <a class="option-link">Maestría en Psicopedagogía</a>
   <a class="option-link">Maestría en Pedagogía de los Idiomas Nacionales y Extranjeros mención Enseñanza de Inglés</a><br>
-  Puedes consultar mas información haciendo click en una maestría, y luego en enviar.`);
+  Puedes obtener más detalles haciendo clic en una maestría 👆.`);
     //TAG: INFO_MAESTRIA_EDUCACION_INICIAL
     exports.nlp.addDocument('es', 'dame más información sobre la maestria en Educacion Inicial', 'maestria.educacion_inicial');
     exports.nlp.addDocument('es', 'maestria en Educacion Inicial', 'maestria.educacion_inicial');
@@ -437,7 +442,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'precio de educacion inicial', 'maestria.costo_edu_ini');
     exports.nlp.addDocument('es', 'que vale la maestria de educacion inicial', 'maestria.costo_edu_ini');
     exports.nlp.addAnswer('es', 'maestria.costo_edu_ini', `La maestría de <b>Educacion Inicial</b> tiene un arancel de <b>$2000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$2000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a la que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de Educacion Inicial
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de Educacion Inicial', 'modulos.mod_edu_ini');
@@ -491,7 +496,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'que precio tiene educacion basica', 'maestria.costo_edubasica');
     exports.nlp.addDocument('es', 'que vale la maestria de educacion basica', 'maestria.costo_edubasica');
     exports.nlp.addAnswer('es', 'maestria.costo_edubasica', `La maestría de <b>Educacion basica</b> tiene un arancel de <b>$2000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$2000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de educación básica
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de educacion basica', 'modulos.mod_edubasica');
@@ -543,7 +548,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'que precio tiene educacion con mencion en Tecnologia', 'maestria.costo_eduinnov');
     exports.nlp.addDocument('es', 'que vale la maestria de educacion con mencion en Tecnologia', 'maestria.costo_eduinnov');
     exports.nlp.addAnswer('es', 'maestria.costo_eduinnov', `La maestría de <b>Educación con mención en Tecnología e Innovación Educativa</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de educación con mención en tecnología e innovación educativa
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de educacion con mencion en Tecnologia', 'modulos.mod_eduinnov');
@@ -596,7 +601,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'que precio tiene entrenamiento deportivo', 'maestria.costo_entdep');
     exports.nlp.addDocument('es', 'que vale la maestria de entrenamiento deportivo', 'maestria.costo_entdep');
     exports.nlp.addAnswer('es', 'maestria.costo_entdep', `La maestría de <b>Entrenamiento Deportivo</b> tiene un arancel de <b>$3200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$3500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de entrenamiento deportivo
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de entrenamiento deportivo', 'modulos.mod_entdep');
@@ -648,7 +653,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'que precio tiene psicopedagogia', 'maestria.costo_psicoped');
     exports.nlp.addDocument('es', 'que vale la maestria de psicopedagogia', 'maestria.costo_psicoped');
     exports.nlp.addAnswer('es', 'maestria.costo_psicoped', `La maestría de <b>Psicopedagogía</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de psicopedagogía
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de psicopedagogia', 'modulos.mod_psicoped');
@@ -700,7 +705,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'que precio tiene pedagogia de los idiomas nacionales y extranjeros con mencion en enseñanza de ingles', 'maestria.costo_pedidiomas');
     exports.nlp.addDocument('es', 'que vale la maestria de pedagogia de los idiomas nacionales y extranjeros con mencion en enseñanza de ingles', 'maestria.costo_pedidiomas');
     exports.nlp.addAnswer('es', 'maestria.costo_pedidiomas', `La maestría de <b>Pedagogía de los Idiomas Nacionales y Extranjeros</b> con mencion en <b>Enseñanza de ingles</b> tiene un arancel de <b>$3700</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de pedagogía de los idiomas nacionales y extranjeros con mencion en enseñanza de ingles
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de pedagogia de los idiomas nacionales y extranjeros con mencion en enseñanza de ingles', 'modulos.mod_pedidiomas');
@@ -729,7 +734,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
   <a class="option-link">Maestría en Gestión de Riesgos mención Prevención de Riesgos Laborales</a>
   <a class="option-link">Maestría en Ingeniería Civil mención Gestión de la Construcción</a>
   <a class="option-link">Maestría en Petróleos</a><br>
-  Puedes consultar mas información haciendo click en una maestría, y luego en enviar.`);
+  Puedes obtener más detalles haciendo clic en una maestría 👆.`);
     //TAG: INFO_MAESTRIA_GESTION_AMBIENTAL
     exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en gestion Ambiental', 'maestria.gestionambiental');
     exports.nlp.addDocument('es', 'maestria en gestion Ambiental', 'maestria.gestionambiental');
@@ -760,7 +765,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'que precio tiene gestion ambiental', 'maestria.costo_ambiental');
     exports.nlp.addDocument('es', 'que vale la maestria de gestion ambiental', 'maestria.costo_ambiental');
     exports.nlp.addAnswer('es', 'maestria.costo_ambiental', `La maestría de <b>Gestión Ambiental</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de gestión ambiental
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de gestion ambiental', 'modulos.mod_ambiental');
@@ -812,7 +817,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'que precio tiene gestion de riesgos', 'maestria.costo_riesgos');
     exports.nlp.addDocument('es', 'que vale la maestria de gestion de riesgos', 'maestria.costo_riesgos');
     exports.nlp.addAnswer('es', 'maestria.costo_riesgos', `La maestría de <b>Gestión de Riesgos mención Prevención de Riesgos Laborales</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$4500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de gestión de riesgos
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de gestion de riesgos', 'modulos.mod_riesgos');
@@ -864,7 +869,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'que precio tiene ingenieria civil', 'maestria.costo_ingenieria');
     exports.nlp.addDocument('es', 'que vale la maestria de ingenieria civil', 'maestria.costo_ingenieria');
     exports.nlp.addAnswer('es', 'maestria.costo_ingenieria', `La maestría de <b>Ingeniería Civil mención Gestión de la Construcción</b> tiene un arancel de <b>$5500</b> dólares y matrícula de <b>$350</b> dólares que dan un total de <b>$5850</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de ingeniería civil
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de ingenieria civil', 'modulos.mod_ingenieria');
@@ -915,7 +920,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'que precio tiene petroleos', 'maestria.costo_petroleos');
     exports.nlp.addDocument('es', 'que vale la maestria de petroleos', 'maestria.costo_petroleos');
     exports.nlp.addAnswer('es', 'maestria.costo_petroleos', `La maestría de <b>Petróleos</b> tiene un arancel de <b>$6000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$6400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de petróleos
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de petroleos', 'modulos.mod_petroleos');
@@ -948,7 +953,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
   <a class="option-link">Maestría en Derecho mención Derecho Constitucional</a>
   <a class="option-link">Maestría en Gestión Social y Desarrollo mención Desarrollo Local</a>
   <a class="option-link">Maestría en Comunicación</a><br>
-  Puedes consultar mas información haciendo click en una maestría, y luego en enviar.`);
+  Puedes obtener más detalles haciendo clic en una maestría 👆.`);
     //TAG: INFO_MAESTRIA_DERECHO_PROCESAL
     exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Derecho Procesal', 'maestria.derecho_procesal');
     exports.nlp.addDocument('es', 'maestria en Derecho Procesal', 'maestria.derecho_procesal');
@@ -978,7 +983,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'que precio tiene derecho procesal', 'maestria.costo_derechoprocesal');
     exports.nlp.addDocument('es', 'que vale la maestria de derecho procesal', 'maestria.costo_derechoprocesal');
     exports.nlp.addAnswer('es', 'maestria.costo_derechoprocesal', `La maestría de <b>Derecho Procesal</b> tiene un arancel de <b>$2500</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$2500</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de derecho procesal
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de derecho procesal', 'modulos.mod_derechoprocesal');
@@ -1029,7 +1034,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'que precio tiene derecho', 'maestria.costo_derecho');
     exports.nlp.addDocument('es', 'que vale la maestria de derecho', 'maestria.costo_derecho');
     exports.nlp.addAnswer('es', 'maestria.costo_derecho', `La maestría de <b>Derecho</b> tiene un arancel de <b>$4600</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$5000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de derecho
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de derecho', 'modulos.mod_derecho');
@@ -1081,7 +1086,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'que precio tiene Derecho mencion Derecho Constitucional', 'maestria.costo_derechoconstitucional');
     exports.nlp.addDocument('es', 'que vale la maestria de Derecho mencion Derecho Constitucional', 'maestria.costo_derechoconstitucional');
     exports.nlp.addAnswer('es', 'maestria.costo_derechoconstitucional', `La maestría en <b>Derecho mención Derecho Constitucional</b> tiene un arancel de <b>$4600</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$5000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de Derecho mención Derecho Constitucional
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de Derecho mencion Derecho Constitucional', 'modulos.mod_derechoconstitucional');
@@ -1132,7 +1137,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'que precio tiene maestria en gestion Social y Desarrollo mencion Desarrollo Local', 'maestria.costo_gestiondesarrollo');
     exports.nlp.addDocument('es', 'que vale la maestria en gestion Social y Desarrollo mencion Desarrollo Local', 'maestria.costo_gestiondesarrollo');
     exports.nlp.addAnswer('es', 'maestria.costo_gestiondesarrollo', `La maestría en <b>Gestión Social y Desarrollo</b> con mención en <b>Desarrollo Local</b> tiene un arancel de <b>$3600</b> dólares y matrícula de <b>$300</b> dólares que dan un total de <b>$3900</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de Maestría en Gestión Social y Desarrollo mención Desarrollo Local
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de gestion Social y Desarrollo mencion Desarrollo Local', 'modulos.mod_gestiondesarrollo');
@@ -1183,7 +1188,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'precio de comunicacion', 'maestria.costo_comunicacion');
     exports.nlp.addDocument('es', 'que vale la maestria de comunicacion', 'maestria.costo_comunicacion');
     exports.nlp.addAnswer('es', 'maestria.costo_comunicacion', `La maestría de <b>Comunicación</b> tiene un arancel de <b>$3500</b> dólares y matrícula de <b>$350</b> dólares que dan un total de <b>$3850</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de Comunicación
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de Comunicacion', 'modulos.mod_comunicacion');
@@ -1213,7 +1218,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
   <a class="option-link">Maestría en Contabilidad y Auditoría</a>
   <a class="option-link">Maestría en Turismo mención Gestión Sostenible en Destinos Turísticos</a>
   <a class="option-link">Maestría en Administración de Empresas mención Gestión de las Pymes</a><br>
-  Puedes consultar mas información haciendo click en una maestría, y luego en enviar.`);
+  Puedes obtener más detalles haciendo clic en una maestría 👆.`);
     //TAG: INFO_MAESTRIA_TALENTO_HUMANO
     exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en gestion del Talento Humano', 'maestria.talento_humano');
     exports.nlp.addDocument('es', 'maestria en gestion del Talento Humano', 'maestria.talento_humano');
@@ -1244,7 +1249,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'precio de gestion del Talento Humano', 'maestria.costo_talento_humano');
     exports.nlp.addDocument('es', 'que vale la maestria de gestion del Talento Humano', 'maestria.costo_talento_humano');
     exports.nlp.addAnswer('es', 'maestria.costo_talento_humano', `La maestría de <b>Gestión del Talento Humano</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de Gestión del Talento Humano
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de gestion del Talento Humano', 'modulos.mod_talento_humano');
@@ -1296,7 +1301,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'precio de Administracion Publica', 'maestria.costo_admin_publica');
     exports.nlp.addDocument('es', 'que vale la maestria de Administracion Publica', 'maestria.costo_admin_publica');
     exports.nlp.addAnswer('es', 'maestria.costo_admin_publica', `La maestría de <b>Administración Pública</b> tiene un arancel de <b>$4500</b> dólares y matrícula de <b>$450</b> dólares que dan un total de <b>$4950</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de Administración Pública
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de Administración Pública', 'modulos.mod_admin_publica');
@@ -1348,7 +1353,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'precio de Contabilidad y Auditoria', 'maestria.costo_contabilidad');
     exports.nlp.addDocument('es', 'que vale la maestria de Contabilidad y Auditoria', 'maestria.costo_contabilidad');
     exports.nlp.addAnswer('es', 'maestria.costo_contabilidad', `La maestría de <b>Contabilidad y Auditoría</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de Contabilidad y Auditoría
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de Contabilidad y Auditoría', 'modulos.mod_contabilidad');
@@ -1400,7 +1405,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'precio de Turismo', 'maestria.costo_turismo');
     exports.nlp.addDocument('es', 'que vale la maestria de Turismo', 'maestria.costo_turismo');
     exports.nlp.addAnswer('es', 'maestria.costo_turismo', `La maestría de <b>Turismo</b> con mención <b>Gestión Sostenible en Destinos Turísticos</b> tiene un arancel de <b>$5000</b> dólares y matrícula de <b>$0</b> dólares que dan un total de <b>$5000</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de Turismo
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de Turismo', 'modulos.mod_turismo');
@@ -1452,7 +1457,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'precio de Administracion de Empresas', 'maestria.costo_admin_empresas');
     exports.nlp.addDocument('es', 'que vale la maestria de Administracion de Empresas', 'maestria.costo_admin_empresas');
     exports.nlp.addAnswer('es', 'maestria.costo_admin_empresas', `La maestría de <b>Administración de Empresas</b> tiene un arancel de <b>$4000</b> dólares y matrícula de <b>$400</b> dólares que dan un total de <b>$4400</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-    <a class="option-link">¿Cuáles son esos descuentos?</a>
+    <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
     `);
     //modulos de Administración de Empresas
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de Administración de Empresas', 'modulos.mod_admin_empresas');
@@ -1479,7 +1484,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addAnswer('es', 'facultades.fac_cagraria', `La facultad de <b>Ciencias Agrarias</b> tiene la siguiente maestría disponible: <br>
 
   <a class="option-link">Maestría en Agropecuaria mención Gestión del Desarrollo Rural Sostenible</a><br>
-  Puedes consultar mas información haciendo click en una maestría, y luego en enviar.`);
+  Puedes obtener más detalles haciendo clic en una maestría 👆.`);
     //TAG: INFO_MAESTRIA_AGROPECUARIA
     exports.nlp.addDocument('es', 'dame mas informacion sobre la maestria en Agropecuaria mencion gestion del Desarrollo Rural Sostenible', 'maestria.agropecuaria');
     exports.nlp.addDocument('es', 'maestria en Agropecuaria mencion gestion del Desarrollo Rural Sostenible', 'maestria.agropecuaria');
@@ -1510,7 +1515,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'que precio tiene agropecuaria con mencion en gestion del desarrollo rural sostenible', 'maestria.costo_agropecuaria');
     exports.nlp.addDocument('es', 'que vale la maestria de agropecuaria con mencion en gestion del desarrollo rural sostenible', 'maestria.costo_agropecuaria');
     exports.nlp.addAnswer('es', 'maestria.costo_agropecuaria', `La maestría de <b>Agropecuaria</b> con mencion en <b>Gestión del Desarrollo Rural Sostenible</b> tiene un arancel de <b>$4200</b> dólares y matrícula de <b>$250</b> dólares que dan un total de <b>$4450</b> dólares. <br><br>Recuerda que hay diferentes descuentos a los que puedes aplicar.
-      <a class="option-link">¿Cuáles son esos descuentos?</a>
+      <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
       `);
     //modulos de agropecuaria con mencion en gestión del desarrollo rural sostenible
     exports.nlp.addDocument('es', 'cuantos modulos hay en la maestria de agropecuaria con mencion en gestion del desarrollo rural sostenible', 'modulos.mod_agropecuaria');
@@ -1570,9 +1575,9 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addDocument('es', 'que vale una maestria', 'costo_maestria.costo_maestria');
     exports.nlp.addDocument('es', 'que precio tiene una maestria', 'costo_maestria.costo_maestria');
     exports.nlp.addDocument('es', 'cual es el costo de una maestria', 'costo_maestria.costo_maestria');
-    exports.nlp.addAnswer('es', 'costo_maestria.costo_maestria', `Varía dependiendo de la maestría que elijas. Por ejemplo, en la maestría de <b>Tecnologías de la Información</b> tiene un arancel de <b>$5500</b> dólares y una matrícula de <b>$300</b> dólares, lo que da un total de <b>$5800</b> dólares. 
+    exports.nlp.addAnswer('es', 'costo_maestria.costo_maestria', `El precio varía dependiendo de la maestría que elijas. Por ejemplo, en la maestría de <b>Tecnologías de la Información</b> tiene un arancel de <b>$5500</b> dólares y una matrícula de <b>$300</b> dólares, lo que da un total de <b>$5800</b> dólares. 
   <br><br>Recuerda que también hay diferentes descuentos a los que puedes aplicar. 
-  <a class="option-link">¿Cuáles son esos descuentos?</a>
+  <a class="option-link">¿Cuáles son esos descuentos?🤔</a>
   <a class="option-link">¿Cuáles son las Facultades?</a>
   <a class="option-link">Quiero inscribirme</a>`);
     //GESTIÓN DEL APRENDIZAJE Y EVALUACIÓN
@@ -1602,7 +1607,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     <a class="option-link">Maestría en Derecho Procesal</a>
     <br>
     
-    Puedes consultar mas información haciendo click en una maestría, y luego en enviar.
+    Puedes obtener más detalles haciendo clic en una maestría 👆.
     Para más información comunícate al celular: 📞 <b>0982495331</b> o al 📧 <a href="mailto:infopostgrado@upse.edu.ec">correo</a>.
 
     <a class="option-link">¿Cuáles son las maestrías presenciales?</a>
@@ -1639,7 +1644,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     
     <br>
     
-    Puedes consultar mas información haciendo click en una maestría, y luego en enviar.
+    Puedes obtener más detalles haciendo clic en una maestría 👆.
     Para más información comunícate al celular: 📞 <b>0982495331</b> o al 📧 <a href="mailto:infopostgrado@upse.edu.ec">correo</a>.
 
     <a class="option-link">¿Cuáles son las maestrías virtuales?</a>
@@ -2048,8 +2053,8 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
     exports.nlp.addAnswer('es', 'maestria.docs_gen', `Para el registro en línea necesitarás: 
   <a class="option-link" href="https://www.upse.edu.ec/postgrado/media/attachments/2022/03/21/formato-de-hoja-de-vida-estudiantes-instituto-de-postgrado-.docx">Hoja de vida</a>
   <a class="option-link" href="https://www.upse.edu.ec/postgrado/images/2022/maestrias/acuicultura/solicitud-inscripcion-acuicultura.docx">Solicitud de al Director/a IPG</a> 
-  Puedes hacer click en una opción para descargar la plantilla.<br>
-  También puedes revisar la
+  Puedes descargar la plantilla haciendo clic en una opción 👆.<br>
+  También puedes revisar la 👉
   <a class="option-link" href="https://www.upse.edu.ec/postgrado/index.php?option=com_sppagebuilder&view=page&id=34&Itemid=270" target="_blank">Guía de admisión</a> `);
     /* } */
     //si se agregaron mas preguntas = true
