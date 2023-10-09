@@ -2,10 +2,8 @@ import { nlp } from "../chatbotia/train_telegram";
 import { Telegraf } from 'telegraf';
 import Oferta from "../models/oferta";
 import Persona from "../models/usuario";
-/* const bot = new Telegraf('6617530107:AAFIMAK3X3gwuGSsN4n9B42QclC8Z81biEE'); */
-const bot = new Telegraf('5634031745:AAGrGqC34B55g8ocxcLLJ6-1h9jy2rcpV-A');
 
-
+const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN || '');
 
 bot.command('start', ctx =>{
   sendStartMessage(ctx);

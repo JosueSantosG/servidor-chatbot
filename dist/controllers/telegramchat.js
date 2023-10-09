@@ -18,7 +18,8 @@ const telegraf_1 = require("telegraf");
 const oferta_1 = __importDefault(require("../models/oferta"));
 const usuario_1 = __importDefault(require("../models/usuario"));
 /* const bot = new Telegraf('6617530107:AAFIMAK3X3gwuGSsN4n9B42QclC8Z81biEE'); */
-const bot = new telegraf_1.Telegraf('5634031745:AAGrGqC34B55g8ocxcLLJ6-1h9jy2rcpV-A');
+/* const bot = new Telegraf('5634031745:AAGrGqC34B55g8ocxcLLJ6-1h9jy2rcpV-A'); */
+const bot = new telegraf_1.Telegraf(process.env.TELEGRAM_BOT_TOKEN || '');
 bot.command('start', ctx => {
     sendStartMessage(ctx);
 });
