@@ -14,6 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const usuario_1 = __importDefault(require("../routes/usuario"));
+const userdata_1 = __importDefault(require("../routes/userdata"));
 const cors_1 = __importDefault(require("cors"));
 const connection_1 = __importDefault(require("../database/connection"));
 const express_session_1 = __importDefault(require("express-session"));
@@ -23,6 +24,9 @@ class Server {
             chatbot: '/api/chatbot',
             oferta: '/api/oferta',
             comentario: '/api/chatbot',
+            login: '/api/user',
+            sendFile: '/api/file',
+            actdatos: '/api/datos'
         };
         this.app = (0, express_1.default)();
         this.port = process.env.PORT || '3000';
@@ -54,7 +58,7 @@ class Server {
         this.app.use((0, express_session_1.default)({
             secret: 'S3cr3tK3y',
             resave: false,
-            saveUninitialized: true,
+            saveUninitialized: false,
             /*
             cookie: {
               secure: process.env.NODE_ENV === 'production', // Usar cookies seguras en producción
@@ -67,6 +71,9 @@ class Server {
         this.app.use(this.apiPaths.chatbot, usuario_1.default);
         this.app.use(this.apiPaths.oferta, usuario_1.default);
         this.app.use(this.apiPaths.comentario, usuario_1.default);
+        this.app.use(this.apiPaths.login, userdata_1.default);
+        this.app.use(this.apiPaths.sendFile, userdata_1.default);
+        this.app.use(this.apiPaths.actdatos, userdata_1.default);
     }
     listen() {
         this.app.listen(this.port, () => {

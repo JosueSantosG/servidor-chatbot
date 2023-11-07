@@ -1,5 +1,6 @@
 import express, {Application,Request } from 'express'
 import userRoutes from '../routes/usuario';
+import userData from "../routes/userdata";
 import cors from 'cors';
 import database from '../database/connection';
 import session from 'express-session';
@@ -11,6 +12,9 @@ class Server{
         chatbot:'/api/chatbot',
         oferta:'/api/oferta',
         comentario:'/api/chatbot',
+        login:'/api/user',
+        sendFile:'/api/file',
+        actdatos:'/api/datos'
     }
     constructor(){
         this.app=express();
@@ -50,7 +54,7 @@ class Server{
         this.app.use(session({
             secret: 'S3cr3tK3y',
             resave: false,
-            saveUninitialized: true,
+            saveUninitialized: false,
             /* 
             cookie: {
               secure: process.env.NODE_ENV === 'production', // Usar cookies seguras en producción
@@ -67,6 +71,9 @@ class Server{
         this.app.use(this.apiPaths.chatbot,userRoutes)
         this.app.use(this.apiPaths.oferta,userRoutes)
         this.app.use(this.apiPaths.comentario,userRoutes)
+        this.app.use(this.apiPaths.login,userData)
+        this.app.use(this.apiPaths.sendFile,userData)
+        this.app.use(this.apiPaths.actdatos,userData)
     }
     listen(){
         this.app.listen(this.port, ()=>{

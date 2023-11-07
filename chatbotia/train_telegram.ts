@@ -126,10 +126,10 @@ Puedes consultar mas información haciendo click en una maestría, y luego en en
 
 
 // Entrena y se guarda el modelo
-    const hrstart = process.hrtime();
+  /*   const hrstart = process.hrtime();
     await nlp.train();
     nlp.save('./model_telegram.nlp');
     const hrend = process.hrtime(hrstart);
     console.info('Chat de telegram entrenado! (hr): %ds %dms', hrend[0], hrend[1] / 1000000);
-  
+   */
 })();

@@ -3,7 +3,7 @@ import { Telegraf } from 'telegraf';
 import Oferta from "../models/oferta";
 import Persona from "../models/usuario";
 
-const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN || '');
+const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN2 || '');
 
 bot.command('start', ctx =>{
   sendStartMessage(ctx);
