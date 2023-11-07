@@ -17,7 +17,7 @@ const train_telegram_1 = require("../chatbotia/train_telegram");
 const telegraf_1 = require("telegraf");
 const oferta_1 = __importDefault(require("../models/oferta"));
 const usuario_1 = __importDefault(require("../models/usuario"));
-const bot = new telegraf_1.Telegraf(process.env.TELEGRAM_BOT_TOKEN2 || '');
+const bot = new telegraf_1.Telegraf(process.env.TELEGRAM_BOT_TOKEN || '');
 bot.command('start', ctx => {
     sendStartMessage(ctx);
 });
