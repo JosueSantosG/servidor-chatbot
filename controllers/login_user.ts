@@ -146,22 +146,25 @@ export const maestriaUser = async (req: Request, res: Response) => {
 
   // se obtiene la oferta de maestría basada en el id_oferta
   const nomMaestria: any = await Oferta.findOne({ where: { id_oferta: maestria } });
-
+    //se obtiene el usuario que esta relacionado con la oferta
+    const userToken = getUserToken(req);
+    const user: any = await Persona.findOne({ where: { identificacion: userToken } });
+  
   if (!nomMaestria) {
     return res.status(404).json({
       msg: `No se encontró una oferta de maestría con la descripción proporcionada`
     });
   }
 
-  // se busca la inscripción relacionada con la oferta de maestría
-  const idinscrip: any = await Inscripcion.findOne({ where: { id_oferta: nomMaestria.id_oferta } });
-
+  // se busca la inscripción relacionada con la oferta de maestría y el usuario
+/*   const idinscrip: any = await Inscripcion.findOne({ where: { id_oferta: nomMaestria.id_oferta, id_persona:user.id_persona } });
+ */
   // Se obtiene los documentos del usuario en función de la oferta de maestría y la inscripción
   const userPersona = await Inscripcion.findAll({
     attributes: ['id_inscripcion'],
     where: {
       id_oferta: nomMaestria.id_oferta,
-      id_persona: idinscrip.id_persona
+      id_persona: user.id_persona
     },
     include: {
       model: Userdocs,
@@ -319,7 +322,7 @@ export const sendFileUser = async (req: Request, res: Response) => {
 };
 
 
-function getUserToken(req: Request): string | null {
+export function getUserToken(req: Request): string | null {
   const authorizationHeader = req.headers.authorization;
 
   if (authorizationHeader && authorizationHeader.startsWith('Bearer ')) {

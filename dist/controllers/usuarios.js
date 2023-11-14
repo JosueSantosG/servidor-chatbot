@@ -17,6 +17,7 @@ const usuario_1 = __importDefault(require("../models/usuario"));
 const oferta_1 = __importDefault(require("../models/oferta"));
 const train_1 = require("../chatbotia/train");
 const inscripcion_1 = __importDefault(require("../models/inscripcion"));
+const login_user_1 = require("./login_user");
 const userDocs = {};
 /* interface Iniciosesion{
   usuario?:string,
@@ -29,9 +30,11 @@ function postConsulta(req, res) {
         const message = req.body.message;
         const uniqueUserId = req.body.uniqueUserId;
         const { body } = req;
-        let answer = "";
+        let answer;
         let intento = "";
-        let token = "";
+        let idinscrip = 0;
+        let idoferta = 0;
+        let salir = "salir";
         try {
             const response = yield train_1.nlp.process("es", message);
             intento = response.intent;
@@ -52,8 +55,7 @@ function postConsulta(req, res) {
                     switch (userDocs[uniqueUserId].currentStep) {
                         case 1:
                             userDocs[uniqueUserId].confirm = "temp";
-                            answer =
-                                `Te recuerdo que puedes cancelar este proceso si escribes (<b>salir</b>) <br><br>Por favor, proporciona tu credenciales:
+                            answer = `Te recuerdo que puedes cancelar este proceso si escribes (<b>salir</b>) <br><br>Por favor, proporciona tu credenciales:
               <div class="dropdown">
               <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="true">
                 Iniciar Sesión
@@ -80,46 +82,62 @@ function postConsulta(req, res) {
                             const user = yield usuario_1.default.findOne({
                                 where: { identificacion: message },
                             });
-                            if (!user) {
+                            const userToken = (0, login_user_1.getUserToken)(req);
+                            if (user && userToken !== null) {
+                                userDocs[uniqueUserId].usuario = message;
+                                userDocs[uniqueUserId].currentStep = 3;
                                 answer =
-                                    "El usuario o clave son incorrectos. Por favor, intenta nuevamente:";
+                                    "Hola! <b>" + user.nombres + " " + user.apellidos + "</b><br>";
                             }
                             else {
-                                userDocs[uniqueUserId].usuario = message;
-                                console.log(userDocs[uniqueUserId].usuario);
-                                const userPersona = yield inscripcion_1.default.findAll({
-                                    attributes: ['id_persona', 'id_inscripcion'],
-                                    where: {
-                                        id_persona: user.id_persona,
-                                    },
-                                    include: {
-                                        model: oferta_1.default,
-                                        attributes: ['id_oferta', 'descripcion'],
-                                    },
-                                });
-                                const userPersonaData = userPersona.map(item => item.get({ plain: true }));
-                                const descripcionOferta = userPersonaData.map(item => item.ofertum.descripcion);
-                                answer = "Hola! <b>" + user.nombres + " " + user.apellidos + "</b><br><br>Elije la maestría para subir tus <b>Documentos/Requisitos</b>👇:<br><a class='option-link'>"
-                                    + descripcionOferta.join('<a class="option-link">') + "</a>";
-                                userDocs[uniqueUserId].currentStep = 3;
+                                answer = `Por favor ingresa tus credenciales, o si deseas cancelar el proceso escribe (<b>salir</b>)`;
                             }
                             break;
                         }
-                        case 3:
-                            userDocs[uniqueUserId].confirm = "temp";
-                            answer = `Sube aquí tus documentos en formato <b>PDF</b> 👇: <br>
-              <b>Cédula de ciudadanía:</b> <br>
-              <input class="form-control file-input" type="file" id="formFile" accept="application/pdf">
-              <b>Certificado de votación vigente:</b> <br>
-              <input class="form-control file-input" type="file" id="formFile" accept="application/pdf">
-              <b>Solicitud de ingreso:</b> <br>
-              <input class="form-control file-input" type="file" id="formFile" accept="application/pdf">`;
-                            userDocs[uniqueUserId].currentStep = 4;
+                        case 3: {
+                            const userToken = (0, login_user_1.getUserToken)(req);
+                            const user = yield usuario_1.default.findOne({
+                                where: { identificacion: userToken },
+                            });
+                            const nomOferta = yield oferta_1.default.findOne({
+                                where: { descripcion: message },
+                            });
+                            //verifica si existe la maestria en la tabla de inscripcion por id_oferta
+                            if (nomOferta) {
+                                const inscrip = yield inscripcion_1.default.findOne({
+                                    where: {
+                                        id_persona: user.id_persona,
+                                        id_oferta: nomOferta.id_oferta,
+                                    },
+                                });
+                                if (inscrip) {
+                                    userDocs[uniqueUserId].confirm = message;
+                                    if (userDocs[uniqueUserId].confirm === nomOferta.descripcion) {
+                                        idoferta = nomOferta.id_oferta;
+                                        idinscrip = inscrip.id_inscripcion;
+                                    }
+                                    userDocs[uniqueUserId].currentStep = 4;
+                                    //aqui debe ir una validacion de docs: ejemplo, si ya subió sus docs escriba salir
+                                    answer = `Sube aquí tus documentos 👇:`;
+                                }
+                                else {
+                                    answer = `Por favor elige una maestría en la que te registraste, o si deseas cancelar el proceso escribe (<b>salir</b>)`;
+                                }
+                            }
+                            else {
+                                answer = `Por favor elige una maestría en la que te registraste, o si deseas cancelar el proceso escribe (<b>salir</b>)`;
+                            }
                             break;
+                        }
                         case 4:
-                            userDocs[uniqueUserId].confirm = "temp";
-                            answer = "Documentos subidos con éxito!";
-                            delete userDocs[uniqueUserId];
+                            if (salir === userDocs[uniqueUserId].confirm) {
+                                answer =
+                                    "Adiós! <br> Si necesitas otra cosa, estaré aquí para ayudarte! 😄 ";
+                                delete userDocs[uniqueUserId];
+                            }
+                            else {
+                                answer = "Si ya subiste tus documentos, escribe (<b>salir</b>)";
+                            }
                             break;
                     }
                 }
@@ -136,9 +154,15 @@ function postConsulta(req, res) {
         }
         catch (error) {
             console.error("Error en el procesamiento del mensaje:", error);
-            answer = "Error en el procesamiento del mensaje";
+            answer = "Ha ocurrido un error en el procesamiento del mensaje, disculpa las molestias...";
         }
-        res.json({ response: answer, uniqueUserId: uniqueUserId, prueba: intento });
+        res.json({
+            response: answer,
+            uniqueUserId: uniqueUserId,
+            intent: intento,
+            idoferta: idoferta,
+            idinscrip: idinscrip,
+        });
     });
 }
 exports.postConsulta = postConsulta;

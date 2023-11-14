@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sendFileUser = exports.modificarDatos = exports.maestriaUser = exports.mostrarMaestrias = exports.loginUser = exports.newUser = void 0;
+exports.getUserToken = exports.sendFileUser = exports.modificarDatos = exports.maestriaUser = exports.mostrarMaestrias = exports.loginUser = exports.newUser = void 0;
 const bcrypt_1 = __importDefault(require("bcrypt"));
 const usuario_1 = __importDefault(require("../models/usuario"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
@@ -145,19 +145,23 @@ const maestriaUser = (req, res) => __awaiter(void 0, void 0, void 0, function* (
     const { maestria } = req.body;
     // se obtiene la oferta de maestría basada en el id_oferta
     const nomMaestria = yield oferta_1.default.findOne({ where: { id_oferta: maestria } });
+    //se obtiene el usuario que esta relacionado con la oferta
+    const userToken = getUserToken(req);
+    const user = yield usuario_1.default.findOne({ where: { identificacion: userToken } });
     if (!nomMaestria) {
         return res.status(404).json({
             msg: `No se encontró una oferta de maestría con la descripción proporcionada`
         });
     }
-    // se busca la inscripción relacionada con la oferta de maestría
-    const idinscrip = yield inscripcion_1.default.findOne({ where: { id_oferta: nomMaestria.id_oferta } });
+    // se busca la inscripción relacionada con la oferta de maestría y el usuario
+    /*   const idinscrip: any = await Inscripcion.findOne({ where: { id_oferta: nomMaestria.id_oferta, id_persona:user.id_persona } });
+     */
     // Se obtiene los documentos del usuario en función de la oferta de maestría y la inscripción
     const userPersona = yield inscripcion_1.default.findAll({
         attributes: ['id_inscripcion'],
         where: {
             id_oferta: nomMaestria.id_oferta,
-            id_persona: idinscrip.id_persona
+            id_persona: user.id_persona
         },
         include: {
             model: userdocs_1.default,
@@ -330,4 +334,5 @@ function getUserToken(req) {
     }
     return null; // Devuelve null si no se encontró el token en la cabecera
 }
+exports.getUserToken = getUserToken;
 //# sourceMappingURL=login_user.js.map

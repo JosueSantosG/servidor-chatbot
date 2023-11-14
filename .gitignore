@@ -3,7 +3,9 @@
 
 /node_modules
 .env
+/datas
 #"start": "nodemon dist/app.js",
 #"ts": "tsc --watch",
 #"dev": "concurrently --kill-others \"npm run start\" \"npm run ts\""
+  
   
