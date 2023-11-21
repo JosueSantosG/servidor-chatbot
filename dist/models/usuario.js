@@ -30,12 +30,6 @@ const Persona = connection_1.default.define('persona', {
     email_personal: {
         type: sequelize_1.DataTypes.STRING
     },
-    codigo_vendedor: {
-        type: sequelize_1.DataTypes.STRING
-    },
-    maestria: {
-        type: sequelize_1.DataTypes.STRING
-    },
     estado: {
         type: sequelize_1.DataTypes.CHAR,
         defaultValue: 'A',

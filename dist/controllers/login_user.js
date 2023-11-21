@@ -110,39 +110,9 @@ const mostrarMaestrias = (req, res) => __awaiter(void 0, void 0, void 0, functio
     }
 });
 exports.mostrarMaestrias = mostrarMaestrias;
-/*
-export const registro = async(req:Request, res:Response) => {
-  const { id_persona, id_oferta, id_periodo_academico, codigo_vendedor, estado } = req.body;
-
-  const userPersona = await Persona.findAll({
-    attributes: [
-      'nombres',
-      'apellidos',
-      'maestria',
-    ],
-    where: {
-      maestria: maestria,
-    },
-    include: {
-      model: Userdocument,
-      attributes: ['cedula', 'certificado', 'solicitud'],
-    },
-    
-  });
-
-  if (!userPersona) {
-    return res.status(401).json({
-      msg: `No se encontraron datos de usuario asociados`
-    });
-  }
-
-  res.json({userPersona});
-
-
-} */
 //funcion para mostrar los documentos al usuario con la maestria que se ha registrado
 const maestriaUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { maestria } = req.body;
+    const { maestria } = req.params;
     // se obtiene la oferta de maestría basada en el id_oferta
     const nomMaestria = yield oferta_1.default.findOne({ where: { id_oferta: maestria } });
     //se obtiene el usuario que esta relacionado con la oferta

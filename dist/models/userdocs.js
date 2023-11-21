@@ -15,10 +15,10 @@ const Userdocs = connection_1.default.define("userdocs", {
         field: "id_userdoc",
     },
     id_inscripcion: {
-        type: sequelize_1.DataTypes.STRING,
+        type: sequelize_1.DataTypes.INTEGER,
     },
     id_iniciosesion: {
-        type: sequelize_1.DataTypes.STRING,
+        type: sequelize_1.DataTypes.INTEGER,
     },
     cedula: {
         type: sequelize_1.DataTypes.STRING,
@@ -34,10 +34,5 @@ Userdocs.belongsTo(iniciosesion_1.default, { foreignKey: "id_iniciosesion" });
 iniciosesion_1.default.hasMany(Userdocs, { foreignKey: "id_iniciosesion" });
 Userdocs.belongsTo(inscripcion_1.default, { foreignKey: "id_inscripcion" });
 inscripcion_1.default.hasMany(Userdocs, { foreignKey: 'id_inscripcion' });
-/*
-Userdocs.hasMany(Inscripcion, { foreignKey: 'id_inscripcion' });
-Inscripcion.belongsTo(Userdocs, { foreignKey: 'id_inscripcion' });
-
- */
 exports.default = Userdocs;
 //# sourceMappingURL=userdocs.js.map

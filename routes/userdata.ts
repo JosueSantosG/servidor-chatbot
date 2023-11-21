@@ -13,6 +13,6 @@ router.post('/login', loginUser);
 router.put('/sendFile/:idinscripcion', validateToken,upload.single('file'), sendFileUser);
 router.put('/actdatos/:idinscripcion', validateToken,modificarDatos);
 router.post('/newUser', newUser);
-router.post('/mostrarDocs', validateToken, maestriaUser);
+router.get('/mostrarDocs/:maestria', validateToken, maestriaUser);
 router.get('/maestriaOferta', validateToken, mostrarMaestrias);
 export default router;

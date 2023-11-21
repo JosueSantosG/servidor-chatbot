@@ -11,10 +11,10 @@ const Userdocs = database.define("userdocs", {
     field: "id_userdoc",
   },
   id_inscripcion: {
-    type: DataTypes.STRING,
+    type: DataTypes.INTEGER,
   },
   id_iniciosesion: {
-    type: DataTypes.STRING,
+    type: DataTypes.INTEGER,
   },
   cedula: {
     type: DataTypes.STRING,
@@ -32,9 +32,4 @@ Iniciosesion.hasMany(Userdocs, { foreignKey: "id_iniciosesion" });
 Userdocs.belongsTo(Inscripcion, { foreignKey: "id_inscripcion" });
 Inscripcion.hasMany(Userdocs, { foreignKey: 'id_inscripcion' });
 
-/* 
-Userdocs.hasMany(Inscripcion, { foreignKey: 'id_inscripcion' });
-Inscripcion.belongsTo(Userdocs, { foreignKey: 'id_inscripcion' });
-
- */
 export default Userdocs;

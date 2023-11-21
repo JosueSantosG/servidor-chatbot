@@ -17,7 +17,7 @@ router.post('/login', login_user_1.loginUser);
 router.put('/sendFile/:idinscripcion', validate_token_1.default, upload.single('file'), login_user_1.sendFileUser);
 router.put('/actdatos/:idinscripcion', validate_token_1.default, login_user_1.modificarDatos);
 router.post('/newUser', login_user_1.newUser);
-router.post('/mostrarDocs', validate_token_1.default, login_user_1.maestriaUser);
+router.get('/mostrarDocs/:maestria', validate_token_1.default, login_user_1.maestriaUser);
 router.get('/maestriaOferta', validate_token_1.default, login_user_1.mostrarMaestrias);
 exports.default = router;
 //# sourceMappingURL=userdata.js.map

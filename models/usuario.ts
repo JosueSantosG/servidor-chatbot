@@ -26,12 +26,6 @@ const Persona = database.define('persona', {
   email_personal: {
     type: DataTypes.STRING
   },
-  codigo_vendedor: {
-    type: DataTypes.STRING
-  },
-  maestria: {
-    type: DataTypes.STRING
-  },
   estado: {
     type: DataTypes.CHAR,
     defaultValue: 'A',
