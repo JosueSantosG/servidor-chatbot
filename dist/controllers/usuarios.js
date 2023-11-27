@@ -72,7 +72,7 @@ function postConsulta(req, res) {
                 userDocs[uniqueUserId].currentStep = 1; // Establecer el primer paso del flujo
             }
             else if (userDocs[uniqueUserId] && userDocs[uniqueUserId].currentStep) {
-                if (message.toLowerCase() === "no" || message.toLowerCase() === "salir" || message.toLowerCase() === "cerrar sesion") {
+                if (message.toLowerCase() === "no" || message.toLowerCase() === "salir" || message.toLowerCase() === "cerrar") {
                     let salirUser = false; // Variable para controlar si se debe "salir"
                     let cerrarSesion = false; // Variable para controlar si se debe "cerrar sesión"
                     let mensajeNo = false;
@@ -84,7 +84,7 @@ function postConsulta(req, res) {
                         answer = "Entiendo, cuando cambies de opinión estaré aquí para ayudarte.😄";
                         mensajeNo = true;
                     }
-                    else if (message.toLowerCase() === "cerrar sesion") {
+                    else if (message.toLowerCase() === "cerrar") {
                         answer = "Adiós! <br>Si necesitas otra cosa, estaré aquí para ayudarte! 😄";
                         cerrarSesion = true;
                     }
@@ -202,7 +202,7 @@ function postConsulta(req, res) {
                                         const userPersonaData = userPersona.map(item => item.get({ plain: true }));
                                         const descripcionOferta = userPersonaData.map(item => item.ofertum.descripcion);
                                         answer = "Si deseas subir tus documentos en otra maestría, selecciona una 👇:<br><a class='option-link' id='capturaNombre'>" +
-                                            descripcionOferta.join('<a class="option-link" id="capturaNombre">') + '</a> O has clic aquí 👇 para salir de tu cuenta.<a class="option-link">Cerrar Sesion</a> ';
+                                            descripcionOferta.join('<a class="option-link" id="capturaNombre">') + '</a> O has clic aquí 👇 para salir de tu cuenta.<a class="option-link">Cerrar</a> ';
                                         userDocs[uniqueUserId].currentStep = 3;
                                     }
                                 }
@@ -221,7 +221,7 @@ function postConsulta(req, res) {
                                     const userPersonaData = userPersona.map(item => item.get({ plain: true }));
                                     const descripcionOferta = userPersonaData.map(item => item.ofertum.descripcion);
                                     answer = "Si deseas subir tus documentos en otra maestría, selecciona una 👇:<br><a class='option-link' id='capturaNombre'>" +
-                                        descripcionOferta.join('<a class="option-link" id="capturaNombre">') + '</a> O has clic aquí 👇 para salir de tu cuenta.<a class="option-link">Cerrar Sesion</a>';
+                                        descripcionOferta.join('<a class="option-link" id="capturaNombre">') + '</a> O has clic aquí 👇 para salir de tu cuenta.<a class="option-link">Cerrar</a>';
                                     userDocs[uniqueUserId].currentStep = 3;
                                 }
                                 break;
