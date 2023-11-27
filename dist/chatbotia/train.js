@@ -38,6 +38,7 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
       <a class="option-link">Formas de pago 💳</a>
       <a class="option-link">Precio de maestrías 💰</a>
       <a class="option-link">Descuentos 🎉</a>
+      <a class="option-link">¿Dónde subo mis documentos? 📚</a>
       <a class="option-link">¿Cuál es mi campo amplio? 🌐</a><br>
       O escribe tu pregunta en la caja de texto.
       `);
@@ -2046,6 +2047,10 @@ exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
       <a class="option-link">No</a>`);
         //TAG: SUBIR_DOCUMENTACION
         exports.nlp.addDocument('es', 'docs', 'subir_docs.subir_docs');
+        exports.nlp.addDocument('es', 'quiero iniciar sesion', 'subir_docs.subir_docs');
+        exports.nlp.addDocument('es', 'como inicio sesion', 'subir_docs.subir_docs');
+        exports.nlp.addDocument('es', 'donde pongo mi usuario y contraseña', 'subir_docs.subir_docs');
+        exports.nlp.addDocument('es', 'como hago para poner el usuario y clave', 'subir_docs.subir_docs');
         exports.nlp.addDocument('es', 'como subo los documentos', 'subir_docs.subir_docs');
         exports.nlp.addDocument('es', 'donde pongo los documentos', 'subir_docs.subir_docs');
         exports.nlp.addDocument('es', 'donde subo mis comprobantes de pago', 'subir_docs.subir_docs');

@@ -70,7 +70,7 @@ const loginUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         // Generamos token
         const token = jsonwebtoken_1.default.sign({
             usuario: usuario
-        }, process.env.SECRET_KEY || '1234clave');
+        }, process.env.SECRET_KEY || '1234clave', { expiresIn: '10m' });
         res.json({
             token: token
         });
@@ -250,7 +250,7 @@ const sendFileUser = (req, res) => __awaiter(void 0, void 0, void 0, function* (
     catch (error) {
         console.error('Error al guardar la actualización:', error);
         return res.status(500).json({
-            msg: 'Error al actualizar los datos del usuario'
+            msg: 'Error al guardar el archivo ❌, por favor vuelve a elegir la maestría e intenta de nuevo.'
         });
     }
     function uploadFile() {
@@ -271,7 +271,7 @@ const sendFileUser = (req, res) => __awaiter(void 0, void 0, void 0, function* (
                 /*  await storage.bucket(bucketName).upload(file.path, options);
                  console.log(`${originalFileName} subido como ${destFileName} a ${bucketName}`);
             */
-                res.status(200).json({ message: 'Archivo subido exitosamente' });
+                res.status(200).json({ message: 'Archivo subido exitosamente ✅ <br> <b>Nota: </b>Cuando hayas terminado de subir tus documentos escribe (<b>salir</b>) para cerrar la sesión de tu cuenta!' });
             }
             catch (error) {
                 console.error('Error al subir el archivo:', error);

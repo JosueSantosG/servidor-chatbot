@@ -28,6 +28,7 @@ export const nlp = new NlpManager({ languages: ['es'], forceNER: true });
       <a class="option-link">Formas de pago 💳</a>
       <a class="option-link">Precio de maestrías 💰</a>
       <a class="option-link">Descuentos 🎉</a>
+      <a class="option-link">¿Dónde subo mis documentos? 📚</a>
       <a class="option-link">¿Cuál es mi campo amplio? 🌐</a><br>
       O escribe tu pregunta en la caja de texto.
       `);
@@ -2334,6 +2335,10 @@ nlp.addAnswer('es', 'moodle.moodle', 'Para ingresar a la plataforma Moodle puede
 
     //TAG: SUBIR_DOCUMENTACION
       nlp.addDocument('es', 'docs', 'subir_docs.subir_docs');
+      nlp.addDocument('es', 'quiero iniciar sesion', 'subir_docs.subir_docs');
+      nlp.addDocument('es', 'como inicio sesion', 'subir_docs.subir_docs');
+      nlp.addDocument('es', 'donde pongo mi usuario y contraseña', 'subir_docs.subir_docs');
+      nlp.addDocument('es', 'como hago para poner el usuario y clave', 'subir_docs.subir_docs');
       nlp.addDocument('es', 'como subo los documentos', 'subir_docs.subir_docs');
       nlp.addDocument('es', 'donde pongo los documentos', 'subir_docs.subir_docs');
       nlp.addDocument('es', 'donde subo mis comprobantes de pago', 'subir_docs.subir_docs');

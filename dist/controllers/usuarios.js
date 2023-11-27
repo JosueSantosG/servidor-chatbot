@@ -40,18 +40,18 @@ function postConsulta(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         const message = req.body.message;
         const uniqueUserId = req.body.uniqueUserId;
-        let answer = '';
+        let answer = "";
         let intento = "";
         let idinscrip = 0;
         let idoferta = 0;
-        let salir = "Cerrar Sesión";
+        let salir = "";
         try {
             const response = yield train_1.nlp.process("es", message);
             intento = response.intent;
             if (response.intent === "inscripcion.inscripcion") {
                 answer = response.answer;
                 /* registrationInProgress = true;
-                currentStep = 1; */
+                  currentStep = 1; */
                 userStates[uniqueUserId] = {}; // Inicializar el estado de usuario
                 userStates[uniqueUserId].currentStep = 1; // Establecer el primer paso del flujo
             }
@@ -72,16 +72,49 @@ function postConsulta(req, res) {
                 userDocs[uniqueUserId].currentStep = 1; // Establecer el primer paso del flujo
             }
             else if (userDocs[uniqueUserId] && userDocs[uniqueUserId].currentStep) {
-                if (message.toLowerCase() === "no" || message.toLowerCase() === "salir") {
-                    delete userDocs[uniqueUserId];
-                    answer =
-                        "Entiendo, cuando cambies de opinión estaré aquí para ayudarte.😄";
+                if (message.toLowerCase() === "no" || message.toLowerCase() === "salir" || message.toLowerCase() === "cerrar sesion") {
+                    let salirUser = false; // Variable para controlar si se debe "salir"
+                    let cerrarSesion = false; // Variable para controlar si se debe "cerrar sesión"
+                    let mensajeNo = false;
+                    if (message.toLowerCase() === "salir") {
+                        answer = "Hasta luego, si necesitas algo más no dudes en consultarme! 😄";
+                        salirUser = true;
+                    }
+                    else if (message.toLowerCase() === "no") {
+                        answer = "Entiendo, cuando cambies de opinión estaré aquí para ayudarte.😄";
+                        mensajeNo = true;
+                    }
+                    else if (message.toLowerCase() === "cerrar sesion") {
+                        answer = "Adiós! <br>Si necesitas otra cosa, estaré aquí para ayudarte! 😄";
+                        cerrarSesion = true;
+                    }
+                    else {
+                        salirUser = false;
+                        cerrarSesion = false;
+                        mensajeNo = false;
+                    }
+                    if (salirUser) {
+                        salir = "Cerrar Sesion";
+                        delete userDocs[uniqueUserId];
+                        // Código para eliminar el token si el mensaje es "salir"
+                        // Aquí puedes incluir la lógica para eliminar el token
+                    }
+                    if (cerrarSesion) {
+                        salir = "Cerrar Sesion";
+                        delete userDocs[uniqueUserId];
+                    }
+                    if (mensajeNo) {
+                        salir = "Cerrar Sesion";
+                        delete userDocs[uniqueUserId];
+                    }
+                    // TODO: AQUI VA ALGO PARA ELIMINAR EL TOKEN SI SE ESCRIBE "salir"
                 }
                 else {
                     switch (userDocs[uniqueUserId].currentStep) {
                         case 1:
-                            userDocs[uniqueUserId].confirm = "temp";
-                            answer = `Te recuerdo que puedes cancelar este proceso si escribes (<b>salir</b>) <br><br>Por favor, proporciona tu credenciales:
+                            userDocs[uniqueUserId].confirm = message;
+                            if (message.toLowerCase() === "si") {
+                                answer = `Te recuerdo que puedes cancelar este proceso si escribes (<b>salir</b>) <br><br>Por favor, proporciona tu credenciales:
               <div class="dropdown">
               <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="true">
                 Iniciar Sesión
@@ -102,7 +135,12 @@ function postConsulta(req, res) {
             </div>
               
               `;
-                            userDocs[uniqueUserId].currentStep = 2;
+                                userDocs[uniqueUserId].currentStep = 2;
+                            }
+                            else {
+                                answer = "Al parecer no te decidiste, pero cuando cambies de opinión, estaré aqui para ayudarte!";
+                                delete userDocs[uniqueUserId];
+                            }
                             break;
                         case 2: {
                             const user = yield usuario_1.default.findOne({
@@ -121,7 +159,6 @@ function postConsulta(req, res) {
                             break;
                         }
                         case 3:
-                            answer = `Sube aquí tus documentos 👇:`;
                             {
                                 const userToken = (0, login_user_1.getUserToken)(req);
                                 const user = yield usuario_1.default.findOne({
@@ -146,37 +183,65 @@ function postConsulta(req, res) {
                                         if (userDocs[uniqueUserId].confirm === nomOferta.descripcion) {
                                             idoferta = nomOferta.id_oferta;
                                             idinscrip = inscrip.id_inscripcion;
+                                            answer = `Sube aquí tus documentos 👇:`;
+                                            userDocs[uniqueUserId].currentStep = 3;
                                         }
-                                        userDocs[uniqueUserId].currentStep = 3;
-                                        //aqui debe ir una validacion de docs: ejemplo, si ya subió sus docs escriba salir
                                     }
                                     else {
-                                        answer = `Por favor elige una maestría en la que te registraste, o si deseas cancelar el proceso escribe (<b>salir</b>)`;
+                                        //Devuelve las maestrias en la que el usuario esta inscrito
+                                        const userPersona = yield inscripcion_1.default.findAll({
+                                            attributes: ['id_persona', 'id_inscripcion'],
+                                            where: {
+                                                id_persona: user.id_persona,
+                                            },
+                                            include: {
+                                                model: oferta_1.default,
+                                                attributes: ['id_oferta', 'descripcion'],
+                                            },
+                                        });
+                                        const userPersonaData = userPersona.map(item => item.get({ plain: true }));
+                                        const descripcionOferta = userPersonaData.map(item => item.ofertum.descripcion);
+                                        answer = "Si deseas subir tus documentos en otra maestría, selecciona una 👇:<br><a class='option-link' id='capturaNombre'>" +
+                                            descripcionOferta.join('<a class="option-link" id="capturaNombre">') + '</a> O has clic aquí 👇 para salir de tu cuenta.<a class="option-link">Cerrar Sesion</a> ';
+                                        userDocs[uniqueUserId].currentStep = 3;
                                     }
                                 }
                                 else {
-                                    answer = `Por favor elige una maestría en la que te registraste, o si deseas cancelar el proceso escribe (<b>salir</b>)`;
+                                    //Devuelve las maestrias en la que el usuario esta inscrito
+                                    const userPersona = yield inscripcion_1.default.findAll({
+                                        attributes: ['id_persona', 'id_inscripcion'],
+                                        where: {
+                                            id_persona: user.id_persona,
+                                        },
+                                        include: {
+                                            model: oferta_1.default,
+                                            attributes: ['id_oferta', 'descripcion'],
+                                        },
+                                    });
+                                    const userPersonaData = userPersona.map(item => item.get({ plain: true }));
+                                    const descripcionOferta = userPersonaData.map(item => item.ofertum.descripcion);
+                                    answer = "Si deseas subir tus documentos en otra maestría, selecciona una 👇:<br><a class='option-link' id='capturaNombre'>" +
+                                        descripcionOferta.join('<a class="option-link" id="capturaNombre">') + '</a> O has clic aquí 👇 para salir de tu cuenta.<a class="option-link">Cerrar Sesion</a>';
+                                    userDocs[uniqueUserId].currentStep = 3;
                                 }
                                 break;
                             }
-                        case 4:
-                            const mensajeUsu = message.toLowerCase() === "cerrar";
-                            if (mensajeUsu) {
-                                answer =
-                                    "Adiós! <br> Si necesitas otra cosa, estaré aquí para ayudarte! 😄 ";
-                                delete userDocs[uniqueUserId];
-                            }
-                            else {
-                                answer = "Si ya subiste tus documentos, escribe (<b>salir</b>) o da clic en el botón <a class='option-link'>cerrar</a>";
-                            }
-                            break;
                     }
                 }
             }
             else {
                 if (response.intent === "None") {
                     answer = `¡Ups! Parece que no he entendido tu consulta 😟. 
-          Podrías reformular tu pregunta o proporcionar más detalles.`;
+          Podrías reformular tu pregunta o proporcionar más detalles.<br>
+          También puedes hacer clic en una opción 👇
+          <a class="option-link">Información sobre las Facultades 🎓</a>
+          <a class="option-link">Quiero inscribirme 📝</a>
+          <a class="option-link">Información Maestrías 📚</a>
+          <a class="option-link">Formas de pago 💳</a>
+          <a class="option-link">Precio de maestrías 💰</a>
+          <a class="option-link">Descuentos 🎉</a>
+          <a class="option-link">¿Dónde subo mis documentos? 📚</a>
+          <a class="option-link">¿Cuál es mi campo amplio? 🌐</a><br>`;
                 }
                 else {
                     answer = response.answer;
@@ -193,12 +258,12 @@ function postConsulta(req, res) {
             intent: intento,
             idoferta: idoferta,
             idinscrip: idinscrip,
+            token: salir,
         });
     });
 }
 exports.postConsulta = postConsulta;
 function funcionInscripcion(message, uniqueUserId) {
-    var _a, _b;
     return __awaiter(this, void 0, void 0, function* () {
         let answer = "";
         let validarNum = false;
@@ -217,25 +282,33 @@ function funcionInscripcion(message, uniqueUserId) {
                 case 2:
                     if (!validarNum) {
                         if (!message.match(validarDig)) {
-                            answer = "El número de cédula debe tener 10 dígitos numéricos 🙂. Por favor, intenta nuevamente:";
+                            answer =
+                                "El número de cédula debe tener 10 dígitos numéricos 🙂. Por favor, intenta nuevamente:";
                         }
                         else {
                             userStates[uniqueUserId].identificacion = message;
                             validarNum = true; // Marcar la cédula como válida
                             const cedula = userStates[uniqueUserId].identificacion;
-                            const persona = yield usuario_1.default.findOne({ where: { identificacion: cedula } });
+                            const persona = yield usuario_1.default.findOne({
+                                where: { identificacion: cedula },
+                            });
                             if (persona && validarNum) {
                                 // Mostrar los detalles de la persona
                                 answer =
                                     "Actualmente ya estás registrado: <br>" +
-                                        "<b>Nombres:</b> " + persona.nombres +
-                                        "<br><b>Apellidos:</b> " + persona.apellidos +
-                                        "<br><b>Sexo:</b> " + persona.sexo +
-                                        "<br><b>Email:</b> " + persona.email_personal +
-                                        "<br><b>Celular:</b> " + persona.celular +
+                                        "<b>Nombres:</b> " +
+                                        persona.nombres +
+                                        "<br><b>Apellidos:</b> " +
+                                        persona.apellidos +
+                                        "<br><b>Sexo:</b> " +
+                                        persona.sexo +
+                                        "<br><b>Email:</b> " +
+                                        persona.email_personal +
+                                        "<br><b>Celular:</b> " +
+                                        persona.celular +
                                         "<br><br>¿Deseas inscribirte en otra maestría?" +
                                         `<a class="option-link">si</a>
-                   <a class="option-link">No</a>`;
+                  <a class="option-link">No</a>`;
                                 userStates[uniqueUserId].currentStep = 10; // Cambiar el paso para capturar la respuesta de inscripción en otra maestría
                             }
                             else {
@@ -278,8 +351,7 @@ function funcionInscripcion(message, uniqueUserId) {
                     }
                     break;
                 case 5:
-                    if (message.toUpperCase() === "F" ||
-                        message.toUpperCase() === "M") {
+                    if (message.toUpperCase() === "F" || message.toUpperCase() === "M") {
                         userStates[uniqueUserId].sexo = message.toUpperCase();
                         answer =
                             "Listo 😀, ahora ingrese su número de teléfono (Ej: 0912345678):";
@@ -339,66 +411,63 @@ function funcionInscripcion(message, uniqueUserId) {
                 case 9:
                     //Se selecciona la maestria elegida por el usuario
                     userStates[uniqueUserId].maestria = message;
-                    const selectedMaestria = message.toLowerCase();
-                    if (userStates[uniqueUserId].maestriasDisponibles) {
-                        const lowerCaseMaestrias = (_a = userStates[uniqueUserId].maestriasDisponibles) === null || _a === void 0 ? void 0 : _a.map((maestria) => maestria.toLowerCase());
-                        if (lowerCaseMaestrias === null || lowerCaseMaestrias === void 0 ? void 0 : lowerCaseMaestrias.includes(selectedMaestria)) {
-                            userStates[uniqueUserId].selectedMaestria = selectedMaestria;
-                            answer =
-                                "¡Registro completado! 🤗 <br>Revise su correo para continuar el proceso 📧. <br> Pronto un asesor se contactará contigo 📱👨‍💼.";
-                            const personaData = Object.assign({}, userStates[uniqueUserId]);
-                            //Se construye el body con los datos capturados del usuario en la tabla persona
-                            const DatosPersona = usuario_1.default.build({
-                                identificacion: personaData.identificacion,
-                                nombres: personaData.nombres,
-                                apellidos: personaData.apellidos,
-                                sexo: personaData.sexo,
-                                celular: personaData.celular,
-                                email_personal: personaData.email_personal,
-                            });
-                            yield DatosPersona.save();
-                            const idpersona = yield usuario_1.default.findOne({
-                                where: { identificacion: personaData.identificacion }
-                            });
-                            const nombreOferta = yield oferta_1.default.findOne({
-                                where: { descripcion: personaData.maestria }
-                            });
-                            //Se construye el body con los datos capturados del usuario en la tabla inscripcion
-                            const personaInscrip = inscripcion_1.default.build({
-                                id_persona: idpersona.id_persona,
+                    const personaData = Object.assign({}, userStates[uniqueUserId]);
+                    const nombreOferta = yield oferta_1.default.findOne({
+                        where: { descripcion: personaData.maestria },
+                    });
+                    if (nombreOferta) {
+                        answer =
+                            "¡Registro completado! 🤗 <br>Revise su correo para continuar el proceso 📧. <br> Pronto un asesor se contactará contigo 📱👨‍💼.";
+                        //Se construye el body con los datos capturados del usuario en la tabla persona
+                        const DatosPersona = usuario_1.default.build({
+                            identificacion: personaData.identificacion,
+                            nombres: personaData.nombres,
+                            apellidos: personaData.apellidos,
+                            sexo: personaData.sexo,
+                            celular: personaData.celular,
+                            email_personal: personaData.email_personal,
+                        });
+                        yield DatosPersona.save();
+                        const idpersona = yield usuario_1.default.findOne({
+                            where: { identificacion: personaData.identificacion },
+                        });
+                        const nombreOferta = yield oferta_1.default.findOne({
+                            where: { descripcion: personaData.maestria },
+                        });
+                        //Se construye el body con los datos capturados del usuario en la tabla inscripcion
+                        const personaInscrip = inscripcion_1.default.build({
+                            id_persona: idpersona.id_persona,
+                            id_oferta: nombreOferta.id_oferta,
+                            id_periodo_academico: 1,
+                            codigo_vendedor: personaData.codigo_vendedor,
+                        });
+                        yield personaInscrip.save();
+                        const hashedPassword = yield bcrypt_1.default.hash(idpersona.identificacion, 10);
+                        // Guarda usuario en la base de datos
+                        yield iniciosesion_1.default.create({
+                            usuario: personaData.identificacion,
+                            clave: hashedPassword,
+                        });
+                        // TODO: Se debe insertar los datos en la tabla userdocs
+                        // TODO: Se debe obtener el id_iniciosesion de la tabla
+                        const idIniSes = yield iniciosesion_1.default.findOne({
+                            where: { usuario: personaData.identificacion },
+                        });
+                        const idInscrip = yield inscripcion_1.default.findOne({
+                            where: {
                                 id_oferta: nombreOferta.id_oferta,
-                                id_periodo_academico: 1,
-                                codigo_vendedor: personaData.codigo_vendedor,
-                            });
-                            yield personaInscrip.save();
-                            const hashedPassword = yield bcrypt_1.default.hash(idpersona.identificacion, 10);
-                            // Guarda usuario en la base de datos
-                            yield iniciosesion_1.default.create({
-                                usuario: personaData.identificacion,
-                                clave: hashedPassword,
-                            });
-                            // TODO: Se debe insertar los datos en la tabla userdocs
-                            // TODO: Se debe obtener el id_iniciosesion de la tabla
-                            const idIniSes = yield iniciosesion_1.default.findOne({
-                                where: { usuario: personaData.identificacion }
-                            });
-                            const idInscrip = yield inscripcion_1.default.findOne({
-                                where: { id_oferta: nombreOferta.id_oferta, id_persona: idpersona.id_persona }
-                            });
-                            //Se inserta el usuario con la maestria, y sus respectivos documentos
-                            yield userdocs_1.default.create({
-                                id_inscripcion: idInscrip.id_inscripcion,
-                                id_iniciosesion: idIniSes.id_iniciosesion,
-                            });
-                            delete userStates[uniqueUserId];
-                        }
-                        else {
-                            answer =
-                                "La maestría seleccionada no es válida 🙂. Por favor, elige una maestría de la lista.";
-                        }
+                                id_persona: idpersona.id_persona,
+                            },
+                        });
+                        //Se inserta el usuario con la maestria, y sus respectivos documentos
+                        yield userdocs_1.default.create({
+                            id_inscripcion: idInscrip.id_inscripcion,
+                            id_iniciosesion: idIniSes.id_iniciosesion,
+                        });
+                        delete userStates[uniqueUserId];
                     }
                     else {
-                        answer = "No hay maestrías disponibles para seleccionar 😢.";
+                        answer = "Esa maestría no es válida 🙂. Por favor, elige una maestría de la lista.";
                     }
                     break;
                 case 10:
@@ -408,32 +477,31 @@ function funcionInscripcion(message, uniqueUserId) {
                         userStates[uniqueUserId].currentStep = 11;
                     }
                     else {
-                        answer = "Al parecer no te decidiste, pero cuando cambies de opinión, estaré aqui para ayudarte!";
+                        answer =
+                            "Al parecer no te decidiste, pero cuando cambies de opinión, estaré aqui para ayudarte!";
                         delete userStates[uniqueUserId];
                     }
                     break;
-                case 11:
-                    {
-                        userStates[uniqueUserId].codigo_vendedor = message;
-                        const maestrias = yield (0, exports.getMaestrias)(); // Obtener la lista de maestrías            
-                        if (Array.isArray(maestrias)) {
-                            userStates[uniqueUserId].maestriasDisponibles = maestrias;
-                            answer =
-                                'Por favor, elige una maestría de la lista 👇:<br><a class="option-link">' +
-                                    maestrias.join('<a class="option-link">') +
-                                    "</a>";
-                            userStates[uniqueUserId].currentStep = 12;
-                        }
-                        else {
-                            answer =
-                                "Disculpa, ha ocurrido un error al obtener la lista de maestrías 😢.";
-                        }
-                        break;
+                case 11: {
+                    userStates[uniqueUserId].codigo_vendedor = message;
+                    const maestrias = yield (0, exports.getMaestrias)(); // Obtener la lista de maestrías
+                    if (Array.isArray(maestrias)) {
+                        userStates[uniqueUserId].maestriasDisponibles = maestrias;
+                        answer =
+                            'Por favor, elige una maestría de la lista 👇:<br><a class="option-link">' +
+                                maestrias.join('<a class="option-link">') +
+                                "</a>";
+                        userStates[uniqueUserId].currentStep = 12;
                     }
+                    else {
+                        answer =
+                            "Disculpa, ha ocurrido un error al obtener la lista de maestrías 😢.";
+                    }
+                    break;
+                }
                 case 12:
                     {
                         userStates[uniqueUserId].maestria = message;
-                        const selectedMaestria = message.toLowerCase();
                         const personaData = Object.assign({}, userStates[uniqueUserId]);
                         const idpersona = yield usuario_1.default.findOne({
                             where: { identificacion: personaData.identificacion }
@@ -441,16 +509,16 @@ function funcionInscripcion(message, uniqueUserId) {
                         const nombreOferta = yield oferta_1.default.findOne({
                             where: { descripcion: personaData.maestria }
                         });
-                        const idoferta = yield inscripcion_1.default.findOne({
-                            where: { id_oferta: nombreOferta.id_oferta, id_persona: idpersona.id_persona }
-                        });
-                        if (userStates[uniqueUserId].maestriasDisponibles) {
-                            const lowerCaseMaestrias = (_b = userStates[uniqueUserId].maestriasDisponibles) === null || _b === void 0 ? void 0 : _b.map((maestria) => maestria.toLowerCase());
-                            if ((lowerCaseMaestrias === null || lowerCaseMaestrias === void 0 ? void 0 : lowerCaseMaestrias.includes(selectedMaestria)) && !idoferta) {
-                                userStates[uniqueUserId].selectedMaestria = selectedMaestria;
+                        if (nombreOferta) {
+                            const idoferta = yield inscripcion_1.default.findOne({
+                                where: { id_oferta: nombreOferta.id_oferta, id_persona: idpersona.id_persona }
+                            });
+                            if (idoferta) {
+                                answer = "Ya estás inscrito en esa maestría. Por favor, elige una maestría de la lista.";
+                            }
+                            else {
                                 answer =
                                     "¡Registro completado! 🤗 <br>Revise su correo para continuar el proceso 📧. <br> Pronto un asesor se contactará contigo 📱👨‍💼.";
-                                /* const persona = Inscripcion.build(personaData); */
                                 const persona = inscripcion_1.default.build({
                                     id_persona: idpersona.id_persona,
                                     id_oferta: nombreOferta.id_oferta,
@@ -473,16 +541,10 @@ function funcionInscripcion(message, uniqueUserId) {
                                 yield userdocs.save();
                                 delete userStates[uniqueUserId];
                             }
-                            else if (idoferta) {
-                                answer = "Ya estás inscrito en esa maestría. Por favor, elige una maestría de la lista.";
-                            }
-                            else {
-                                answer =
-                                    "La maestría seleccionada no es válida 🙂. Por favor, elige una maestría de la lista.";
-                            }
                         }
                         else {
-                            answer = "No hay maestrías disponibles para seleccionar 😢.";
+                            answer =
+                                "Esa maestría no es válida 🙂. Por favor, elige una maestría de la lista.";
                         }
                         break;
                     }

@@ -15,13 +15,13 @@ const validateToken = (req, res, next) => {
         }
         catch (error) {
             res.status(401).json({
-                msg: 'token no valido'
+                msg: 'Tu sesión expiró, ¿Quieres volver a iniciar sesión? <a class="option-link">Sí, quiero iniciar sesión</a>'
             });
         }
     }
     else {
         res.status(401).json({
-            msg: 'Acceso no permitido'
+            msg: 'Si quieres volver a subir tus documentos primero inicia sesión 😀.'
         });
     }
 };
