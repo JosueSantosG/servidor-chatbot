@@ -234,29 +234,43 @@ export const sendFileUser = async (req: Request, res: Response) => {
       const {idinscripcion} = req.params;
       const {cedula, certificado, solicitud } = req.body;
       const userToken = getUserToken(req);
+    
+    if (userToken===null || userToken===undefined ) {
+      console.log(userToken);
+      
+      res.status(401).json({ msg: 'Disculpa las molestias, no puedes realizar eso...' });
+    }else{
       const idses: any = await Iniciosesion.findOne({
         where: { usuario: userToken}
-    });
-      const userdocs: any = await Userdocs.findOne({
-        where: { id_inscripcion: idinscripcion,id_iniciosesion:idses.id_iniciosesion}
-    });
-      // Modifica los campos que deseas actualizar
-      if (cedula) {
-        userdocs.cedula = cedula;
+      });
+        const userdocs: any = await Userdocs.findOne({
+          where: { id_inscripcion: idinscripcion,id_iniciosesion:idses.id_iniciosesion}
+      });
+      if (idinscripcion === '0' && req.file) {
+        
+        res.status(401).json({
+          msg: 'Error al guardar el archivo ❌, por favor vuelve a elegir la maestría e intenta de nuevo.'
+      });
+      }else{
+        // Modifica los campos que deseas actualizar
+        if (cedula) {
+          userdocs.cedula = cedula;
+        }
+        if (solicitud) {
+            userdocs.solicitud = solicitud;
+        }
+        if (certificado) {
+            userdocs.certificado = certificado;
+        }
+        await userdocs.save();
+        uploadFile().catch(console.error);
       }
-      if (solicitud) {
-          userdocs.solicitud = solicitud;
-      }
-      if (certificado) {
-          userdocs.certificado = certificado;
-      }
-      await userdocs.save();
-
+    
+      
+    }
     } catch (error) {
         console.error('Error al guardar la actualización:', error);
-        return res.status(500).json({
-            msg: 'Error al guardar el archivo ❌, por favor vuelve a elegir la maestría e intenta de nuevo.'
-        });
+
     }
 
   async function uploadFile() {
@@ -287,7 +301,7 @@ export const sendFileUser = async (req: Request, res: Response) => {
     }
   }
 
-  uploadFile().catch(console.error);
+  
 };
 
 
