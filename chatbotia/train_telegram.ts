@@ -4,9 +4,9 @@ import fs from 'fs';
 export const nlp = new NlpManager({ languages: ['es'], forceNER: true });
 // Se añade las preguntas y sus etiquetas
 (async() => {
-  if (fs.existsSync('./model.nlp')) {
-    nlp.load('./model.nlp');
-    console.info('Modelo cargado correctamente!')
+  if (fs.existsSync('./model_telegram.nlp')) {
+    nlp.load('./model_telegram.nlp');
+    console.info('Modelo telegram cargado correctamente!')
   }else{
 nlp.addLanguage('es');
 //TAG: NOMBRE BOT
