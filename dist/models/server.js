@@ -17,19 +17,18 @@ const usuario_1 = __importDefault(require("../routes/usuario"));
 const userdata_1 = __importDefault(require("../routes/userdata"));
 const cors_1 = __importDefault(require("cors"));
 const connection_1 = __importDefault(require("../database/connection"));
-const express_session_1 = __importDefault(require("express-session"));
 class Server {
     constructor() {
         this.apiPaths = {
-            chatbot: "/api/chatbot",
-            oferta: "/api/oferta",
-            comentario: "/api/chatbot",
-            login: "/api/user",
-            sendFile: "/api/file",
-            actdatos: "/api/datos",
+            chatbot: '/api/chatbot',
+            oferta: '/api/oferta',
+            comentario: '/api/chatbot',
+            login: '/api/user',
+            sendFile: '/api/file',
+            actdatos: '/api/datos'
         };
         this.app = (0, express_1.default)();
-        this.port = process.env.PORT || "3000";
+        this.port = process.env.PORT || '3000';
         //metodos iniciales
         this.dbConnection();
         this.middlewares();
@@ -43,7 +42,7 @@ class Server {
                 console.log("Base de datos conectada");
             }
             catch (error) {
-                console.error("Error al conectar", error);
+                console.error('Error al conectar', error);
             }
         });
     }
@@ -53,13 +52,7 @@ class Server {
         // Lectura del body
         this.app.use(express_1.default.json());
         // Carpeta pública
-        this.app.use(express_1.default.static("public"));
-        // Middleware de sesión
-        this.app.use((0, express_session_1.default)({
-            secret: "S3cr3tK3y",
-            resave: false,
-            saveUninitialized: false,
-        }));
+        this.app.use(express_1.default.static('public'));
     }
     routes() {
         this.app.use(this.apiPaths.chatbot, usuario_1.default);
@@ -71,7 +64,7 @@ class Server {
     }
     listen() {
         this.app.listen(this.port, () => {
-            console.log("Servidor en puerto: " + this.port);
+            console.log('Servidor en puerto: ' + this.port);
         });
     }
 }
