@@ -8,14 +8,17 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.nlp = void 0;
 const { NlpManager } = require('node-nlp');
-const fs = require('fs');
+const fs_1 = __importDefault(require("fs"));
 exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
 // Agrega los documentos y respuestas al chatbot
 (() => __awaiter(void 0, void 0, void 0, function* () {
-    if (fs.existsSync('./model.nlp')) {
+    if (fs_1.default.existsSync('./model.nlp')) {
         exports.nlp.load('./model.nlp');
         console.info('Modelo cargado correctamente!');
     }

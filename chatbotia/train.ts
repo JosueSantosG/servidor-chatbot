@@ -1,10 +1,10 @@
 
 const { NlpManager } = require('node-nlp');
-const fs = require('fs');
+import fs from 'fs';
 export const nlp = new NlpManager({ languages: ['es'], forceNER: true });
   // Agrega los documentos y respuestas al chatbot
   (async () => {
-     if (fs.existsSync('./model.nlp')) {
+    if (fs.existsSync('./model.nlp')) {
       nlp.load('./model.nlp');
       console.info('Modelo cargado correctamente!')
     }else{
