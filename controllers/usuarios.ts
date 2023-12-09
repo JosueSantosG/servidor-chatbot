@@ -170,14 +170,18 @@ export async function postConsulta(req: Request, res: Response) {
 
             {
               const userToken = getUserToken(req);
+
+
               const user: any = await Persona.findOne({
                 where: { identificacion: userToken },
               });
+
 
               const nomOferta: any = await Oferta.findOne({
                 where: { descripcion: message },
               });
               console.log("mensaje1111", message);
+
 
               //verifica si existe la maestria en la tabla de inscripcion por id_oferta
               if (nomOferta) {
@@ -201,6 +205,7 @@ export async function postConsulta(req: Request, res: Response) {
                   }
                   
                 } else {
+                  
                   
                   //Devuelve las maestrias en la que el usuario esta inscrito
                   const userPersona = await Inscripcion.findAll({

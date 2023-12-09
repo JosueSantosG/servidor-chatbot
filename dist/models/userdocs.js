@@ -29,6 +29,15 @@ const Userdocs = connection_1.default.define("userdocs", {
     solicitud: {
         type: sequelize_1.DataTypes.STRING,
     },
+    titulo: {
+        type: sequelize_1.DataTypes.STRING,
+    },
+    comprobante: {
+        type: sequelize_1.DataTypes.STRING,
+    },
+    hojadevida: {
+        type: sequelize_1.DataTypes.STRING,
+    },
 });
 Userdocs.belongsTo(iniciosesion_1.default, { foreignKey: "id_iniciosesion" });
 iniciosesion_1.default.hasMany(Userdocs, { foreignKey: "id_iniciosesion" });

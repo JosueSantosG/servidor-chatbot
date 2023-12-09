@@ -5,12 +5,12 @@ import validateToken from './validate-token';
 /* const upload = multer({ dest: 'uploads/'})
  */
 const router = Router();
-// Configura multer para la subida de archivos
+// Configuracion de multer para la subida de archivos
 const storage = multer.diskStorage({})
 const upload = multer({ storage: storage })
 
 router.post('/login', loginUser);
-router.put('/sendFile/:idinscripcion', validateToken,upload.single('file'), sendFileUser);
+router.put('/sendFile/:idinscripcion', upload.single('file'), sendFileUser);
 router.put('/actdatos/:idinscripcion', validateToken,modificarDatos);
 router.post('/newUser', newUser);
 router.get('/mostrarDocs/:maestria', validateToken, maestriaUser);

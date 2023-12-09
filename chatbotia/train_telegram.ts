@@ -1,9 +1,13 @@
 
 const { NlpManager } = require('node-nlp');
-
+import fs from 'fs';
 export const nlp = new NlpManager({ languages: ['es'], forceNER: true });
 // Se añade las preguntas y sus etiquetas
 (async() => {
+  if (fs.existsSync('./model.nlp')) {
+    nlp.load('./model.nlp');
+    console.info('Modelo cargado correctamente!')
+  }else{
 nlp.addLanguage('es');
 //TAG: NOMBRE BOT
 nlp.addDocument('es', 'Como te llamas', 'nombot.nombot');
@@ -122,14 +126,22 @@ Puedes consultar mas información haciendo click en una maestría, y luego en en
     `);
 
 
-
+  }
 
 
 // Entrena y se guarda el modelo
-  /*   const hrstart = process.hrtime();
-    await nlp.train();
-    nlp.save('./model_telegram.nlp');
-    const hrend = process.hrtime(hrstart);
-    console.info('Chat de telegram entrenado! (hr): %ds %dms', hrend[0], hrend[1] / 1000000);
-   */
+
+    //si se agregaron mas preguntas = true
+    //no se hicieron cambion = false
+    const isNewDataAdded = false;
+
+    if (isNewDataAdded) {
+      // Entrena el chatbot y guarda el modelo
+      const hrstart = process.hrtime();
+      await nlp.train();
+      nlp.save('./model_telegram.nlp');
+      const hrend = process.hrtime(hrstart);
+      console.info('Chat de telegram entrenado! (hr): %ds %dms', hrend[0], hrend[1] / 1000000);
+    }
+  
 })();

@@ -12,7 +12,7 @@ const validateToken = (req: Request, res: Response, next: NextFunction) => {
             jwt.verify(bearerToken, process.env.SECRET_KEY || '1234clave');
             next()
         } catch (error) {
-            res.status(500).json({
+            res.status(401).json({
                 msg: 'Tu sesión expiró, ¿Quieres volver a iniciar sesión? <a class="option-link">Sí, quiero iniciar sesión</a>'
             })
         }

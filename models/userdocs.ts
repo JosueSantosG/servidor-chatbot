@@ -25,6 +25,16 @@ const Userdocs = database.define("userdocs", {
   solicitud: {
     type: DataTypes.STRING,
   },
+  titulo: {
+    type: DataTypes.STRING,
+  },
+  comprobante: {
+    type: DataTypes.STRING,
+  },
+  hojadevida: {
+    type: DataTypes.STRING,
+  },
+  
 });
 Userdocs.belongsTo(Iniciosesion, { foreignKey: "id_iniciosesion" });
 Iniciosesion.hasMany(Userdocs, { foreignKey: "id_iniciosesion" });

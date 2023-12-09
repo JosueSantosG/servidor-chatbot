@@ -14,7 +14,7 @@ const validateToken = (req, res, next) => {
             next();
         }
         catch (error) {
-            res.status(500).json({
+            res.status(401).json({
                 msg: 'Tu sesión expiró, ¿Quieres volver a iniciar sesión? <a class="option-link">Sí, quiero iniciar sesión</a>'
             });
         }

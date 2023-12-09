@@ -2,14 +2,14 @@ import { nlp } from "../chatbotia/train_telegram";
 import { Telegraf } from 'telegraf';
 import Oferta from "../models/oferta";
 import Persona from "../models/usuario";
-/* 
-const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN || '');
- */
-/* bot.command('start', ctx =>{
-  sendStartMessage(ctx);
-}) */
 
-export function sendStartMessage (ctx:any) {/* 
+const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN || '');
+
+bot.command('start', ctx =>{
+  sendStartMessage(ctx);
+})
+
+export function sendStartMessage (ctx:any) {
   const startMessage = "Hola, ¿cómo te puedo ayudar? 😄 \nPuedes seleccionar en una opción 👇";
 
   bot.telegram.sendMessage(ctx.chat.id, startMessage, {
@@ -26,9 +26,9 @@ export function sendStartMessage (ctx:any) {/*
               ]
           ]
       }
-  }) */
+  }) 
 }
-/* 
+
 bot.action('registro', async (ctx:any) => {
   ctx.answerCbQuery();
    
@@ -150,7 +150,7 @@ bot.on('text', async ctx => {
 
 
 bot.launch();
- */
+
 
 
 
@@ -181,7 +181,7 @@ export const getMaestriasTlg = async () => {
 };
 
 export async function postConsultaTlg(ctx:any) {
-  /* const message = ctx.message.text;
+  const message = ctx.message.text;
   const uniqueUserId = ctx.chat.id;
   let answer = "";
   let validarNum = false;
@@ -353,7 +353,7 @@ export async function postConsultaTlg(ctx:any) {
   } catch (error) {
     console.error("Error en el procesamiento del mensaje:", error);
     answer = "Error en el procesamiento del mensaje";
-  } */
+  } 
 
 }
 

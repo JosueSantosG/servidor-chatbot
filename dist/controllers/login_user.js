@@ -28,7 +28,7 @@ const newUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const user = yield userdocs_1.default.findOne({ where: { usuario: usuario } });
     if (user) {
         return res.status(400).json({
-            msg: `Ya existe un usuario con el nombre ${usuario}`
+            msg: `Ya existe un usuario con el nombre ${usuario}`,
         });
     }
     const hashedPassword = yield bcrypt_1.default.hash(clave, 10);
@@ -39,13 +39,13 @@ const newUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
             clave: hashedPassword,
         });
         res.json({
-            msg: `Usuario ${usuario} creado exitosamente!`
+            msg: `Usuario ${usuario} creado exitosamente!`,
         });
     }
     catch (error) {
         res.status(400).json({
-            msg: 'Upps ocurrio un error',
-            error
+            msg: "Upps ocurrio un error",
+            error,
         });
     }
 });
@@ -54,31 +54,33 @@ const loginUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { usuario, clave } = req.body;
     try {
         // Validamos si el usuario existe en la base de datos
-        const user = yield iniciosesion_1.default.findOne({ where: { usuario: usuario } });
+        const user = yield iniciosesion_1.default.findOne({
+            where: { usuario: usuario },
+        });
         if (!user) {
             return res.status(401).json({
-                msg: `El usuario o clave son incorrectos, vuelva a intentar por favor.`
+                msg: `El usuario o clave son incorrectos, vuelva a intentar por favor.`,
             });
         }
         // Validamos password
         const passwordValid = yield bcrypt_1.default.compare(clave, user.clave);
         if (!passwordValid) {
             return res.status(401).json({
-                msg: `El usuario o clave son incorrectos, vuelva a intentar por favor.`
+                msg: `El usuario o clave son incorrectos, vuelva a intentar por favor.`,
             });
         }
         // Generamos token
         const token = jsonwebtoken_1.default.sign({
-            usuario: usuario
-        }, process.env.SECRET_KEY || '1234clave', { expiresIn: '10m' });
+            usuario: usuario,
+        }, process.env.SECRET_KEY || "1234clave", { expiresIn: "30m" });
         res.json({
-            token: token
+            token: token,
         });
     }
     catch (error) {
         console.error("Error al obtener los datos:", error);
         res.status(500).json({
-            msg: 'Error interno del servidor.'
+            msg: "Error interno del servidor.",
         });
     }
 });
@@ -87,26 +89,26 @@ exports.loginUser = loginUser;
 const mostrarMaestrias = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const userToken = getUserToken(req);
     const idpersona = yield usuario_1.default.findOne({
-        where: { identificacion: userToken }
+        where: { identificacion: userToken },
     });
     try {
         const userPersona = yield inscripcion_1.default.findAll({
-            attributes: ['id_persona', 'id_inscripcion'],
+            attributes: ["id_persona", "id_inscripcion"],
             where: {
                 id_persona: idpersona.id_persona,
             },
             include: {
                 model: oferta_1.default,
-                attributes: ['id_oferta', 'descripcion'],
+                attributes: ["id_oferta", "descripcion"],
             },
         });
         res.json({
-            maestrias: userPersona
+            maestrias: userPersona,
         });
     }
     catch (error) {
         console.error("Error en maestriaOferta:", error);
-        throw error; // Asegura que los errores se manejen adecuadamente
+        throw error;
     }
 });
 exports.mostrarMaestrias = mostrarMaestrias;
@@ -114,13 +116,17 @@ exports.mostrarMaestrias = mostrarMaestrias;
 const maestriaUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { maestria } = req.params;
     // se obtiene la oferta de maestría basada en el id_oferta
-    const nomMaestria = yield oferta_1.default.findOne({ where: { id_oferta: maestria } });
+    const nomMaestria = yield oferta_1.default.findOne({
+        where: { id_oferta: maestria },
+    });
     //se obtiene el usuario que esta relacionado con la oferta
     const userToken = getUserToken(req);
-    const user = yield usuario_1.default.findOne({ where: { identificacion: userToken } });
+    const user = yield usuario_1.default.findOne({
+        where: { identificacion: userToken },
+    });
     if (!nomMaestria) {
         return res.status(404).json({
-            msg: `No se encontró una oferta de maestría con la descripción proporcionada`
+            msg: `No se encontró una oferta de maestría con la descripción proporcionada`,
         });
     }
     // se busca la inscripción relacionada con la oferta de maestría y el usuario
@@ -128,19 +134,19 @@ const maestriaUser = (req, res) => __awaiter(void 0, void 0, void 0, function* (
      */
     // Se obtiene los documentos del usuario en función de la oferta de maestría y la inscripción
     const userPersona = yield inscripcion_1.default.findAll({
-        attributes: ['id_inscripcion'],
+        attributes: ["id_inscripcion"],
         where: {
             id_oferta: nomMaestria.id_oferta,
-            id_persona: user.id_persona
+            id_persona: user.id_persona,
         },
         include: {
             model: userdocs_1.default,
-            attributes: ['cedula', 'certificado', 'solicitud'],
+            attributes: ["cedula", "certificado", "solicitud", "titulo", "comprobante", "hojadevida"],
         },
     });
     if (userPersona.length === 0) {
         return res.status(404).json({
-            msg: `No se encontraron documentos de usuario asociados a la oferta de maestría y la inscripción proporcionadas`
+            msg: `No se encontraron documentos de usuario asociados a la oferta de maestría y la inscripción proporcionadas`,
         });
     }
     res.json({ userPersona });
@@ -153,10 +159,13 @@ const modificarDatos = (req, res) => __awaiter(void 0, void 0, void 0, function*
         const { cedula, certificado, solicitud } = req.body;
         const userToken = getUserToken(req);
         const idses = yield iniciosesion_1.default.findOne({
-            where: { usuario: userToken }
+            where: { usuario: userToken },
         });
         const userdocs = yield userdocs_1.default.findOne({
-            where: { id_inscripcion: idinscripcion, id_iniciosesion: idses.id_iniciosesion }
+            where: {
+                id_inscripcion: idinscripcion,
+                id_iniciosesion: idses.id_iniciosesion,
+            },
         });
         // Modifica los campos que deseas actualizar
         if (cedula) {
@@ -222,31 +231,37 @@ const modificarDatos = (req, res) => __awaiter(void 0, void 0, void 0, function*
 exports.modificarDatos = modificarDatos;
 //funcion para enviar el archivo a la nube y guardalo en la base de datos
 const sendFileUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const bucketName = 'postgradia'; // Nombre de tu bucket en Google Cloud Storage
-    const storage = new storage_1.Storage({ keyFilename: 'googlecloud.json' }); // Reemplaza 'googlecloud.json' con la ruta a tu archivo de credenciales de Google Cloud Storage
+    const bucketName = "postgradia"; // Nombre del bucket en Google Cloud Storage
+    const storage = new storage_1.Storage({ keyFilename: "googlecloud.json" });
     // Guarda los cambios en la base de datos
     try {
         const { idinscripcion } = req.params;
-        const { cedula, certificado, solicitud } = req.body;
+        const { cedula, certificado, solicitud, titulo, comprobante, hojadevida } = req.body;
         const userToken = getUserToken(req);
-        if (userToken === null || userToken === undefined) {
-            console.log(userToken);
-            res.status(401).json({ msg: 'Disculpa las molestias, no puedes realizar eso...' });
+        if (userToken === null || userToken === undefined || !userToken) {
+            res
+                .status(401)
+                .json({
+                msg: "Si quieres volver a subir tus documentos primero inicia sesión 😀.",
+            });
         }
         else {
-            const idses = yield iniciosesion_1.default.findOne({
-                where: { usuario: userToken }
-            });
-            const userdocs = yield userdocs_1.default.findOne({
-                where: { id_inscripcion: idinscripcion, id_iniciosesion: idses.id_iniciosesion }
-            });
-            if (idinscripcion === '0' && req.file) {
+            if (idinscripcion === "0" && req.file) {
                 res.status(401).json({
-                    msg: 'Error al guardar el archivo ❌, por favor vuelve a elegir la maestría e intenta de nuevo.'
+                    msg: "Error al guardar el archivo ❌, primero elige la maestría e intenta de nuevo.",
                 });
             }
             else {
-                // Modifica los campos que deseas actualizar
+                const idses = yield iniciosesion_1.default.findOne({
+                    where: { usuario: userToken },
+                });
+                const userdocs = yield userdocs_1.default.findOne({
+                    where: {
+                        id_inscripcion: idinscripcion,
+                        id_iniciosesion: idses.id_iniciosesion,
+                    },
+                });
+                // Modifica los campos que se actualizarán
                 if (cedula) {
                     userdocs.cedula = cedula;
                 }
@@ -256,18 +271,29 @@ const sendFileUser = (req, res) => __awaiter(void 0, void 0, void 0, function* (
                 if (certificado) {
                     userdocs.certificado = certificado;
                 }
+                if (titulo) {
+                    userdocs.titulo = titulo;
+                }
+                if (comprobante) {
+                    userdocs.comprobante = comprobante;
+                }
+                if (hojadevida) {
+                    userdocs.hojadevida = hojadevida;
+                }
                 yield userdocs.save();
                 uploadFile().catch(console.error);
             }
         }
     }
     catch (error) {
-        console.error('Error al guardar la actualización:', error);
+        console.error("Error al guardar la actualización:", error);
     }
     function uploadFile() {
         return __awaiter(this, void 0, void 0, function* () {
             if (!req.file) {
-                return res.status(400).json({ error: 'No se ha proporcionado ningún archivo' });
+                return res
+                    .status(400)
+                    .json({ error: "No se ha proporcionado ningún archivo" });
             }
             const file = req.file;
             const originalFileName = file.originalname;
@@ -275,18 +301,22 @@ const sendFileUser = (req, res) => __awaiter(void 0, void 0, void 0, function* (
             const uniqueFileName = (0, uuid_1.v4)();
             const destFileName = `${uniqueFileName}.pdf`;
             const options = {
-                destination: destFileName
+                destination: destFileName,
             };
             try {
                 // Subir el archivo a Google Cloud Storage
                 /*  await storage.bucket(bucketName).upload(file.path, options);
-                 console.log(`${originalFileName} subido como ${destFileName} a ${bucketName}`);
-            */
-                res.status(200).json({ message: 'Archivo subido exitosamente ✅ <br> <b>Nota: </b>Cuando hayas terminado de subir tus documentos escribe (<b>salir</b>) para cerrar la sesión de tu cuenta!' });
+                console.log(`${originalFileName} subido como ${destFileName} a ${bucketName}`);
+           */
+                res
+                    .status(200)
+                    .json({
+                    message: "Archivo subido exitosamente ✅ <br> <b>Nota: </b>Cuando hayas terminado de subir tus documentos escribe (<b>salir</b>) para cerrar la sesión de tu cuenta!",
+                });
             }
             catch (error) {
-                console.error('Error al subir el archivo:', error);
-                res.status(500).json({ error: 'Error al subir el archivo' });
+                console.error("Error al subir el archivo:", error);
+                res.status(500).json({ error: "Error al subir el archivo" });
             }
         });
     }
@@ -294,13 +324,13 @@ const sendFileUser = (req, res) => __awaiter(void 0, void 0, void 0, function* (
 exports.sendFileUser = sendFileUser;
 function getUserToken(req) {
     const authorizationHeader = req.headers.authorization;
-    if (authorizationHeader && authorizationHeader.startsWith('Bearer ')) {
+    if (authorizationHeader && authorizationHeader.startsWith("Bearer ")) {
         // Extraer el token eliminando el prefijo "Bearer "
         const token = authorizationHeader.substring(7);
         try {
             // Decodificar el token usando la clave secreta
-            const decoded = jsonwebtoken_1.default.verify(token, process.env.SECRET_KEY || '1234clave');
-            if (typeof decoded === 'object' && 'usuario' in decoded) {
+            const decoded = jsonwebtoken_1.default.verify(token, process.env.SECRET_KEY || "1234clave");
+            if (typeof decoded === "object" && "usuario" in decoded) {
                 return decoded.usuario; // Devuelve el valor de 'usuario'
             }
             else {
