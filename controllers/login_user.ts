@@ -301,7 +301,7 @@ export const sendFileUser = async (req: Request, res: Response) => {
     const file = req.file;
     const originalFileName = file.originalname;
 
-    // Genera un nombre de archivo único usando UUID (Identificador Único Universal) y agrega la extensión .pdf
+    // Genera un nombre de archivo único usando UUID
     const uniqueFileName = uuidv4();
     const destFileName = `${uniqueFileName}.pdf`;
 
@@ -311,9 +311,9 @@ export const sendFileUser = async (req: Request, res: Response) => {
 
     try {
       // Subir el archivo a Google Cloud Storage
-      /*  await storage.bucket(bucketName).upload(file.path, options);
+      await storage.bucket(bucketName).upload(file.path, options);
       console.log(`${originalFileName} subido como ${destFileName} a ${bucketName}`);
- */
+
 
       res
         .status(200)

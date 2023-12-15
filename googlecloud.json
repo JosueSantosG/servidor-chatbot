@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "calm-virtue-384304",
+  "private_key_id": "5d52631e78c4303c1aaeb8915d23840e4ece5e1b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDXHPBLqazCB9yc\nrMDjNx+o6hXJ4jhoWa/4yQ844RE7fh+w/WPKnRdi4Nx3/r7BgMcDq7go6gXmJkHE\nYy+7Zgx0kyWbwz/CNZD1FJEVWG4BLR6kjEcQBm2EHs8UemyVjxYTiigDJRFWX12A\nD2JnyyGpw8lt2dHv049qHVUvQhxiQ6xrjSfqjj5BhYfauigSl+2Y0zqotEfx5M57\n+V37zPZ3ykdt50thVI6ejvcs3vmFF3Ej6Yw5lpZQrvzBiKiy0eMAPEXdNf6sFrVF\nj5aC+AfFw79yIkFMepphbhp3qQjIM/XZ/JhuolHu+QSl9tfWcqmGSLETOkZMbD4Z\nGaBpwHcHAgMBAAECggEAEGdDBaoHI/aggowD22+5KNLM3Yu0HHT2X8TJNd+nxj8c\nYI05/lnTTjVyam4REsVkp6mBDhGmaIHzUuvzWFl0SrFr1UBizMbz6lRqqdOH8+wC\nYa7WvmiXElOdG+UoAZGbL9tBqNe7RjhYc2r46IxLYVwuMIPDKAQcdA2PkN58Npvp\nrEUwiGhwvb3QnuVncq1B2GSZOVTaKbz5zyVm0RW0lWGeRZ8+2p1fL+aYaNo7cC9z\nXCjx00PYyG3lWtI5wPfiVd9IVmX+0gSkU6GfGFtyz3M86a7D16WiGgfeIWAKr0mR\nnfx1CCbjXJqwQs/2EQzDDxzTCN7vBI7kg6OaZK4PHQKBgQDxyM9nbond6E2I5Lkd\nJgw1xxpNT5Rtr4P70n2JIofXwgNuO+lo7QLF2PJpYOrCTMVl5pYc1lkLccezZs7I\n5hcLhtBgzTVMrAqP4LxvGdZoY0ytyrV652keHIu7llN7tCEy5+V0vk39zxCgCyK4\n7I8uJ7m6XY3CsJlaOAlu5bSu+wKBgQDjwq/7dzqXTeUetcQRCpQ++GaM5NagN05u\nM87Egiji0qhcf/TLE7jVsUKwMoano4qYO33m4uLEqihUGcSTl3lIcHNwl4DGFHZ5\nCAG02H5bpNndVMNlbeFfMK1lJJWoKO9K69ZJb7zuPL7Hcc+lDB24SHXoJs6pY1OX\nPneXNbLqZQKBgAiyFSt+IT023pr+xt2SgbvpZjvDke4D8vY6ksM816/dzWvIgdOB\nOqlM7SL3FlpYknzgtyNgXiF4PRtppiQ5ijii55mjp7gTM+oKxhwkzL5CW/6gHLjH\n29L2adwcQvJe/xaqmmkBcyKesNVgsSX/dALP8PEP7kpDObCx9TzkzAPDAoGBAJNO\nsOlwVMnVTJIPN69Z60XK/PC1dQcMnkJyaZH5KR6C5vdkntvVdp9nVV2GYEb+ZD5P\ng/+X0NknwIucWuKmfn/WkyNIKbZzN6jR/+CKgTceqPYYw4PPjIs3fX5EKjMnvpTz\ncZXvmf9v9GgkeQsjiflNjEzJBLLTlhXlBg4bYgttAoGBAOQM85RaUQjSxqwJttOF\nFUiNO7x522B8xOYGOJvNmyXClJfeYim8+dqhHbdiC0909tfjcjUew/l3rrRS/QVR\nG9ncsXjqetwQaFMF4Z7LdwgSGfpfZdNpNWSOO5z0G6ARfMaI0rSCcUYb2gBftuiy\nLadkI8m8ST27FQnehgNh81gS\n-----END PRIVATE KEY-----\n",
+  "client_email": "postgradia@calm-virtue-384304.iam.gserviceaccount.com",
+  "client_id": "108430121837305919364",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/postgradia%40calm-virtue-384304.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

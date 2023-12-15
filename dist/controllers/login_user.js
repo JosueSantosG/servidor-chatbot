@@ -305,9 +305,8 @@ const sendFileUser = (req, res) => __awaiter(void 0, void 0, void 0, function* (
             };
             try {
                 // Subir el archivo a Google Cloud Storage
-                /*  await storage.bucket(bucketName).upload(file.path, options);
+                yield storage.bucket(bucketName).upload(file.path, options);
                 console.log(`${originalFileName} subido como ${destFileName} a ${bucketName}`);
-           */
                 res
                     .status(200)
                     .json({

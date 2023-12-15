@@ -2,7 +2,7 @@
 const { NlpManager } = require('node-nlp');
 import fs from 'fs';
 export const nlp = new NlpManager({ languages: ['es'], forceNER: true });
-  // Agrega los documentos y respuestas al chatbot
+  // Entrenamiento del asistente virtual
   (async () => {
     if (fs.existsSync('./model.nlp')) {
       nlp.load('./model.nlp');

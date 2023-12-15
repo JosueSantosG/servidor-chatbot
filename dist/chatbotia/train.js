@@ -16,7 +16,7 @@ exports.nlp = void 0;
 const { NlpManager } = require('node-nlp');
 const fs_1 = __importDefault(require("fs"));
 exports.nlp = new NlpManager({ languages: ['es'], forceNER: true });
-// Agrega los documentos y respuestas al chatbot
+// Entrenamiento del asistente virtual
 (() => __awaiter(void 0, void 0, void 0, function* () {
     if (fs_1.default.existsSync('./model.nlp')) {
         exports.nlp.load('./model.nlp');
